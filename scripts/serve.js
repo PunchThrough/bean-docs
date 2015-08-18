@@ -2,15 +2,20 @@ import Serve from 'metalsmith-serve'
 import Watch from 'metalsmith-watch'
 import core from './core'
 
+const config = {
+  watch: {
+    paths: {
+      '${source}/**/*.md': true,
+      '../templates/**/*': '**/*.md',
+    },
+    livereload: true
+  }
+}
+
 export default function() {
   core
   .use(Serve())
-  .use(Watch({
-    paths: {
-      '../src/**/*': true
-    },
-    livereload: true
-  }))
+  .use(Watch(config.watch))
   .build(function(err) {
     if (err) throw err
   })

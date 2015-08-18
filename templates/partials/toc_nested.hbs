@@ -1,0 +1,10 @@
+<ul>
+  {{#each children}}
+    <li>
+      {{text}}
+      {{#if children}}
+        {{> toc_nested}}
+      {{/if}}
+    </li>
+  {{/each}}
+</ul>
