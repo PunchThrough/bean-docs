@@ -1,0 +1,11 @@
+{
+  "name": "bean-docs",
+  "private": true,
+  "dependencies": {
+    "handlebars": "^3.0.3",
+    "metalsmith": "^1.0.0",
+    "metalsmith-layouts": "^1.4.0",
+    "metalsmith-markdown": "^0.2.1",
+    "metalsmith-templates": "^0.6.1"
+  }
+}
