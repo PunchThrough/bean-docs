@@ -1,7 +1,7 @@
 <ul>
   {{#each children}}
     <li>
-      {{text}}
+      <a href="#{{id}}">{{text}}</a>
       {{#if children}}
         {{> toc_nested}}
       {{/if}}

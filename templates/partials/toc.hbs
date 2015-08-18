@@ -2,7 +2,7 @@
 <ul>
   {{#each toc}}
     <li>
-      {{text}}
+      <a href="#{{id}}">{{text}}</a>
       {{> toc_nested}}
     </li>
   {{/each}}
