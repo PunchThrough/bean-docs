@@ -1,7 +1,11 @@
 ---
 title: Index
 layout: basic.hbs
+autotoc: true
 ---
 
 # Hello world!
-New page here
+
+## My section
+### Thing
+### Thing Two

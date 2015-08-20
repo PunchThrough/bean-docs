@@ -8,10 +8,10 @@
   <div class="guides">
     <ul>
       {{#each collections}}
-        <li>{{key}}: {{name}}</li>
+        <li><strong>{{name}}</strong></li>
         <ul>
           {{#each pages}}
-            <li>{{title}}</li>
+            <li><a href="/{{path}}">{{title}}</a></li>
           {{/each}}
         </ul>
       {{/each}}

@@ -7,6 +7,7 @@ import Markdown from 'metalsmith-markdown'
 import Layouts from 'metalsmith-layouts'
 import AutoTOC from 'metalsmith-autotoc'
 import Partials from 'metalsmith-register-partials'
+import Path from 'metalsmith-path'
 
 
 const config = {
@@ -46,15 +47,10 @@ const config = {
   ]
 }
 
-Handlebars.registerHelper('debug', (thing, verbose) => {
+Handlebars.registerHelper('debug', (thing) => {
   console.log('===== START =====')
-  if (verbose) {
-    console.log(util.inspect(thing))
-  } else {
-    console.log(thing)
-  }
-  console.log('===== END =====')
-  console.log('\n\n')
+  console.log(thing)
+  console.log('===== END =====\n\n')
 })
 
 Handlebars.registerHelper('titleize', (text) => {
@@ -67,6 +63,7 @@ export default Metalsmith(__dirname)
   .use(PathCollector(config.pathCollector))
   .use(Markdown())
   // .use(Debugger())
-  // .use(AutoTOC(config.autotoc))
+  .use(AutoTOC(config.autotoc))
+  .use(Path())
   .use(Partials(config.partials))
   .use(Layouts(config.layouts))
