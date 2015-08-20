@@ -1,11 +1,13 @@
 import Metalsmith from 'metalsmith'
+import Handlebars from 'handlebars'
+
+import PathCollector from './plugins/path-collector'
+import Debugger from './plugins/debugger'
 import Markdown from 'metalsmith-markdown'
 import Layouts from 'metalsmith-layouts'
 import AutoTOC from 'metalsmith-autotoc'
 import Partials from 'metalsmith-register-partials'
-import util from 'util'
 
-import Handlebars from 'handlebars'
 
 const config = {
   src: '../src',
@@ -19,30 +21,52 @@ const config = {
   },
   autotoc: {
     selector: 'h2, h3'
-  }
+  },
+  pathCollector: [
+    {
+      key: 'guides-enim',
+      name: 'Enim ut Placeat',
+      pattern: '^guides/enim.+$',
+    },
+    {
+      key: 'guides-laud',
+      name: 'Laudantium Ratione',
+      pattern: '^guides/laud.+$',
+    },
+    {
+      key: 'guides-natus',
+      name: 'Natus Nihil',
+      pattern: '^guides/natus.+$',
+    },
+    {
+      key: 'guides-qui',
+      name: 'Qui Reprehenderit',
+      pattern: '^guides/qui.+$'
+    },
+  ]
 }
 
-function Debugger() {
-  return (files) => {
-    Object.keys(files).forEach(file => {
-      let data = files[file]
-      console.log(file)
-      console.log(util.inspect(data, {depth: 5}))
-    })
+Handlebars.registerHelper('debug', (thing, verbose) => {
+  console.log('===== START =====')
+  if (verbose) {
+    console.log(util.inspect(thing))
+  } else {
+    console.log(thing)
   }
-}
+  console.log('===== END =====')
+  console.log('\n\n')
+})
 
-Handlebars.registerHelper('debug', function(optionalValue) {
-  console.log('Current Handlebars context:')
-  console.log('===========================')
-  console.log(util.inspect(this))
+Handlebars.registerHelper('titleize', (text) => {
+  return 'Titleized: ' + text
 })
 
 export default Metalsmith(__dirname)
   .source(config.src)
   .destination(config.dest)
+  .use(PathCollector(config.pathCollector))
   .use(Markdown())
-  .use(AutoTOC(config.autotoc))
-  .use(Debugger())
+  // .use(Debugger())
+  // .use(AutoTOC(config.autotoc))
   .use(Partials(config.partials))
   .use(Layouts(config.layouts))

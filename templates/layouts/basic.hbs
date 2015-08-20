@@ -5,6 +5,18 @@
   <title>{{ title }}</title>
 </head>
 <body>
+  <div class="guides">
+    <ul>
+      {{#each collections}}
+        <li>{{key}}: {{name}}</li>
+        <ul>
+          {{#each pages}}
+            <li>{{title}}</li>
+          {{/each}}
+        </ul>
+      {{/each}}
+    </ul>
+  </div>
   <div class="toc">
     {{> toc}}
   </div>

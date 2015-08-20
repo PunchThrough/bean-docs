@@ -1,9 +1,11 @@
-<h1>Table of Contents</h1>
-<ul>
-  {{#each toc}}
-    <li>
-      <a href="#{{id}}">{{text}}</a>
-      {{> toc_nested}}
-    </li>
-  {{/each}}
-</ul>
+{{#if autotoc}}
+  <h1>Table of Contents</h1>
+  <ul>
+    {{#each toc}}
+      <li>
+        <a href="#{{id}}">{{text}}</a>
+        {{> toc_nested}}
+      </li>
+    {{/each}}
+  </ul>
+{{/if}}
