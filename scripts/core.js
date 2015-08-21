@@ -15,16 +15,6 @@ import Ignore from 'metalsmith-ignore'
 
 const config = Yaml.safeLoad(fs.readFileSync('config.yml', 'utf8'))
 
-Handlebars.registerHelper('debug', (thing) => {
-  console.log('===== START =====')
-  console.log(thing)
-  console.log('===== END =====\n\n')
-})
-
-Handlebars.registerHelper('titleize', (text) => {
-  return 'Titleized: ' + text
-})
-
 export default Metalsmith(__dirname)
   .source(config.src)
   .destination(config.dest)
