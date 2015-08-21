@@ -18,6 +18,8 @@ export default (config) => {
         let collRegex = new RegExp(coll.pattern)
         if (collRegex.test(filePath)) {
           collections[index].pages.push(data)
+          // Each file should be aware of the collection it's in
+          files[filePath].coll_key = coll.key
         }
       })
     })
