@@ -24,6 +24,18 @@ export default (config) => {
       })
     })
 
+    let pageOrder = (a, b) => {
+      if (!a.order && !b.order) return 0
+      if (!a.order) return -1
+      if (!b.order) return 1
+      return a.order - b.order
+    }
+
+    // Sort all pages by their "order" property, if it exists
+    collections.forEach((coll) => {
+      coll.pages = coll.pages.sort(pageOrder)
+    })
+
     // Store in Metalsmith global object
     metalsmith.collections = collections
     // Store in each File for local access

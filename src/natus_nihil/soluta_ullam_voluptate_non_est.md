@@ -2,6 +2,7 @@
 title: Soluta ullam voluptate non est
 layout: basic.hbs
 autotoc: true
+order: 2
 ---
 ## Nemo laboriosam alias
 

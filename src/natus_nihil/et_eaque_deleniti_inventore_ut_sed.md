@@ -2,6 +2,7 @@
 title: Et eaque deleniti inventore ut sed
 layout: basic.hbs
 autotoc: true
+order: 3
 ---
 ## Eius est quae facilis id nulla incidunt
 

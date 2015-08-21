@@ -2,6 +2,7 @@
 title: Beatae qui enim
 layout: basic.hbs
 autotoc: true
+order: 1
 ---
 ## Rerum enim
 
