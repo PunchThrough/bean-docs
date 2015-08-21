@@ -8,6 +8,7 @@ import Debugger from './plugins/debugger'
 import Markdown from 'metalsmith-markdown'
 import Layouts from 'metalsmith-layouts'
 import AutoTOC from 'metalsmith-autotoc'
+import Helpers from 'metalsmith-register-helpers'
 import Partials from 'metalsmith-register-partials'
 import Permalinks from 'metalsmith-permalinks'
 import Ignore from 'metalsmith-ignore'
@@ -32,6 +33,7 @@ export default Metalsmith(__dirname)
   .use(Markdown())
   .use(AutoTOC(config.autotoc))
   .use(Permalinks(config.permalinks))
-  .use(Debugger())
+  //.use(Debugger())
+  .use(Helpers(config.helpers))
   .use(Partials(config.partials))
   .use(Layouts(config.layouts))

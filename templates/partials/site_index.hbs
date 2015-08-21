@@ -1,0 +1,10 @@
+<ul>
+  {{#each collections}}
+    <li><strong>{{name}}</strong></li>
+    <ul>
+      {{#each pages}}
+        <li><a href="/{{path}}">{{title}}</a></li>
+      {{/each}}
+    </ul>
+  {{/each}}
+</ul>

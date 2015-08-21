@@ -1,30 +1,33 @@
-src: "../src"
-dest: "../build"
-ignore: "**/.DS_Store"
+src: ../src
+dest: ../build
+ignore: '**/.DS_Store'
 
 layouts:
-  engine: "handlebars"
-  directory: "../templates/layouts"
+  engine: handlebars
+  directory: ../templates/layouts
+
+helpers:
+  directory: ../templates/helpers
 
 partials:
-  directory: "../templates/partials"
+  directory: ../templates/partials
 
 autotoc:
-  selector: "h2, h3"
+  selector: h2, h3
 
 pathCollector:
-  - key: "enim_ut"
-    name: "Enim ut Placeat"
-    pattern: "^enim_ut/.+.md$"
-  - key: "laudantium"
-    name: "Laudantium Ratione"
-    pattern: "^laudantium/.+.md$"
-  - key: "natus_nihil"
-    name: "Natus Nihil"
-    pattern: "^natus_nihil/.+.md$"
-  - key: "qui"
-    name: "Qui Reprehenderit"
-    pattern: "^qui/.+.md+$"
+  - key: enim_ut
+    name: Enim ut Placeat
+    pattern: ^enim_ut/.+.md$
+  - key: laudantium
+    name: Laudantium Ratione
+    pattern: ^laudantium/.+.md$
+  - key: natus_nihil
+    name: Natus Nihil
+    pattern: ^natus_nihil/.+.md$
+  - key: qui
+    name: Qui Reprehenderit
+    pattern: ^qui/.+.md+$
 
 permalinks:
-  pattern: ":coll_key/:id"
+  pattern: :coll_key/:id
