@@ -12,6 +12,7 @@
     "metalsmith-register-partials": "^1.0.2"
   },
   "devDependencies": {
+    "js-yaml": "^3.3.1",
     "metalsmith-serve": "0.0.3",
     "metalsmith-watch": "^1.0.1",
     "optimist": "^0.6.1",

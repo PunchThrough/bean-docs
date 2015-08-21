@@ -1,5 +1,7 @@
 import Metalsmith from 'metalsmith'
 import Handlebars from 'handlebars'
+import Yaml from 'js-yaml'
+import fs from 'fs'
 
 import PathCollector from './plugins/path-collector'
 import Debugger from './plugins/debugger'
@@ -10,47 +12,7 @@ import Partials from 'metalsmith-register-partials'
 import Permalinks from 'metalsmith-permalinks'
 import Ignore from 'metalsmith-ignore'
 
-
-const config = {
-  src: '../src',
-  dest: '../build',
-  ignore: '**/.DS_Store',
-  layouts: {
-    engine: 'handlebars',
-    directory: '../templates/layouts'
-  },
-  partials: {
-    directory: '../templates/partials'
-  },
-  autotoc: {
-    selector: 'h2, h3'
-  },
-  pathCollector: [
-    {
-      key: 'enim_ut',
-      name: 'Enim ut Placeat',
-      pattern: '^enim_ut/.+.md$',
-    },
-    {
-      key: 'laudantium',
-      name: 'Laudantium Ratione',
-      pattern: '^laudantium/.+.md$',
-    },
-    {
-      key: 'natus_nihil',
-      name: 'Natus Nihil',
-      pattern: '^natus_nihil/.+.md$',
-    },
-    {
-      key: 'qui',
-      name: 'Qui Reprehenderit',
-      pattern: '^qui/.+.md+$'
-    },
-  ],
-  permalinks: {
-    pattern: ':coll_key/:id'
-  },
-}
+const config = Yaml.safeLoad(fs.readFileSync('config.yml', 'utf8'))
 
 Handlebars.registerHelper('debug', (thing) => {
   console.log('===== START =====')
