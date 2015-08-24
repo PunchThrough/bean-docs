@@ -4,8 +4,4 @@ layout: basic.hbs
 autotoc: true
 ---
 
-# Hello world!
-
-## My section
-### Thing
-### Thing Two
+This is the home page. Use it to navigate to other pages.
