@@ -12,6 +12,7 @@ import Helpers from 'metalsmith-register-helpers'
 import Partials from 'metalsmith-register-partials'
 import Permalinks from 'metalsmith-permalinks'
 import Ignore from 'metalsmith-ignore'
+import Stylus from 'metalsmith-stylus'
 
 const config = Yaml.safeLoad(fs.readFileSync('config.yml', 'utf8'))
 
@@ -21,6 +22,7 @@ export default Metalsmith(__dirname)
   .use(Ignore(config.ignore))
   .use(PathCollector(config.pathCollector))
   .use(Markdown())
+  .use(Stylus())
   .use(AutoTOC(config.autotoc))
   .use(Permalinks(config.permalinks))
   //.use(Debugger())

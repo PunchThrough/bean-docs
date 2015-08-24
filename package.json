@@ -10,7 +10,8 @@
     "metalsmith-markdown": "^0.2.1",
     "metalsmith-permalinks": "^0.4.0",
     "metalsmith-register-helpers": "^0.1.2",
-    "metalsmith-register-partials": "^1.0.2"
+    "metalsmith-register-partials": "^1.0.2",
+    "metalsmith-stylus": "^1.0.0"
   },
   "devDependencies": {
     "js-yaml": "^3.3.1",
