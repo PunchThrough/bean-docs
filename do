@@ -4,22 +4,17 @@ import { argv } from 'optimist'
 import build from './scripts/build'
 import serve from './scripts/serve'
 
-var tasks = new Map()
+let tasks = new Map()
 
-tasks.set('build', () => {
-  build()
-})
+tasks.set('build', build)
+tasks.set('serve', serve)
 
-tasks.set('serve', () => {
-  serve()
-})
+let listTasks = () => { console.log('Tasks:', Array.from(tasks.keys())) }
 
-var listTasks = () => { console.log('Tasks:', Array.from(tasks.keys())) }
-
-var task = argv._[0]
+let task = argv._[0]
 
 if (!task) {
-  console.log('Syntax: ./do TASK')
+  console.log('Usage: ./do TASK')
   listTasks()
 
 } else if (!tasks.has(task)) {
@@ -28,6 +23,6 @@ if (!task) {
 
 } else {
   console.log('Running task:', task)
-  var todo = tasks.get(task)
-  todo()
+  let todo = tasks.get(task)
+  todo(argv)
 }
