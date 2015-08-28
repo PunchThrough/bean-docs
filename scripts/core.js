@@ -13,19 +13,23 @@ import Partials from 'metalsmith-register-partials'
 import Permalinks from 'metalsmith-permalinks'
 import Ignore from 'metalsmith-ignore'
 import Stylus from 'metalsmith-stylus'
+import InPlace from 'metalsmith-in-place'
+import Paths from 'metalsmith-paths'
 
 const config = Yaml.safeLoad(fs.readFileSync('config.yml', 'utf8'))
 
 export default Metalsmith(__dirname)
   .source(config.src)
   .destination(config.dest)
-  .use(Ignore(config.ignore))
   .use(PathCollector(config.pathCollector))
+  .use(Paths())
+  .use(Ignore(config.ignore))
+  .use(Partials(config.partials))
+  .use(Helpers(config.helpers))
+  .use(InPlace(config.inPlace))
   .use(Markdown())
   .use(Stylus())
   .use(AutoTOC(config.autotoc))
   .use(Permalinks(config.permalinks))
   //.use(Debugger())
-  .use(Helpers(config.helpers))
-  .use(Partials(config.partials))
   .use(Layouts(config.layouts))
