@@ -7,7 +7,8 @@ const config = {
     paths: {
       '${source}/**/*.md': true,
       '../templates/**/*': '**/*.md',
-      '${source}/**/*.styl': '**/*'
+      '${source}/**/*.styl': '**/*',
+      '${source}/assets/**/*': '**/*'
     },
     livereload: true
   }
