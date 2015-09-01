@@ -485,8 +485,8 @@ th {
 @at-root {
   @font-face {
     font-family: 'Glyphicons Halflings';
-    src: url("/assets/bootstrap/glyphicons-halflings-regular.eot");
-    src: url("/assets/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("/assets/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("/assets/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("/assets/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("/assets/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
+    src: url("https://punchthrough.com/assets/bootstrap/glyphicons-halflings-regular.eot");
+    src: url("https://punchthrough.com/assets/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("https://punchthrough.com/assets/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("https://punchthrough.com/assets/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("https://punchthrough.com/assets/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("https://punchthrough.com/assets/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
 }
 }
 
@@ -8908,8 +8908,8 @@ button.close {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("/assets/font-awesome/fontawesome-webfont.eot");
-  src: url("/assets/font-awesome/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/font-awesome/fontawesome-webfont.woff2") format("woff2"), url("/assets/font-awesome/fontawesome-webfont.woff") format("woff"), url("/assets/font-awesome/fontawesome-webfont.ttf") format("truetype"), url("/assets/font-awesome/fontawesome-webfont.svg#fontawesomeregular") format("svg");
+  src: url("https://punchthrough.com/assets/font-awesome/fontawesome-webfont.eot");
+  src: url("https://punchthrough.com/assets/font-awesome/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("https://punchthrough.com/assets/font-awesome/fontawesome-webfont.woff2") format("woff2"), url("https://punchthrough.com/assets/font-awesome/fontawesome-webfont.woff") format("woff"), url("https://punchthrough.com/assets/font-awesome/fontawesome-webfont.ttf") format("truetype"), url("https://punchthrough.com/assets/font-awesome/fontawesome-webfont.svg#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -11805,74 +11805,74 @@ button.close {
 /* @import must be at top of file, otherwise CSS will not work */
 @font-face {
   font-family: "VerbCondExtrabold";
-  src: url(/assets/2E7DDF_29_0.eot);
-  src: url(/assets/2E7DDF_29_0.eot?#iefix) format("embedded-opentype"), url(/assets/2E7DDF_29_0.woff2) format("woff2"), url(/assets/2E7DDF_29_0.woff) format("woff"), url(/assets/2E7DDF_29_0.ttf) format("truetype");
+  src: url(https://punchthrough.com/assets/2E7DDF_29_0.eot);
+  src: url(https://punchthrough.com/assets/2E7DDF_29_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/2E7DDF_29_0.woff2) format("woff2"), url(https://punchthrough.com/assets/2E7DDF_29_0.woff) format("woff"), url(https://punchthrough.com/assets/2E7DDF_29_0.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "VerbCondExtrabold-Italic";
-  src: url(/assets/2E7DDF_28_0.eot);
-  src: url(/assets/2E7DDF_28_0.eot?#iefix) format("embedded-opentype"), url(/assets/2E7DDF_28_0.woff2) format("woff2"), url(/assets/2E7DDF_28_0.woff) format("woff"), url(/assets/2E7DDF_28_0.ttf) format("truetype");
+  src: url(https://punchthrough.com/assets/2E7DDF_28_0.eot);
+  src: url(https://punchthrough.com/assets/2E7DDF_28_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/2E7DDF_28_0.woff2) format("woff2"), url(https://punchthrough.com/assets/2E7DDF_28_0.woff) format("woff"), url(https://punchthrough.com/assets/2E7DDF_28_0.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "VerbCondExtralight";
-  src: url(/assets/2E7DDF_2A_0.eot);
-  src: url(/assets/2E7DDF_2A_0.eot?#iefix) format("embedded-opentype"), url(/assets/2E7DDF_2A_0.woff2) format("woff2"), url(/assets/2E7DDF_2A_0.woff) format("woff"), url(/assets/2E7DDF_2A_0.ttf) format("truetype");
+  src: url(https://punchthrough.com/assets/2E7DDF_2A_0.eot);
+  src: url(https://punchthrough.com/assets/2E7DDF_2A_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/2E7DDF_2A_0.woff2) format("woff2"), url(https://punchthrough.com/assets/2E7DDF_2A_0.woff) format("woff"), url(https://punchthrough.com/assets/2E7DDF_2A_0.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "VerbCondExtralight-Italic";
-  src: url(/assets/2E7DDF_30_0.eot);
-  src: url(/assets/2E7DDF_30_0.eot?#iefix) format("embedded-opentype"), url(/assets/2E7DDF_30_0.woff2) format("woff2"), url(/assets/2E7DDF_30_0.woff) format("woff"), url(/assets/2E7DDF_30_0.ttf) format("truetype");
+  src: url(https://punchthrough.com/assets/2E7DDF_30_0.eot);
+  src: url(https://punchthrough.com/assets/2E7DDF_30_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/2E7DDF_30_0.woff2) format("woff2"), url(https://punchthrough.com/assets/2E7DDF_30_0.woff) format("woff"), url(https://punchthrough.com/assets/2E7DDF_30_0.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "VerbCondRegular-Bold";
-  src: url(/assets/2E7DDF_27_0.eot);
-  src: url(/assets/2E7DDF_27_0.eot?#iefix) format("embedded-opentype"), url(/assets/2E7DDF_27_0.woff2) format("woff2"), url(/assets/2E7DDF_27_0.woff) format("woff"), url(/assets/2E7DDF_27_0.ttf) format("truetype");
+  src: url(https://punchthrough.com/assets/2E7DDF_27_0.eot);
+  src: url(https://punchthrough.com/assets/2E7DDF_27_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/2E7DDF_27_0.woff2) format("woff2"), url(https://punchthrough.com/assets/2E7DDF_27_0.woff) format("woff"), url(https://punchthrough.com/assets/2E7DDF_27_0.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "VerbCondRegular-BoldItalic";
-  src: url(/assets/2E7DDF_26_0.eot);
-  src: url(/assets/2E7DDF_26_0.eot?#iefix) format("embedded-opentype"), url(/assets/2E7DDF_26_0.woff2) format("woff2"), url(/assets/2E7DDF_26_0.woff) format("woff"), url(/assets/2E7DDF_26_0.ttf) format("truetype");
+  src: url(https://punchthrough.com/assets/2E7DDF_26_0.eot);
+  src: url(https://punchthrough.com/assets/2E7DDF_26_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/2E7DDF_26_0.woff2) format("woff2"), url(https://punchthrough.com/assets/2E7DDF_26_0.woff) format("woff"), url(https://punchthrough.com/assets/2E7DDF_26_0.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "VerbRegular";
-  src: url(/assets/2E7DDF_D_0.eot);
-  src: url(/assets/2E7DDF_D_0.eot?#iefix) format("embedded-opentype"), url(/assets/2E7DDF_D_0.woff2) format("woff2"), url(/assets/2E7DDF_D_0.woff) format("woff"), url(/assets/2E7DDF_D_0.ttf) format("truetype");
+  src: url(https://punchthrough.com/assets/2E7DDF_D_0.eot);
+  src: url(https://punchthrough.com/assets/2E7DDF_D_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/2E7DDF_D_0.woff2) format("woff2"), url(https://punchthrough.com/assets/2E7DDF_D_0.woff) format("woff"), url(https://punchthrough.com/assets/2E7DDF_D_0.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "VerbRegular-Italic";
-  src: url(/assets/2E7DDF_C_0.eot);
-  src: url(/assets/2E7DDF_C_0.eot?#iefix) format("embedded-opentype"), url(/assets/2E7DDF_C_0.woff2) format("woff2"), url(/assets/2E7DDF_C_0.woff) format("woff"), url(/assets/2E7DDF_C_0.ttf) format("truetype");
+  src: url(https://punchthrough.com/assets/2E7DDF_C_0.eot);
+  src: url(https://punchthrough.com/assets/2E7DDF_C_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/2E7DDF_C_0.woff2) format("woff2"), url(https://punchthrough.com/assets/2E7DDF_C_0.woff) format("woff"), url(https://punchthrough.com/assets/2E7DDF_C_0.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "VerbCompSemibold";
-  src: url(/assets/2E7DDF_19_0.eot);
-  src: url(/assets/2E7DDF_19_0.eot?#iefix) format("embedded-opentype"), url(/assets/2E7DDF_19_0.woff2) format("woff2"), url(/assets/2E7DDF_19_0.woff) format("woff"), url(/assets/2E7DDF_19_0.ttf) format("truetype");
+  src: url(https://punchthrough.com/assets/2E7DDF_19_0.eot);
+  src: url(https://punchthrough.com/assets/2E7DDF_19_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/2E7DDF_19_0.woff2) format("woff2"), url(https://punchthrough.com/assets/2E7DDF_19_0.woff) format("woff"), url(https://punchthrough.com/assets/2E7DDF_19_0.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "VerbCompSemibold-Italic";
-  src: url(/assets/2E7DDF_3E_0.eot);
-  src: url(/assets/2E7DDF_3E_0.eot?#iefix) format("embedded-opentype"), url(/assets/2E7DDF_3E_0.woff2) format("woff2"), url(/assets/2E7DDF_3E_0.woff) format("woff"), url(/assets/2E7DDF_3E_0.ttf) format("truetype");
+  src: url(https://punchthrough.com/assets/2E7DDF_3E_0.eot);
+  src: url(https://punchthrough.com/assets/2E7DDF_3E_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/2E7DDF_3E_0.woff2) format("woff2"), url(https://punchthrough.com/assets/2E7DDF_3E_0.woff) format("woff"), url(https://punchthrough.com/assets/2E7DDF_3E_0.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "VerbMedium";
-  src: url(/assets/2E7DDF_B_0.eot);
-  src: url(/assets/2E7DDF_B_0.eot?#iefix) format("embedded-opentype"), url(/assets/2E7DDF_B_0.woff2) format("woff2"), url(/assets/2E7DDF_B_0.woff) format("woff"), url(/assets/2E7DDF_B_0.ttf) format("truetype");
+  src: url(https://punchthrough.com/assets/2E7DDF_B_0.eot);
+  src: url(https://punchthrough.com/assets/2E7DDF_B_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/2E7DDF_B_0.woff2) format("woff2"), url(https://punchthrough.com/assets/2E7DDF_B_0.woff) format("woff"), url(https://punchthrough.com/assets/2E7DDF_B_0.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "VerbMedium-Italic";
-  src: url(/assets/2E7DDF_A_0.eot);
-  src: url(/assets/2E7DDF_A_0.eot?#iefix) format("embedded-opentype"), url(/assets/2E7DDF_A_0.woff2) format("woff2"), url(/assets/2E7DDF_A_0.woff) format("woff"), url(/assets/2E7DDF_A_0.ttf) format("truetype");
+  src: url(https://punchthrough.com/assets/2E7DDF_A_0.eot);
+  src: url(https://punchthrough.com/assets/2E7DDF_A_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/2E7DDF_A_0.woff2) format("woff2"), url(https://punchthrough.com/assets/2E7DDF_A_0.woff) format("woff"), url(https://punchthrough.com/assets/2E7DDF_A_0.ttf) format("truetype");
 }
 
 @font-face {
@@ -12190,7 +12190,7 @@ body {
 
 /* line 28, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/covers.sass */
 .cover-circuit-board {
-  background: url("/assets/circuit_board.jpg") no-repeat center center;
+  background: url("https://punchthrough.com/assets/circuit_board.jpg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -12199,7 +12199,7 @@ body {
 
 /* line 31, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/covers.sass */
 .cover-steve-karel-dof {
-  background: url("/assets/steve-karel-dof.jpg");
+  background: url("https://punchthrough.com/assets/steve-karel-dof.jpg");
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -12217,7 +12217,7 @@ body {
 
 /* line 34, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/covers.sass */
 .cover-matt-soldering {
-  background: url("/assets/matt-soldering.jpg") no-repeat center center;
+  background: url("https://punchthrough.com/assets/matt-soldering.jpg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -12403,11 +12403,11 @@ body {
 }
 /* line 34, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/about_us.sass */
 .profile-delta .delta-red {
-  background-image: url(/assets/profile-delta-red.png);
+  background-image: url(https://punchthrough.com/assets/profile-delta-red.png);
 }
 /* line 36, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/about_us.sass */
 .profile-delta .delta-blk {
-  background-image: url(/assets/profile-delta-blk.png);
+  background-image: url(https://punchthrough.com/assets/profile-delta-blk.png);
 }
 
 /* line 39, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/about_us.sass */
@@ -12415,7 +12415,7 @@ body {
   display: none;
   padding: 40px;
   margin-bottom: 20px !important;
-  background: #36383b url(/assets/profile-background.png) no-repeat right bottom;
+  background: #36383b url(https://punchthrough.com/assets/profile-background.png) no-repeat right bottom;
   background-size: auto 100%;
 }
 /* line 48, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/about_us.sass */
