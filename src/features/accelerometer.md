@@ -10,43 +10,55 @@ The Bean has a built-in accelerometer that lets you detect its orientation and a
 
 One Bean user built a wall clock that knows when it's perfectly level on a wall hook. Another Beanie attached the Bean to a paratrooper toy that automatically deployed its parachute when it detects freefall!
 
-In this tutorial, you'll access the accelerometer on a Bean and visualize its data on an OS X computer using Processing.
+In this tutorial, you'll read data from the accelerometer on a Bean and view it in Arduino's Serial Monitor using the Virtual Serial port.
 
 ## What You Need
-
-* LightBlue Bean
-* Compatible OS X computer
-* Bean Loader for OS X
-* Processing for OS X
 
 If you haven't completed the following guides, please become familiar with them before starting this one:
 
 * Getting Started
 * Feature: Virtual Serial
 
+You will need the following pieces of hardware:
+
+* LightBlue Bean
+* Compatible OS X computer
+
+You will also need the following pieces of software installed:
+
+* Bean Loader for OS X ([install guide]())
+
 ## Step-by-Step
 
-### Check your Bean
+### 1. Check your Bean
 
 Turn on your Bean by inserting the coin cell battery into its holder. Make sure you see the LED blink green, indicating your battery power is OK:
 
 {{{img_rel this 'blink-green.jpg' 'LED blinking green on power-up'}}}
 
-### Connect to your Bean
+### 2. Connect to your Bean
 
 Open Bean Loader for OS X. Select your Bean and connect to it:
 
+{{{img_rel this 'connecting.png' 'Connecting to Bean'}}}
+
 Verify your Bean is connected:
+
+{{{img_rel this 'connected.png' 'Connected to Bean'}}}
 
 If there are lots of Beans near you, blink your Bean to make sure you're connected to the right one:
 
-### Program the Arduino Sketch
+{{{img_rel this 'blink.png' 'Blink your Bean'}}}
+
+{{{img_rel this 'blink-red.jpg' 'Bean blinking red'}}}
+
+### 3. Program the Arduino Sketch
 
 This is an Arduino sketch for your Bean. Here's what it does:
 
 * Reads the accelerometer values
 * Prints the X, Y, and Z values to the serial port
-* Sleeps for 50 milliseconds
+* Sleeps for 250 milliseconds
 * Loops back to the start
 
 ```
@@ -61,116 +73,76 @@ void loop()
   byte x = reading.xAxis / 4;
   byte y = reading.yAxis / 4;
   byte z = reading.zAxis / 4;
-  Serial.write(x);
-  Serial.write(y);
-  Serial.write(z);
+
+  Serial.print(" X: ");
+  Serial.print(x);
+
+  Serial.print(" Y: ");
+  Serial.print(y);
+
+  Serial.print(" Z: ");
+  Serial.print(z);
+
   Serial.println();
-  Bean.sleep(50);
+  Bean.sleep(250);
 }
 ```
 
 Open Arduino. Copy and paste the above sketch into Arduino. Save your sketch using **File > Save**:
 
+{{{img_rel this 'save.png' 'Arduino sketch saved'}}}
+
 Make sure you have selected LightBlue Bean as your programming target, then click Upload to send the sketch to Bean Loader:
+
+{{{img_rel this 'upload.png' 'Uploading sketch to Bean Loader'}}}
 
 Program the sketch to your Bean:
 
-Stay connected to your Bean. You'll use the Bean in the upcoming steps.
+{{{img_rel this 'programming.png' 'Programming the Bean with the sketch'}}}
 
-### Save the Processing Sketch
+{{{img_rel this 'programmed.png' 'Programming is complete!'}}}
 
-This is a Processing sketch that talks to your Bean. Here's what it does:
+Stay connected to your Bean so you can read data from it in the next steps.
 
-* Reads values coming from the Bean's Virtual Serial port
-* Interprets those values as X, Y, and Z accelerometer values
-* Visualizes those values to show the Bean's current acceleration on each axis
-
-```
-import processing.serial.*;
-
-String portName = "/dev/tty.LightBlue-Bean";
-PFont font = createFont("Helvetica Neue", 16, true);
-Serial beanSerial;
-
-void setup() {
-  size(800, 360);
-  background(52, 73, 94);
-  noStroke();
-  textFont(font);
-  drawBarBackgrounds();
-  beanSerial = new Serial(this, portName, 57600);
-}
-
-void draw() {
-  checkForData();
-}
-
-void checkForData() {
-  if (beanSerial.available() > 0) {
-    byte[] received = beanSerial.readBytesUntil('\n');
-
-    if (received == null || received.length < 3) {
-      return;
-    }
-    
-    int x = received[0];
-    int y = received[1];
-    int z = received[2];
-    visualizeAccel(x, y, z);
-  }
-}
-
-void drawBarBackgrounds() {
-  fill(44, 62, 80);
-  rect(100, 80, 600, 40);
-  rect(100, 160, 600, 40);
-  rect(100, 240, 600, 40);
-}
-
-void drawBars(int widthX, int widthY, int widthZ) {
-  fill(231, 76, 60);
-  rect(100, 80, widthX, 40);
-  fill(46, 204, 113);
-  rect(100, 160, widthY, 40);
-  fill(52, 152, 219);
-  rect(100, 240, widthZ, 40);
-}
-
-void drawBarLabels() {
-  fill(255);
-  text("X", 120, 105);
-  text("Y", 120, 185);
-  text("Z", 120, 265);
-}
-
-void visualizeAccel(int x, int y, int z) {
-  drawBarBackgrounds();
-  
-  int widthX = (x + 128) * 600 / 255;
-  int widthY = (y + 128) * 600 / 255;
-  int widthZ = (z + 128) * 600 / 255;
-  
-  drawBars(widthX, widthY, widthZ);
-  drawBarLabels();
-}
-```
-
-Open Processing. Copy and paste the above sketch into Processing. Save your sketch using **File > Save**:
-
-### Enable Virtual Serial
+### 4. Enable Virtual Serial
 
 Select your Bean and enable Virtual Serial:
 
-### Run the Processing Sketch
+{{{img_rel this 'enabling-vs.png' 'Enabling Virtual Serial'}}}
 
-Click the Play button to run your Processing sketch. You'll see the sketch canvas open.
+{{{img_rel this 'vs-enabled.png' 'Virtual Serial enabled'}}}
 
-As you move your Bean around and rotate it in the air, the Bean's accelerometer will read new values. You should see the colored bars move up and down to visualize these changes:
+### 5. Open the Serial Monitor
 
+In Arduino, select the Bean's serial port in **Tools &raquo; Port**:
 
+{{{img_rel this 'select-port.png' "Select the Bean's serial port"}}}
+
+Open the Serial Monitor using the button in the Arduino IDE:
+
+{{{img_rel this 'serial-monitor-button.png' 'Serial Monitor button'}}}
+
+The Serial Monitor displays data received from your Bean when Virtual Serial is enabled. You can read the serial data your Bean is sending to your Mac in the Serial Monitor:
+
+{{{img_rel this 'serial-monitor.png' 'Serial Monitor opened'}}}
+
+Try moving your device around. You should see the X, Y, and Z axis values change as they are printed in the Serial Monitor.
 
 ## Conclusion
 
 ## Troubleshooting
 
+### Virtual Serial problems
+
+* Your Virtual Serial port is enabled, but you're not seeing any data in the Serial Monitor.
+* Arduino IDE doesn't show the LightBlue Bean's serial port.
+
+If you're having problems like these, check out the [Virtual Serial troubleshooting]() steps.
+
+### Everything Else
+
+Having trouble with anything else? Try the steps listed in [General Bean troubleshooting]().
+
 ## Additional Notes
+
+Looking to use accelerometer data in a desktop app? Check out our [Processing tutorial](), where you'll build an app that reads accelerometer data from Bean and displays it in a live visualization.
