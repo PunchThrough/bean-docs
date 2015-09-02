@@ -122,13 +122,24 @@ Open the Serial Monitor using the button in the Arduino IDE:
 
 {{{img_rel this 'serial-monitor-button.png' 'Serial Monitor button'}}}
 
-The Serial Monitor displays data received from your Bean when Virtual Serial is enabled. You can read the serial data your Bean is sending to your Mac in the Serial Monitor:
+The Serial Monitor displays data received from your Bean when Virtual Serial is enabled. You can read the serial data your Bean is sending to your computer in the Serial Monitor:
 
 {{{img_rel this 'serial-monitor.png' 'Serial Monitor opened'}}}
 
 Try moving your device around. You should see the X, Y, and Z axis values change as they are printed in the Serial Monitor.
 
 ## Conclusion
+
+In this walkthrough, you learned how to read data from the Bean's accelerometer with an Arduino sketch, send it over Virtual Serial to your computer, and read it in the Arduino Serial Monitor.
+
+Here are some ideas for projects you could build with the accelerometer:
+
+* Put the Bean on a hanging wall painting and make the LED blink when the painting is perfectly level.
+* Use the Bean as an [HID device]() and use it to control a game on your computer.
+* Attach the Bean to a skateboard and measure the acceleration when you kick off.
+* Add a buzzer to the Bean, hide it under papers on your desk, and sound an alarm when someone snoops around your stuff and moves the Bean.
+
+Looking to use accelerometer data in a desktop app? Check out our [Processing tutorial](), where you'll build an app that reads accelerometer data from Bean and displays it in a live visualization.
 
 ## Troubleshooting
 
@@ -142,7 +153,3 @@ If you're having problems like these, check out the [Virtual Serial troubleshoot
 ### Everything Else
 
 Having trouble with anything else? Try the steps listed in [General Bean troubleshooting]().
-
-## Additional Notes
-
-Looking to use accelerometer data in a desktop app? Check out our [Processing tutorial](), where you'll build an app that reads accelerometer data from Bean and displays it in a live visualization.
