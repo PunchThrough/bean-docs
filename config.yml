@@ -26,3 +26,8 @@ pathCollector:
 
 permalinks:
   pattern: :coll_key/:id
+
+relativeRoots:
+  debug: true
+  fixPermalinks: true
+  indexFilename: index.md

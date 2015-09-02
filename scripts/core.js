@@ -4,6 +4,7 @@ import Yaml from 'js-yaml'
 import fs from 'fs'
 
 import PathCollector from './plugins/path-collector'
+import RelativeRoots from './plugins/relative-roots'
 import Debugger from './plugins/debugger'
 import Markdown from 'metalsmith-markdown'
 import Layouts from 'metalsmith-layouts'
@@ -24,6 +25,7 @@ export default Metalsmith(__dirname)
   .use(PathCollector(config.pathCollector))
   .use(Paths())
   .use(Ignore(config.ignore))
+  .use(RelativeRoots(config.relativeRoots))
   .use(Partials(config.partials))
   .use(Helpers(config.helpers))
   .use(InPlace(config.inPlace))
