@@ -20,14 +20,16 @@ autotoc:
   selector: h2, h3
 
 pathCollector:
-  - key: features
-    name: Feature Walkthroughs
-    pattern: ^features/.+.md$
+  debug: false
+  groups:
+    - key: features
+      name: Feature Walkthroughs
+      pattern: ^features/.+.md$
 
 permalinks:
   pattern: :coll_key/:id
 
 relativeRoots:
-  debug: true
+  debug: false
   fixPermalinks: true
   indexFilename: index.md

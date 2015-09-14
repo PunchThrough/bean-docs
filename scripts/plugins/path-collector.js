@@ -4,17 +4,20 @@ export default (config) => {
   return (files, metalsmith, done) => {
 
     let count = Object.keys(files).length
-    console.log('Generating collections for ' + count + ' ' + pluralize('file', count))
+    if (config.debug) {
+      console.log('Generating collections for ' + count + ' ' + pluralize('file', count))      
+    }
 
+    let groups = config.groups
     let collections = []
-    config.forEach((coll) => {
+    groups.forEach((coll) => {
       collections.push({key: coll.key, name: coll.name, pages: []})
     })
 
     Object.keys(files).forEach((filePath) => {
       let data = files[filePath]
 
-      config.forEach((coll, index) => {
+      groups.forEach((coll, index) => {
         let collRegex = new RegExp(coll.pattern)
         if (collRegex.test(filePath)) {
           collections[index].pages.push(data)
