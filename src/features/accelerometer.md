@@ -14,54 +14,29 @@ In this tutorial, you'll read data from the accelerometer on a Bean and view it 
 
 ## What You Need
 
-If you haven't completed the following guides, please become familiar with them before starting this one:
+Please make sure you're familiar with the following before starting this guide:
 
-* Getting Started
-* Feature: Virtual Serial
+### Skills
 
-You will need the following pieces of hardware:
+* [Getting Started](#)
+
+### Hardware
 
 * LightBlue Bean
-* Compatible OS X computer
-
-You will also need the following pieces of software installed:
-
-* Bean Loader for OS X ([install guide]())
+* Device with Bean Loader installed ([install guides](#))
 
 ## Step-by-Step
 
-### 1. Check your Bean
-
-Turn on your Bean by inserting the coin cell battery into its holder. Make sure you see the LED blink green, indicating your battery power is OK:
-
-{{{img_rel this 'blink-green.jpg' 'LED blinking green on power-up'}}}
-
-### 2. Connect to your Bean
-
-Open Bean Loader for OS X. Select your Bean and connect to it:
-
-{{{img_rel this 'connecting.png' 'Connecting to Bean'}}}
-
-Verify your Bean is connected:
-
-{{{img_rel this 'connected.png' 'Connected to Bean'}}}
-
-If there are lots of Beans near you, blink your Bean to make sure you're connected to the right one:
-
-{{{img_rel this 'blink.png' 'Blink your Bean'}}}
-
-{{{img_rel this 'blink-red.jpg' 'Bean blinking red'}}}
-
-### 3. Program the Arduino Sketch
+### Program the Arduino Sketch
 
 This is an Arduino sketch for your Bean. Here's what it does:
 
-* Reads the accelerometer values
-* Prints the X, Y, and Z values to the serial port
-* Sleeps for 250 milliseconds
+* Reads the accelerometer values (range from -512 to 511)
+* Scales the values to the range 0 to 255.
+* Sets the LED's red, green and blue values to the scaled X, Y, and Z values
 * Loops back to the start
 
-```
+```cpp
 void setup()
 {
   Serial.begin(57600);
@@ -70,86 +45,48 @@ void setup()
 void loop()
 {
   AccelerationReading reading = Bean.getAcceleration();
-  byte x = reading.xAxis / 4;
-  byte y = reading.yAxis / 4;
-  byte z = reading.zAxis / 4;
-
-  Serial.print(" X: ");
-  Serial.print(x);
-
-  Serial.print(" Y: ");
-  Serial.print(y);
-
-  Serial.print(" Z: ");
-  Serial.print(z);
-
-  Serial.println();
-  Bean.sleep(250);
+  char x = abs(reading.xAxis) / 4;
+  char y = abs(reading.yAxis) / 4;
+  char z = abs(reading.zAxis) / 4;
+  Bean.setLed(x, y, z);
 }
 ```
 
-Open Arduino. Copy and paste the above sketch into Arduino. Save your sketch using **File > Save**:
+Connect to your Bean and program this sketch.
 
-{{{img_rel this 'save.png' 'Arduino sketch saved'}}}
+### Using the Accelerometer with Arduino
 
-Make sure you have selected LightBlue Bean as your programming target, then click Upload to send the sketch to Bean Loader:
+The Bean accelerometer ([datasheet](http://ae-bst.resource.bosch.com/media/products/dokumente/bma250/bst-bma250-ds002-05.pdf)) defaults to ±2G sensitivity and has 10-bit accuracy. That means that values within the acceleration range -2G...2G map to -512...511 in our Arduino sketch.
 
-{{{img_rel this 'upload.png' 'Uploading sketch to Bean Loader'}}}
+`AccelerationReading` is a struct type. This struct holds the X axis, Y axis, and Z axis values, as well as the current accelerometer sensitivity setting.
 
-Program the sketch to your Bean:
+When we scale the raw -512...511 values, we use `abs` to convert negative values to positive ones. This maps our -512...511 range to 512...0...511. We can observe this on the LED when we rotate it past the point of maximum brightness. As we rotate the Bean, its LED will smoothly get brighter, and then smoothly dim as the absolute accelerometer value passes 512.
 
-{{{img_rel this 'programming.png' 'Programming the Bean with the sketch'}}}
+Since the Bean's LED takes 8-bit values for the RGB colors, we need to divide the 0...512 range by 2 before setting the LED colors.
 
-{{{img_rel this 'programmed.png' 'Programming is complete!'}}}
+You can change the sensitivity of the accelerometer using Arduino code. See the [`setAccelerationRange`](#) method.
 
-Stay connected to your Bean so you can read data from it in the next steps.
+### Move your Bean around
 
-### 4. Enable Virtual Serial
+Try moving your Bean around: picking it up, shaking it, and rotating it in the air. You should see the color of the Bean's LED change as the accelerometer reads new values.
 
-Select your Bean and enable Virtual Serial:
-
-{{{img_rel this 'enabling-vs.png' 'Enabling Virtual Serial'}}}
-
-{{{img_rel this 'vs-enabled.png' 'Virtual Serial enabled'}}}
-
-### 5. Open the Serial Monitor
-
-In Arduino, select the Bean's serial port in **Tools &raquo; Port**:
-
-{{{img_rel this 'select-port.png' "Select the Bean's serial port"}}}
-
-Open the Serial Monitor using the button in the Arduino IDE:
-
-{{{img_rel this 'serial-monitor-button.png' 'Serial Monitor button'}}}
-
-The Serial Monitor displays data received from your Bean when Virtual Serial is enabled. You can read the serial data your Bean is sending to your computer in the Serial Monitor:
-
-{{{img_rel this 'serial-monitor.png' 'Serial Monitor opened'}}}
-
-Try moving your device around. You should see the X, Y, and Z axis values change as they are printed in the Serial Monitor.
+<video autoplay="autoplay" loop="loop">
+  <source src="../../assets/images/features/accelerometer/accel_to_rgb.mp4" type="video/mp4">
+</video>
 
 ## Conclusion
 
-In this walkthrough, you learned how to read data from the Bean's accelerometer with an Arduino sketch, send it over Virtual Serial to your computer, and read it in the Arduino Serial Monitor.
+In this guide, you learned how to read data from the Bean's accelerometer and use it to change the color of the LED.
 
 Here are some ideas for projects you could build with the accelerometer:
 
 * Put the Bean on a hanging wall painting and make the LED blink when the painting is perfectly level.
-* Use the Bean as an [HID device]() and use it to control a game on your computer.
+* Use the Bean as an [HID device](#) and use it to control a game on your computer.
 * Attach the Bean to a skateboard and measure the acceleration when you kick off.
 * Add a buzzer to the Bean, hide it under papers on your desk, and sound an alarm when someone snoops around your stuff and moves the Bean.
 
-Looking to use accelerometer data in a desktop app? Check out our [Processing tutorial](), where you'll build an app that reads accelerometer data from Bean and displays it in a live visualization.
+Looking to use accelerometer data in a desktop app? Check out our [Processing tutorial](#), where you'll build an app that reads accelerometer data from Bean and displays it in a live visualization.
 
 ## Troubleshooting
 
-### Virtual Serial problems
-
-* Your Virtual Serial port is enabled, but you're not seeing any data in the Serial Monitor.
-* Arduino IDE doesn't show the LightBlue Bean's serial port.
-
-If you're having problems like these, check out the [Virtual Serial troubleshooting]() steps.
-
-### Everything Else
-
-Having trouble with anything else? Try the steps listed in [General Bean troubleshooting]().
+Having trouble with this guide? Try the steps listed in [General Bean troubleshooting](#).
