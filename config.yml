@@ -25,6 +25,9 @@ pathCollector:
     - key: features
       name: Feature Walkthroughs
       pattern: ^features/.+.md$
+    - key: accessories
+      name: Accessories
+      pattern: ^accessories/.+.md$
 
 permalinks:
   pattern: :coll_key/:id
