@@ -8,15 +8,15 @@ autotoc: true
 
 The Bean has a built-in accelerometer that lets you detect its orientation and any changes in velocity. You can access the accelerometer's data from within your Arduino sketches or through any of the Bean platform SDKs.
 
-One Bean user built a wall clock that knows when it's perfectly level on a wall hook. Another Beanie attached the Bean to a paratrooper toy that automatically deployed its parachute when it detects freefall!
+Our Beantalk users have come up with lots of cool projects that use the accelerometer. One Bean user built a [wall clock that knows when it's perfectly level on a wall hook](#). Another Beanie attached the Bean to a [paratrooper toy that automatically deploys its parachute](#) when it detects freefall!
 
 In this tutorial, you'll read data from the accelerometer on a Bean and view it in Arduino's Serial Monitor using the Virtual Serial port.
 
 ## What You Need
 
-Please make sure you're familiar with the following before starting this guide:
-
 ### Skills
+
+Please make sure you're familiar with the following before starting this guide:
 
 * [Getting Started](#)
 
@@ -45,20 +45,20 @@ void setup()
 void loop()
 {
   AccelerationReading reading = Bean.getAcceleration();
-  char x = abs(reading.xAxis) / 4;
-  char y = abs(reading.yAxis) / 4;
-  char z = abs(reading.zAxis) / 4;
+  char x = abs(reading.xAxis) / 2;
+  char y = abs(reading.yAxis) / 2;
+  char z = abs(reading.zAxis) / 2;
   Bean.setLed(x, y, z);
 }
 ```
 
-Connect to your Bean and program this sketch.
+Connect to your Bean and program this sketch. If you haven't installed Bean Loader yet, [visit the Getting Started guide for downloads and instructions](#).
 
 ### Using the Accelerometer with Arduino
 
 The Bean accelerometer ([datasheet](http://ae-bst.resource.bosch.com/media/products/dokumente/bma250/bst-bma250-ds002-05.pdf)) defaults to ±2G sensitivity and has 10-bit accuracy. That means that values within the acceleration range -2G...2G map to -512...511 in our Arduino sketch.
 
-`AccelerationReading` is a struct type. This struct holds the X axis, Y axis, and Z axis values, as well as the current accelerometer sensitivity setting.
+`AccelerationReading` is a struct type. A struct is a [data type used by C-related languages, such as Arduino](http://playground.arduino.cc/Code/Struct), to group together lots of related variables. The AccelerationReading struct holds the X axis, Y axis, and Z axis values, as well as the current accelerometer sensitivity setting.
 
 When we scale the raw -512...511 values, we use `abs` to convert negative values to positive ones. This maps our -512...511 range to 512...0...511. We can observe this on the LED when we rotate it past the point of maximum brightness. As we rotate the Bean, its LED will smoothly get brighter, and then smoothly dim as the absolute accelerometer value passes 512.
 
@@ -66,13 +66,13 @@ Since the Bean's LED takes 8-bit values for the RGB colors, we need to divide th
 
 You can change the sensitivity of the accelerometer using Arduino code. See the [`setAccelerationRange`](#) method.
 
+The Bean's accelerometer is configured in low power mode. When Bean requests a reading, the accelerometer takes about 5 ms to warm up before it returns a reading. This means that the Bean is able to read the accelerometer at a maximum frequency of 200 Hz.
+
 ### Move your Bean around
 
 Try moving your Bean around: picking it up, shaking it, and rotating it in the air. You should see the color of the Bean's LED change as the accelerometer reads new values.
 
-<video autoplay="autoplay" loop="loop">
-  <source src="../../assets/images/features/accelerometer/accel_to_rgb.mp4" type="video/mp4">
-</video>
+{{{video_rel this 'accel_to_rgb.mp4'}}}
 
 ## Conclusion
 
