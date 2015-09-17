@@ -63,7 +63,7 @@ The Bean accelerometer ([datasheet](http://ae-bst.resource.bosch.com/media/produ
 The `abs` function takes the absolute value of a number. `abs(reading.xAxis)` takes negative values from -512 to -1 and converts them to positive values (+512 to +1). Now, when we rotate the Bean, the accelerometer values will fluctuate in the range 512...0...511.  Visually, we can observe these values changing over time as the LED transitions smoothly between colors. As we rotate the Bean, the values will change and so will the colors.
 
 
-The Bean's LED takes 1 byte of information, which has 8 bits. A bit is made of binary digits, namely 0's and 1's. A byte can hold 2^8 possible values.The 2 represents the 2 possible binary digits, 0 and 1, and 8 represents the 8 bits. When you calculate 2^8 you get 256.  When you start counting from 0, you can get 0 to 255 possible values. 
+The Bean's LED takes 1 byte of information, which has 8 bits. A bit is made of binary digits, namely 0's and 1's. A byte can hold 2^8 possible values.The 2 represents the 2 possible binary digits, 0 and 1, and 8 represents the 8 bits. When you calculate 2^8 you get 256.  When you start counting from 0, you get 0 to 255 possible values. 
 
 Since the Bean's LED can only accept up to 255 in values, we can take the accelerometer data and divide that by 2.  When we do this, no value will exceed 255 and will be within a range of byte values that are acceptable. For example, 512 is the highest absolute accelerometer data.  When we divide 512/2 we will get 256. Thus, this gives us 0 to 255 possible values.  Checkout more about [bytes](hhttps://www.arduino.cc/en/Reference/Byte)  
 
