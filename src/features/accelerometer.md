@@ -60,9 +60,9 @@ The Bean accelerometer ([datasheet](http://ae-bst.resource.bosch.com/media/produ
 
 `AccelerationReading` is a struct type. A struct is a [data type used by C-related languages, such as Arduino](http://playground.arduino.cc/Code/Struct), to group together lots of related variables. The AccelerationReading struct holds the X axis, Y axis, and Z axis values, as well as the current accelerometer sensitivity setting.
 
-When we scale the raw -512...511 values, we use `abs` to convert negative values to positive ones. This maps our -512...511 range to 512...0...511. We can observe this on the LED when we rotate it past the point of maximum brightness. As we rotate the Bean, its LED will smoothly get brighter, and then smoothly dim as the absolute accelerometer value passes 512.
+The `abs` function takes the absolute value of a number. `abs(reading.xAxis)` takes negative values from -512 to -1 and converts them to positive values (+512 to +1). Now, when we rotate the Bean, the accelerometer values will fluctuate in the range 512...0...511.  Visually, we can observe these values changing over time as the LED transitions smoothly between colors. As we rotate the Bean, the values will change and so will the colors.
 
-Since the Bean's LED takes 8-bit values for the RGB colors, we need to divide the 0...512 range by 2 before setting the LED colors.
+Since the Bean's LED takes 8-bit values in the range 0...255 for the RGB colors, we need to divide the 0...512 range by 2 before setting the LED colors.
 
 You can change the sensitivity of the accelerometer using Arduino code. See the [`setAccelerationRange`](#) method.
 
