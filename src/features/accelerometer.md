@@ -65,11 +65,11 @@ The `abs` function takes the absolute value of a number. `abs(reading.xAxis)` ta
 
 The Bean's LED takes 1 byte of information, which has 8 bits. A bit is made of binary digits, namely 0's and 1's. A byte can hold 2^8 possible values.The 2 represents the 2 possible binary digits, 0 and 1, and 8 represents the 8 bits. When you calculate 2^8 you get 256.  When you start counting from 0, you get 0 to 255 possible values. 
 
-Since the Bean's LED can only accept up to 255 in values, we can take the accelerometer data and divide that by 2.  When we do this, no value will exceed 255 and will be within a range of byte values that are acceptable. For example, 512 is the highest absolute accelerometer data.  When we divide 512/2 we will get 256. Thus, this gives us 0 to 255 possible values.  Checkout more about [bytes](hhttps://www.arduino.cc/en/Reference/Byte)  
+Since the Bean's LED can only accept up to 255 in values, we can take the accelerometer data and divide that by 2.  When we do this, no value will exceed 255 and will be within a range of byte values that are acceptable. For example, 512 is the highest absolute value we  can get for the accelerometer data.  When we divide 512/2 we will get 256. Thus, this gives us 0 to 255 possible values.  Checkout[bytes](hhttps://www.arduino.cc/en/Reference/Byte) to learn more!  
 
 You can change the sensitivity of the accelerometer using Arduino code. See the [`setAccelerationRange`](#) method.
 
-The Bean's accelerometer is configured in low power mode. When Bean requests a reading, the accelerometer takes about 5 ms to warm up before it returns a reading. This means that the Bean is able to read the accelerometer at a maximum frequency of 200 Hz.
+The Bean's accelerometer is configured in low power mode. When a Bean requests a reading, the accelerometer takes about 5 ms to warm up before it returns a reading. This means that the Bean is able to read the accelerometer at a maximum frequency of 200 Hz.
 
 ### Move your Bean around
 
