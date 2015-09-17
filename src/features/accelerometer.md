@@ -6,9 +6,9 @@ autotoc: true
 
 ## Introduction
 
-The Bean has a built-in accelerometer that lets you detect its orientation and any changes in velocity over time. You can access the accelerometer's data from within your Arduino sketches or through any of the Bean platform SDKs.
+The Bean has a built-in accelerometer that lets you detect its orientation and any changes in velocity over time. You can access the accelerometer's data from within your Arduino sketches by using specific functions or through any of the Bean platform SDKs.
 
-Our Beantalk users have come up with lots of cool projects that use the accelerometer. One Bean user built a [wall clock that knows when it's perfectly level on a wall hook](#). Another Beanie attached the Bean to a [paratrooper toy that automatically deploys its parachute](#) when it detects freefall!
+Our Beantalk users have come up with lots of cool projects that use the accelerometer. One Bean user built a [wall clock that knows when it's perfectly level on a wall hook](#). Another Beanie attached the Bean to a [paratrooper toy that automatically deploys its parachute](#) when it detects freefall! There are endless and fun ways the accelerometer features can be used.  We hope this tutorial will get you started on your own personal projects!
 
 In this tutorial, you'll read data from the accelerometer on a Bean and view it in Arduino's Serial Monitor using the Virtual Serial port.
 
