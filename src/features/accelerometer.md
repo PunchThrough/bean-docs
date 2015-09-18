@@ -73,9 +73,9 @@ There are other functions that enable you to utilize the accelerometer. For exam
 
 
 
-### Move your Bean around
+### Lets move our Bean to see the LED change colors
 
-Try moving your Bean around: picking it up, shaking it, and rotating it in the air. You should see the color of the Bean's LED change as the accelerometer reads new values.
+Congratulations!  You have successfully programed the Bean to change its LED as the accelerometer reads new values. Try moving your Bean around: picking it up, shaking it, and rotating it in the air. You should see the color of the Bean's LED change.
 
 {{{video_rel this 'accel_to_rgb.mp4'}}}
 
