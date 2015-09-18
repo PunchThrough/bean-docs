@@ -48,20 +48,23 @@ This is an Arduino sketch for that will be compiled and uploaded to the Bean:
 10
 11
 12
-13</pre></td><td><pre style="margin: 0; line-height: 125%">void setup()
+13
+14</pre></td><td><pre style="margin: 0; line-height: 125%">void setup()
 {
-  Serial<span style="color: #555555">.</span>begin(<span style="color: #FF6600">57600</span>);
+    Serial<span style="color: #555555">.</span>begin(<span style="color: #FF6600">57600</span>);
 }
 
 void loop()
 {
-  AccelerationReading reading <span style="color: #555555">=</span> Bean<span style="color: #555555">.</span>getAcceleration();
-  char x <span style="color: #555555">=</span> <span style="color: #336666">abs</span>(reading<span style="color: #555555">.</span>xAxis) <span style="color: #555555">/</span> <span style="color: #FF6600">2</span>;
-  char y <span style="color: #555555">=</span> <span style="color: #336666">abs</span>(reading<span style="color: #555555">.</span>yAxis) <span style="color: #555555">/</span> <span style="color: #FF6600">2</span>;
-  char z <span style="color: #555555">=</span> <span style="color: #336666">abs</span>(reading<span style="color: #555555">.</span>zAxis) <span style="color: #555555">/</span> <span style="color: #FF6600">2</span>;
-  Bean<span style="color: #555555">.</span>setLed(x, y, z);
+    AccelerationReading reading <span style="color: #555555">=</span> Bean<span style="color: #555555">.</span>getAcceleration();
+    char x <span style="color: #555555">=</span> <span style="color: #336666">abs</span>(reading<span style="color: #555555">.</span>xAxis) <span style="color: #555555">/</span> <span style="color: #FF6600">2</span>;
+    char y <span style="color: #555555">=</span> <span style="color: #336666">abs</span>(reading<span style="color: #555555">.</span>yAxis) <span style="color: #555555">/</span> <span style="color: #FF6600">2</span>;
+    char z <span style="color: #555555">=</span> <span style="color: #336666">abs</span>(reading<span style="color: #555555">.</span>zAxis) <span style="color: #555555">/</span> <span style="color: #FF6600">2</span>;
+    
+    Bean<span style="color: #555555">.</span>setLed(x, y, z);
 }
 </pre></td></tr></table></div>
+
 
 <br>
 Here's what the code does:
@@ -108,24 +111,27 @@ If you want to see that the values will not exceed 255, you can print the charac
 14
 15
 16
-17</pre></td><td><pre style="margin: 0; line-height: 125%">void setup()
+17
+18</pre></td><td><pre style="margin: 0; line-height: 125%">void setup()
 {
-  Serial<span style="color: #555555">.</span>begin(<span style="color: #FF6600">57600</span>);
+    Serial<span style="color: #555555">.</span>begin(<span style="color: #FF6600">57600</span>);
 }
 
 void loop()
 {
-  AccelerationReading reading <span style="color: #555555">=</span> Bean<span style="color: #555555">.</span>getAcceleration();
-  char x <span style="color: #555555">=</span> <span style="color: #336666">abs</span>(reading<span style="color: #555555">.</span>xAxis) <span style="color: #555555">/</span> <span style="color: #FF6600">2</span>;
-  char y <span style="color: #555555">=</span> <span style="color: #336666">abs</span>(reading<span style="color: #555555">.</span>yAxis) <span style="color: #555555">/</span> <span style="color: #FF6600">2</span>;
-  char z <span style="color: #555555">=</span> <span style="color: #336666">abs</span>(reading<span style="color: #555555">.</span>zAxis) <span style="color: #555555">/</span> <span style="color: #FF6600">2</span>;
-  Bean<span style="color: #555555">.</span>setLed(x, y, z);
+    AccelerationReading reading <span style="color: #555555">=</span> Bean<span style="color: #555555">.</span>getAcceleration();
+    char x <span style="color: #555555">=</span> <span style="color: #336666">abs</span>(reading<span style="color: #555555">.</span>xAxis) <span style="color: #555555">/</span> <span style="color: #FF6600">2</span>;
+    char y <span style="color: #555555">=</span> <span style="color: #336666">abs</span>(reading<span style="color: #555555">.</span>yAxis) <span style="color: #555555">/</span> <span style="color: #FF6600">2</span>;
+    char z <span style="color: #555555">=</span> <span style="color: #336666">abs</span>(reading<span style="color: #555555">.</span>zAxis) <span style="color: #555555">/</span> <span style="color: #FF6600">2</span>;
+    
+    Bean<span style="color: #555555">.</span>setLed(x, y, z);
 
-Serial<span style="color: #555555">.</span>println(x);
-<span style="color: #555555">//</span>Serial<span style="color: #555555">.</span>println(y);
-<span style="color: #555555">//</span>Serial<span style="color: #555555">.</span>println(z);
+    Serial<span style="color: #555555">.</span>println(x);
+    <span style="color: #555555">//</span>Serial<span style="color: #555555">.</span>println(y);
+    <span style="color: #555555">//</span>Serial<span style="color: #555555">.</span>println(z);
 }
 </pre></td></tr></table></div>
+
 
 
 <br>
