@@ -4,7 +4,7 @@ layout: basic.hbs
 autotoc: true
 ---
 
-## Introduction
+### Introduction
 
 The Bean has a built-in accelerometer that lets you detect its orientation and any changes in velocity over time. You can access the accelerometer's data from within your Arduino sketches by using specific functions or through any of the Bean platform SDKs.
 
@@ -12,26 +12,27 @@ Our Beantalk users have come up with lots of cool projects that use the accelero
 
 In this tutorial, you'll read data from the accelerometer on a Bean and view it in Arduino's Serial Monitor using the Virtual Serial port.
 
-## What You Need
-
-### Skills
+### Setup
 
 Please make sure you're familiar with the following before starting this guide:
 
 * [Getting Started](#)
 
-### Software
+## Software
 
 * Bean Loader ([install guides](#))
 
-### Hardware
+## Hardware
 
 * LightBlue Bean
 * Mobile or Computer device
 
-## Step-by-Step
 
-### Program the Bean
+### Lets Program the Bean
+
+This tutorial assumes you have completed prior tutorials, for example understanding how to activate the Bean with the Bean Loader. Please refer to the [Getting Started](#) if you need to brush up on some of the setup requirements. 
+
+<br>
 
 This is an Arduino sketch for that will be compiled and uploaded to the Bean:  
 <br>
@@ -152,7 +153,7 @@ Congratulations!  You have successfully programed the Bean to change its LED as 
 
 {{{video_rel this 'accel_to_rgb.mp4'}}}
 
-## Conclusion
+### Conclusion
 
 In this guide, you learned how to read data from the Bean's accelerometer and use it to change the color of the Bean's LED.
 
@@ -165,7 +166,7 @@ Here are some ideas for projects you could build with the accelerometer:
 
 Looking to use accelerometer data in a desktop app? Check out our [Processing tutorial](#), where you'll build an app that reads accelerometer data from Bean and displays it in a live visualization.
 
-## Troubleshooting
+### Troubleshooting
 
 Having trouble with this guide? Try the steps listed in [General Bean troubleshooting](#).
 
