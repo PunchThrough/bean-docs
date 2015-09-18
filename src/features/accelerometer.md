@@ -20,10 +20,14 @@ Please make sure you're familiar with the following before starting this guide:
 
 * [Getting Started](#)
 
+### Software
+
+* Bean Loader ([install guides](#))
+
 ### Hardware
 
 * LightBlue Bean
-* Device with Bean Loader installed ([install guides](#))
+* Mobile or Computer device
 
 ## Step-by-Step
 
