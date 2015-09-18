@@ -137,7 +137,7 @@ void loop()
 
 <br>
 
- * `Line 15` is an example of how to print in serial. To find out more about activating virtual serial on the Bean and viewing it on the Arduino IDE, checkout this tutorial [Using Serial](#).
+ * `Line 15` is an example of how to print in serial. To find out more about activating virtual serial on the Bean and viewing it on the Arduino IDE, checkout this tutorial [using virtual serial](#).
  * `Line 16-17` can be uncommented (delete //) to see the y and z values.
 
 
