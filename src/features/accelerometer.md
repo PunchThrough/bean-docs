@@ -131,7 +131,7 @@ Serial<span style="color: #555555">.</span>println(x);
 
 <br>
 
- * See `Line 15` that shows how to print in serial. To findout more about accessing serial in the Arduino IDE, checkout this tutorial [Using Serial](#)
+ * `Line 15` shows how to print in serial. To findout more about activating virtual serial on the Bean and viewing it on the Arduino IDE, checkout this tutorial [Using Serial](#)
 
 
 Your Bean's accelerometer is configured in low power mode.  As a result, when your Bean requests a reading, the accelerometer takes about 5 ms to warm up before it returns a reading. This means that your Bean is able to read the accelerometer at a maximum frequency of 200 Hz.
