@@ -81,7 +81,7 @@ Congratulations!  You have successfully programed the Bean to change its LED as 
 
 ## Conclusion
 
-In this guide, you learned how to read data from the Bean's accelerometer and use it to change the color of the LED.
+In this guide, you learned how to read data from the Bean's accelerometer and use it to change the color of the Bean's LED.
 
 Here are some ideas for projects you could build with the accelerometer:
 
