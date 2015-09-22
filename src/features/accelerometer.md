@@ -28,46 +28,29 @@ Please make sure you're familiar with the following before starting this guide:
 * Mobile or Computer device
 
 
-### Lets Program the Bean
+### Let's Program the Bean
 
 This tutorial assumes you have completed prior tutorials, for example understanding how to activate the Bean with the Bean Loader. Please refer to the [Getting Started](#) if you need to brush up on some of the setup requirements. 
 
-<br>
-
 This is an Arduino sketch for that will be compiled and uploaded to the Bean:  
-<br>
 
-<div style="background: #f0f3f3; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14</pre></td><td><pre style="margin: 0; line-height: 125%">void setup()
+```
+void setup()
 {
-    Serial<span style="color: #555555">.</span>begin(<span style="color: #FF6600">57600</span>);
+    Serial.begin(57600);
 }
 
 void loop()
 {
-    AccelerationReading reading <span style="color: #555555">=</span> Bean<span style="color: #555555">.</span>getAcceleration();
-    char x <span style="color: #555555">=</span> <span style="color: #336666">abs</span>(reading<span style="color: #555555">.</span>xAxis) <span style="color: #555555">/</span> <span style="color: #FF6600">2</span>;
-    char y <span style="color: #555555">=</span> <span style="color: #336666">abs</span>(reading<span style="color: #555555">.</span>yAxis) <span style="color: #555555">/</span> <span style="color: #FF6600">2</span>;
-    char z <span style="color: #555555">=</span> <span style="color: #336666">abs</span>(reading<span style="color: #555555">.</span>zAxis) <span style="color: #555555">/</span> <span style="color: #FF6600">2</span>;
-    
-    Bean<span style="color: #555555">.</span>setLed(x, y, z);
+    AccelerationReading reading = Bean.getAcceleration();
+    char x = abs(reading.xAxis) / 2;
+    char y = abs(reading.yAxis) / 2;
+    char z = abs(reading.zAxis) / 2;
+
+    Bean.setLed(x, y, z);
 }
-</pre></td></tr></table></div>
+```
 
-
-<br>
 Here's what the code does:
 
 

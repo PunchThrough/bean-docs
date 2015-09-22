@@ -3,6 +3,13 @@ body
   padding-bottom: 80px
   background: white
 
+// Ignore Bootstrap code block background colors;
+// highlight.js takes care of this
+pre
+  padding: 0
+code.hljs
+  padding: 9.5px  // yes, this is actually what Bootstrap uses
+
 .guide-img, .guide-video
   border: 1px solid rgba(0, 0, 0, 0.1)
   border-radius: 4px
