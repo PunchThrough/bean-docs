@@ -4,7 +4,7 @@ layout: basic.hbs
 autotoc: true
 ---
 
-### Introduction
+## Introduction
 
 The Bean has a built-in accelerometer that lets you detect its orientation and any changes in velocity over time. You can access the accelerometer's data from within your Arduino sketches by using specific functions or through any of the Bean platform SDKs.
 
@@ -12,23 +12,23 @@ Our Beantalk users have come up with lots of cool projects that use the accelero
 
 In this tutorial, you'll read data from the accelerometer on a Bean and view it in Arduino's Serial Monitor using the Virtual Serial port.
 
-### Setup
+## Setup
 
 Please make sure you're familiar with the following before starting this guide:
 
 * [Getting Started](#)
 
-## Software
+### Software
 
 * Bean Loader ([install guides](#))
 
-## Hardware
+### Hardware
 
 * LightBlue Bean
 * Mobile or Computer device
 
 
-### Let's Program the Bean
+## Let's Program the Bean
 
 This tutorial assumes you have completed prior tutorials, for example understanding how to activate the Bean with the Bean Loader. Please refer to the [Getting Started](#) if you need to brush up on some of the setup requirements. 
 
@@ -64,7 +64,7 @@ Here's what the code does:
 
 Upload and compiled this arduino sketch. Afterwards, connect your Bean and program the Bean with this sketch. If you haven't installed the Bean Loader or don't know how to connect the Bean to the Bean Loader [visit the Getting Started guide for downloads and instructions](#).
 
-### Understanding and Using the Bean's Accelerometer with the Arduino IDE
+## Understanding and Using the Bean's Accelerometer with the Arduino IDE
 
 The Bean accelerometer [datasheet](http://ae-bst.resource.bosch.com/media/products/dokumente/bma250/bst-bma250-ds002-05.pdf) defaults to ±2G sensitivity and has 10-bit accuracy. That means that values within the acceleration range -2G...2G map to -512...511, respectively in our Arduino sketch.
 
@@ -111,13 +111,13 @@ There are other functions that enable you to utilize the accelerometer. For exam
 
 
 
-### Move the Bean around!
+## Move the Bean around!
 
 Congratulations!  You have successfully programed the Bean to change its LED as the accelerometer reads new values. Try moving your Bean around: picking it up, shaking it, and rotating it in the air. You should see the color of the Bean's LED change.
 
 {{{video_rel this 'accel_to_rgb.mp4'}}}
 
-### Conclusion
+## Conclusion
 
 In this guide, you learned how to read data from the Bean's accelerometer and use it to change the color of the Bean's LED.
 
@@ -130,7 +130,7 @@ Here are some ideas for projects you could build with the accelerometer:
 
 Looking to use accelerometer data in a desktop app? Check out our [Processing tutorial](#), where you'll build an app that reads accelerometer data from Bean and displays it in a live visualization.
 
-### Troubleshooting
+## Troubleshooting
 
 Having trouble with this guide? Try the steps listed in [General Bean troubleshooting](#).
 
