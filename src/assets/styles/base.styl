@@ -7,8 +7,26 @@ body
 // highlight.js takes care of this
 pre
   padding: 0
+// Allow code blocks to scroll
+pre
+  overflow-x: auto
+  code
+    overflow-wrap: normal
+    white-space: pre
+// Line numbering
+pre .line-number
+  float: left
+  text-align: right
+  background-color: #373b41
+  color: #969896
+// Line number spacing
+pre .line-number span
+  margin-left: 10px
+  display: block
+pre .line-number, code.hljs
+  padding: 20px 10px 20px 15px
 code.hljs
-  padding: 9.5px  // yes, this is actually what Bootstrap uses
+  padding-left: 10px
 
 .guide-img, .guide-video
   border: 1px solid rgba(0, 0, 0, 0.1)

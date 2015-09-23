@@ -42,7 +42,7 @@ void setup()
 
 void loop()
 {
-    AccelerationReading reading = Bean.getAcceleration();
+    AccelerationReading reading = Bean.getAcceleration(); AccelerationReading reading = Bean.getAcceleration();
     char x = abs(reading.xAxis) / 2;
     char y = abs(reading.yAxis) / 2;
     char z = abs(reading.zAxis) / 2;
@@ -79,46 +79,27 @@ Since the Bean's LED can only accept up to 255 in values, we can take the accele
 
 If you want to see that the values will not exceed 255, you can print the characters in serial:
 
-<div style="background: #f0f3f3; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18</pre></td><td><pre style="margin: 0; line-height: 125%">void setup()
+
+```
+void setup()
 {
-    Serial<span style="color: #555555">.</span>begin(<span style="color: #FF6600">57600</span>);
+    Serial.begin(57600);
 }
 
 void loop()
 {
-    AccelerationReading reading <span style="color: #555555">=</span> Bean<span style="color: #555555">.</span>getAcceleration();
-    char x <span style="color: #555555">=</span> <span style="color: #336666">abs</span>(reading<span style="color: #555555">.</span>xAxis) <span style="color: #555555">/</span> <span style="color: #FF6600">2</span>;
-    char y <span style="color: #555555">=</span> <span style="color: #336666">abs</span>(reading<span style="color: #555555">.</span>yAxis) <span style="color: #555555">/</span> <span style="color: #FF6600">2</span>;
-    char z <span style="color: #555555">=</span> <span style="color: #336666">abs</span>(reading<span style="color: #555555">.</span>zAxis) <span style="color: #555555">/</span> <span style="color: #FF6600">2</span>;
-    
-    Bean<span style="color: #555555">.</span>setLed(x, y, z);
+    AccelerationReading reading = Bean.getAcceleration(); 
+    char x = abs(reading.xAxis) / 2;
+    char y = abs(reading.yAxis) / 2;
+    char z = abs(reading.zAxis) / 2;
 
-    Serial<span style="color: #555555">.</span>println(x);
-    <span style="color: #555555">//</span>Serial<span style="color: #555555">.</span>println(y);
-    <span style="color: #555555">//</span>Serial<span style="color: #555555">.</span>println(z);
+    Bean.setLed(x, y, z);
+
+    Serial.println(x);
+    //Serial.println(y);
+    //Serial.println(z);
 }
-</pre></td></tr></table></div>
-
-
-
-<br>
+```
 
  * `Line 15` is an example of how to print to the Serial Monitor. To find out more about activating Virtual Serial on the Bean and viewing it on the Arduino's Serial Monitor, checkout this tutorial [using Virtual Serial](#).
  * `Line 16-17` can be uncommented (delete //) to see the y and z values.
@@ -130,7 +111,7 @@ There are other functions that enable you to utilize the accelerometer. For exam
 
 
 
-### Lets move our Bean to see the LED change colors
+### Move the Bean around!
 
 Congratulations!  You have successfully programed the Bean to change its LED as the accelerometer reads new values. Try moving your Bean around: picking it up, shaking it, and rotating it in the air. You should see the color of the Bean's LED change.
 
