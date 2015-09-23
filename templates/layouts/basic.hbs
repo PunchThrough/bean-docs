@@ -3,17 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>{{title}}</title>
+  <!-- Punch Through styling -->
+  <link rel="stylesheet" href="{{relativeRoot}}assets/vendor/punchthrough/homepage.css" data-pt-ignore>
   <!-- Syntax highlighting -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/tomorrow-night.min.css">
-  <!-- Site styling -->
-  <link rel="stylesheet" href="{{relativeRoot}}assets/vendor/punchthrough/homepage.css">
-  <!-- Already included in PTD site CSS
-    <link rel="stylesheet" href="/assets/vendor/bootstrap/dist/css/bootstrap.min.css">
-  -->
+  <!-- Docs styling -->
   <link rel="stylesheet" href="{{relativeRoot}}assets/styles/base.css">
+  <link rel="stylesheet" href="{{relativeRoot}}assets/styles/standalone.css" data-pt-ignore>
 </head>
 <body>
-  <div class="container">
+  <div class="container-fluid lc-white">
     <div class="row">
       <div class="col-xs-4">
         <div class="site-index">
