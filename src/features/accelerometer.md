@@ -42,7 +42,7 @@ void setup()
 
 void loop()
 {
-    AccelerationReading reading = Bean.getAcceleration(); AccelerationReading reading = Bean.getAcceleration();
+    AccelerationReading reading = Bean.getAcceleration();
     char x = abs(reading.xAxis) / 2;
     char y = abs(reading.yAxis) / 2;
     char z = abs(reading.zAxis) / 2;
