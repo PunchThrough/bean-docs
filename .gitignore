@@ -1,2 +1,5 @@
 build/
 .publish/
+.idea/
+node_modules/
+
