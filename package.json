@@ -1,6 +1,9 @@
 {
   "name": "bean-docs",
   "private": true,
+  "scripts": {
+    "gulp": "gulp"
+  },
   "dependencies": {
     "handlebars": "^3.0.3",
     "metalsmith": "^2.0.1",
