@@ -22,12 +22,18 @@ autotoc:
 pathCollector:
   debug: false
   groups:
+    - key: getting-started
+      name: Getting Started
+      pattern: ^getting-started/.+\.md$
     - key: features
       name: Feature Walkthroughs
-      pattern: ^features/.+.md$
+      pattern: ^features/.+\.md$
     - key: accessories
       name: Accessories
-      pattern: ^accessories/.+.md$
+      pattern: ^accessories/.+\.md$
+    - key: platforms
+      name: Other Platforms
+      pattern: ^platforms/.+\.md$
 
 permalinks:
   pattern: :coll_key/:id
