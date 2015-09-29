@@ -28,9 +28,16 @@ export default (config) => {
     })
 
     let pageOrder = (a, b) => {
-      if (!a.order && !b.order) return 0
-      if (!a.order) return -1
-      if (!b.order) return 1
+      if (!a.order && !b.order) {
+        // Default: sort alphabetically
+        // http://stackoverflow.com/a/51169/254187
+        // localeCompare with locale and sort options doesn't work with
+        // case-insensitivity for some reason
+        return a.title.toLowerCase().localeCompare(b.title.toLowerCase())
+      }
+      // Sort pages with "order" above pages without
+      if (!a.order) return 1
+      if (!b.order) return -1
       return a.order - b.order
     }
 
