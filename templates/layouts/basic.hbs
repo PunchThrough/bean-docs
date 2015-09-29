@@ -3,14 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>{{title}}</title>
-  <link rel="stylesheet" href="{{relativeRoot}}assets/vendor/punchthrough/homepage.css">
-  <!-- Already included in PTD site CSS
-    <link rel="stylesheet" href="/assets/vendor/bootstrap/dist/css/bootstrap.min.css">
-  -->
-  <link rel="stylesheet" href="{{relativeRoot}}assets/styles/base.css">
+  <!-- Punch Through styling -->
+  <link rel="stylesheet" href="{{relativeRoot}}_assets/vendor/punchthrough/homepage.css" data-pt-ignore>
+  <!-- Syntax highlighting -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/tomorrow-night.min.css">
+  <!-- Docs styling -->
+  <link rel="stylesheet" href="{{relativeRoot}}_assets/styles/base.css">
+  <link rel="stylesheet" href="{{relativeRoot}}_assets/styles/standalone.css" data-pt-ignore>
 </head>
 <body>
-  <div class="container">
+  <div class="container-fluid lc-white">
     <div class="row">
       <div class="col-xs-4">
         <div class="site-index">
@@ -26,5 +28,20 @@
       </div>
     </div>
   </div>
+  <!-- Syntax highlighting -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+  <script>
+    var pre = document.getElementsByTagName('pre')
+    var pl = pre.length
+    for (var i = 0; i < pl; i++) {
+      pre[i].innerHTML = '<span class="line-number"></span>' + pre[i].innerHTML
+      var num = pre[i].innerHTML.split(/\n/).length
+      for (var j = 1; j < num; j++) {
+        var line_num = pre[i].getElementsByTagName('span')[0]
+        line_num.innerHTML += '<span>' + j + '</span>'
+      }
+    }
+    hljs.initHighlighting()
+  </script>
 </body>
 </html>
