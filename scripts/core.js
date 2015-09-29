@@ -16,6 +16,7 @@ import Ignore from 'metalsmith-ignore'
 import Stylus from 'metalsmith-stylus'
 import InPlace from 'metalsmith-in-place'
 import Paths from 'metalsmith-paths'
+import Redirect from 'metalsmith-redirect'
 
 const config = Yaml.safeLoad(fs.readFileSync('config.yml', 'utf8'))
 
@@ -35,3 +36,4 @@ export default Metalsmith(__dirname)
   .use(Permalinks(config.permalinks))
   //.use(Debugger())
   .use(Layouts(config.layouts))
+  .use(Redirect(config.redirect))

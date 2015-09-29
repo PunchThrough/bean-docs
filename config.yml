@@ -42,3 +42,6 @@ relativeRoots:
   debug: false
   fixPermalinks: true
   indexFilename: index.md
+
+redirect:
+  '/': '/getting-started/intro/'
