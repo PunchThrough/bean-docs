@@ -40,7 +40,7 @@ Please make sure you're familiar with the following before starting this guide:
 
 ### Program the Arduino Sketch
 
-### Turn the potentiometer
+### Turn the Potentiometer
 
 ## Conclusion
 

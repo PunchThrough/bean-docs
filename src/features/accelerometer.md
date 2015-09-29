@@ -28,11 +28,11 @@ Please make sure you're familiar with the following before starting this guide:
 * Mobile or Computer device
 
 
-## Let's Program the Bean
+## Program the Bean
 
-This tutorial assumes you have completed prior tutorials, for example understanding how to activate the Bean with the Bean Loader. Please refer to the [Getting Started](#) if you need to brush up on some of the setup requirements. 
+This tutorial assumes you have completed the [Getting Started guide](#). It covers tasks such as connecting to and programming the Bean with the Bean Loader. 
 
-This is an Arduino sketch for that will be compiled and uploaded to the Bean:  
+Connect to your Bean and upload this Arduino sketch:
 
 ```
 void setup()
@@ -53,31 +53,27 @@ void loop()
 
 Here's what the code does:
 
-
 * `Line 1` is the [setup function](https://www.arduino.cc/en/Serial/Begin). This function is excuted only once during the duration of the program.
-* `Line 6` is the [loop function](https://www.arduino.cc/en/Reference/Loop).  This function is excuted continuously until the Bean is either turned off or unprogrammed.   
+* `Line 6` is the [loop function](https://www.arduino.cc/en/Reference/Loop).  This function is excuted continuously until the Bean is either turned off or unprogrammed.
 * `Line 8` reads the accelerometer values (range from -512 to 511)
 * `Lines 9-11` scales the values to the range 0 to 255.
-* `Line 12` sets the LED's red, green and blue values to the scaled X, Y, and Z values
+* `Line 12` sets the LED's red, green and blue values to the scaled X, Y, and Z values.
 * Executes loop() again. 
 
 
-Upload and compiled this arduino sketch. Afterwards, connect your Bean and program the Bean with this sketch. If you haven't installed the Bean Loader or don't know how to connect the Bean to the Bean Loader [visit the Getting Started guide for downloads and instructions](#).
+Upload this Arduino sketch to your Bean. If you haven't installed the Bean Loader or don't know how to connect to your Bean, [visit the Getting Started guide for downloads and instructions](#).
 
-## Understanding and Using the Bean's Accelerometer with the Arduino IDE
+## Understanding and Using the Bean's Accelerometer
 
-The Bean accelerometer [datasheet](http://ae-bst.resource.bosch.com/media/products/dokumente/bma250/bst-bma250-ds002-05.pdf) defaults to ±2G sensitivity and has 10-bit accuracy. That means that values within the acceleration range -2G...2G map to -512...511, respectively in our Arduino sketch.
+The Bean accelerometer [datasheet](http://ae-bst.resource.bosch.com/media/products/dokumente/bma250/bst-bma250-ds002-05.pdf) defaults to ±2g sensitivity and has 10-bit accuracy. That means that values within the acceleration range -2g...2g map to -512...511 in our Arduino sketch.
 
-`AccelerationReading` is a struct type. A struct is a [data type used by C-related languages, such as Arduino](http://playground.arduino.cc/Code/Struct), to group together lots of related variables. The AccelerationReading struct holds the X axis, Y axis, and Z axis values, as well as the current accelerometer sensitivity setting.
+`AccelerationReading` is a struct type. A struct is a data type used by C-related languages, such as Arduino, to group together lots of related variables. [Learn more at the Arduino reference for the `struct` data type.](http://playground.arduino.cc/Code/Struct) The `AccelerationReading` struct holds the X axis, Y axis, and Z axis values, as well as the current accelerometer sensitivity setting.
 
 The `abs` function takes the absolute value of a number. The `abs(reading.xAxis)` takes negative values from -512 to -1 and converts them to positive values from +512 to +1. Now, when we rotate the Bean, the accelerometer values will fluctuate in the range 512...0...511.  Visually, we can observe these values changing over time as the LED transitions smoothly between colors. As we rotate the Bean, the values will change and so will the colors.
 
+Since the Bean's LED takes a single byte in the range 0...255, and our accelerometer data is in the range 0...512, we can simply divide our axis data by 2 to ensure no value will exceed 255.
 
-The Bean's LED takes 1 byte of information, which has 8 bits. A bit is made of binary digits, namely 0's and 1's. A byte can hold 2^8 possible values.The 2 represents the 2 possible binary digits, 0 and 1, and 8 represents the 8 bits. When you calculate 2^8 you get 256.  When you start counting from 0, you get 0 to 255 possible values, represented as 00000000 and 11111111, respectively.  
-
-Since the Bean's LED can only accept up to 255 in values, we can take the accelerometer data and divide that by 2.  When we do this, no value will exceed 255. For example, 512 is the highest absolute value we  can get for the accelerometer data.  When we divide 512/2 we will get 256. Thus, this gives us 0 to 255 possible values.  Checkout [bytes](https://www.arduino.cc/en/Reference/Byte) to learn more!  
-
-If you want to see that the values will not exceed 255, you can print the characters in serial:
+If you want to see that the values will not exceed 255, you can display the values via Virtual Serial:
 
 
 ```
@@ -101,17 +97,14 @@ void loop()
 }
 ```
 
- * `Line 15` is an example of how to print to the Serial Monitor. To find out more about activating Virtual Serial on the Bean and viewing it on the Arduino's Serial Monitor, checkout this tutorial [using Virtual Serial](#).
- * `Line 16-17` can be uncommented (delete //) to see the y and z values.
-
+ * `Line 15` is an example of how to print to the Serial Monitor. To find out more about activating Virtual Serial on the Bean and viewing it on the Arduino's Serial Monitor, check out our [Virtual Serial guide](#).
+ * `Line 16-17` can be uncommented (delete the `//` characters) to see the Y and Z axis values as well.
 
 Your Bean's accelerometer is configured in low power mode.  As a result, when your Bean requests a reading, the accelerometer takes about 5 ms to warm up before it returns a reading. This means that your Bean is able to read the accelerometer at a maximum frequency of 200 Hz.
 
 There are other functions that enable you to utilize the accelerometer. For example, You can change the sensitivity of the accelerometer using [`setAccelerationRange`](#) method. Checkout [`Accelerometer`](#) to see more functions that are available to you. 
 
-
-
-## Move the Bean around!
+## Move the Bean around
 
 Congratulations!  You have successfully programed the Bean to change its LED as the accelerometer reads new values. Try moving your Bean around: picking it up, shaking it, and rotating it in the air. You should see the color of the Bean's LED change.
 
