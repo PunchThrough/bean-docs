@@ -13,8 +13,8 @@ Bean and Bean+ are two different flavors of the same software, the [LightBlue Pl
 
 {{{img_rel this 'bean-and-plus-sketch.png' 'Bean and Bean+ feature comparison'}}}
 
-__Program Wirelessly:__ No more digging your board out of your project enclosure: Bean is programmed wirelessly over Bluetooth Low Energy!
-__Cross-Platform:__ Compile and upload sketches with Bean Loader for Windows, OS X, iOS, and Android. Bean also has SDKs for iOS, OS X, and Android for native app development.
+__Program Wirelessly:__ No more digging your board out of your project enclosure: Bean is programmed wirelessly over Bluetooth Low Energy!<br>
+__Cross-Platform:__ Compile and upload sketches with Bean Loader for Windows, OS X, iOS, and Android. Bean also has SDKs for iOS, OS X, and Android for native app development. <br>
 __Arduino-Compatible:__ Bean Loader integrates with the Arduino IDE for Windows and OS X. Your favorite Arduino libraries work on Bean too.
 __Built-In Peripherals:__ Both Bean and Bean+ come with an accelerometer, a temperature sensor, and an RGB LED. Start building right away—no soldering necessary.
 
