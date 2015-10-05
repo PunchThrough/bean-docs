@@ -61,4 +61,4 @@ __Talk to your connected devices!__
   <br>
 
 ## The Beantalk Community
-We're proud to host one of the coolest groups of makers at Beantalk, our community forums. If you're looking for project inspiration, troubleshooting issues, or showing off something cool you built, Beantalk is the place to go!
+We're proud to host one of the coolest groups of makers at [Beantalk] (http://beantalk.punchthrough.com/), our community forums. If you're looking for project inspiration, troubleshooting issues, or showing off something cool you built, Beantalk is the place to go!
