@@ -4,13 +4,15 @@ layout: basic.hbs
 autotoc: true
 ---
 
-## Introduction
+@swstack @mplewis  Here are my initial editing suggestions! Let me know what you guys think.
 
-iBeacon is a protocol for building beacons using Bluetooth Low Energy.
+## Introduction 
+Imagine you are at a sports store looking at a pair of Nike’s. This sport store is really tech savvy, so it also offered an iOS app that you can open when you go there.  When you go near a pair of shoes that struck your fancy, all of a sudden, information about the shoes you are glancing is displayed on your phone.  How did that happen!? How did the app know you were looking at those shoes!? Beacons. A Beacon is a technology that is equipped with Bluetooth LE and broadcasts small amounts of data per unit of time.  A Beacon is also referred to as the transmitter because it keeps broadcasting.  The iPhone and the app are the receivers because both are listening for specific information that the Beacon is broadcasting.  Once the iPhone and app receive the relevant information, they execute a task.  In this case, information about the shoes are displayed on the app.
 
-Beacons provide new ways for BLE-powered devices to learn more about their positions in real life.
+In this guide, we will take a deeper dive on what beacons are, how they work, and how your Bean can act as an iBeacon.  An iBeacon is Apple’s version of the beacon concept.   In the sample example above, the beacon is actually an iBeacon.
 
-In this guide, we'll discuss what iBeacon is, how it works, and how you can use your Bean as an iBeacon.
+What is a beacon?
+Beacons are devices that advertise data to anyone nearby. They're passive—they don't need to receive data, and clients don't need to transmit data to them.
 
 ## Setup
 
@@ -29,36 +31,41 @@ Please make sure you're familiar with the following before starting this guide:
 
 ## Learn About iBeacons
 
-### What is a beacon?
+### Differences between Beacons and GPS geolocation:
 
-Beacons are devices that advertise data to anyone nearby. They're passive—they don't need to receive data, and clients don't need to transmit data to them.
+Beacons are devices that advertise data to anyone nearby. They're passive meaning they don't need to receive data, and clients don't need to transmit data to them.
 
-Before beacons, most smartphone apps used geographical region monitoring to add location awareness. Geographical region monitoring combines GPS and Wi-Fi data to determine a user's location, then notifies an app when the user enters or exits a region. This is also known as geofencing.
+Before beacons, most smartphone apps used geographical region monitoring to add location awareness. Geographical region monitoring combines GPS and Wi-Fi data to determine a user's location, then notifies an app when the user enters or exits a region. This is also known as [geofencing] (http://whatis.techtarget.com/definition/geofencing).
 
-Unfortunately, GPS geolocation doesn't work well in many situations. For example, in shopping malls, smartphones often can't get GPS reception or accurately determine their location. In an art gallery, GPS doesn't provide high enough resolution to tell one exhibit apart from the one next to it. And most geofencing libraries are designed for static regions, not ones that change location from time to time.
+Unfortunately, GPS geolocation doesn't work well in many situations. For example, in shopping malls, smartphones often can't get GPS reception or accurately determine their location. In an art gallery, GPS doesn't provide high enough resolution to tell one exhibit apart from the one next to it. And most geofencing libraries are designed for static regions, not regions that change location from time to time.
 
-### What can I do with an iBeacon?
+Beacons triumph over geofencing in situations where GPS location fails to properly work, such as:
 
-Beacons work well with apps that:
+- Want to know when they're very close to a specific object
+- Need to work in places where GPS isn't available
+- Need better resolution than GPS provides
+- Interact with physical objects that change location from time to time
 
-* Want to know when they're very close to a specific object
-* Need to work in places where GPS isn't available
-* Need better resolution than GPS provides
-* Interact with physical objects that change location from time to time
+## How iBeacons are used
 
-Beacons are often stationary. For example, a hardware store could place a beacon at the end of each aisle and help users find the items in nearby aisles. And an art gallery could place beacons at each exhibit, providing information on specific pieces when a user walks up to them.
+Beacons can be used in a variety of ways.  We’ll go over some of the popular situations of how people use Beacons.
 
-But they don't have to be. A food discovery app could monitor for iBeacons located on local food trucks. When the user is near a truck with a running special, the app could notify the user.
+Beacons can be placed in a stationary spot where customers or users can get more information about a specific item. Here are some examples:
 
-iBeacons solve many of the problems with geographical region monitoring. Devices determine their location by proximity to specific beacons, so they don't need access to GPS. Beacons that change location work just as well as stationary beacons. When indoors, devices can determine location very accurately from the signal strength of nearby beacons.
+- A hardware store could place a beacon at the end of each aisle and help
+    users find the items in nearby aisles
+- An art gallery could place beacons at each exhibit, providing information
+   on specific pieces when a user walks up to them.
 
-### Why do iBeacons matter?
+A food discovery app can monitor for iBeacons that is placed near food truck.  When the user is near a  food truck with a daily special, the app can notify the user of the special.
 
-Apple limits what an iOS device is allowed to do when a user isn't directly using the device. If an app isn't running in the foreground, it must ask the OS to notify it when events occur by registering for a **notification**. That's the only way for an app to act on data when it's in the background or the device is locked.
+iBeacons solve many of the problems with geographical region monitoring. Devices determine their location by proximity to specific beacons, thus GPS location is not necessary for devices to discover iBeacons.
 
-In the past, iOS apps could only receive location-based notifications by registering for geographical region monitoring. Apple added iBeacon support to iOS devices in iOS 7, allowing devices to register for **beacon region monitoring** as well.
+## Advantage of Using iBeacons vs. Location-based Notifications
 
-Beacon region monitoring allows iOS apps to be woken when they enter or exit the range of an iBeacon. Apps that use iBeacon don't have to monitor their GPS location. They simply have to listen passively for nearby Bluetooth Low Energy signals, saving battery life. This makes it easier for developers to build apps that know more about the world around them.
+Apple limits what an iOS device is allowed to do when a user isn't directly using the device. If an app isn't running in the foreground, it must ask the OS to notify it when events occur by registering for a notification. That's the only way for an app to act on data when it's in the background or the device is locked. In the past, iOS apps could only receive location-based notifications by registering for geographical region monitoring. This is battery intensive process for the iPhone.
+
+In iOS7, Apple added iBeacon support for iOS devices. This allowed devices to register for beacon region monitoring as well. Beacon region monitoring allows iOS apps to be woken when they enter or exit the range of an iBeacon.  Since iBeacons don’t need to monitor GPS location, the iPhone battery is conserved. iBeacons simply have to listen to nearby Bluetooth Low Energy signals.  The conservation of battery life on the iPhone allows developers to build apps that know more about the world around them.
 
 ### How does the Bean work with iBeacon?
 
