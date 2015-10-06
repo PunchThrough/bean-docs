@@ -44,4 +44,4 @@ relativeRoots:
   indexFilename: index.md
 
 redirect:
-  '/': '/getting-started/intro/'
+  '/': 'getting-started/intro/'
