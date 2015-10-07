@@ -62,11 +62,16 @@ Packets that are being sent from the peripheral to the central devices carry gen
 __Differences between GAP and GATT:__
 It is important to differentiate between GAP and GATT. GAP defines the general topology of the BLE network stack. GATT describes in detail how attributes (data) are transferred once devices have a dedicated connection.  All BLE sevices follow GATT. The section below will cover some of the fundamental concepts of GATT.
 
-GATT specifically foucses on how data is formatted, packaged, and sent according to the its described rules. Similiar to GAP, there are certain roles that interacting devices can adopt:
-* __Client:__ Typically sends a request to the server and the server sends back a response according to a security protocol.  The client can read and/or write attributes found in the server. 
-* __Server:__ One of the main roles of the server is to store data. Once the client makes a request to see te data, the server must make that data available. 
-* __Example of client/server relationship:__ When I push the button on the Bean and I want the computer to read that information, the Bean acts as a server (stores the time information) and the computer acts as a client, reading that information. <br><br>
+GATT specifically focuses on how data is formatted, packaged, and sent according to its described rules.  In the BLE network stack, the Attribute Protocol (ATT) is closely aligned with GATT, where GATT directly sits ontop of ATT.  GATT actually uses ATT to describe how data is exchanged from two connected devices. Data, also called attributes when transported as described by ATT, is organized into services and characteristics. A group of related characteristics constitute a service. 
 
-Peripheral or central devices can BOTH act as a server or client, depending on how data is flowing.  In the above example, if I wanted to send an update from from the computer to the Bean, the computer acts as a server and the Bean acts as a client.  Essentially, GAP and GATT roles are independent. 
+ Similiar to GAP, there are certain roles that interacting devices can adopt:
+
+* __Client:__ Typically sends a request to the GATT server. The client can read and/or write attributes found in the server. 
+
+* __Server:__ One of the main roles of the server is to store attributes. Once the client makes a request, the server must make the attributes available. 
+
+* __Example of client/server relationship:__ When I push a button on the Bean and I want the computer to read that information, the Bean acts as a server (stores the time information) and the computer acts as a client, reading that information. <br><br>
+
+Peripheral or central devices can BOTH act as a server or client, depending on how data is flowing.  In contrast to the above example, if I wanted to send an update from from the computer to the Bean, the computer acts as a server and the Bean acts as a client.  <strong>Essentially, GAP and GATT roles are independent of each other. </strong>
 
 
