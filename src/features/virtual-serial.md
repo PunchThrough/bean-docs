@@ -91,7 +91,8 @@ Up until this point, we've described how the peripheral device (in this example,
 Below is the sequence that describes the process of how you will use virtual-serial:
 
 __Bean Connects to Bean Loader:__
-Once the battery is in the Bean and enabled, it starts broadcasting to the world letting central devices know that it wants to connect.  The image belows shows you you will connect to the Bean:
+Once the battery is in the Bean and enabled, it starts broadcasting to the world letting central devices know that it wants to connect. 
+
 
 __Upload and Compile A Program on the Arduino IDE:__
 Once you have written your program, you need to upload the sketch and compile it. As an example, copy and paste this to the sketch on your computer:
@@ -137,15 +138,14 @@ void loop()
 }
 ```
 
-* `Line 3` just states that the pin soldered to GPIO 0 is not pushed.  This means it has a value of 0. 
+* `Line 3` states that the pin soldered to GPIO 0 is not pushed.  This means it has a value of 0. Conversely, if the button is pressed, its value will change to 1. 
 * `Line 4`  says that the 8-bit pinValue has an off state. This means it has a value of 0. 
 * `Line 10` initializes serial communication at 57600 bps.  The maximum speed for serial communication can be up to  115200 bps.  The higher speed of serial communication also comes at a cost. There will be more errors (some bits may not transfer serially, not print to the serial monitor, and the likes). Take a look at the [Arduino docs](https://www.arduino.cc/en/Serial/Begin) to learn more serial!
 * `Line 20`is reading the push button's state. If the state is off, the button is not pressed.  Conversley, if the state is on, the button is pressed. 
 * `Line 22` is checking if the pinState is different from the pinValue. For example, if the pin is pressed, the pinValue becomes 1. 
 * `Line 28` is checking if notify was set to true. 
 * `Line 31` is resetting values so another button press can be detected.
-* `Line 30` is writing ot the serial monitor the pinValue
-
+* `Line 30` is writing to the serial monitor the pinValue
 
 
 __Program the Bean with a Sketch:__
@@ -155,5 +155,34 @@ Now that we have the code compiled, we can program the Bean with it.  Right clic
 __Enable Virtual Serial on the Bean Loader:__
 After we successfully programmed the Bean, we must enable virtual-serial. 
 
-__Open Serial Monitor on the Arduino IDE:__
+
+__Open the Serial Monitor on the Arduino IDE:__
 The serial monitor is located on the Arduino IDE.  Specifically, it'll be on the right-hand side of your sketch. Since we enabled virtual-serial on the Bean Loader, we should see serial data on the serial monitor. 
+
+## Conclusion
+
+In this guide we took a more detailed approach to explain how the Bean transmits data to the computer by describing how the Bluetooth Low Energy stack operates.  
+
+Knowing how to use the serial monitor provides many advantanges:
+* Debugging
+* Writing data to the Bean
+* Reading data from the Bean
+
+Checkout the [Arduino reference for serial](https://www.arduino.cc/en/Reference/Serial) to learn more about the commands available for serial. 
+
+__References to Learn More About BLE:__
+
+* [Getting Started with Bluetooth Low Energy](http://www.amazon.com/Getting-Started-Bluetooth-Low-Energy-ebook/dp/B00K1N23LA)
+* [Bluetooth Low Energy Core Specification 4.0:](https://www.bluetooth.org/en-us/specification/adopted-specifications)
+
+
+## Troubleshooting
+
+Having trouble with this guide? Try the steps listed in [General Bean troubleshooting](#).
+
+
+
+
+
+
+
