@@ -53,7 +53,7 @@ void loop()
 
 Here's what the code does:
 
-* `Line 1` is the [setup function](https://www.arduino.cc/en/Serial/Begin). This function is excuted only once during the duration of the program.
+* `Line 1` is the [setup function](https://www.arduino.cc/en/Reference/Setup). This function is excuted only once during the duration of the program.
 * `Line 6` is the [loop function](https://www.arduino.cc/en/Reference/Loop).  This function is excuted continuously until the Bean is either turned off or unprogrammed.
 * `Line 8` reads the accelerometer values (range from -512 to 511)
 * `Lines 9-11` scales the values to the range 0 to 255.
