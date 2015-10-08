@@ -2,14 +2,13 @@ src: ../src
 dest: ../build
 ignore: '**/.DS_Store'
 
-serve:
-  watch:
-    paths:
-      '${source}/**/*': true
-      '../templates/**/*': '**/*.md'
-      '${source}/**/*.styl': '**/*'
-      '${source}/_assets/**/*': '**/*'
-    livereload: true
+watch:
+  paths:
+    '${source}/**/*': true
+    '../templates/**/*': '**/*.md'
+    '${source}/**/*.styl': '**/*'
+    '${source}/_assets/**/*': '**/*'
+  livereload: true
 
 layouts:
   engine: handlebars
