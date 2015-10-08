@@ -1,20 +1,18 @@
 ---
-title: Virtual Serial (Serial over GATT)
-layout: basic.hbs
-autotoc: true
----
----
-title: Accelerometer
+title: Virtual Serial
 layout: basic.hbs
 autotoc: true
 ---
 
 ## Introduction
-Let's say I have a [push button](https://www.sparkfun.com/products/97) soldered onto the Bean. I want the computer to know that when I press the push button it should send a tweet. The first step into accomplishing this task is for the Bean to send data to the computer when the button is pressed. How does the Bean communicate to the computer? 
 
-There are many communication protocols. Regardless, in order for the Bean (or any device for that matter) to communicate to the computer, they must share a common communication protocol. The Bean and the computer need to agree on how the information will be organized and have an appropriate response to the request being made. For example, the data that is sent between both devices can have a header that signifies the start of a message, a body, and a footer that signifies the end of a message.
+Say you have a digital [pushbutton](https://www.sparkfun.com/products/97) soldered onto your Bean. You want your laptop to post a tweet when you push the button. To get that to happen, you need the Bean to read the button and send data to your laptop when you push the button.
 
-In this guide, we will focus on some Bluetooth Low Energy network specifications, how serial communication works, and how to use the serial monitor on the Arduino IDE to send and visualize data coming from the Bean. 
+How do you get the Bean to send data back to the computer?
+
+In order for any device to communicate with your computer, the device and computer must share a common communication protocol. The Bean and Bean Loader support Virtual Serial, an easy way to start talking to your Bean from the Arduino IDE.
+
+In this guide, we will explore how Virtual Serial allows your computer and Bean to talk to each other. We'll build an example that uses the serial monitor on the Arduino IDE to send and visualize data coming from the Bean.
 
 ## Setup
 
