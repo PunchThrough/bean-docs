@@ -14,7 +14,7 @@ Let's say I have a [push button](https://www.sparkfun.com/products/97) soldered 
 
 There are many communication protocols. Regardless, in order for the Bean (or any device for that matter) to communicate to the computer, they must share a common communication protocol. The Bean and the computer need to agree on how the information will be organized and have an appropriate response to the request being made. For example, the data that is sent between both devices can have a header that signifies the start of a message, a body, and a footer that signifies the end of a message.
 
-In this guide, we will focus on some network specifications of Bluetooth Low Energy, how serial communication works, and how to use the serial monitor on the Arduino IDE to send and visualize data from the Bean. 
+In this guide, we will focus on some Bluetooth Low Energy network specifications, how serial communication works, and how to use the serial monitor on the Arduino IDE to send and visualize data coming from the Bean. 
 
 ## Setup
 
@@ -39,23 +39,23 @@ In contrast to traditional microcontrollers, microcontrollers equipped with Blue
 There are two mechanisms that a BLE device can communicate to the outside world: broadcasting or connecting. These mechanisms are subjected to the Generic Access Profile (GAP) guidelines. GAP defines how BLE-enabled devices can make themselves available and how two devices can communicate directly with each other.  A device can join a BLE network by adoping these roles specified in GAP: <br><br>
 __Broadcasting__: <br>
 _Main Idea_- Data packets are sent at fixed intervals in a unidirectional manner from the broadcaster to the observer. 
-* __Broadcaster:__ A device that can publically broadcasts advertising data packets, such as how long the push button has been pressed, to the outside world.  No connection happens between the broadcaster and observer.  The Bean is an example of a broadcaster.
-* __Observer:__  A device that listens to the data in the advertising packets being broadcasted from the broadcaster. An example of a device that listens to the Bean is the computer<br><br>
+* __Broadcaster:__ A dvice that publically broadcast advertising data packets, such as how long the push button has been pressed.  No connection happens between the broadcaster and observer. An example is when the battery is already put into the Bean, it automatically broadcast data packets to the observer. 
+* __Observer:__  A edvices that listens to the data in the advertising packets being broadcasted from the broadcaster. An example of a device that listens to the Bean is the computer.<br><br>
 
 __Connecting__: <br>
-_Main Idea_ - Peripheral devices send specific advertising data packets that specifically inform the central device that it wants to connect. Once the peripheral connects, it no longer broadcasts data packets to the world until the connection is closed. 
-* __Peripheral:__ Devices that used advertising data packets to establish a connection with a central device. After connecting, peripherals no longer broadcast data to other central devices and stay connected to the device that accepted connectection request.  An example of a peripheral is when the Bean connects to the Bean Loader.  
+_Main Idea_ - A peripheral device that sends specific advertising data packets that inform the central device that it wants to connect. Once the peripheral connects, it no longer broadcasts data packets to the world until the connection is closed. 
+* __Peripheral:__ A device that used advertising data packets to establish a connection with a central device. After connecting, peripherals no longer broadcast data to other central devices and stay connected to the device that accepted connectection request.  An example of a peripheral is when the Bean connects to the Bean Loader.  
 * __Central:__ A device that initiates a connection with a peripheral device by first listenting to the advertising packets. A central device can connect to many other peripheral devices. An example of a central device is the computer.<br><br>
 
 __After Connection is Established__: <br>
 _Main Idea_ - Additional procedures can occur once the peripheral device is exclusivley communicating to one central device by transmitting data packets: 
 
 * __Data Packets Can Send the Device Name:__
-Packets that are being sent from the peripheral to the central devices carry general information.  Information that is transmitted can possibly contain a UTF-8 string of the device name. If the device name is not transmitted here, it'll be transmitted over GATT. 
+Packets that are being sent from the peripheral to the central device carry general information.  Information that is transmitted can possibly contain a UTF-8 string of the device name. If the device name is not transmitted here, it'll be transmitted over GATT. 
 
-* __Central Devices Can Update Connection Parameters:__ The central device typically establishes the connecting parameters between the peripheral device and itself.  The central device can only modify the connecting parameters.  However, the peripheral device can request the central device to change the connecting parameters. When the central device finds a data packet that has specific information that says it wants to connect, it sends a request connection data packet to the peripheral device.  If the peripheral device accepts the request from the central device, a connection is established.  There are different ways that a central device. 
+* __Central Devices Can Update Connection Parameters:__ The central device typically establishes the connecting parameters between the peripheral device and itself.  The central device can only modify the connecting parameters.  However, the peripheral device can request the central device to change the connecting parameters. When the central device finds a data packet that has specific information that says it wants to connect, it sends a request connection data packet to the peripheral device.  If the peripheral device accepts the request from the central device, a connection is established.
 
-* __Peripheral or Central Devices Can Terminate Connection:__ Connection termination can happen for a variety reasons: battery dies on the device, network issues,  and the likes. 
+* __Peripheral or Central Devices Can Terminate Connection:__ Connection termination can happen for a variety of reasons: battery dies on the device, network issues,  and the likes. 
 
 ### Generic Attribute Profile (GATT):
 
@@ -82,7 +82,7 @@ Previously, we described that the Bean needs to advertise its presence in order 
 
 ### Bean Transmits Serial Data to the Computer:
 
-The Bean transmits the data packets serially, where only one data packet can sequentially be communicated at a time.  Afterwards, the Bean Loader routes the data packets to the /dev/cu.LightBlue-Bean serial port, seen on the Arduino IDE. The data packets are actually presented to the /dev/cu.LightBlue-Bean serial port seqeuntially.
+The Bean transmits the data packets serially, where only one data packet can sequentially be communicated at a time.  Afterwards, the Bean Loader routes the data packets to the /dev/cu.LightBlue-Bean serial port, seen on the Arduino IDE. The data packets are actually presented to the /dev/cu.LightBlue-Bean.
 
 ## Visualizing and Transmitting Serial Data: 
 
