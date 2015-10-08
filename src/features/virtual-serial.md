@@ -14,7 +14,7 @@ Let's say I have a [push button](https://www.sparkfun.com/products/97) soldered 
 
 There are many communication protocols. Regardless, in order for the Bean (or any device for that matter) to communicate to the computer, they must share a common communication protocol. The Bean and the computer need to agree on how the information will be organized and have an appropriate response to the request being made. For example, the data that is sent between both devices can have a header that signifies the start of a message, a body, and a footer that signifies the end of a message.
 
-In this guide, we will focus on network specifications of Bluetooth Low Energy, how serial communication works, and how to use the serial monitor on the Arduino IDE to send and visualize data from the Bean. 
+In this guide, we will focus on some network specifications of Bluetooth Low Energy, how serial communication works, and how to use the serial monitor on the Arduino IDE to send and visualize data from the Bean. 
 
 ## Setup
 
@@ -53,7 +53,7 @@ _Main Idea_ - Additional procedures can occur once the peripheral device is excl
 * __Data Packets Can Send the Device Name:__
 Packets that are being sent from the peripheral to the central devices carry general information.  Information that is transmitted can possibly contain a UTF-8 string of the device name. If the device name is not transmitted here, it'll be transmitted over GATT. 
 
-* __Central Devices Can Update Connection Parameters:__ The central device typically establishes the connecting parameters between the peripheral device and itself.  The central device can only modify the connecting parameters.  However, the peripheral device can request the central device to change the connecting parameters. When the central device finds a data packet that has specific information that says it wants to connect, it sends a request connection data packet to the peripheral device.  If the peripheral device accepts the request from the central device, a connection is established.  There are different ways of how a central device can connect to a peripheral device, all of which the central device defines. 
+* __Central Devices Can Update Connection Parameters:__ The central device typically establishes the connecting parameters between the peripheral device and itself.  The central device can only modify the connecting parameters.  However, the peripheral device can request the central device to change the connecting parameters. When the central device finds a data packet that has specific information that says it wants to connect, it sends a request connection data packet to the peripheral device.  If the peripheral device accepts the request from the central device, a connection is established.  There are different ways that a central device. 
 
 * __Peripheral or Central Devices Can Terminate Connection:__ Connection termination can happen for a variety reasons: battery dies on the device, network issues,  and the likes. 
 
@@ -74,4 +74,86 @@ GATT specifically focuses on how data is formatted, packaged, and sent according
 
 Peripheral or central devices can BOTH act as a server or client, depending on how data is flowing.  In contrast to the above example, if I wanted to send an update from from the computer to the Bean, the computer acts as a server and the Bean acts as a client.  <strong>Essentially, GAP and GATT roles are independent of each other. </strong>
 
+This concludes the basic information with the BLE network stack.  Don't worry!  There is a lot more that is occurring.  Checkout our references at the bottom to learn more!
 
+### Bean Connects to the Bean Loader App:
+
+Previously, we described that the Bean needs to advertise its presence in order for it to connect to a central device. The way the central device connects to the Bean is through the Bean Loader App. The Bean Loader is also what allows you to disconnect and program your Bean.  
+
+### Bean Transmits Serial Data to the Computer:
+
+The Bean transmits the data packets serially, where only one data packet can sequentially be communicated at a time.  Afterwards, the Bean Loader routes the data packets to the /dev/cu.LightBlue-Bean serial port, seen on the Arduino IDE. The data packets are actually presented to the /dev/cu.LightBlue-Bean serial port seqeuntially.
+
+## Visualizing and Transmitting Serial Data: 
+
+Up until this point, we've described how the peripheral device (in this example, the Bean) communicates to the central device (in this example, the computer), and how data is transferred from the Bean to the computer.  In order to see the data that is being transferred or send data back to the Bean,  we need a monitor that allows us to read and write values.  
+
+Below is the sequence that describes the process of how you will use virtual-serial:
+
+__Bean Connects to Bean Loader:__
+Once the battery is in the Bean and enabled, it starts broadcasting to the world letting central devices know that it wants to connect.  The image belows shows you you will connect to the Bean:
+
+__Upload and Compile A Program on the Arduino IDE:__
+Once you have written your program, you need to upload the sketch and compile it. As an example, copy and paste this to the sketch on your computer:
+
+``` 
+// Notify the client over serial when a digital pin state changes
+
+static int d0 = 0;
+static uint8_t pinValue = 0;
+
+// the setup routine runs once when you press reset:
+void setup() 
+{
+  // initialize serial communication at 57600 bits per second:
+  Serial.begin(57600);
+  
+  // Digital pins
+  pinMode(d0, INPUT_PULLUP);  
+
+}
+
+void loop()
+{
+ bool notify = false;
+   uint8_t pinState = digitalRead(d0);
+   
+   if ( pinState != pinValue)
+   {
+     notify = true;
+     pinValue = pinState;
+   } 
+ 
+ if ( notify )
+ {
+   Serial.write(pinValue);
+   notify = false;
+   pinState = 0;
+ }
+ 
+ // Sleep for half a second before checking the pins again  
+ Bean.sleep(500);  
+  }
+}
+```
+
+* `Line 3` just states that the pin soldered to GPIO 0 is not pushed.  This means it has a value of 0. 
+* `Line 4`  says that the 8-bit pinValue has an off state. This means it has a value of 0. 
+* `Line 10` initializes serial communication at 57600 bps.  The maximum speed for serial communication can be up to  115200 bps.  The higher speed of serial communication also comes at a cost. There will be more errors (some bits may not transfer serially, not print to the serial monitor, and the likes). Take a look at the [Arduino docs](https://www.arduino.cc/en/Serial/Begin) to learn more serial!
+* `Line 20`is reading the push button's state. If the state is off, the button is not pressed.  Conversley, if the state is on, the button is pressed. 
+* `Line 22` is checking if the pinState is different from the pinValue. For example, if the pin is pressed, the pinValue becomes 1. 
+* `Line 28` is checking if notify was set to true. 
+* `Line 31` is resetting values so another button press can be detected.
+* `Line 30` is writing ot the serial monitor the pinValue
+
+
+
+__Program the Bean with a Sketch:__
+Now that we have the code compiled, we can program the Bean with it.  Right click on the Bean Loader and go to 'Program Sketch.'  
+
+
+__Enable Virtual Serial on the Bean Loader:__
+After we successfully programmed the Bean, we must enable virtual-serial. 
+
+__Open Serial Monitor on the Arduino IDE:__
+The serial monitor is located on the Arduino IDE.  Specifically, it'll be on the right-hand side of your sketch. Since we enabled virtual-serial on the Bean Loader, we should see serial data on the serial monitor. 
