@@ -8,7 +8,7 @@ autotoc: true
 
 This guide will take you through the process of reading the temperature from the Bean's on-board [BMA250 temperature sensor](http://ae-bst.resource.bosch.com/media/products/dokumente/bma250/bst-bma250-ds002-05.pdf).
 
-This temperature reading can be used to detect air temperature to a certain level of accuracy, around +/- 3 degrees celsius.
+This temperature sensor can be used to read air temperature near the Bean with an accuracy of ±3°C.
 
 
 ## Before you begin
@@ -27,46 +27,43 @@ Hardware required:
 
 ### Program the Bean
 
-Load the following sketch onto the Bean which will read the temperature and print it back over the Serial port.
+Upload the following sketch to your Bean:
 
 ```cpp
-static int8_t temp = 0;
- 
-// The setup routine runs once at the beginning of the program
+int8_t lastTemp = 0;
+
 void setup() {
   Serial.begin();
 }
 
-// Main loop
 void loop() {
-  int8_t newTemp = Bean.getTemperature();
+  int8_t currTemp = Bean.getTemperature();
 
-  if (newTemp != temp) {
-    temp = newTemp;
+  if (lastTemp != currTemp) {
     Serial.print("Temperature is ");
-    Serial.print(temp);
+    Serial.print(currTemp);
     Serial.println(" degrees Celsius");
+    lastTemp = currTemp;
   }
 
-  // Sleep for a second before reading the temperature again
   Bean.sleep(1000);
 }
 ```
 
-### Code Breakdown
+This sketch reads the Bean's temperature and prints it over Virtual Serial. Connect to your Bean and enable Virtual Serial to see the sketch in action.
 
-* `Line 1` defines a global variable `temp` and initializes it's value to 0.
-  * `int8_t` means it is a platform independent 8-bit signed integer.
-  * `static` means the variable is global in the context of this file but hidden rom external files.
-* `Line 10` is the first line of the main loop, which grabs a new temperature from the Bean API via `Bean.getTemperature()` and saves it to a local variable `newTemp`.
-* `Line 12` checks to see if the new temperature is different than the one assigned to the global variable from `line 1`.
-* `Line 13` reassigns the global variable `temp` to `newTemp`.
-* `Line 14-16` sends a single line of text over the serial port containing the new temperature.
-* `Line 20` tells the Bean to sleep for 1 second and the loop is run again.
+* **Line 1** defines a global variable `temp` and initializes its value to 0.
+  * `int8_t` means it is an 8-bit signed integer. This is the same type as `Bean.getTemperature()`.
+  * It's declared outside of the loop function, so it will maintain its value even after `loop()` completes.
+* **Line 8** reads the current temperature via `Bean.getTemperature()` and saves it to a local variable called `currTemp`.
+* **Line 10** checks to see if the new temperature is different from the last recorded temperature.
+* **Lines 11-13** send a single line of text over Virtual Serial with the new temperature reading. This line looks like this: `Temperature is 23 degrees Celsius`
+* **Line 14** saves the current temperature to `lastTemp` if it has changed since last time.
+* **Line 27** tells the Bean to sleep for one second before checking the temperature again.
 
 ## Conclusion
 
-This guide shows you the very simple Bean API for reading temperature. You can now use your Bean to monitor temperature and make the next great connected product.
+In this guide, we read a temperature from the Bean's temperature sensor and sent it to your computer via Virtual Serial.
 
 ## Troubleshooting
 
@@ -74,4 +71,4 @@ Having trouble with this guide? Try the steps listed in [General Bean troublesho
 
 ## Related projects
 
-* [Temperature controlled fan](http://www.instructables.com/id/Automatic-desktop-fan/)
+* [Temperature-controlled fan](http://www.instructables.com/id/Automatic-desktop-fan/): This fan turns on to cool people down when the Bean detects the room is getting too hot.
