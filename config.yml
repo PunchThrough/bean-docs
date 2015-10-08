@@ -2,6 +2,15 @@ src: ../src
 dest: ../build
 ignore: '**/.DS_Store'
 
+serve:
+  watch:
+    paths:
+      '${source}/**/*': true
+      '../templates/**/*': '**/*.md'
+      '${source}/**/*.styl': '**/*'
+      '${source}/_assets/**/*': '**/*'
+    livereload: true
+
 layouts:
   engine: handlebars
   directory: ../templates/layouts
@@ -43,5 +52,4 @@ relativeRoots:
   fixPermalinks: true
   indexFilename: index.md
 
-redirect:
-  '/': 'getting-started/intro/'
+index: 'getting-started/intro/'
