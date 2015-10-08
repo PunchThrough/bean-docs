@@ -1,4 +1,5 @@
 var gulp = require('gulp')
+var add = require('gulp-add')
 var ghPages = require('gulp-gh-pages')
 var exec = require('child_process').exec
 
@@ -17,5 +18,6 @@ gulp.task('build', function(done) {
 
 gulp.task('deploy', ['build'], function() {
   return gulp.src('build/**/*')
+    .pipe(add('.nojekyll', ''))
     .pipe(ghPages(config))
 })

@@ -1,18 +1,11 @@
+import Yaml from 'js-yaml'
+import fs from 'fs'
+
 import Serve from 'metalsmith-serve'
 import Watch from 'metalsmith-watch'
 import core from './core'
 
-const config = {
-  watch: {
-    paths: {
-      '${source}/**/*.md': true,
-      '../templates/**/*': '**/*.md',
-      '${source}/**/*.styl': '**/*',
-      '${source}/_assets/**/*': '**/*'
-    },
-    livereload: true
-  }
-}
+const config = Yaml.safeLoad(fs.readFileSync('config.yml', 'utf8'))
 
 export default function() {
   core

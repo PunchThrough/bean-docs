@@ -3,9 +3,11 @@ import Handlebars from 'handlebars'
 import Yaml from 'js-yaml'
 import fs from 'fs'
 
+import Metadata from './plugins/metadata'
 import PathCollector from './plugins/path-collector'
 import RelativeRoots from './plugins/relative-roots'
 import Debugger from './plugins/debugger'
+
 import Markdown from 'metalsmith-markdown'
 import Layouts from 'metalsmith-layouts'
 import AutoTOC from 'metalsmith-autotoc'
@@ -16,13 +18,13 @@ import Ignore from 'metalsmith-ignore'
 import Stylus from 'metalsmith-stylus'
 import InPlace from 'metalsmith-in-place'
 import Paths from 'metalsmith-paths'
-import Redirect from 'metalsmith-redirect'
 
 const config = Yaml.safeLoad(fs.readFileSync('config.yml', 'utf8'))
 
 export default Metalsmith(__dirname)
   .source(config.src)
   .destination(config.dest)
+  .use(Metadata({config: config}))
   .use(PathCollector(config.pathCollector))
   .use(Paths())
   .use(Ignore(config.ignore))
@@ -36,4 +38,3 @@ export default Metalsmith(__dirname)
   .use(Permalinks(config.permalinks))
   //.use(Debugger())
   .use(Layouts(config.layouts))
-  .use(Redirect(config.redirect))

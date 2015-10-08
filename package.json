@@ -14,13 +14,13 @@
     "metalsmith-markdown": "^0.2.1",
     "metalsmith-paths": "^2.1.1",
     "metalsmith-permalinks": "^0.4.0",
-    "metalsmith-redirect": "^1.1.0",
     "metalsmith-register-helpers": "^0.1.2",
     "metalsmith-register-partials": "^1.0.2",
     "metalsmith-stylus": "^1.0.0"
   },
   "devDependencies": {
     "gulp": "^3.9.0",
+    "gulp-add": "0.0.2",
     "gulp-gh-pages": "^0.5.2",
     "js-yaml": "^3.3.1",
     "metalsmith-serve": "0.0.3",
