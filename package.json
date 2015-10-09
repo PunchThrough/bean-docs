@@ -16,7 +16,8 @@
     "metalsmith-permalinks": "^0.4.0",
     "metalsmith-register-helpers": "^0.1.2",
     "metalsmith-register-partials": "^1.0.2",
-    "metalsmith-stylus": "^1.0.0"
+    "metalsmith-stylus": "^1.0.0",
+    "string": "^3.3.1"
   },
   "devDependencies": {
     "gulp": "^3.9.0",
