@@ -17,7 +17,7 @@ Or keep reading to learn more!
 
 Bean and Bean+ are two different flavors of the same software, the [LightBlue Platform](http://punchthrough.com/platform). Here's what they have in common:
 
-{{{img_rel this 'bean-and-plus-sketch.png' 'Bean and Bean+ feature comparison'}}}
+{{{img_rel this 'bean-and-plus-comparison.jpg' 'Bean and Bean+ feature comparison'}}}
 
 __Program Wirelessly:__ No more digging your board out of your project enclosure: Bean is programmed wirelessly over Bluetooth Low Energy!
 
@@ -29,7 +29,7 @@ __Built-In Peripherals:__ Both Bean and Bean+ come with an accelerometer, a temp
 
 ## Bean Specs
 
-{{{img_rel this 'bean-sketch.png' 'Bean features'}}}
+{{{img_rel this 'bean-diagram.jpg' 'Bean features' '84%'}}}
 
 __Built-In Protoboard:__ Making something with just a couple components? Solder and wire them right on the Bean's prototyping area.
 
@@ -39,7 +39,7 @@ __Coin Cell Battery:__ Bean ships with a coin cell battery included. You can sta
 
 ## Bean+ Specs
 
-{{{img_rel this 'bean-plus-sketch.png' 'Bean+ features'}}}
+{{{img_rel this 'bean-plus-diagram.jpg' 'Bean+ features'}}}
 
 __Rechargeable LiPo:__ It's easy to keep Bean+ going. The included lithium polymer battery charges via Micro USB, so power is never out of reach.
 
