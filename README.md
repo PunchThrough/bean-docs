@@ -61,6 +61,16 @@ Inside `accelerometer.md`, add the following Handlebars helper call to add the i
 
 When you use the above tag in your own documents, replace `blue_led.jpg` with your actual file name, and replace "A description of this image" with your own description of your image.
 
+### Max Width
+
+To make an image take up less width horizontally and place margins around the left and right sides, add a max width argument:
+
+```
+{{{img_rel this 'blue_led.jpg' 'A description of this image', '50%'}}}
+```
+
+The image above will be 50% the width of the content column with 25% margins on the left and right sides.
+
 ## Videos
 
 For videos, use the same syntax with `video_rel` instead:
@@ -68,3 +78,5 @@ For videos, use the same syntax with `video_rel` instead:
 ```
 {{{video_rel this 'move_bean.mp4' 'A description of this video'}}}
 ```
+
+The max width argument doesn't work with videos yet.
