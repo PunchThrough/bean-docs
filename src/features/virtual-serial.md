@@ -35,12 +35,12 @@ In contrast to traditional microcontrollers, microcontrollers equipped with Blue
 
 ### Generic Access Profile (GAP) and General Attribute Profile (GATT)
 
-GAP and GATT are two protocols that play a key role in BLE. GAP defines the general topology of the BLE network stack. Essentially, GAP provides a framework that allows two devices to communicate. In contrast, GATT describes in detail how attributes (data) are transferred once devices have a dedicated connection.  All BLE sevices follow GAP and GATT. 
+GAP and GATT are two protocols that play a key role in the BLE stack. GAP defines the general topology of the BLE network stack. Essentially, GAP provides a framework that allows two devices to communicate. In contrast, GATT describes in detail how attributes (data) are transferred once devices have a dedicated connection.  All BLE sevices follow GAP and GATT. 
 
 ### Virtual-Serial
 
 __Bluetooth Low Energy Doesn't Support Serial Characteristics:__
-Unlike Bluetooth Classic, BLE doesn't have a Serial Port Profile (SPP).  The Bean Loader creates a virtual serial port:/dev/cu.LightBlue-Bean, and when a specific command is sent from the Atmega the Bean Loader passes the payload through to the virtual serial port. We can connect to this port on the Arduino IDE. To see data that the Bean is sending, we can use the serial monitor.  The maximum amount of data that can be sent is 20 bytes.  Anything more, and the data gets broken up into chunks and sent.
+Unlike Bluetooth Classic, BLE stack doesn't have a Serial Port Profile (SPP).  The Bean Loader creates a virtual serial port:/dev/cu.LightBlue-Bean, and when a specific command is sent from the Atmega, the Bean Loader passes the payload through to the virtual serial port. We can connect to this port on the Arduino IDE. To see data that the Bean is sending, we can use the serial monitor. 
 
 ### Bean Connects to the Bean Loader App:
 
@@ -73,7 +73,7 @@ static uint8_t pinValue = 0;
 void setup() 
 {
   // initialize serial communication at 57600 bits per second:
-  Serial.begin(57600);
+  Serial.begin();
   
   // Digital pins
   pinMode(d0, INPUT_PULLUP);  
@@ -106,7 +106,8 @@ void loop()
 
 * `Line 3` states that the pin soldered to GPIO 0 is not pushed.  This means it has a value of 0. Conversely, if the button is pressed, its value will change to 1. 
 * `Line 4`  says that the 8-bit pinValue has an off state. This means it has a value of 0. 
-* `Line 10` initializes serial communication at 57600 bps.  The maximum speed for serial communication can be up to  115200 bps.  The higher speed of serial communication also comes at a cost. There will be more errors (some bits may not transfer serially, not print to the serial monitor, and the likes). Take a look at the [Arduino docs](https://www.arduino.cc/en/Serial/Begin) to learn more serial!
+* `Line 10` initializes serial communication at 57600 bps.   
+Serial communication also comes at a cost. For example, when the module communicates to the Arduino at, there may be errors due to noise.  Take a look at the [Arduino docs](https://www.arduino.cc/en/Serial/Begin) to learn more serial!
 * `Line 20`is reading the push button's state. If the state is off, the button is not pressed.  Conversley, if the state is on, the button is pressed. 
 * `Line 22` is checking if the pinState is different from the pinValue. For example, if the pin is pressed, the pinValue becomes 1. 
 * `Line 28` is checking if notify was set to true. 
