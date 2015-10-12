@@ -120,13 +120,19 @@ In this example, w tell the Bean to use the major ID `0xBEEF` and the minor ID `
 
 Download and install the iBeacon app [Locate, by Radius Networks](https://itunes.apple.com/us/app/locate-for-ibeacon/id738709014?mt=8).
 
-Launch the app. Tap "Locate Beacons". Then tap the row that says "Tap here to configure additional UUIDs". Next, tap the `+` button to monitor for a new Beacon.
+* Open the app.
+* Tap **Locate Beacons**.
+* Then tap the row that says **Tap here to configure additional UUIDs**.
+* Next, tap the **+** button to configure monitoring for a new iBeacon.
 
-Configure the beacon monitor as shown below, then tap Save:
+Configure the new iBeacon monitoring as shown below, then tap **Save**.
 
-(Hex `0xBEEF` is decimal 48879. Hex `0xCAFE` is decimal 51966.)
+* **Name:** Bean
+* **Proximity UUID:** `A495DEAD-C5B1-4B44-B512-1370F02D74DE` (case-insensitive)
+* **Major:** 48879 (equal to `0xBEEF`)
+* **Minor:** 51966 (equal to `0xCAFE`)
 
-{{{img_rel this 'locate_beacon_setup.jpg' 'Locate app setup for Bean iBeacon'}}}
+{{{img_rel this 'locate_beacon_setup.jpg' 'Locate app setup for Bean iBeacon' '50%'}}}
 
 (TODO: Continue this guide.)
 
