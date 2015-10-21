@@ -54,10 +54,17 @@ The Bean transmits the data packets serially, where only one data packet can seq
 
  In order to see the data that is being transferred or send data back to the Bean,  we need a monitor that allows us to read and write values.  
 
-Below is the sequence that describes the process of how you will use serial monitor:
+Before going through this part of the tutorial, please make sure you have gone through our [Getting Started Tutorial](#)
+Below is the sequence that describes the process of how you will use the serial monitor:
 
 __Bean Connects to Bean Loader:__
-Once the battery is in the Bean and enabled, it starts broadcasting to the world letting central devices know that it wants to connect. 
+Once the battery is in the Bean and enabled, it starts broadcasting to the world letting central devices know that it wants to connect.
+
+{{{img_rel this 'bean-disconnected.jpg'}}}
+
+Double clicking on your Bean connects it to your computer
+
+{{{img_rel this 'bean-connected.jpg'}}}
 
 
 __Upload and Compile A Program on the Arduino IDE:__
@@ -73,7 +80,7 @@ static uint8_t pinValue = 0;
 void setup() 
 {
   // initialize serial communication at 57600 bits per second:
-  Serial.begin();
+  Serial.begin(57600);
   
   // Digital pins
   pinMode(d0, INPUT_PULLUP);  
@@ -115,16 +122,24 @@ Serial communication also comes at a cost. For example, when the module communic
 * `Line 30` is writing to the serial monitor the pinValue
 
 
+{{{img_rel this 'compile-arduino-sketch.jpg'}}}
+
+
 __Program the Bean with a Sketch:__
 Now that we have the code compiled, we can program the Bean with it.  Right click on the Bean Loader and go to 'Program Sketch.'  
 
+{{{img_rel this 'program-bean.jpg'}}}
 
 __Enable Virtual Serial on the Bean Loader:__
 After we successfully programmed the Bean, we must enable virtual-serial. 
 
+{{{img_rel this 'enable-virtual-serial-on-bean.jpg'}}}
+
 
 __Open the Serial Monitor on the Arduino IDE:__
 The serial monitor is located on the Arduino IDE.  Specifically, it'll be on the right-hand side of your sketch. Since we enabled virtual-serial on the Bean Loader, we should see serial data on the serial monitor. 
+
+{{{img_rel this 'location-virtual-serial.jpg'}}}
 
 ## Conclusion
 

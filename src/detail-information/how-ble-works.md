@@ -1,3 +1,8 @@
+---
+title: How Bluetooth Low Energy Works
+layout: basic.hbs
+autotoc: true
+---
 ## How Bluetooth Low Energy (BLE) stack works:
 The Bluetooth Protocol Stack is divided into two categories: the controller and the host.  Each category has sub-categories, which perform specific roles.  The two subcategories we are going to look at is the Generic Acess Profile (GAP) and the Generic Attribute Profile (GATT).  
 
