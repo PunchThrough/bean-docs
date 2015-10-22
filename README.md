@@ -1,8 +1,6 @@
 # Setup
 
-## Use the right Node version
-
-*Yes, this is a huge pain. Sorry, some of our dependencies are broken in Node 4.x.*
+## Use Node 4+
 
 Check what version of Node you're running.
 
@@ -10,18 +8,11 @@ Check what version of Node you're running.
 node --version
 ```
 
-If you don't have Node installed or aren't running Node.js v0.12, start by installing nvm:
+If it doesn't start with `v4`, you need to update Node. You're probably on a Mac and installed Node via Homebrew, so try:
 
 ```sh
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.28.0/install.sh | bash
-```
-
-Restart your shell, then install Babel and Node v0.12:
-
-```sh
-nvm install 0.12
-nvm use 0.12
-npm install -g babel
+brew update
+brew upgrade node
 ```
 
 ## Install dependencies
