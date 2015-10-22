@@ -7,7 +7,7 @@
   "dependencies": {
     "handlebars": "^3.0.3",
     "metalsmith": "^2.0.1",
-    "metalsmith-autotoc": "^0.1.2",
+    "metalsmith-autotoc": "git+https://git@github.com/mplewis/metalsmith-autotoc.git",
     "metalsmith-ignore": "^0.1.2",
     "metalsmith-in-place": "^1.3.1",
     "metalsmith-layouts": "^1.4.0",
