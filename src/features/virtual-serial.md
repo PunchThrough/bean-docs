@@ -27,136 +27,102 @@ Please make sure you're familiar with the following before starting this guide:
 ### Hardware
 
 * LightBlue Bean
-* Mobile or Computer device
+* OS X computer
 
-## How the Bean Communicates to the Computer: 
+## Bean-Computer Communication
 
-In contrast to traditional microcontrollers, microcontrollers equipped with Bluetooth Low Energy (BLE), such as the Bean and Bean+, follow a set of standarized rules and communication protocol defined in Bluetooth Core Specification 4.0. To get a better understanding of how some of the BLE network-stack is working, check out our [guide](#)
+In contrast to boards like the Arduino Uno, Bean and Bean+ don't support USB. Instead, all their communication is done via  Bluetooth 4.0, also known as Bluetooth Smart or Bluetooth Low Energy. To learn more about how the BLE stack works with Bean, check out our [detailed guide](#).
 
-### Generic Access Profile (GAP) and General Attribute Profile (GATT)
+### How Virtual Serial Works
 
-GAP and GATT are two protocols that play a key role in the BLE stack. GAP defines the general topology of the BLE network stack. Essentially, GAP provides a framework that allows two devices to communicate. In contrast, GATT describes in detail how characteristics (data) are transferred once devices have a dedicated connection.  All BLE sevices follow GAP and GATT. 
+Bluetooth Low Energy doesn't natively support serial communication.
 
-### Virtual-Serial
+Unlike Bluetooth Classic, BLE doesn't have a Serial Port Profile (SPP). Instead, Bean's firmware sends serial messages over BLE using the [LightBlue Platform](#) protocol. On the other end, your computer parses LightBlue Platform messages and converts them back into serial.
 
-__Bluetooth Low Energy Doesn't Support Serial Characteristics:__
-Unlike Bluetooth Classic, BLE stack doesn't have a Serial Port Profile (SPP).  The Bean Loader creates a virtual serial port:/dev/cu.LightBlue-Bean, and when a specific command is sent from the Atmega, the Bean Loader passes the payload through to the virtual serial port. We can connect to this port on the Arduino IDE. To see data that the Bean is sending, we can use the serial monitor. 
+When an Arduino sketch writes serial data, the Bean Loader receives it, parses it, and passes the data through to the virtual serial port. To see data that the Bean is sending, we can use the serial monitor in Arduino IDE.
 
-### Bean Connects to the Bean Loader App:
+## Step-by-Step
 
-The Bean needs to advertise its presence in order for it to connect to a central device. The way the central device connects to the Bean is through the Bean Loader App. The Bean Loader is also what allows you to disconnect and program your Bean.  
+### Upload a Sketch
 
-### Bean Transmits Serial Data to the Computer:
+This sketch sends a message over Virtual Serial when the state of digital pin 0 changes. Upload the following sketch to your Bean.
 
-The Bean transmits the data packets serially, where only one data packet can sequentially be communicated at a time.  Afterwards, the Bean Loader routes the data packets to the /dev/cu.LightBlue-Bean serial port, seen on the Arduino IDE. The data packets are actually presented to the /dev/cu.LightBlue-Bean.
+```cpp
+bool lastState = 0;
 
-## Visualizing and Transmitting Serial Data: 
-
- In order to see the data that is being transferred or send data back to the Bean,  we need a monitor that allows us to read and write values.  
-
-Before going through this part of the tutorial, please make sure you have gone through our [Getting Started Tutorial](#)
-Below is the sequence that describes the process of how you will use the serial monitor:
-
-__Bean Connects to Bean Loader:__
-Once the battery is in the Bean and enabled, it starts broadcasting to the world letting central devices know that it wants to connect.
-
-{{{img_rel this 'bean-disconnected.jpg'}}}
-
-Double clicking on your Bean connects it to your computer
-
-{{{img_rel this 'bean-connected.jpg'}}}
-
-
-__Upload and Compile A Program on the Arduino IDE:__
-Once you have written your program, you need to upload the sketch and compile it. As an example, copy and paste this to the sketch on your computer:
-
-``` 
-// Notify the client over serial when a digital pin state changes
-
-static int d0 = 0;
-static uint8_t pinValue = 0;
-
-// the setup routine runs once when you press reset:
-void setup() 
-{
-  // initialize serial communication at 57600 bits per second:
+void setup() {
+  // Initialize serial communication
   Serial.begin(57600);
-  
-  // Digital pins
-  pinMode(d0, INPUT_PULLUP);  
 
+  // Set D0 to pullup mode
+  pinMode(0, INPUT_PULLUP);
 }
 
-void loop()
-{
- bool notify = false;
-   uint8_t pinState = digitalRead(d0);
-   
-   if ( pinState != pinValue)
-   {
-     notify = true;
-     pinValue = pinState;
-   } 
- 
- if ( notify )
- {
-   Serial.write(pinValue);
-   notify = false;
-   pinState = 0;
- }
- 
- // Sleep for half a second before checking the pins again  
- Bean.sleep(500);  
+void loop() {
+  bool newState = digitalRead(0);
+
+  if (lastState != newState) {
+    lastState = newState;
+    Serial.print("Pin changed: ");
+    Serial.println(newState);
   }
+
+  // Sleep for half a second before checking the pins again
+  Bean.sleep(500);
 }
 ```
 
-* `Line 3` states that the pin soldered to GPIO 0 is not pushed.  This means it has a value of 0. Conversely, if the button is pressed, its value will change to 1. 
-* `Line 4`  says that the 8-bit pinValue has an off state. This means it has a value of 0. 
-* `Line 10` initializes serial communication at 57600 bps.   
-Serial communication also comes at a cost. For example, when the module communicates to the Arduino at, there may be errors due to noise.  Take a look at the [Arduino docs](https://www.arduino.cc/en/Serial/Begin) to learn more serial!
-* `Line 20`is reading the push button's state. If the state is off, the button is not pressed.  Conversley, if the state is on, the button is pressed. 
-* `Line 22` is checking if the pinState is different from the pinValue. For example, if the pin is pressed, the pinValue becomes 1. 
-* `Line 28` is checking if notify was set to true. 
-* `Line 31` is resetting values so another button press can be detected.
-* `Line 30` is writing to the serial monitor the pinValue
+* **Line 1** declares a variable, `lastState`, that keeps track of the last read value from pin 0.
+* **Line 5** sets up serial communication so your Bean can start sending data.
+* **Line 8** sets pin 0 to pullup mode. This means that the microcontroller will connect an internal high-impedance resistor between the high logic level (3.3v or 5v) and pin 0. Pin 0 will default to HIGH. To change pin 0 to LOW, pull this pin low by connecting it to ground.
+* **Line 12** checks the current state of pin 0.
+* **Lines 14-18** check if the latest state of pin 0 is different from the one last recorded. If it is, it sends a message over serial.
 
+### Select the Virtual Serial Port
 
-{{{img_rel this 'compile-arduino-sketch.jpg'}}}
+To read the Virtual Serial port in Arduino IDE, go to the Arduino IDE menu bar and select **Tools** > **Port** > `/dev/cu.LightBlue-Bean`.
 
+{{{img_rel this 'vs-port.png'}}}
 
-__Program the Bean with a Sketch:__
-Now that we have the code compiled, we can program the Bean with it.  Right click on the Bean Loader and go to 'Program Sketch.'  
+### Enable Virtual Serial
 
-{{{img_rel this 'program-bean.jpg'}}}
+After uploading your sketch to Bean, enable Virtual Serial. Right-click on your connected Bean in Bean Loader and click **Use for Virtual Serial**.
 
-__Enable Virtual Serial on the Bean Loader:__
-After we successfully programmed the Bean, we must enable virtual-serial. 
+{{{img_rel this 'enable-vs.png'}}}
 
-{{{img_rel this 'enable-virtual-serial-on-bean.jpg'}}}
+### Open the Serial Monitor
 
+The button that opens Serial Monitor is located in the upper-right corner of the Arduino IDE. Click this button to open it.
 
-__Open the Serial Monitor on the Arduino IDE:__
-The serial monitor is located on the Arduino IDE.  Specifically, it'll be on the right-hand side of your sketch. Since we enabled virtual-serial on the Bean Loader, we should see serial data on the serial monitor. 
+{{{img_rel this 'sm-button.png'}}}
 
-{{{img_rel this 'location-virtual-serial.jpg'}}}
+### Toggle Pin 0
+
+To toggle digital pin 0, you need to connect it to ground. Connecting a pin to ground is also called *grounding a pin*. The easiest way to do this is to connect a jumper wire between the `0` and `GND` pins. You could also solder a button to ground pin 0 when pressed.
+
+{{{img_rel this 'bean-button.svg' 'Bean with a pulldown switch on D0' '30%'}}}
+
+Since we enabled Virtual Serial in Bean Loader, we should see serial data appear in the serial monitor when we ground pin 0:
+
+{{{img_rel this 'serial-monitor.png'}}}
 
 ## Conclusion
 
-In this guide we took a more detailed approach to explain how the Bean transmits data to the computer by describing how the Bluetooth Low Energy stack operates.  
+In this guide, we learned how Bean uses Virtual Serial to read and write serial data just like any other Arduino dev board.
 
-Knowing how to use the serial monitor provides many advantanges:
-* Debugging
-* Writing data to the Bean
-* Reading data from the Bean
+Knowing how to use the serial monitor and Virtual Serial lets you do things like:
 
-Checkout the [Arduino reference for serial](https://www.arduino.cc/en/Reference/Serial) to learn more about the commands available for serial. 
+* Read data directly from the Bean
+* Write all sorts of data to the Bean
+* Debug your sketches
 
-__References to Learn More About BLE:__
+Check out the [Arduino Serial reference](https://www.arduino.cc/en/Reference/Serial) to learn more about the commands available for serial communication.
+
+### Learn More about BLE
 
 * [Our Guide](#)
 * [Getting Started with Bluetooth Low Energy](http://www.amazon.com/Getting-Started-Bluetooth-Low-Energy-ebook/dp/B00K1N23LA)
-* [Bluetooth Low Energy Core Specification 4.0:](https://www.bluetooth.org/en-us/specification/adopted-specifications)
+* [Bluetooth Low Energy Core Specification 4.0](https://www.bluetooth.org/en-us/specification/adopted-specifications)
 
 ## Troubleshooting
 
