@@ -126,3 +126,9 @@ To save your sketch, simply press **Done** to close the keyboard.
 ## Conclusion
 
 In this guide, you programmed your Bean with an example sketch, copied the example to your local sketches, and edited and saved your own version of Blink. You should be ready to get started writing and uploading sketches to your Bean!
+
+### The Bean Cloud Compiler
+
+Bean Loader for iOS doesn't have Arduino installed locally. Instead, it sends sketches to the Bean Cloud Compiler to compile them into hex code for your Bean.
+
+If you're working on a sketch and you need to use a library, it might be available on the Bean Cloud Compiler. Check out [this thread on Beantalk](http://beantalk.punchthrough.com/t/cloud-compiler-library-requests/1101) to see what libraries are available and to request new libraries for the Cloud Compiler.
