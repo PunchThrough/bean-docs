@@ -78,17 +78,17 @@ void loop() {
 * **Line 12** checks the current state of pin 0.
 * **Lines 14-18** check if the latest state of pin 0 is different from the one last recorded. If it is, it sends a message over serial.
 
-### Enable Virtual Serial
-
-After uploading your sketch to Bean, enable Virtual Serial. Right-click on your connected Bean in Bean Loader and click **Use for Virtual Serial**.
-
-{{{img_rel this 'enable-vs.png'}}}
-
 ### Select the Virtual Serial Port
 
 To read the Virtual Serial port in Arduino IDE, go to the Arduino IDE menu bar and select **Tools** > **Port** > `/dev/cu.LightBlue-Bean`.
 
 {{{img_rel this 'vs-port.png'}}}
+
+### Enable Virtual Serial
+
+After uploading your sketch to Bean, enable Virtual Serial. Right-click on your connected Bean in Bean Loader and click **Use for Virtual Serial**.
+
+{{{img_rel this 'enable-vs.png'}}}
 
 ### Open the Serial Monitor
 
@@ -98,9 +98,11 @@ The button that opens Serial Monitor is located in the upper-right corner of the
 
 ### Toggle Pin 0
 
-To toggle digital pin 0, you need to connect it to ground, also known as grounding it. The easiest way to do this is to connect a jumper wire between the `0` and `GND` pins. You could also solder a button to connect `0` and `GND` when pressed.
+To toggle digital pin 0, you need to connect it to ground. Connecting a pin to ground is also called *grounding a pin*. The easiest way to do this is to connect a jumper wire between the `0` and `GND` pins. You could also solder a button to ground pin 0 when pressed.
 
-Since we enabled Virtual Serial in Bean Loader, we should see serial data appear in the serial monitor:
+{{{img_rel this 'bean-button.svg' 'Bean with a pulldown switch on D0' '30%'}}}
+
+Since we enabled Virtual Serial in Bean Loader, we should see serial data appear in the serial monitor when we ground pin 0:
 
 {{{img_rel this 'serial-monitor.png'}}}
 
