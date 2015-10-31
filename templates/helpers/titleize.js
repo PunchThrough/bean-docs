@@ -1,3 +1,5 @@
-export default (text) => {
+'use strict'
+
+module.exports = text => {
   return 'Titleized: ' + text
 }

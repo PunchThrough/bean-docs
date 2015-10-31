@@ -1,6 +1,7 @@
-export default (config) => {
-  return (files, metalsmith, done) => {
+'use strict'
 
+module.exports = config => {
+  return (files, metalsmith, done) => {
     // Add relative links to home to each page
     // i.e. files/something/doc.md -> '../../',
     //      files/other_doc.md -> '../'

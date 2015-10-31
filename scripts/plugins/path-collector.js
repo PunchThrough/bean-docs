@@ -1,11 +1,12 @@
-import pluralize from 'pluralize'
+'use strict'
 
-export default (config) => {
+let pluralize = require('pluralize')
+
+module.exports = config => {
   return (files, metalsmith, done) => {
-
     let count = Object.keys(files).length
     if (config.debug) {
-      console.log('Generating collections for ' + count + ' ' + pluralize('file', count))      
+      console.log('Generating collections for ' + count + ' ' + pluralize('file', count))
     }
 
     let groups = config.groups

@@ -1,6 +1,8 @@
-import S from 'string'
+'use strict'
 
-export default (context, name, desc, maxWidth) => {
+let S = require('string')
+
+module.exports = (context, name, desc, maxWidth) => {
   let styleTemplate = 'max-width: {{maxWidth}};'
   let srcTemplate = '{{relativeRoot}}_assets/images/{{pathDir}}/{{pathName}}/{{name}}'
   let htmlTemplate = ('<div class="guide-img-holder">' +
@@ -10,7 +12,7 @@ export default (context, name, desc, maxWidth) => {
                       '</div>')
 
   let style = ''
-  if (typeof(maxWidth) === 'string') {  // Handlebars passes in an object if the last argument is omitted (??)
+  if (typeof maxWidth === 'string') {  // Handlebars passes in an object if the last argument is omitted (??)
     style = S(styleTemplate).template({
       maxWidth: maxWidth
     })

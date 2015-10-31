@@ -1,6 +1,8 @@
-import util from 'util'
+'use strict'
 
-export default () => {
+let util = require('util')
+
+module.exports = () => {
   return (files) => {
     Object.keys(files).forEach(file => {
       let data = files[file]

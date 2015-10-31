@@ -26,10 +26,9 @@ npm install
 # Usage
 
 ```sh
-./do                 # list tasks
-./do build           # build the site into /build
-./do serve           # serve the site at localhost:8080 with live reloading
-npm run gulp deploy  # deploy to GitHub Pages
+npm run build   # build the site into /build
+npm run serve   # serve the site at localhost:8080 with live reloading
+npm run deploy  # deploy to GitHub Pages
 ```
 
 # Writing Content
