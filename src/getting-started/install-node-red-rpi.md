@@ -7,7 +7,7 @@ order: 2
 
 This is a setup guide for a dedicated Node-RED server on a Raspberry Pi
 
-{{{img_rel this 'node-red-advanced.png' 'Node-RED with RaspberryPi', '50%'}}}
+{{{img_rel this 'node-red-advanced.png' 'Node-RED with RaspberryPi' '50%'}}}
 
 ## Components
 
@@ -41,7 +41,7 @@ __Software:__
     * `sudo apt-get update`
     * `sudo apt-get upgrade`
 
-{{{img_rel this 'platforms.jpg' 'Node-RED with RaspberryPi', '50%'}}}
+{{{img_rel this 'platforms.jpg' 'Node-RED with RaspberryPi' '50%'}}}
 
 ## Install Node.js
 
@@ -55,20 +55,20 @@ __Software:__
 * Install dependancies:  
     * `sudo apt-get install bluetooth bluez-utils libbluetooth-dev libcap2-bin`
 
-{{{img_rel this 'nodejs.png' 'Node-RED with RaspberryPi', '50%'}}}
+{{{img_rel this 'nodejs.png' 'Node-RED with RaspberryPi' '50%'}}}
 
 ## Install Node-RED
 
 * `sudo npm install -g node-red` (There may be errors, but you can ignore them)
 
-{{{img_rel this 'flow.png' 'Node-RED with RaspberryPi', '50%'}}}
+{{{img_rel this 'flow.png' 'Node-RED with RaspberryPi' '50%'}}}
 
 ## Install Bean Nodes
 
 * `mkdir -p ~/.node-red/node_modules`
 * `npm install --prefix ~/.node-red node-red-contrib-bean`
 
-{{{img_rel this 'bean-nodes.png' 'Node-RED with RaspberryPi', '50%'}}}
+{{{img_rel this 'bean-nodes.png' 'Node-RED with RaspberryPi' '50%'}}}
 
 ## Configure Node-RED
 
