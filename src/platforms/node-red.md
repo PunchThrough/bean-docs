@@ -18,10 +18,10 @@ Node-RED is based on Node.js. The Node-RED application runs as a web server, and
 
 We provide a set of nodes specifically for communicating with the Bean. They are defined as follows:
 
-* __Bean Serial__ - Send or recieve serial messages to or from a connected Bean.
-* __Bean Accelerometer__ - Get accelerometer data from a connected Bean.
-* __Bean LED__ - Set the Bean's LED to a specified color.
-* __Bean Temperature__ - Get the ambient temperature from a connected Bean.
+* [Bean Serial](#) - Send or recieve serial messages to or from a connected Bean.
+* [Bean Accelerometer](#) - Get accelerometer data from a connected Bean.
+* [Bean LED](#) - Set the Bean's LED to a specified color.
+* [Bean Temperature](#) - Get the ambient temperature from a connected Bean.
 
 Each of the nodes defined above can be used in a Node-RED application once you install these nodes into your Node environment. We will cover installation and setup in following sections. First, take a look at the following app to get an idea of how you might use our Bean nodes.
 
