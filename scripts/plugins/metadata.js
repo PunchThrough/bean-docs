@@ -1,7 +1,9 @@
+'use strict'
+
 // Add arbitrary metadata to Metalsmith.
 // See https://github.com/segmentio/metalsmith-metadata
 
-export default (opts) => {
+module.exports = opts => {
   opts = opts || {}
 
   return (files, metalsmith, done) => {

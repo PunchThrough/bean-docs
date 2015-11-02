@@ -1,27 +1,28 @@
-import Metalsmith from 'metalsmith'
-import Handlebars from 'handlebars'
-import Yaml from 'js-yaml'
-import fs from 'fs'
+'use strict'
 
-import Metadata from './plugins/metadata'
-import PathCollector from './plugins/path-collector'
-import RelativeRoots from './plugins/relative-roots'
-import Debugger from './plugins/debugger'
+let Metalsmith = require('metalsmith')
+let Yaml = require('js-yaml')
+let fs = require('fs')
 
-import Markdown from 'metalsmith-markdown'
-import Layouts from 'metalsmith-layouts'
-import AutoTOC from 'metalsmith-autotoc'
-import Helpers from 'metalsmith-register-helpers'
-import Partials from 'metalsmith-register-partials'
-import Permalinks from 'metalsmith-permalinks'
-import Ignore from 'metalsmith-ignore'
-import Stylus from 'metalsmith-stylus'
-import InPlace from 'metalsmith-in-place'
-import Paths from 'metalsmith-paths'
+let Metadata = require('./plugins/metadata')
+let PathCollector = require('./plugins/path-collector')
+let RelativeRoots = require('./plugins/relative-roots')
+
+let Markdown = require('metalsmith-markdown')
+let Layouts = require('metalsmith-layouts')
+let AutoTOC = require('metalsmith-autotoc')
+let Helpers = require('metalsmith-register-helpers')
+let Partials = require('metalsmith-register-partials')
+let Permalinks = require('metalsmith-permalinks')
+let Ignore = require('metalsmith-ignore')
+let Stylus = require('metalsmith-stylus')
+let InPlace = require('metalsmith-in-place')
+let Paths = require('metalsmith-paths')
 
 const config = Yaml.safeLoad(fs.readFileSync('config.yml', 'utf8'))
 
-export default Metalsmith(__dirname)
+module.exports =
+  Metalsmith(__dirname)
   .source(config.src)
   .destination(config.dest)
   .use(Metadata({config: config}))
@@ -36,5 +37,4 @@ export default Metalsmith(__dirname)
   .use(Stylus())
   .use(AutoTOC(config.autotoc))
   .use(Permalinks(config.permalinks))
-  //.use(Debugger())
   .use(Layouts(config.layouts))

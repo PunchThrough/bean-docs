@@ -1,22 +1,15 @@
-var gulp = require('gulp')
-var add = require('gulp-add')
-var ghPages = require('gulp-gh-pages')
-var exec = require('child_process').exec
+'use strict'
 
-var config = {
+let gulp = require('gulp')
+let add = require('gulp-add')
+let ghPages = require('gulp-gh-pages')
+
+let config = {
   push: true
 }
 
-gulp.task('build', function(done) {
-  exec('./do build', function(err, stdout, stderr) {
-    if (err) throw err
-    process.stdout.write(stdout)
-    process.stderr.write(stderr)
-    done()
-  })
-})
-
-gulp.task('deploy', ['build'], function() {
+gulp.task('deploy', () => {
+  console.log('deploy started')
   return gulp.src('build/**/*')
     .pipe(add('.nojekyll', ''))
     .pipe(ghPages(config))

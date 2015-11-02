@@ -2,7 +2,9 @@
   "name": "bean-docs",
   "private": true,
   "scripts": {
-    "gulp": "gulp"
+    "build": "node scripts/build.js",
+    "serve": "node scripts/serve.js",
+    "deploy": "node_modules/.bin/gulp deploy"
   },
   "dependencies": {
     "handlebars": "^3.0.3",
@@ -26,7 +28,6 @@
     "js-yaml": "^3.3.1",
     "metalsmith-serve": "0.0.3",
     "metalsmith-watch": "^1.0.1",
-    "optimist": "^0.6.1",
     "pluralize": "^1.1.4",
     "rimraf": "^2.4.3"
   }
