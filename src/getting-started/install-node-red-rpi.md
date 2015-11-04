@@ -7,8 +7,6 @@ order: 2
 
 This is a setup guide for a dedicated Node-RED server on a Raspberry Pi
 
-{{{img_rel this 'node-red-advanced.png' 'Node-RED with RaspberryPi' '50%'}}}
-
 ## Components
 
 __Hardware:__ 
@@ -116,7 +114,4 @@ __Software:__
 * Allow BLE adapter to be accessed by non root users
     * `cd ~/.node-red/node_modules/node-red-contrib-bean/`
     * `find path '*noble*Release/hci-ble' -exec sudo setcap cap_net_raw+eip '{}' \;`
-
-
-
 

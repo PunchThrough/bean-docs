@@ -7,8 +7,6 @@ order: 2
 
 This is a setup guide for a Node-RED server for running on OSX. 
 
-{{{img_rel this 'node-red-simple.png' 'Node-RED with OSX'}}}
-
 ## Check System Requirements
 
 The Bean nodes are built around a Node.js dependency called ‘noble’. <a href="https://github.com/sandeepmistry/noble" target="_blank">The noble project</a> currently supports OS X and Linux. Before starting, take a look through noble’s <a href="https://github.com/sandeepmistry/noble#prerequisites" target="_blank">prerequisites</a>.
@@ -43,3 +41,4 @@ Note: Node-RED does not yet support the latest distributions of Node.js
 
 * `node-red`
 * Go to "http://localhost:1880" in your browser
+
