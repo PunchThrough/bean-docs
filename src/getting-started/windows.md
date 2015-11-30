@@ -127,3 +127,20 @@ Once connected, you may be prompted to update the firmware on the Bean. You need
 ## Conclusion
 
 In this guide, you installed the Windows Bean Loader, updated the firmware on your Bean, and programmed your Bean with an example sketch. You should be ready to get started uploading sketches to your Bean using Windows!
+
+## Troubleshooting
+
+### No Beans are Appearing in my PC Settings
+It may take a while to appear in the PC settings, but usually less than 30 seconds. If no Beans appear, you may want to check the battery, and reconnect any BLE dongle you may be using.
+
+### No Beans are Appearing in my Bean Loader
+
+If a Bean is not appearing in the list on your Bean Loader, ensure you have run through the steps above in [Connect to Your Bean](#connect-to-your-bean).
+
+### Further Troubleshooting
+If you are having other problems with the Windows Bean Loader, use the [Troubleshooting page](http://legacy.punchthrough.com/bean/support/troubleshooting/) or ask in the [BeanTalk forum](http://beantalk.punchthrough.com/).
+
+## Windows Bean Loader Tips
+
+* If you have multiple Beans, you can blink an LED from the application to locate the Bean that you are connected to.  Choose “Commands” then “Blink LED” to do this.
+* The “BeanBlink” sketch uses the LED and is therefore power hungry. To preserve your battery when you are finished, connect to your Bean and toggle the "Arduino on/off" button.
