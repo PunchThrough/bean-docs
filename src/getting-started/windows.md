@@ -147,5 +147,5 @@ If you are having other problems with the Windows Bean Loader, use the [Troubles
 
 ## Windows Bean Loader Tips
 
-* If you have multiple Beans, you can blink an LED from the application to locate the Bean that you are connected to.  Choose “Commands” then “Blink LED” to do this.
+* If you have multiple Beans, you can blink an LED from the Windows Bean Loader to locate the Bean that you are connected to.  Choose “Commands” then “Blink LED” to do this.
 * The “BeanBlink” sketch uses the LED and is therefore power hungry. To preserve your battery when you are finished, connect to your Bean and toggle the "Arduino on/off" button.
