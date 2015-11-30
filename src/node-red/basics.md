@@ -1,7 +1,8 @@
 ---
-title: Node-RED
+title: Basics
 layout: basic.hbs
 autotoc: true
+order: 1
 ---
 
 ## Introduction

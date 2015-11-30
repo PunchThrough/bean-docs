@@ -39,9 +39,9 @@ pathCollector:
     - key: accessories
       name: Accessories
       pattern: ^accessories/.+\.md$
-    - key: platforms
-      name: Other Platforms
-      pattern: ^platforms/.+\.md$
+    - key: node-red
+      name: Node-RED
+      pattern: ^node-red/.+\.md$
     - key: everything-else
       name: Everything Else
       pattern: ^everything-else/.+\.md$  

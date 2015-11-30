@@ -1,5 +1,5 @@
 ---
-title: Node-RED for OSX
+title: Install on OSX
 layout: basic.hbs
 autotoc: true
 order: 2

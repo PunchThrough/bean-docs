@@ -1,7 +1,8 @@
 ---
-title: Using Node-RED
+title: Usage
 layout: basic.hbs
 autotoc: true
+order: 4
 ---
 
 Now that you have Node-RED installed, it's time to get familiar with building flows along with how to use the Bean nodes. 

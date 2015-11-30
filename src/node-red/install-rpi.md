@@ -1,8 +1,8 @@
 ---
-title: Node-RED for Raspberry Pi
+title: Install on Raspberry Pi
 layout: basic.hbs
 autotoc: true
-order: 2
+order: 3
 ---
 
 This is a setup guide for a dedicated Node-RED server on a Raspberry Pi
