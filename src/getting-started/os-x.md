@@ -95,44 +95,63 @@ Connect to your Bean, right click on it, and select "Pairing PIN Settings". Choo
 
 TODO image
 
-### Ignore your neighbor's Beans
+### Ignore Your Neighbor's Beans
 
-Your Bean Loader window may be overwhelmed with nearby Beans. In that case, right click on uninteresting Beans and select "Ignore". Ignored Beans will always be displayed in a light grey color at the bottom of your list.
+Your Bean Loader window may be overwhelmed with nearby Beans. If you want to keep some Beans out of the way, you can right click on uninteresting Beans and select **Ignore**.
 
-## Open the "BeanBlink" example sketch
+Ignored Beans will always be displayed in a light grey color at the bottom of your list:
 
-In your Arduino application, select **Tools -> Board -> "LightBlue Bean"**. 
+TODO image
 
-Go to **File -> Examples -> LightBlue-Bean -> "Bean Blink"**.
+### Open An Example Sketch
 
-Select the "Upload" button. 
+Open Arduino IDE. Select **Tools &rarr; Board &rarr; LightBlue Bean** (or **LightBlue Bean+**). This tells Arduino IDE to use the Bean libraries when compiling your Arduino sketch.
 
-In your Bean Loader you should see the sketch name "Bean Blink" in the bottom left corner. 
+TODO image
 
-// TODO put a picture showing the sketch name in bottom left
+Once you've selected your board, open the example sketch by selecting **File &rarr; Examples &rarr; LightBlue-Bean &rarr; Bean Blink**.
+
+TODO image
 
 ## Programming Your Bean
+
+Now that you have a sketch open, it's time to compiile and upload it to your Bean!
+
+### Send to Bean Loader
+
+Click **Upload** to compile the example sketch and send it to Bean Loader. 
+
+TODO image
+
+You should see the sketch name "Bean Blink" appear in the bottom left corner of Bean Loader:
+
+TODO put a picture showing the sketch name in bottom left
 
 ### Upload to Bean
 
 Connect to your Bean. Right click and select "Program Sketch".
 
-Once the sketch upload is complete, you should see flashy colors on the Bean. 
+Once the sketch upload is complete, you should see your Bean running the Bean Blink sketch. Watch for the blinkenlights! 
 
 ### Communicate with the Bean over serial
 
-Go back to the Example sketch folder and this time select "Get Temperature". Program the Bean. 
+The Bean talks over Bluetooth LE which is a little different from the serial port you use with an Arduino Uno. To make the Bean work with Arduino IDE's Serial Monitor, we built **Virtual Serial**. This feature takes incoming data from Bean sent over Bluetooth and pipes it to a serial port on your computer. It also takes any data you write to that port and sends it to Bean via Bluetooth.
 
-The Bean talks over Bluetooth LE which is a little different from traditional serial. To bridge the two, we use something called "Virtual Serial". Right click your connected Bean and select "Use for Virtual Serial". You're Bean's Bluetooth LE serial messages will now be piped to and from **/dev/cu.LightBlue-Bean**
+You need a sketch that sends data to serial to see the Virtual Serial port work. Open the **Temperature** sketch in the LightBlue Bean example sketches. Compile the sketch, connect to your Bean, and upload it.
 
-In the Arduino application, select **Tools -> Port -> /dev/cu.LightBlue-Bean**
+Right click your connected Bean and select "Use for Virtual Serial". Serial messages from your Bean will now be piped to and from `/dev/cu.LightBlue-Bean`.
 
-Now open Arduino's Serial Monitor (The magnifier button in the top right).
+In Arduino IDE, select the Virtual Serial port: **Tools -> Port -> /dev/cu.LightBlue-Bean**.
 
-You should now see a live log of your Bean's ambient temperature. Enjoy this newfound knowledge. 
+TODO image
 
+Now open Arduino's Serial Monitor:
+
+TODO image
+
+You should see a live log of your Bean's ambient temperature in the Serial Monitor.
 
 ## Conclusion
 
-In this guide, you configured your Bean and software, programmed your Bean with example sketches, and read data from your Bean with virtual serial. You should be ready to start exploring the LightBlue-Bean example folder and try out the Bean's many features! 
+In this guide, you configured your Bean and Bean Loader, programmed your Bean with example sketches, and read data from your Bean with Virtual Serial. You should be ready to start exploring the LightBlue Bean example sketches and try out the Bean's many features!
 
