@@ -45,6 +45,9 @@ pathCollector:
     - key: everything-else
       name: Everything Else
       pattern: ^everything-else/.+\.md$  
+    - key: help
+      name: Having Problems?
+      pattern: ^help/.+\.md$
 
 permalinks:
   pattern: :coll_key/:id
