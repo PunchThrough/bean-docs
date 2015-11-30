@@ -120,13 +120,18 @@ Once connected, you may be prompted to update the firmware on the Bean. You need
 
 * The “BeanBlink” sketch you verified in Arduino is ready for loading and is shown in grey text on the top of the Bean loader app.
 * Click Program to start uploading your sketch.
-* Once the sketch finishes uploading, your Bean will start running it!
 
 {{{img_rel this 'windows_programming_bean.PNG' 'Windows Loader Programming'}}}
 
+Once the sketch finishes uploading, your Bean will start running it!
+
+{{{img_rel this 'windows_programmed_bean.PNG' 'Programmed Bean'}}}
+
+Nice job! You have successfully installed the Windows Bean Loader and programmed your Bean with the BeanBlink sketch. 
+
 ## Conclusion
 
-In this guide, you installed the Windows Bean Loader, updated the firmware on your Bean, and programmed your Bean with an example sketch. You should be ready to get started uploading sketches to your Bean using Windows!
+In this guide, you installed the Windows Bean Loader and programmed your Bean with an example sketch. You should be ready to get started uploading sketches to your Bean using Windows!
 
 ## Troubleshooting
 
