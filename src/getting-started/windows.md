@@ -113,7 +113,7 @@ Once connected, you may be prompted to update the firmware on the Bean. You need
 
 ## Select Your Sketch in the Bean Loader
 * Your compiled sketch will appear in the WindowsBeanLoader document folder.
-* Click “Choose Sketch Folder” near the top of the screen and select this folder.
+* Click “Select Sketch Folder” near the top of the screen and select this folder.
 * **Important:** This needs to be done every time the application is opened (not every time a sketch is compiled), as Windows Store apps cannot access folders without permission.
 
 ## Program Your Bean
