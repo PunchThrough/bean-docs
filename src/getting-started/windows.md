@@ -143,7 +143,7 @@ It may take a while for your Bean to appear in the PC settings, but usually less
 If a Bean is not appearing in the list on your Bean Loader, ensure you have run through the steps above in [Connect to Your Bean](#connect-to-your-bean).
 
 ### Further Troubleshooting
-If you are having other problems with the Windows Bean Loader, use the [Troubleshooting page](http://legacy.punchthrough.com/bean/support/troubleshooting/) or ask in the [BeanTalk forum](http://beantalk.punchthrough.com/).
+If you are having other problems with the Windows Bean Loader, use the [Troubleshooting page](http://legacy.punchthrough.com/bean/support/troubleshooting/) or ask in the [Beantalk forum](http://beantalk.punchthrough.com/).
 
 ## Windows Bean Loader Tips
 
