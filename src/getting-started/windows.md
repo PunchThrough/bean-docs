@@ -131,7 +131,7 @@ In this guide, you installed the Windows Bean Loader, updated the firmware on yo
 ## Troubleshooting
 
 ### No Beans are Appearing in my PC Settings
-It may take a while to appear in the PC settings, but usually less than 30 seconds. If no Beans appear, you may want to check the battery, and reconnect any BLE dongle you may be using.
+It may take a while for your Bean to appear in the PC settings, but usually less than 30 seconds. If no Beans appear, you may want to check the battery, and reconnect any BLE dongle you may be using.
 
 ### No Beans are Appearing in my Bean Loader
 
