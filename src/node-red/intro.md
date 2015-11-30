@@ -1,5 +1,5 @@
 ---
-title: Basics
+title: Intro to Node-RED
 layout: basic.hbs
 autotoc: true
 order: 1
