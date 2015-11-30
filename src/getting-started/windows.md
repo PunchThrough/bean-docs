@@ -102,7 +102,7 @@ Once connected, you may be prompted to update the firmware on the Bean. You need
   * Click Tools ->
   * Go to Boards -> 
   * Select LightBlue Bean or Bean+. 
-* Now you can select the Blink sketch.
+* Now you can select the BeanBlink sketch.
   * Click File ->
   * Go to Examples -> 
   * Open LightBlue-Bean ->
