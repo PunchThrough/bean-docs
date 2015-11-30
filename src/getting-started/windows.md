@@ -1,5 +1,5 @@
 ---
-title: Windows Bean Loader Install Guide
+title: Bean Loader for Windows
 layout: basic.hbs
 autotoc: true
 order: 2
@@ -38,16 +38,16 @@ After downloading the application, follow the installer instructions to complete
 
 ## Install the Bean Arduino IDE Patch 
 
-The Bean Arduino IDE patch will install all of the necessary Bean Arduino libraries that you need to get started building with Bean. The patch also modifies the Arduino IDE to run a post-build script which will copy your recently built sketch hex file to the following folder:
+The Bean Arduino IDE patch will install all of the necessary Bean Arduino libraries that you need to get started building with Bean. The patch also modifies the Arduino IDE to run a post-build script that will copy your recently built sketch hex file to the following folder:
 
-->**./Documents/WindowsBeanLoader/**<-
+**./Documents/WindowsBeanLoader/**
 
 The Arduino patch will automatically create the folder for you after you finish building your first sketch.
 
 * Download the [Bean Arduino IDE patch](http://punchthrough.com/files/bean/loader/windows/WindowsBeanLoader_ArduinoIDEAddOn.zip).
-* Open the addon installer and follow the instructions.
+* Open the add-on installer and follow the instructions.
 * The installer assumes that C:\Program Files (x86)\Arduino is the installation directory for the Arduino IDE.
-  * If so, choose next, otherwise choose your Arduino install directory first.
+  * If so, choose next; otherwise choose your Arduino install directory first.
 * Make sure that the “Typical” install is selected and finish the installation. 
 
 ## Connect to Your Bean
@@ -67,7 +67,7 @@ A screen will appear asking you for a passcode. Enter '0' to continue.
 
 {{{img_rel this 'windows_device_passcode.PNG' 'Windows 10 Passcode Screen'}}}
 
-It may take a while for Windows to connect to your Bean at first. Watch the status bar for progress. If the connection was successfull, the Bean will show as "Connected."
+It may take a while for Windows to connect to your Bean at first. Watch the status bar for progress. If the connection was successful, the Bean will show as "Connected."
 
 {{{img_rel this 'windows_bean_paired.PNG' 'Connected Bean'}}}
 
@@ -79,7 +79,7 @@ The Windows Bean Loader allows for wireless programming of Arduino sketches to y
 
 ### Select Your Connected Bean
 
-Your connected Beans will appear in the list on the right-side of the screen.
+Your connected Beans will appear in the list on the right side of the screen.
 
 {{{img_rel this 'windows_loader_bean.PNG' 'Windows Loader Beans'}}}
 
