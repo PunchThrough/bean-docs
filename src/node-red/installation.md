@@ -1,5 +1,5 @@
 ---
-title: Setup Node-RED
+title: Installation
 layout: basic.hbs
 autotoc: true
 order: 2
@@ -9,10 +9,10 @@ order: 2
 
 ---
 
-Welcome to the Node-RED setup guide. This guide will help you get your system ready to use with Node-RED as well as the custom nodes used to comminucate with the Bean.
+Welcome to the Node-RED installation guide. This guide will help you get your system ready to use with Node-RED as well as the custom nodes used to communicate with the Bean.
  
 
-## Node-RED
+## Install Node-RED
 
 ---
 
@@ -26,7 +26,7 @@ If you are interested in setting up a Raspberry Pi or BeagleBone Black for a ded
 * [Install Node-RED on BeagleBone Black](http://nodered.org/docs/hardware/beagleboneblack.html)
 
 
-## Bean Nodes
+## Install Bean Nodes
 
 ---
 
@@ -44,4 +44,5 @@ Finally, in order to make use of the Bean Nodes, you must install them in a plac
 
 ## Next Steps
 
-* [Using Node-RED](/node-red/usage)
+* Learn how to use our [Bean Nodes](/node-red/bean-nodes)
+* [Official Node-RED docs](http://nodered.org/docs/)

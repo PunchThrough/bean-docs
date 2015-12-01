@@ -1,5 +1,5 @@
 ---
-title: Intro to Node-RED
+title: What is Node-RED?
 layout: basic.hbs
 autotoc: true
 order: 1
@@ -59,5 +59,6 @@ __Dedicated Server using a Raspbery Pi:__
 
 Now that you have a basic understanding of what Node-RED is and how it can be used to quickly start connecting beans to your computer and internet, check out the following guides:
 
-* [Setup](/node-red/setup)
-* [Usage examples](/node-red/usage)
+* [Installation guide](/node-red/installation)
+* [Bean Nodes guide](/node-red/bean-nodes)
+* [Official Node-RED docs](http://nodered.org/docs/)
