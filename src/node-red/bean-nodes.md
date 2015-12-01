@@ -11,42 +11,46 @@ order: 3
 
 This guide will walk you through how to use the custom nodes for communicating with the Bean.
 
-## Using the Bean Nodes
+## Using Bean Nodes
 
 ---
 
-Here are the nodes for communicating with the LightBlue Bean:
+When using any of the Bean nodes you will have to tell the flow which Bean you want to communicate with. To do this, begin by double clicking on any of the Bean nodes. You will see the following menu.
 
-* __Bean Acceleration__ - Get accelerometer data from the Bean.
-* __Bean Serial__ - Send or recieve serial messages to or from the Bean.
-* __Bean Temperature__ - Get the ambient temperature from the Bean.
-* __Bean Read Scratch__ - Read scratch data set by the Bean. 
-* __Bean RGB LED__ - Set the Bean's LED to a specified color.
-* __Bean Write Scratch__ - Write scratch data for the Bean. 
+{{{img_rel this 'config-bean.png' 'Config Bean' '100%'}}}
 
-{{{img_rel this 'bean_nodes.png' 'LightBlue Bean Nodes' '100%'}}}
+Clicking on the pencil icon will allow you to configure the Bean name or UUID. Make sure one of these settings is accurate for your Bean.
+
+{{{img_rel this 'config-bean-name.png' 'Config Bean Name' '100%'}}}
 
 
-### Setting the Bean Node Config
+### LED Node
 
-Update the config settings for Bean nodes so that Node-RED can connect to the Bean name you specify. Double click on a Bean node and hit the edit icon to add the name of your Bean. 
+The Bean LED node allows you to set the red, green and blue values of a Bean's LED. Here is an example using an `inject` node to input a comma delimited RGB string `0,255,0` which is Green!
 
-{{{img_rel this 'bean_node_config.png' 'Bean Node Config' '100%'}}}
+{{{img_rel this 'example-led-node.png' 'LED Node' '100%'}}}
+
+### Acceleration Node
+
+Sending any message to the accel node will result in a query to the Bean for accelerometer data. Check out this example where a blank inject node is used to trigger the node execution.
+
+{{{img_rel this 'example-accel-node.png' 'Accel Node' '100%'}}}
 
 
-### Deploying Flows
-
-Hit the red deploy button on the top right corner to push your flow to the server and put it into action. Check out our Node-RED example projects for more guidance! 
 
 
 ### Injecting and Debugging Flows
 
-Two inportant nodes for creating flows are the Inject and Debug nodes. The Inject node allows you to start a flow by clicking a button or with a set time interval. The Debug node allows you to view the messages that are passed from node to node. 
 
-{{{img_rel this 'inject.png' 'Inject Node' '100%'}}}
+Two important nodes for creating flows are the Inject and Debug nodes. The Inject node allows you to start a flow by clicking a button or with a set time interval. The Debug node allows you to view the messages that are passed from node to node. 
 
-{{{img_rel this 'debug.png' 'Debug Node' '100%'}}}
+{{{img_rel this 'inject.png' 'Inject Node' '70%'}}}
+
+{{{img_rel this 'debug.png' 'Debug Node' '70%'}}}
 
 ## Next Steps
 
+* Example project on hackster.io - [Logging Bean data](https://www.hackster.io/punchthrough/projects)
+* Example project on hackster.io - [Tweet sentiment to LED](https://www.hackster.io/punchthrough/projects)
+* Example project on hackster.io - [Email temperature warning system](https://www.hackster.io/punchthrough/projects)
 * [Official Node-RED docs](http://nodered.org/docs/)
