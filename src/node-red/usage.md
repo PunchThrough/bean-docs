@@ -2,7 +2,7 @@
 title: Usage
 layout: basic.hbs
 autotoc: true
-order: 4
+order: 3
 ---
 
 Now that you have Node-RED installed, it's time to get familiar with building flows along with how to use the Bean nodes. 
@@ -62,7 +62,3 @@ Update the config settings for Bean nodes so that Node-RED can connect to the Be
 ### Deploying Flows
 
 Hit the red deploy button on the top right corner to push your flow to the server and put it into action. Check out our Node-RED example projects for more guidance! 
-
-
-
-
