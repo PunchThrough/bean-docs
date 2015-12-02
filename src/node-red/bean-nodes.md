@@ -61,6 +61,21 @@ This node behaves in a very similar way to the accel node. Any message results i
 
 __Note__: The temperature reading is in __celsius__.
 
+### Scratch Nodes
+
+This section explains how to use both the `read` and `write` scratch nodes. The Bean provides 5 BLE characteristics that can old arbitrary data such as strings, numbers and binary data. The `read scratch` node will allow you to read the current value of any of the scratch characteristics on the Bean. The `write scratch` node allows you to write data to any scratch characteristic. 
+
+Here is an example of two flows... one writes the string `"hi"` and the other reads it and logs it to the debug pane.
+
+{{{img_rel this 'example-scratch-nodes.png' 'Scratch nodes' '100%'}}}
+
+You can select which scratch characteristic to read/write to by double clicking on the node.
+
+### Serial Node
+
+TODO
+
+
 ## Next Steps
 
 * Example project on hackster.io - [Logging Bean data](https://www.hackster.io/punchthrough/projects)
