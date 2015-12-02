@@ -56,7 +56,7 @@ When you use the above tag in your own documents, replace `blue_led.jpg` with yo
 To make an image take up less width horizontally and place margins around the left and right sides, add a max width argument:
 
 ```
-{{{img_rel this 'blue_led.jpg' 'A description of this image', '50%'}}}
+{{{img_rel this 'blue_led.jpg' 'A description of this image' '50%'}}}
 ```
 
 The image above will be 50% the width of the content column with 25% margins on the left and right sides.
