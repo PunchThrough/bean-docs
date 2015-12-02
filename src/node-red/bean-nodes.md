@@ -23,6 +23,21 @@ Clicking on the pencil icon will allow you to configure the Bean name or UUID. M
 
 {{{img_rel this 'config-bean-name.png' 'Config Bean Name' '100%'}}}
 
+### Injecting and Debugging Flows 
+
+Some of the following examples will make use of two important nodes, `inject` and `debug`. 
+
+{{{img_rel this 'inject.png' 'Inject Node' '70%'}}}
+
+{{{img_rel this 'debug.png' 'Debug Node' '70%'}}}
+
+The inject node allows you to start a flow by clicking a button or by firing a timer. If you need to input test data such as a string the inject node is also used for that purpose. The Debug node will allow you to view the output from any node.
+
+## Bean Node Examples
+
+---
+
+Check out the following sections to get an understanding on how to use the Bean nodes.
 
 ### LED Node
 
@@ -32,21 +47,19 @@ The Bean LED node allows you to set the red, green and blue values of a Bean's L
 
 ### Acceleration Node
 
-Sending any message to the accel node will result in a query to the Bean for accelerometer data. Check out this example where a blank inject node is used to trigger the node execution.
+Sending any message to the accel node will result in a query to the Bean for accelerometer data. Check out this example where a blank inject node is used to trigger the accelerometer reading.
 
 {{{img_rel this 'example-accel-node.png' 'Accel Node' '100%'}}}
 
+__Note__: The acceleration reading is three fixed point numbers representing g-forces for X, Y and Z axis.
 
+### Temperature Node
 
+This node behaves in a very similar way to the accel node. Any message results in a query to the Bean for temperature data. Below is an example that uses the inject node to trigger the temperature reading.
 
-### Injecting and Debugging Flows
+{{{img_rel this 'example-temp-node.png' 'Temp Node' '100%'}}}
 
-
-Two important nodes for creating flows are the Inject and Debug nodes. The Inject node allows you to start a flow by clicking a button or with a set time interval. The Debug node allows you to view the messages that are passed from node to node. 
-
-{{{img_rel this 'inject.png' 'Inject Node' '70%'}}}
-
-{{{img_rel this 'debug.png' 'Debug Node' '70%'}}}
+__Note__: The temperature reading is in __celsius__.
 
 ## Next Steps
 
