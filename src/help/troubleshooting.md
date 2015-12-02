@@ -4,7 +4,7 @@ layout: basic.hbs
 autotoc: true
 ---
 
-Are you having trouble with your Bean or Bean Loader? We're sorry to hear it. Here are some steps we have found to help users experiencing problems.
+Are you having trouble with your Bean or Bean Loader? Here are some steps that might help you if you're experiencing problems.
 
 ## Check Your Battery
 
@@ -35,8 +35,6 @@ If you have tried all the other troubleshooting steps and nothing has helped, th
 
 To reset Bean's memory, follow these steps. **This will erase any sketch and all settings!**
 
-### Bean
-
 1. Remove the coin cell battery.
 2. Connect the **\*** and **BAT** pins with a wire as shown below:  
    {{{img_rel this 'reset-bent-wire.png' 'Connect * and BAT' '70%'}}}
@@ -46,10 +44,6 @@ To reset Bean's memory, follow these steps. **This will erase any sketch and all
 Here's a video by Beantalk user Nonsanity that shows how to reset Bean's memory:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/I_4s842e7MU" frameborder="0" allowfullscreen></iframe>
-
-### Bean+
-
-TODO steps
 
 ## Check Arduino IDE's Version
 
