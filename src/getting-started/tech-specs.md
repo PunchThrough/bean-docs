@@ -5,7 +5,17 @@ autotoc: true
 order: 2
 ---
 
-TODO: Talk about tech specs and what this page contains
+## System Architecture
+
+**It just works.** The Bean was designed to provide a magical experience where you don't have to know anything about Bluetooth to use it. However, if you're interested in digging deeper, some architectural details are provided below. 
+
+{{{img_rel this 'bean-block-diagram-guide.png' 'Bean system architecture'}}}
+
+The advantages of this system design are: 
+* The accelerometer and RGB LED don't take up any pins or peripherals of the Atmega. 
+* Safe from 'bricking'. You can't get the Bean into a state where you can't reprogram it, since the BLE stack is handled outside the Atmega.
+* Compiled Arduino Sketches are small. 
+* You can access the Bean over BLE independently of the Arduino code. For example, an iOS app can access the Accelerometer directy without requiring any Arduino code.
 
 ## Bean and Bean+ Features
 
@@ -23,8 +33,6 @@ __Built-In Peripherals:__ Both Bean and Bean+ come with an accelerometer, a temp
 
 ## Bean Specs
 
-TODO: Two-sided board pics
-
 {{{img_rel this 'bean-diagram.jpg' 'Bean features' '84%'}}}
 
 __Built-In Protoboard:__ Making something with just a couple components? Solder and wire them right on the Bean's prototyping area.
@@ -33,11 +41,27 @@ __Small Size:__ The perfect size for tiny projects, Bean is really small! Need m
 
 __Coin Cell Battery:__ Bean ships with a coin cell battery included. You can start hacking before you even take it out of the box.
 
-TODO: More in-depth specs
+__Microcontroller Specifications:__
+
+Bean user code runs on the Atmega328p microcontroller. This is the same part that is common to most original Arduinos and provides the most compatibility with example code. 
+
+Atmega328p Microcontroller
+* 8 bit CPU @ 8MHz 
+* 32KB Flash memory
+* 2KB SRAM
+* 8 accessible I/O (2 Analog)
+* 10 bit ADC
+* SPI, i2c, PWM peripherals
+
+__Electrical Specifications:__
+
+The Bean is powered directly from the onboard CR2032 coin-cell battery. 
+* Recommended Operating Voltage Range: 2.6 to 3.6V. 
+* Maximum Operating Voltage Range: 2.0 to 3.6V. *Below 2.6V the Blue and Green LEDs may not turn on.*
+* Operating Temperature Range: -40c to 85c
+
 
 ## Bean+ Specs
-
-TODO: Two-sided board pics
 
 {{{img_rel this 'bean-plus-diagram.jpg' 'Bean+ features'}}}
 
@@ -49,8 +73,29 @@ __Addon Board Support:__ We make addon boards to add more functionality to your 
 
 __Dual-Voltage Operation:__ Bean+ operates at a user-selectable 3.3V or 5V. No more adding logic level converters just to talk to your fancy graphic LCD.
 
-TODO: 3.3V @ 1 A boost converter is awesome, talk about it
 
-TODO: More in-depth specs
+__Microcontroller Specifications:__
 
-TODO: Link to next page in guides
+Bean+ user code runs on the Atmega328p microcontroller. This is the same part that is common to most original Arduinos and provides the most compatibility for example code available on the internet. 
+
+Atmega328p Microcontroller
+* 8 bit CPU @ 8MHz 
+* 32KB Flash memory
+* 2KB SRAM
+* 8 accessible I/O (2 Analog)
+* 10 bit ADC
+* SPI, i2c, PWM peripherals
+
+__Electrical Specifications:__
+
+The Bean+ can be powered from the included rechargeable battery or directly from a USB cable. In addition it offers 2 operating voltages, 5V and 3.3V. 
+* Operating Voltage Range (Battery): TBA
+* Operating Voltage Range (USB): TBA
+* Maximum Current @5V: TBA
+* Maximum Current @3.3V: TBA
+* Operating Temperature Range: -40c to 85c
+
+__RF Specifications:__
+* Maximum output power: 8dBm 
+* Maximum Range: 200m
+* Typical Range: 150m
