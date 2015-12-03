@@ -42,9 +42,9 @@ pathCollector:
     - key: platforms
       name: Other Platforms
       pattern: ^platforms/.+\.md$
-    - key: other
-      name: Other
-      pattern: ^other/.+\.md$  
+    - key: everything-else
+      name: Everything Else
+      pattern: ^everything-else/.+\.md$  
 
 permalinks:
   pattern: :coll_key/:id
