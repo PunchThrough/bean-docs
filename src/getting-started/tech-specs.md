@@ -9,7 +9,7 @@ order: 2
 
 **It just works.** The Bean was designed to provide a magical experience where you don't have to know anything about Bluetooth to use it. However, if you're interested in digging deeper, here's a diagram detailing Bean's architecture:
 
-{{{img_rel this 'bean-block-diagram-guide.png' 'Bean system architecture'}}}
+{{{img_rel this 'bean-block-diagram.png' 'Bean system architecture'}}}
 
 The advantages of this system design are:
 * **More pins for the user:** The accelerometer and RGB LED don't take up any pins or peripherals of the ATmega. 
