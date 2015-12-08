@@ -102,7 +102,7 @@ Also, the incoming and outgoing messages from the `bean serial` node need to be 
 
 ## Conclusion
 
-TODO
+This guide shows you how to start using the 6 custom nodes provided by PunchThrough that communicate with the Bean. Now go build something amazing!
 
 ## Next Steps
 
