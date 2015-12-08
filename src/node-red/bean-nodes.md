@@ -73,12 +73,41 @@ You can select which scratch characteristic to read/write to by double clicking 
 
 ### Serial Node
 
-TODO
+The Bean features a "virtual serial port" which is essentially a pass-through of serial data to and from your Arduino Sketch. The `bean serial` node allows you to read and write arbitrary serial data using this virtual serial port. 
 
+To show this functionality, here is an example flow that writes serial data to the bean and then reads the serial data back from the bean and logs it to the debug panel.
+
+{{{img_rel this 'example-serial-node.png' 'Serial node' '100%'}}}
+
+This example assumes there is a dead-simple serial loopback sketch programmed on the Bean which reads serial bytes and writes them back unadulterated. Like so:
+
+```
+int incomingByte = 0;
+
+void setup() {
+}
+
+void loop() {
+    if (Serial.available() > 0) {
+        incomingByte = Serial.read();
+        Serial.write(incomingByte);
+    }
+}
+```
+
+Also, the incoming and outgoing messages from the `bean serial` node need to be configured to include a "split" character in order to maintain the original message format.
+
+{{{img_rel this 'example-serial-node-cfg.png' 'Serial node Config' '100%'}}}
+
+
+## Conclusion
+
+TODO
 
 ## Next Steps
 
-* Example project on hackster.io - [Logging Bean data](https://www.hackster.io/punchthrough/projects)
-* Example project on hackster.io - [Tweet sentiment to LED](https://www.hackster.io/punchthrough/projects)
-* Example project on hackster.io - [Email temperature warning system](https://www.hackster.io/punchthrough/projects)
+* Check out some examples projects!
+	* [Logging Bean data](https://www.hackster.io/punchthrough/projects)
+	* [Tweet sentiment to LED](https://www.hackster.io/punchthrough/projects)
+	* [Email temperature warning system](https://www.hackster.io/punchthrough/projects)
 * [Official Node-RED docs](http://nodered.org/docs/)
