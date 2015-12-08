@@ -20,7 +20,7 @@ Please make sure you're familiar with the following before starting this guide:
 * LightBlue Bean
 * Computer device
 
-## Program the Bean
+## Program the Bean on Bean Loader
 This tutorial assumes you have completed the [Getting Started guide](#). It covers tasks such as connecting to and programming the Bean with the Bean Loader.
 
 Connect to your Bean and upload this Arduino sketch:
@@ -61,7 +61,29 @@ Here's what the code does:
 * `Line 18` sends the temperature information through Serial.
 * `Line 19`sends a blank line to Serial. When Node-RED is reading the Bean's value, the "\n" will be the delimiter.  This allows Node-RED to separate the messages.
 * `Line 22`sets the Bean sleep for 10 seconds.  This prevents twitter from being bombarded with the Bean's tweets. 
-
 * Executes loop() again. 
+
+## Program the Bean on Node-RED
+Once you have programmed the Bean, disconnect the Bean from the Bean Loader App. On the terminal, type
+
+```
+node-red
+```
+When you open Node-RED on a browser, you should see this: 
+{{{img_rel this 'Node-RED.jpg'}}}
+
+Go ahead and add the Bean's serial node to the sheet:
+{{{img_rel this 'Read-Bean-Serial-Data.JPG'}}}
+
+When you click on the node, you will see the detail information that needs to be filled in. Notice the "\n".  This is why we had to program the Bean to send it.
+
+
+Next, put the 'Twitter out node' on the sheet and click on the connectors to join the each node. Notice that the connector for the 'Twitter out node' is on the left hand side. Some nodes are polarized, meaning, each node can receive and incoming message OR send an outgoing message.  Fill out the information for your Twitter login. 
+{{{img_rel this 'Tweet-info.JPG'}}}
+
+Afterwards, you can click on 'Deploy,'on the upper right hand corner. 
+
+{{{img_rel this 'Deploy-Node-RED.jpg'}}}
+
 
 
