@@ -85,5 +85,19 @@ Afterwards, you can click on 'Deploy,'on the upper right hand corner.
 
 {{{img_rel this 'Deploy-Node-RED.jpg'}}}
 
+Now, go ahead and check your twitter account!
+
+## Conclusion
+In this tutorial, we learned how to connect the Bean to the internet through Node-RED. With Node-RED, you have the ability to build more complicated apps.  The Bean can now integrate with Twilio, IRC, MySQL, and so much more. 
+
+### Learn More about Node-RED
+* http://nodered.org/
+
+
+## Troubleshooting
+* Having trouble with this guide? Try the steps listed in [General Bean troubleshooting](#).
+* Checkout our [community forum](#).
+
+
 
 
