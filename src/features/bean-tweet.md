@@ -97,7 +97,3 @@ In this tutorial, we learned how to connect the Bean to the internet through Nod
 ## Troubleshooting
 * Having trouble with this guide? Try the steps listed in [General Bean troubleshooting](#).
 * Checkout our [community forum](#).
-
-
-
-
