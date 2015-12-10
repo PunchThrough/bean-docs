@@ -27,39 +27,65 @@ rules.forEach(function(rule) {
 var errorCount = 0
 var errorFileCount = 0
 var errorTypes = {}
+var warningCount = 0
+var warningFileCount = 0
 
 files.forEach(function(path) {
+  // read a file and split it into lines
   var firstError = true
+  var firstWarning = true
   var all = fs.readFileSync(path, 'utf8')
   var lines = all.split('\n')
+  // run every rule on each line
   for (var i = 0; i < lines.length; i++) {
     var line = lines[i]
     rules.forEach(function(rule) {
       var results = []
       var result
       while ((result = rule.pattern.exec(line)) !== null) {
-        errorCount++
-        if (firstError) {
-          firstError = false
-          errorFileCount++
+        // print the file header for the first error/warning of each file
+        if (firstError && firstWarning) {
           console.log(colors.black(colors.bgWhite(path)))
           console.log()
         }
-
-        if (rule.slug in errorTypes) {
-          errorTypes[rule.slug] = errorTypes[rule.slug] + 1
+        if (firstError) {
+          firstError = false
+          errorFileCount++
+        }
+        if (firstWarning) {
+          firstWarning = false
+          warningFileCount++
+        }
+        // increment error count and error type count if it's not a warning
+        if (rule.warning) {
+          warningCount++
         } else {
-          errorTypes[rule.slug] = 1
+          errorCount++
+          if (rule.slug in errorTypes) {
+            errorTypes[rule.slug] = errorTypes[rule.slug] + 1
+          } else {
+            errorTypes[rule.slug] = 1
+          }
         }
 
+        // highlight the match area
         var index = result.index
         var match = result[0]
         var length = match.length
         var highlighted = line.substr(0, index) + colors.white(colors.bold(match)) + line.substr(index + length)
 
+        // output the info and highlighted error text
         var loc = sprintf('%d:%d', i, index)
-        var info = sprintf('%s %s', colors.red(loc), colors.green(rule.message))
-        console.log(info)
+        var msg
+        var color
+        if (rule.warning) {
+          msg = 'warning: ' + rule.message
+          color = colors.yellow
+        } else {
+          msg = 'error: ' + rule.message
+          color = colors.red
+        }
+        console.log(sprintf('%17s %s', colors.green(loc), color(msg)))
         console.log(colors.grey(highlighted))
         console.log()
       }
@@ -71,11 +97,15 @@ Object.keys(errorTypes).forEach(function(slug) {
   var count = errorTypes[slug]
   console.log(sprintf('%4d %s', count, slug))
 })
-console.log()
+
+if (warningCount > 0) {
+  console.log(colors.yellow(sprintf('%d warnings found across %d files', warningCount, warningFileCount)))
+}
 
 if (errorCount === 0) {
   console.log(colors.green('No errors found! :)'))
 } else {
+  console.log()
   console.log(colors.red(sprintf('%d errors found across %d files', errorCount, errorFileCount)))
   process.exit(1)
 }
