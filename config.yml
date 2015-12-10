@@ -61,7 +61,7 @@ index: 'getting-started/intro/'
 
 lint:
   files:
-    - '**/*.md'
+    - 'src/**/*.md'
   rules:
     - slug: caps-bean
       pattern: !!js/regexp /\sbean\s/
@@ -78,7 +78,6 @@ lint:
     - slug: pt-not-ptd
       pattern: !!js/regexp /\bPunch Through Design\b/i
       message: 'Instead of "Punch Through Design", prefer "Punch Through"'
-    - slug: bean-not-the-bean
-      pattern: !!js/regexp /\bthe beans?\b/i
-      message: 'Instead of "the Bean", prefer "Bean"'
-      warning: true
+    - slug: os-x-not-osx
+      pattern: !!js/regexp /\bOSX\b/
+      message: 'Instead of "OSX", use "OS X"'

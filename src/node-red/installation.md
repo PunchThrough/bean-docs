@@ -13,7 +13,7 @@ This guide will help you install Node-RED and the custom nodes used to communica
 
 ## Install Node-RED
 
-Since Node-RED uses Node.js it can be used on any of the core desktop platforms such as OSX, Windows and Linux. Go ahead and follow the installation guide provided by Node-RED to get it running on your system.
+Since Node-RED uses Node.js it can be used on any of the core desktop platforms such as OS X, Windows and Linux. Go ahead and follow the installation guide provided by Node-RED to get it running on your system.
 
 * [Install Node-RED](http://nodered.org/docs/getting-started/installation.html)
 
