@@ -6,13 +6,13 @@ autotoc: true
 
 ## Introduction
 
-Say you have a digital [pushbutton](https://www.sparkfun.com/products/97) soldered onto your Bean. You want your laptop to post a tweet when you push the button. To get that to happen, you need the Bean to read the button and send data to your laptop when you push the button.
+Say you have a digital [pushbutton](https://www.sparkfun.com/products/97) soldered onto your Bean. You want your laptop to post a tweet when you push the button. To get that to happen, you need Bean to read the button and send data to your laptop when you push the button.
 
-How do you get the Bean to send data back to the computer?
+How do you get Bean to send data back to the computer?
 
-In order for any device to communicate with your computer, the device and computer must share a common communication protocol. The Bean and Bean Loader support Virtual Serial, an easy way to start talking to your Bean from the Arduino IDE.
+In order for any device to communicate with your computer, the device and computer must share a common communication protocol. Bean and Bean Loader support Virtual Serial, an easy way to start talking to your Bean from the Arduino IDE.
 
-In this guide, we will explore how Virtual Serial allows your computer and Bean to talk to each other. We'll build an example that uses the serial monitor on the Arduino IDE to send and visualize data coming from the Bean.
+In this guide, we will explore how Virtual Serial allows your computer and Bean to talk to each other. We'll build an example that uses the serial monitor on the Arduino IDE to send and visualize data coming from Bean.
 
 ## Setup
 
@@ -31,7 +31,7 @@ Please make sure you're familiar with the following before starting this guide:
 
 ## Bean-Computer Communication
 
-In contrast to boards like the Arduino Uno, Bean and Bean+ don't support USB. Instead, all their communication is done via  Bluetooth 4.0, also known as Bluetooth Smart or Bluetooth Low Energy. To learn more about how the BLE stack works with Bean, check out our [detailed guide](#).
+In contrast to boards like the Arduino Uno, Bean and Bean+ don't support USB. Instead, all their communication is done via Bluetooth 4.0, also known as Bluetooth Smart or Bluetooth Low Energy. To learn more about how the BLE stack works with Bean, check out our [detailed guide](#).
 
 ### How Virtual Serial Works
 
@@ -39,7 +39,7 @@ Bluetooth Low Energy doesn't natively support serial communication.
 
 Unlike Bluetooth Classic, BLE doesn't have a Serial Port Profile (SPP). Instead, Bean's firmware sends serial messages over BLE using the [LightBlue Platform](#) protocol. On the other end, your computer parses LightBlue Platform messages and converts them back into serial.
 
-When an Arduino sketch writes serial data, the Bean Loader receives it, parses it, and passes the data through to the virtual serial port. To see data that the Bean is sending, we can use the serial monitor in Arduino IDE.
+When an Arduino sketch writes serial data, Bean Loader receives it, parses it, and passes the data through to the virtual serial port. To see data that Bean is sending, we can use the serial monitor in Arduino IDE.
 
 ## Step-by-Step
 
@@ -112,8 +112,8 @@ In this guide, we learned how Bean uses Virtual Serial to read and write serial 
 
 Knowing how to use the serial monitor and Virtual Serial lets you do things like:
 
-* Read data directly from the Bean
-* Write all sorts of data to the Bean
+* Read data directly from Bean
+* Write all sorts of data to Bean
 * Debug your sketches
 
 Check out the [Arduino Serial reference](https://www.arduino.cc/en/Reference/Serial) to learn more about the commands available for serial communication.

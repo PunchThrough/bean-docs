@@ -17,7 +17,7 @@ Below is a very simple example of how these different nodes would interact with 
 
 {{{img_rel this 'generic_node_red.png' 'Generic Node-RED app' '70%'}}}
 
-In reality, you wouldn't have nodes with such generic names as "input" or "output". At Punch Through we have created our own nodes which are specifically designed to communicate with the Bean.
+In reality, you wouldn't have nodes with such generic names as "input" or "output". At Punch Through we have created our own nodes which are specifically designed to communicate with Bean.
 
 {{{img_rel this 'bean-nodes.png' 'Bean Nodes' '50%'}}}
 
@@ -30,7 +30,7 @@ In reality, you wouldn't have nodes with such generic names as "input" or "outpu
 
 Each of the nodes defined above can be used in a Node-RED application once you install these nodes into your Node environment. We will cover installation and setup in following sections.
 
-Check out the following example of a Node-RED app that grabs temperature data from the Bean and tweets it! Connecting your Bean to the internet can be as easy as this.
+Check out the following example of a Node-RED app that grabs temperature data from Bean and tweets it! Connecting your Bean to the internet can be as easy as this.
 
 {{{img_rel this 'complex_node_red.png' 'Bean Node-RED app' '70%'}}}
 

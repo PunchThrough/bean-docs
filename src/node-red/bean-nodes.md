@@ -7,19 +7,15 @@ order: 3
 
 ## Introduction
 
----
-
-This guide will walk you through how to use the custom nodes for communicating with the Bean.
+This guide will walk you through how to use the custom nodes for communicating with Bean.
 
 ## Using Bean Nodes
 
----
-
-When using any of the Bean nodes you will have to tell the flow which Bean you want to communicate with. To do this, begin by double clicking on any of the Bean nodes. You will see the following menu.
+When using any Bean node, you will have to tell the flow which Bean you want to communicate with. To do this, begin by double clicking on any Bean node. You will see the following menu.
 
 {{{img_rel this 'config-bean.png' 'Config Bean' '100%'}}}
 
-Clicking on the pencil icon will allow you to configure the Bean name or UUID. Make sure one of these settings is accurate for your Bean.
+Clicking on the pencil icon will allow you to configure Bean's name or UUID. Make sure one of these settings is accurate for your Bean.
 
 {{{img_rel this 'config-bean-name.png' 'Config Bean Name' '100%'}}}
 
@@ -35,9 +31,7 @@ The inject node allows you to start a flow by clicking a button or by firing a t
 
 ## Bean Node Examples
 
----
-
-Check out the following sections to get an understanding on how to use the Bean nodes.
+Check out the following sections to get an understanding on how to use Bean nodes.
 
 ### LED Node
 
@@ -47,7 +41,7 @@ The Bean LED node allows you to set the red, green and blue values of a Bean's L
 
 ### Acceleration Node
 
-Sending any message to the accel node will result in a query to the Bean for accelerometer data. Check out this example where a blank inject node is used to trigger the accelerometer reading.
+Sending any message to the acceleration node will result in a query to Bean for accelerometer data. Check out this example where a blank inject node is used to trigger the accelerometer reading.
 
 {{{img_rel this 'example-accel-node.png' 'Accel Node' '100%'}}}
 
@@ -55,7 +49,7 @@ __Note__: The acceleration reading is three fixed point numbers representing g-f
 
 ### Temperature Node
 
-This node behaves in a very similar way to the accel node. Any message results in a query to the Bean for temperature data. Below is an example that uses the inject node to trigger the temperature reading.
+This node behaves in a very similar way to the acceleration node. Any message results in a query to Bean for temperature data. Below is an example that uses the inject node to trigger the temperature reading.
 
 {{{img_rel this 'example-temp-node.png' 'Temp Node' '100%'}}}
 
@@ -63,7 +57,7 @@ __Note__: The temperature reading is in __celsius__.
 
 ### Scratch Nodes
 
-This section explains how to use both the `read` and `write` scratch nodes. The Bean provides 5 BLE characteristics that can old arbitrary data such as strings, numbers and binary data. The `read scratch` node will allow you to read the current value of any of the scratch characteristics on the Bean. The `write scratch` node allows you to write data to any scratch characteristic. 
+This section explains how to use both the `read` and `write` scratch nodes. Bean provides 5 BLE characteristics that can old arbitrary data such as strings, numbers and binary data. The `read scratch` node will allow you to read the current value of any of the scratch characteristics on Bean. The `write scratch` node allows you to write data to any scratch characteristic. 
 
 Here is an example of two flows... one writes the string `"hi"` and the other reads it and logs it to the debug pane.
 
@@ -73,36 +67,34 @@ You can select which scratch characteristic to read/write to by double clicking 
 
 ### Serial Node
 
-The Bean features a "virtual serial port" which is essentially a pass-through of serial data to and from your Arduino Sketch. The `bean serial` node allows you to read and write arbitrary serial data using this virtual serial port. 
+Bean features a "virtual serial port" which is essentially a pass-through of serial data to and from your Arduino Sketch. The Bean Serial node allows you to read and write arbitrary serial data using this virtual serial port. 
 
-To show this functionality, here is an example flow that writes serial data to the bean and then reads the serial data back from the bean and logs it to the debug panel.
+To show this functionality, here is an example flow that writes serial data to Bean and then reads the serial data back from Bean and logs it to the debug panel.
 
 {{{img_rel this 'example-serial-node.png' 'Serial node' '100%'}}}
 
-This example assumes there is a dead-simple serial loopback sketch programmed on the Bean which reads serial bytes and writes them back unadulterated. Like so:
+This example assumes there is a dead-simple serial loopback sketch programmed on Bean. A loopback sketch reads serial bytes and writes them straight back to the connected client. Here's an example:
 
 ```
-int incomingByte = 0;
-
 void setup() {
+  // no setup necessary
 }
 
 void loop() {
-    if (Serial.available() > 0) {
-        incomingByte = Serial.read();
-        Serial.write(incomingByte);
-    }
+  if (Serial.available() > 0) {
+    byte incomingByte = Serial.read();
+    Serial.write(incomingByte);
+  }
 }
 ```
 
-Also, the incoming and outgoing messages from the `bean serial` node need to be configured to include a "split" character in order to maintain the original message format.
+Also, the incoming and outgoing messages from the Bean Serial node need to be configured to include a "split" character in order to maintain the original message format.
 
 {{{img_rel this 'example-serial-node-cfg.png' 'Serial node Config' '100%'}}}
 
-
 ## Conclusion
 
-This guide shows you how to start using the 6 custom nodes provided by PunchThrough that communicate with the Bean. Now go build something amazing!
+This guide shows you how to start using the 6 custom nodes provided by Punch Through that communicate with Bean. Now go build something amazing!
 
 ## Next Steps
 

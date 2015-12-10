@@ -6,9 +6,9 @@ autotoc: true
 
 ## Introduction
 
-This guide will take you through the process of reading the temperature from the Bean's on-board [BMA250 temperature sensor](http://ae-bst.resource.bosch.com/media/products/dokumente/bma250/bst-bma250-ds002-05.pdf).
+This guide will take you through the process of reading the temperature from Bean's on-board [BMA250 temperature sensor](http://ae-bst.resource.bosch.com/media/products/dokumente/bma250/bst-bma250-ds002-05.pdf).
 
-This temperature sensor can be used to read air temperature near the Bean with an accuracy of ±3°C.
+This temperature sensor can be used to read air temperature near Bean with an accuracy of ±3°C.
 
 
 ## Before you begin
@@ -25,7 +25,7 @@ Hardware required:
 
 ## Step-by-step
 
-### Program the Bean
+### Program Your Bean
 
 Upload the following sketch to your Bean:
 
@@ -50,7 +50,7 @@ void loop() {
 }
 ```
 
-This sketch reads the Bean's temperature and prints it over Virtual Serial. Connect to your Bean and enable Virtual Serial to see the sketch in action.
+This sketch reads Bean's temperature and prints it over Virtual Serial. Connect to your Bean and enable Virtual Serial to see the sketch in action.
 
 * **Line 1** defines a global variable `temp` and initializes its value to 0.
   * `int8_t` means it is an 8-bit signed integer. This is the same type as `Bean.getTemperature()`.
@@ -59,11 +59,11 @@ This sketch reads the Bean's temperature and prints it over Virtual Serial. Conn
 * **Line 10** checks to see if the new temperature is different from the last recorded temperature.
 * **Lines 11-13** send a single line of text over Virtual Serial with the new temperature reading. This line looks like this: `Temperature is 23 degrees Celsius`
 * **Line 14** saves the current temperature to `lastTemp` if it has changed since last time.
-* **Line 27** tells the Bean to sleep for one second before checking the temperature again.
+* **Line 27** tells Bean to sleep for one second before checking the temperature again.
 
 ## Conclusion
 
-In this guide, we read a temperature from the Bean's temperature sensor and sent it to your computer via Virtual Serial.
+In this guide, we read a temperature from Bean's temperature sensor and sent it to your computer via Virtual Serial.
 
 ## Troubleshooting
 
@@ -71,4 +71,4 @@ Having trouble with this guide? Try the steps listed in [General Bean troublesho
 
 ## Related projects
 
-* [Temperature-controlled fan](http://www.instructables.com/id/Automatic-desktop-fan/): This fan turns on to cool people down when the Bean detects the room is getting too hot.
+* [Temperature-controlled fan](http://www.instructables.com/id/Automatic-desktop-fan/): This fan turns on to cool people down when Bean detects the room is getting too hot.

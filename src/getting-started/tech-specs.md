@@ -7,13 +7,13 @@ order: 2
 
 ## System Architecture
 
-**It just works.** The Bean was designed to provide a magical experience where you don't have to know anything about Bluetooth to use it. However, if you're interested in digging deeper, here's a diagram detailing Bean's architecture:
+**It just works.** Bean was designed to provide a magical experience where you don't have to know anything about Bluetooth to use it. However, if you're interested in digging deeper, here's a diagram detailing Bean's architecture:
 
 {{{img_rel this 'bean-block-diagram.png' 'Bean system architecture'}}}
 
 The advantages of this system design are:
 * **More pins for the user:** The accelerometer and RGB LED don't take up any pins or peripherals of the ATmega. 
-* **Impossible to brick:** Since the CC2540 handles the BLE stack instead of the ATmega, you can't get the Bean into a state where it's impossible to reprogram.
+* **Impossible to brick:** Since the CC2540 handles the BLE stack instead of the ATmega, you can't get Bean into a state where it's impossible to reprogram.
 * **Bean works without an Arduino sketch:** You can access peripherals connected to the CC2540 independently of any Arduino code. For example, an iOS app can access the accelerometer directly without requiring the user to program a sketch that reads the accelerometer.
 
 ## Bean and Bean+
@@ -51,7 +51,7 @@ Bean and Bean+ both use the ATmega328p. Each board has a slightly different conf
 
 ### Features
 
-__Built-In Protoboard:__ Making something with just a couple components? Solder and wire them right on the Bean's prototyping area.
+__Built-In Protoboard:__ Making something with just a couple components? Solder and wire them right on Bean's prototyping area.
 
 __Small Size:__ The perfect size for tiny projects, Bean is really small! Need more space? It's totally OK to cut off the protoboard.
 
@@ -94,7 +94,7 @@ __Dual-Voltage Operation:__ Bean+ operates at a user-selectable 3.3V or 5V. No m
 
 ### Electrical Specifications
 
-The Bean+ can be powered from the included rechargeable battery or directly from a USB cable. It supports 2 operating voltages: 5V and 3.3V.
+Bean+ can be powered from the included rechargeable battery or directly from a USB cable. It supports 2 operating voltages: 5V and 3.3V.
 
 * Operating Voltage Range (Battery): TBA
 * Operating Voltage Range (USB): TBA
