@@ -9,12 +9,9 @@ order: 2
 
 ---
 
-Welcome to the Node-RED installation guide. This guide will help you get your system ready to use with Node-RED as well as the custom nodes used to communicate with the Bean.
- 
+This guide will help you install Node-RED and the custom nodes used to communicate with Bean.
 
 ## Install Node-RED
-
----
 
 Since Node-RED uses Node.js it can be used on any of the core desktop platforms such as OSX, Windows and Linux. Go ahead and follow the installation guide provided by Node-RED to get it running on your system.
 
@@ -28,15 +25,13 @@ If you are interested in setting up a Raspberry Pi or BeagleBone Black for a ded
 
 ## Install Bean Nodes
 
----
-
 {{{img_rel this 'bean-nodes.png' 'Bean Nodes' '50%'}}}
 
-These nodes are developed and maintained by Punch Through and must be installed seperately. First, it is important to understand that these nodes have a dependency on Bluetooth, since they are designed to talk to the Bean. This is done by using a Node library called [Noble](https://github.com/sandeepmistry/noble).
+These nodes are developed and maintained by Punch Through and must be installed seperately. First, it is important to understand that these nodes have a dependency on Bluetooth, since they are designed to talk to Bean. This is done by using a Node library called [Noble](https://github.com/sandeepmistry/noble).
 
 Noble has it's own dependencies which need to be installed. Check out the [prerequisites section](https://github.com/sandeepmistry/noble#prerequisites) of the project README before you continue.
 
-Finally, in order to make use of the Bean Nodes, you must install them in a place that Node-RED can find them. Run the following commands in a terminal.
+Finally, in order to make use of Bean nodes, you must install them in a place that Node-RED can find them. Run the following commands in a terminal.
 
 * `mkdir -p ~/.node-red/node_modules`
 * `npm install --prefix ~/.node-red node-red-contrib-bean`
