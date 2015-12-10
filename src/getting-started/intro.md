@@ -5,7 +5,7 @@ autotoc: true
 order: 1
 ---
 
-Congratulations! You're the proud new owner of a LightBlue Bean or Bean+. What’s even cooler is you are now part of our creative and innovative community that’s building some pretty awesome wearable and IoT devices. We’ll go over the Bean and Bean+ features, and the resources we provide so you can begin building. We at Punch Through love building wireless products with the Bean and Bean+, and we think you will too!
+Congratulations! You're the proud new owner of a LightBlue Bean or Bean+. What’s even cooler is you are now part of our creative and innovative community that’s building some pretty awesome wearable and IoT devices. We’ll go over the features of Bean and Bean+, and the resources we provide so you can begin building. We at Punch Through love building wireless products with Bean and Bean+ and we think you will too!
 
 ## Get Started
 
@@ -25,7 +25,7 @@ TODO: Link to [tech specs](../tech-specs)
 
 ## Be an Inventor
 
-Programming the Bean has never been so easy. With wireless programming and our Bean Loader app, you can write code anywhere and everywhere. There are unlimited possibilities of what you can build with the Bean!  Here are some ideas to get you started:
+Programming Bean has never been so easy. With wireless programming and our Bean Loader app, you can write code anywhere and everywhere. There are unlimited possibilities of what you can build with Bean!  Here are some ideas to get you started:
 
 __Make Bean run (almost) forever:__
 Since Bean runs on battery power, we've made it power-efficient. You can tell your Bean to wake up when a phone connects, when a specific pin toggles or when you tap it with your finger. 

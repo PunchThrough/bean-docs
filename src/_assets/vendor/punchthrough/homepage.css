@@ -122,6 +122,7 @@ Clearfix docs
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 @import url("//hello.myfonts.net/count/2e7ddf");
+@import url(https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/tomorrow-night.min.css);
 /* line 9, /Users/mplewis/.rvm/gems/ruby-2.2.2@ptd-website/gems/bootstrap-sass-3.3.5/assets/stylesheets/bootstrap/_normalize.scss */
 html {
   font-family: sans-serif;
@@ -11802,169 +11803,638 @@ button.close {
   content: "\f23a";
 }
 
-/* @import must be at top of file, otherwise CSS will not work */
 @font-face {
-  font-family: "VerbCondExtrabold";
-  src: url(https://punchthrough.com/assets/2E7DDF_29_0.eot);
-  src: url(https://punchthrough.com/assets/2E7DDF_29_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/2E7DDF_29_0.woff2) format("woff2"), url(https://punchthrough.com/assets/2E7DDF_29_0.woff) format("woff"), url(https://punchthrough.com/assets/2E7DDF_29_0.ttf) format("truetype");
+  font-family: "Verb";
+  font-weight: 100;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_7_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_7_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_7_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_7_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_7_0.ttf) format("truetype");
 }
 
 @font-face {
-  font-family: "VerbCondExtrabold-Italic";
-  src: url(https://punchthrough.com/assets/2E7DDF_28_0.eot);
-  src: url(https://punchthrough.com/assets/2E7DDF_28_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/2E7DDF_28_0.woff2) format("woff2"), url(https://punchthrough.com/assets/2E7DDF_28_0.woff) format("woff"), url(https://punchthrough.com/assets/2E7DDF_28_0.ttf) format("truetype");
+  font-family: "Verb";
+  font-weight: 100;
+  font-style: italic;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_6_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_6_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_6_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_6_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_6_0.ttf) format("truetype");
 }
 
 @font-face {
-  font-family: "VerbCondExtralight";
-  src: url(https://punchthrough.com/assets/2E7DDF_2A_0.eot);
-  src: url(https://punchthrough.com/assets/2E7DDF_2A_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/2E7DDF_2A_0.woff2) format("woff2"), url(https://punchthrough.com/assets/2E7DDF_2A_0.woff) format("woff"), url(https://punchthrough.com/assets/2E7DDF_2A_0.ttf) format("truetype");
+  font-family: "Verb";
+  font-weight: 200;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_9_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_9_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_9_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_9_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_9_0.ttf) format("truetype");
 }
 
 @font-face {
-  font-family: "VerbCondExtralight-Italic";
-  src: url(https://punchthrough.com/assets/2E7DDF_30_0.eot);
-  src: url(https://punchthrough.com/assets/2E7DDF_30_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/2E7DDF_30_0.woff2) format("woff2"), url(https://punchthrough.com/assets/2E7DDF_30_0.woff) format("woff"), url(https://punchthrough.com/assets/2E7DDF_30_0.ttf) format("truetype");
+  font-family: "Verb";
+  font-weight: 200;
+  font-style: italic;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_8_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_8_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_8_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_8_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_8_0.ttf) format("truetype");
 }
 
 @font-face {
-  font-family: "VerbCondRegular-Bold";
-  src: url(https://punchthrough.com/assets/2E7DDF_27_0.eot);
-  src: url(https://punchthrough.com/assets/2E7DDF_27_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/2E7DDF_27_0.woff2) format("woff2"), url(https://punchthrough.com/assets/2E7DDF_27_0.woff) format("woff"), url(https://punchthrough.com/assets/2E7DDF_27_0.ttf) format("truetype");
+  font-family: "Verb";
+  font-weight: 300;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_D_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_D_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_D_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_D_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_D_0.ttf) format("truetype");
 }
 
 @font-face {
-  font-family: "VerbCondRegular-BoldItalic";
-  src: url(https://punchthrough.com/assets/2E7DDF_26_0.eot);
-  src: url(https://punchthrough.com/assets/2E7DDF_26_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/2E7DDF_26_0.woff2) format("woff2"), url(https://punchthrough.com/assets/2E7DDF_26_0.woff) format("woff"), url(https://punchthrough.com/assets/2E7DDF_26_0.ttf) format("truetype");
+  font-family: "Verb";
+  font-weight: 300;
+  font-style: italic;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_C_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_C_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_C_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_C_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_C_0.ttf) format("truetype");
 }
 
 @font-face {
-  font-family: "VerbRegular";
-  src: url(https://punchthrough.com/assets/2E7DDF_D_0.eot);
-  src: url(https://punchthrough.com/assets/2E7DDF_D_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/2E7DDF_D_0.woff2) format("woff2"), url(https://punchthrough.com/assets/2E7DDF_D_0.woff) format("woff"), url(https://punchthrough.com/assets/2E7DDF_D_0.ttf) format("truetype");
+  font-family: "Verb";
+  font-weight: 400;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_B_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_B_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_B_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_B_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_B_0.ttf) format("truetype");
 }
 
 @font-face {
-  font-family: "VerbRegular-Italic";
-  src: url(https://punchthrough.com/assets/2E7DDF_C_0.eot);
-  src: url(https://punchthrough.com/assets/2E7DDF_C_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/2E7DDF_C_0.woff2) format("woff2"), url(https://punchthrough.com/assets/2E7DDF_C_0.woff) format("woff"), url(https://punchthrough.com/assets/2E7DDF_C_0.ttf) format("truetype");
+  font-family: "Verb";
+  font-weight: 400;
+  font-style: italic;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_A_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_A_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_A_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_A_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_A_0.ttf) format("truetype");
 }
 
 @font-face {
-  font-family: "VerbCompSemibold";
-  src: url(https://punchthrough.com/assets/2E7DDF_19_0.eot);
-  src: url(https://punchthrough.com/assets/2E7DDF_19_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/2E7DDF_19_0.woff2) format("woff2"), url(https://punchthrough.com/assets/2E7DDF_19_0.woff) format("woff"), url(https://punchthrough.com/assets/2E7DDF_19_0.ttf) format("truetype");
+  font-family: "Verb";
+  font-weight: 500;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_F_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_F_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_F_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_F_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_F_0.ttf) format("truetype");
 }
 
 @font-face {
-  font-family: "VerbCompSemibold-Italic";
-  src: url(https://punchthrough.com/assets/2E7DDF_3E_0.eot);
-  src: url(https://punchthrough.com/assets/2E7DDF_3E_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/2E7DDF_3E_0.woff2) format("woff2"), url(https://punchthrough.com/assets/2E7DDF_3E_0.woff) format("woff"), url(https://punchthrough.com/assets/2E7DDF_3E_0.ttf) format("truetype");
+  font-family: "Verb";
+  font-weight: 500;
+  font-style: italic;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_E_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_E_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_E_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_E_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_E_0.ttf) format("truetype");
 }
 
 @font-face {
-  font-family: "VerbMedium";
-  src: url(https://punchthrough.com/assets/2E7DDF_B_0.eot);
-  src: url(https://punchthrough.com/assets/2E7DDF_B_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/2E7DDF_B_0.woff2) format("woff2"), url(https://punchthrough.com/assets/2E7DDF_B_0.woff) format("woff"), url(https://punchthrough.com/assets/2E7DDF_B_0.ttf) format("truetype");
+  font-family: "Verb";
+  font-weight: 600;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_3_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_3_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_3_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_3_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_3_0.ttf) format("truetype");
 }
 
 @font-face {
-  font-family: "VerbMedium-Italic";
-  src: url(https://punchthrough.com/assets/2E7DDF_A_0.eot);
-  src: url(https://punchthrough.com/assets/2E7DDF_A_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/2E7DDF_A_0.woff2) format("woff2"), url(https://punchthrough.com/assets/2E7DDF_A_0.woff) format("woff"), url(https://punchthrough.com/assets/2E7DDF_A_0.ttf) format("truetype");
+  font-family: "Verb";
+  font-weight: 600;
+  font-style: italic;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_2_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_2_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_2_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_2_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_2_0.ttf) format("truetype");
 }
 
 @font-face {
-  font-family: "VerbRegular-BoldItalic";
-  src: url(/fonts/webfonts/2E7DDF_2_0.eot);
-  src: url(/fonts/webfonts/2E7DDF_2_0.eot?#iefix) format("embedded-opentype"), url(/fonts/webfonts/2E7DDF_2_0.woff2) format("woff2"), url(/fonts/webfonts/2E7DDF_2_0.woff) format("woff"), url(/fonts/webfonts/2E7DDF_2_0.ttf) format("truetype");
+  font-family: "Verb";
+  font-weight: 700;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_5_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_5_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_5_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_5_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_5_0.ttf) format("truetype");
 }
 
 @font-face {
-  font-family: "VerbRegular-Bold";
-  src: url(/fonts/webfonts/2E7DDF_3_0.eot);
-  src: url(/fonts/webfonts/2E7DDF_3_0.eot?#iefix) format("embedded-opentype"), url(/fonts/webfonts/2E7DDF_3_0.woff2) format("woff2"), url(/fonts/webfonts/2E7DDF_3_0.woff) format("woff"), url(/fonts/webfonts/2E7DDF_3_0.ttf) format("truetype");
+  font-family: "Verb";
+  font-weight: 700;
+  font-style: italic;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_4_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_4_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_4_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_4_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_4_0.ttf) format("truetype");
 }
 
-/* line 3, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
-body {
-  font-family: "VerbRegular", "Helvetica", sans-serif;
-  font-size: 18px;
-  color: #575a5f;
+@font-face {
+  font-family: "Verb";
+  font-weight: 800;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_1_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_1_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_1_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_1_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_1_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb";
+  font-weight: 800;
+  font-style: italic;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_0_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_0_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_0_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_0_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_0_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb";
+  font-weight: 900;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_11_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_11_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_11_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_11_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_11_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb";
+  font-weight: 900;
+  font-style: italic;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_10_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_10_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_10_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_10_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_10_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Compressed";
+  font-weight: 100;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_15_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_15_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_15_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_15_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_15_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Compressed";
+  font-weight: 100;
+  font-style: italic;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_3B_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_3B_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_3B_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_3B_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_3B_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Compressed";
+  font-weight: 200;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_16_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_16_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_16_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_16_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_16_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Compressed";
+  font-weight: 200;
+  font-style: italic;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_3C_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_3C_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_3C_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_3C_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_3C_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Compressed";
+  font-weight: 300;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_18_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_18_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_18_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_18_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_18_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Compressed";
+  font-weight: 300;
+  font-style: italic;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_3A_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_3A_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_3A_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_3A_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_3A_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Compressed";
+  font-weight: 400;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_17_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_17_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_17_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_17_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_17_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Compressed";
+  font-weight: 400;
+  font-style: italic;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_39_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_39_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_39_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_39_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_39_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Compressed";
+  font-weight: 500;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_19_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_19_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_19_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_19_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_19_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Compressed";
+  font-weight: 500;
+  font-style: italic;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_3E_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_3E_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_3E_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_3E_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_3E_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Compressed";
+  font-weight: 600;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_13_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_13_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_13_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_13_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_13_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Compressed";
+  font-weight: 600;
+  font-style: italic;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_38_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_38_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_38_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_38_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_38_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Compressed";
+  font-weight: 700;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_14_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_14_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_14_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_14_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_14_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Compressed";
+  font-weight: 700;
+  font-style: italic;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_37_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_37_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_37_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_37_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_37_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Compressed";
+  font-weight: 800;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_12_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_12_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_12_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_12_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_12_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Compressed";
+  font-weight: 800;
+  font-style: italic;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_36_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_36_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_36_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_36_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_36_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Compressed";
+  font-weight: 900;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_1A_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_1A_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_1A_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_1A_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_1A_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Compressed";
+  font-weight: 900;
+  font-style: italic;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_3D_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_3D_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_3D_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_3D_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_3D_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Condensed";
+  font-weight: 100;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_2A_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_2A_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_2A_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_2A_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_2A_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Condensed";
+  font-weight: 100;
+  font-style: italic;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_30_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_30_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_30_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_30_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_30_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Condensed";
+  font-weight: 200;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_2C_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_2C_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_2C_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_2C_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_2C_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Condensed";
+  font-weight: 200;
+  font-style: italic;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_2B_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_2B_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_2B_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_2B_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_2B_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Condensed";
+  font-weight: 300;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_31_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_31_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_31_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_31_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_31_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Condensed";
+  font-weight: 300;
+  font-style: italic;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_2F_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_2F_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_2F_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_2F_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_2F_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Condensed";
+  font-weight: 400;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_2E_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_2E_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_2E_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_2E_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_2E_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Condensed";
+  font-weight: 400;
+  font-style: italic;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_2D_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_2D_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_2D_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_2D_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_2D_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Condensed";
+  font-weight: 500;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_33_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_33_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_33_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_33_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_33_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Condensed";
+  font-weight: 500;
+  font-style: italic;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_32_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_32_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_32_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_32_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_32_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Condensed";
+  font-weight: 600;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_27_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_27_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_27_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_27_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_27_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Condensed";
+  font-weight: 600;
+  font-style: italic;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_26_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_26_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_26_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_26_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_26_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Condensed";
+  font-weight: 700;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_29_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_29_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_29_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_29_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_29_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Condensed";
+  font-weight: 700;
+  font-style: italic;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_28_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_28_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_28_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_28_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_28_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Condensed";
+  font-weight: 800;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_25_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_25_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_25_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_25_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_25_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Condensed";
+  font-weight: 800;
+  font-style: italic;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_24_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_24_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_24_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_24_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_24_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Condensed";
+  font-weight: 900;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_35_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_35_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_35_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_35_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_35_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Condensed";
+  font-weight: 900;
+  font-style: italic;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_34_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_34_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_34_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_34_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_34_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Extra Condensed";
+  font-weight: 100;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_1E_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_1E_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_1E_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_1E_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_1E_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Extra Condensed";
+  font-weight: 100;
+  font-style: italic;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_42_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_42_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_42_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_42_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_42_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Extra Condensed";
+  font-weight: 200;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_1F_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_1F_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_1F_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_1F_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_1F_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Extra Condensed";
+  font-weight: 200;
+  font-style: italic;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_43_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_43_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_43_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_43_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_43_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Extra Condensed";
+  font-weight: 300;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_21_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_21_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_21_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_21_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_21_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Extra Condensed";
+  font-weight: 300;
+  font-style: italic;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_45_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_45_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_45_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_45_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_45_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Extra Condensed";
+  font-weight: 400;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_20_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_20_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_20_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_20_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_20_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Extra Condensed";
+  font-weight: 400;
+  font-style: italic;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_44_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_44_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_44_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_44_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_44_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Extra Condensed";
+  font-weight: 500;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_22_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_22_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_22_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_22_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_22_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Extra Condensed";
+  font-weight: 500;
+  font-style: italic;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_46_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_46_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_46_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_46_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_46_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Extra Condensed";
+  font-weight: 600;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_1C_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_1C_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_1C_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_1C_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_1C_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Extra Condensed";
+  font-weight: 600;
+  font-style: italic;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_40_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_40_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_40_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_40_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_40_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Extra Condensed";
+  font-weight: 700;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_1D_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_1D_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_1D_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_1D_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_1D_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Extra Condensed";
+  font-weight: 700;
+  font-style: italic;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_3F_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_3F_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_3F_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_3F_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_3F_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Extra Condensed";
+  font-weight: 800;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_1B_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_1B_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_1B_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_1B_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_1B_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Extra Condensed";
+  font-weight: 800;
+  font-style: italic;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_41_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_41_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_41_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_41_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_41_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Extra Condensed";
+  font-weight: 900;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_23_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_23_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_23_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_23_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_23_0.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Verb Extra Condensed";
+  font-weight: 900;
+  font-style: italic;
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_47_0.eot);
+  src: url(https://punchthrough.com/assets/verb/2E7DDF_47_0.eot?#iefix) format("embedded-opentype"), url(https://punchthrough.com/assets/verb/2E7DDF_47_0.woff2) format("woff2"), url(https://punchthrough.com/assets/verb/2E7DDF_47_0.woff) format("woff"), url(https://punchthrough.com/assets/verb/2E7DDF_47_0.ttf) format("truetype");
 }
 
 /* line 8, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
-b, strong {
-  font-family: VerbCondRegular-Bold, sans-serif;
-  color: #36383b;
-  font-weight: 900;
+body {
+  font-family: "Verb", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #575a5f;
 }
 
-/* line 13, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
+/* line 14, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
+b, strong {
+  color: #36383b;
+  font-weight: 500;
+}
+
+/* line 20, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
 h1, h2, h3 {
   color: #36383b;
 }
 
-/* line 16, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
+/* line 23, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
 h1 {
-  font-family: VerbCondExtrabold, sans-serif;
-  font-size: 54px;
-  text-transform: uppercase;
-}
-
-/* line 21, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
-h2 {
-  font-family: VerbCondExtralight, sans-serif;
+  font-weight: 700;
   font-size: 40px;
 }
 
-/* line 25, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
-h3 {
-  font-family: VerbCondRegular-Bold, sans-serif;
+/* line 27, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
+h2 {
+  font-weight: 600;
   font-size: 32px;
 }
 
-/* line 29, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
+/* line 31, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
+h3 {
+  font-weight: 500;
+}
+
+/* line 36, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
+h3, blockquote {
+  font-size: 28px;
+}
+
+/* line 39, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
 blockquote {
-  font-family: VerbCompSemibold, sans-serif;
-  font-size: 48px;
-  color: #7fd1c7;
+  font-weight: 300;
+  color: #36383b;
   border: none;
   padding: 0;
   line-height: 1.25;
 }
 
-/* line 37, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
+/* line 48, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
 p {
+  color: dimgrey;
   line-height: 1.5;
 }
 
-/* line 40, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
+/* line 52, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
 a {
   color: #00adee;
-  -webkit-transition: all 200ms linear;
-  -moz-transition: all 200ms linear;
-  -ms-transition: all 200ms linear;
   transition: all 200ms linear;
 }
-/* line 46, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
+/* line 55, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
 a:hover, a:active {
   color: #031a26;
 }
 
-/* line 49, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
-.text-inverse {
+/* line 60, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
+code {
   color: white;
+  background-color: #00adee;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding: 2px 2px;
 }
 
-/* line 54, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
-.container-fluid.lc-gray p {
-  color: dimgrey;
+/* line 73, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
+p:first-child, h1:first-child, h2:first-child, h3:first-child {
+  margin-top: 0;
 }
-/* line 57, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
-.container-fluid.lc-white p {
-  color: dimgrey;
+/* line 75, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
+p:last-child, h1:last-child, h2:last-child, h3:last-child {
+  margin-bottom: 0;
+}
+
+/* line 79, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
+h1 + h2 {
+  margin-top: 0;
+}
+
+/* line 87, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
+.container-fluid.lc-brand-blue body, .container-fluid.lc-brand-blue p, .container-fluid.lc-brand-blue b, .container-fluid.lc-brand-blue strong, .container-fluid.lc-brand-blue h1, .container-fluid.lc-brand-blue h2, .container-fluid.lc-brand-blue h3, .container-fluid.lc-brand-blue blockquote {
+  color: white;
 }
 
 /* line 7, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/navbar.sass */
@@ -11974,13 +12444,13 @@ a:hover, a:active {
 
 /* line 10, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/navbar.sass */
 .navbar-primary {
-  font-family: VerbMedium, sans-serif;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
 /* line 14, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/navbar.sass */
 .navbar-secondary, .breadcrumbs {
-  font-family: VerbRegular, sans-serif;
+  font-weight: 300;
 }
 
 /* line 18, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/navbar.sass */
@@ -12004,42 +12474,39 @@ a:hover, a:active {
 }
 /* line 30, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/navbar.sass */
 .navbar-primary .navbar-nav > li > a, .navbar-secondary .navbar-nav > li > a {
-  -webkit-transition: all 150ms ease-in-out;
-  -moz-transition: all 150ms ease-in-out;
-  -ms-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
   background: none;
 }
 
-/* line 38, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/navbar.sass */
+/* line 35, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/navbar.sass */
 .navbar-primary {
   background: white;
 }
-/* line 41, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/navbar.sass */
+/* line 38, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/navbar.sass */
 .navbar-primary .navbar-nav > li > a {
   color: #36383b;
   text-transform: uppercase;
 }
-/* line 44, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/navbar.sass */
+/* line 41, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/navbar.sass */
 .navbar-primary .navbar-nav > li > a:hover, .navbar-primary .navbar-nav > li.active > a {
   color: #00adee;
 }
 
-/* line 49, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/navbar.sass */
+/* line 46, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/navbar.sass */
 .navbar-secondary {
   background: #00adee;
 }
-/* line 52, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/navbar.sass */
+/* line 49, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/navbar.sass */
 .navbar-secondary .navbar-nav > li > a {
   color: white;
 }
-/* line 54, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/navbar.sass */
+/* line 51, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/navbar.sass */
 .navbar-secondary .navbar-nav > li > a:hover, .navbar-secondary .navbar-nav > li.active > a {
   border-bottom: 3px solid white;
   padding-bottom: 2px;
 }
 
-/* line 58, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/navbar.sass */
+/* line 55, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/navbar.sass */
 .breadcrumbs {
   background-color: white;
   padding: 20px 0;
@@ -12055,57 +12522,51 @@ body {
   background: none;
 }
 
-/* line 5, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/blocks.sass */
+/* line 5, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/blocks.sass.erb */
 .all-sections-content {
   background-color: white;
   padding-bottom: 60px;
 }
 
-/* line 10, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/blocks.sass */
+/* line 10, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/blocks.sass.erb */
 .container-fluid.lc-gray {
   background-color: #f8f8f8;
 }
-/* line 12, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/blocks.sass */
-.container-fluid.lc-dk-blue {
-  background-color: #031a26;
-  color: white;
-  font-weight: 300;
-}
-/* line 16, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/blocks.sass */
-.container-fluid.lc-dk-blue hr {
-  border-color: rgba(255, 255, 255, 0.3);
-}
-/* line 18, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/blocks.sass */
+/* line 12, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/blocks.sass.erb */
 .container-fluid.lc-brand-blue {
   background-color: #00adee;
 }
-/* line 20, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/blocks.sass */
+/* line 14, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/blocks.sass.erb */
 .container-fluid.lc-white {
   background-color: white;
 }
-/* line 22, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/blocks.sass */
+/* line 16, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/blocks.sass.erb */
+.container-fluid.lc-faded-blue {
+  background-color: rgba(0, 173, 238, 0.1);
+}
+/* line 18, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/blocks.sass.erb */
 .container-fluid .row {
   max-width: 1100px;
   margin: 0 auto;
 }
-/* line 25, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/blocks.sass */
+/* line 21, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/blocks.sass.erb */
 .container-fluid hr.small {
   width: 15%;
   margin-top: 25px;
   margin-bottom: 25px;
 }
 
-/* line 30, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/blocks.sass */
+/* line 26, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/blocks.sass.erb */
 .table {
   display: table;
 }
 
-/* line 33, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/blocks.sass */
+/* line 29, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/blocks.sass.erb */
 .cell {
   display: table-cell;
 }
 
-/* line 36, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/blocks.sass */
+/* line 32, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/blocks.sass.erb */
 #site_bar {
   position: fixed;
   bottom: 0;
@@ -12114,35 +12575,35 @@ body {
   z-index: 999;
 }
 
-/* line 44, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/blocks.sass */
+/* line 40, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/blocks.sass.erb */
 #page_container > header {
   top: 0;
   left: 0;
   width: 100%;
   z-index: 999;
 }
-/* line 49, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/blocks.sass */
+/* line 45, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/blocks.sass.erb */
 #page_container > footer {
   background-color: #f8f8f8;
   padding-top: 40px;
   padding-bottom: 80px;
 }
 
-/* line 54, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/blocks.sass */
-.container-fluid[class*="lc-"] {
-  padding-top: 125px;
-  padding-bottom: 125px;
+/* line 51, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/blocks.sass.erb */
+.container-fluid.lc-white, .container-fluid.lc-faded-blue, .container-fluid.lc-gray, .container-fluid.lc-brand-blue {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
-/* line 57, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/blocks.sass */
-.container-fluid[class*="lc-"].no-pad-bottom {
+/* line 54, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/blocks.sass.erb */
+.container-fluid.lc-white.no-pad-bottom, .container-fluid.lc-faded-blue.no-pad-bottom, .container-fluid.lc-gray.no-pad-bottom, .container-fluid.lc-brand-blue.no-pad-bottom {
   padding-bottom: 0;
 }
-/* line 59, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/blocks.sass */
-.container-fluid[class*="lc-"].no-pad-top {
+/* line 56, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/blocks.sass.erb */
+.container-fluid.lc-white.no-pad-top, .container-fluid.lc-faded-blue.no-pad-top, .container-fluid.lc-gray.no-pad-top, .container-fluid.lc-brand-blue.no-pad-top {
   padding-top: 0;
 }
-/* line 61, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/blocks.sass */
-.container-fluid[class*="lc-"] img {
+/* line 58, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/blocks.sass.erb */
+.container-fluid.lc-white img, .container-fluid.lc-faded-blue img, .container-fluid.lc-gray img, .container-fluid.lc-brand-blue img {
   max-width: 100%;
   height: auto;
 }
@@ -12222,12 +12683,6 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
-@media (max-width: 991px) {
-  /* line 34, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/covers.sass */
-  .cover-matt-soldering {
-    background: none;
-  }
 }
 
 /* line 6, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/colorway.sass */
@@ -12357,60 +12812,154 @@ body {
   margin-top: 40px;
 }
 
-/* line 4, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/about_us.sass */
+/* line 8, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
+body {
+  font-family: "Verb", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #575a5f;
+}
+
+/* line 14, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
+b, strong {
+  color: #36383b;
+  font-weight: 500;
+}
+
+/* line 20, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
+h1, h2, h3 {
+  color: #36383b;
+}
+
+/* line 23, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
+h1 {
+  font-weight: 700;
+  font-size: 40px;
+}
+
+/* line 27, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
+h2 {
+  font-weight: 600;
+  font-size: 32px;
+}
+
+/* line 31, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
+h3 {
+  font-weight: 500;
+}
+
+/* line 36, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
+h3, blockquote {
+  font-size: 28px;
+}
+
+/* line 39, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
+blockquote {
+  font-weight: 300;
+  color: #36383b;
+  border: none;
+  padding: 0;
+  line-height: 1.25;
+}
+
+/* line 48, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
+p {
+  color: dimgrey;
+  line-height: 1.5;
+}
+
+/* line 52, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
+a {
+  color: #00adee;
+  transition: all 200ms linear;
+}
+/* line 55, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
+a:hover, a:active {
+  color: #031a26;
+}
+
+/* line 60, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
+code {
+  color: white;
+  background-color: #00adee;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding: 2px 2px;
+}
+
+/* line 73, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
+p:first-child, h1:first-child, h2:first-child, h3:first-child {
+  margin-top: 0;
+}
+/* line 75, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
+p:last-child, h1:last-child, h2:last-child, h3:last-child {
+  margin-bottom: 0;
+}
+
+/* line 79, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
+h1 + h2 {
+  margin-top: 0;
+}
+
+/* line 87, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/base/typography.sass */
+.container-fluid.lc-brand-blue body, .container-fluid.lc-brand-blue p, .container-fluid.lc-brand-blue b, .container-fluid.lc-brand-blue strong, .container-fluid.lc-brand-blue h1, .container-fluid.lc-brand-blue h2, .container-fluid.lc-brand-blue h3, .container-fluid.lc-brand-blue blockquote {
+  color: white;
+}
+
+/* line 5, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/about_us.sass */
 .profile-thumb img, .profile-detail img {
   width: 100%;
   height: auto;
 }
 
-/* line 8, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/about_us.sass */
+/* line 9, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/about_us.sass */
 .profile-thumb .name, .profile-detail .position {
-  font-family: VerbMedium, sans-serif;
+  font-weight: 400;
   font-size: 16px;
   line-height: 100%;
   margin-top: 8px;
 }
 
-/* line 14, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/about_us.sass */
+/* line 15, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/about_us.sass */
 .profile-thumb {
   padding-top: 10px;
   margin-bottom: 20px;
   cursor: help;
 }
-/* line 18, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/about_us.sass */
+/* line 19, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/about_us.sass */
 .profile-thumb .name {
   text-align: center;
   min-height: 32px;
   margin-bottom: 0;
 }
-/* line 22, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/about_us.sass */
+/* line 23, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/about_us.sass */
 .profile-thumb:hover {
   background: rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
 
-/* line 26, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/about_us.sass */
+/* line 27, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/about_us.sass */
 .profile-delta {
   display: none;
   height: 0;
 }
-/* line 29, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/about_us.sass */
+/* line 30, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/about_us.sass */
 .profile-delta .delta-red, .profile-delta .delta-blk {
   margin-top: -26px;
   min-height: 26px;
   background: no-repeat center bottom;
   background-size: 52px 26px;
 }
-/* line 34, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/about_us.sass */
+/* line 35, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/about_us.sass */
 .profile-delta .delta-red {
   background-image: url(https://punchthrough.com/assets/profile-delta-red.png);
 }
-/* line 36, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/about_us.sass */
+/* line 37, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/about_us.sass */
 .profile-delta .delta-blk {
   background-image: url(https://punchthrough.com/assets/profile-delta-blk.png);
 }
 
-/* line 39, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/about_us.sass */
+/* line 40, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/about_us.sass */
 .profile-detail {
   display: none;
   padding: 40px;
@@ -12418,30 +12967,32 @@ body {
   background: #36383b url(https://punchthrough.com/assets/profile-background.png) no-repeat right bottom;
   background-size: auto 100%;
 }
-/* line 48, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/about_us.sass */
+/* line 49, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/about_us.sass */
 .profile-detail .text {
   padding-left: 80px;
 }
-/* line 53, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/about_us.sass */
+/* line 54, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/about_us.sass */
 .profile-detail .name {
   margin-top: 10px;
   margin-bottom: 0;
-  font-family: VerbCondExtralight, sans-serif;
+  font-family: "Verb Condensed", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-weight: 100;
   font-size: 64px;
   text-transform: inherit;
   color: #7fd1c7;
 }
-/* line 60, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/about_us.sass */
+/* line 62, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/about_us.sass */
 .profile-detail .position {
   margin-top: 0;
   color: #cccccc;
 }
-/* line 63, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/about_us.sass */
+/* line 65, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/about_us.sass */
 .profile-detail .bio {
   display: block;
   margin-top: 40px;
   margin-bottom: 0;
-  font-family: VerbCompSemibold, sans-serif;
+  font-family: "Verb Compressed", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
   color: white;
   font-size: 34px;
   line-height: 125%;
@@ -12449,9 +13000,124 @@ body {
   text-indent: -13px;
 }
 
-/* line 74, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/about_us.sass */
+/* line 77, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/components/about_us.sass */
 .map {
   margin-top: 20px;
+}
+
+/* line 3, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/pages/doxygen_docs.sass */
+.doxygen-docs {
+  padding-top: 80px !important;
+}
+/* line 9, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/pages/doxygen_docs.sass */
+.doxygen-docs ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+/* line 12, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/pages/doxygen_docs.sass */
+.doxygen-docs ul.toc {
+  padding-left: 0;
+}
+/* line 15, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/pages/doxygen_docs.sass */
+.doxygen-docs h3 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+/* line 21, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/pages/doxygen_docs.sass */
+.doxygen-docs .section-link {
+  margin-top: 20px;
+}
+/* line 26, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/pages/doxygen_docs.sass */
+.doxygen-docs .member:nth-of-type(odd) {
+  background-color: #f8f8f8;
+}
+/* line 29, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/pages/doxygen_docs.sass */
+.doxygen-docs .member > .name {
+  margin-bottom: 20px;
+}
+/* line 32, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/pages/doxygen_docs.sass */
+.doxygen-docs .member > .name, .doxygen-docs h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* line 41, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/pages/doxygen_docs.sass */
+.doxygen-docs .section > .info, .doxygen-docs .section .member {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+/* line 49, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/pages/doxygen_docs.sass */
+.doxygen-docs .section > .info > .name {
+  text-transform: none;
+}
+/* line 52, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/pages/doxygen_docs.sass */
+.doxygen-docs .section:first-of-type > .info {
+  padding-top: 0;
+}
+/* line 54, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/pages/doxygen_docs.sass */
+.doxygen-docs .section:first-of-type > .info > .name {
+  margin-top: 0;
+}
+/* line 57, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/pages/doxygen_docs.sass */
+.doxygen-docs .section:not(:first-of-type) > .info {
+  border-top: 3px solid #b4b4b4;
+  margin-top: 40px;
+}
+/* line 63, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/pages/doxygen_docs.sass */
+.doxygen-docs .section .member {
+  border-radius: 4px;
+}
+/* line 68, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/pages/doxygen_docs.sass */
+.doxygen-docs .section .member .param, .doxygen-docs .section .member .return {
+  margin-bottom: 10px;
+}
+/* line 70, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/pages/doxygen_docs.sass */
+.doxygen-docs .section .member .param p, .doxygen-docs .section .member .return p {
+  margin-bottom: 0;
+}
+/* line 72, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/pages/doxygen_docs.sass */
+.doxygen-docs .section .member .param .desc, .doxygen-docs .section .member .return .desc {
+  padding-left: 30px;
+}
+/* line 78, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/pages/doxygen_docs.sass */
+.doxygen-docs pre {
+  padding: 0;
+}
+/* line 81, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/pages/doxygen_docs.sass */
+.doxygen-docs pre {
+  overflow-x: auto;
+}
+/* line 83, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/pages/doxygen_docs.sass */
+.doxygen-docs pre code {
+  overflow-wrap: normal;
+  white-space: pre;
+}
+/* line 88, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/pages/doxygen_docs.sass */
+.doxygen-docs pre .line-number {
+  float: left;
+  text-align: right;
+  background-color: #373b41;
+  color: #969896;
+}
+/* line 94, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/pages/doxygen_docs.sass */
+.doxygen-docs pre .line-number span {
+  margin-left: 10px;
+  display: block;
+}
+/* line 97, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/pages/doxygen_docs.sass */
+.doxygen-docs pre .line-number, .doxygen-docs code.hljs {
+  padding: 20px 10px 20px 15px;
+}
+/* line 99, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/pages/doxygen_docs.sass */
+.doxygen-docs code.hljs {
+  padding-left: 10px;
+}
+
+/* line 1, /Users/mplewis/Dropbox (Punch Through)/PTD Projects/ptd-website/app/assets/stylesheets/admin/ks_bean_plus/addons.css.sass */
+.addons-index .addon .thumb {
+  max-width: 100px;
+  max-height: 40px;
 }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

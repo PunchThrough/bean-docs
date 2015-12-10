@@ -39,9 +39,9 @@ pathCollector:
     - key: accessories
       name: Accessories
       pattern: ^accessories/.+\.md$
-    - key: platforms
-      name: Other Platforms
-      pattern: ^platforms/.+\.md$
+    - key: node-red
+      name: Node-RED
+      pattern: ^node-red/.+\.md$
     - key: everything-else
       name: Everything Else
       pattern: ^everything-else/.+\.md$  
@@ -58,3 +58,29 @@ relativeRoots:
   indexFilename: index.md
 
 index: 'getting-started/intro/'
+
+lint:
+  files:
+    - 'src/**/*.md'
+  rules:
+    - slug: caps-bean
+      pattern: !!js/regexp /\sbean\s/
+      message: 'Always capitalize Bean'
+    - slug: caps-lb
+      pattern: !!js/regexp /\slightblue|Lightblue\s/
+      message: 'Always capitalize LightBlue'
+    - slug: one-word-lb
+      pattern: !!js/regexp /\blight blue\b/i
+      message: 'LightBlue is one word, not two'
+    - slug: two-words-pt
+      pattern: !!js/regexp /\sPunchThrough\s/i
+      message: 'Punch Through is two words, not one'
+    - slug: pt-not-ptd
+      pattern: !!js/regexp /\bPunch Through Design\b/i
+      message: 'Instead of "Punch Through Design", prefer "Punch Through"'
+    - slug: os-x-not-osx
+      pattern: !!js/regexp /\bOSX\b/
+      message: 'Instead of "OSX", use "OS X"'
+    - slug: no-abs-links
+      pattern: !!js/regexp /\]\(\//
+      message: 'Do not use absolute links'

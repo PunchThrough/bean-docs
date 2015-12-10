@@ -1,0 +1,8 @@
+machine:
+  node:
+    version: 4.2.2
+
+test:
+  override:
+    - npm run lint-style
+    - npm run lint-code

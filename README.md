@@ -8,14 +8,14 @@ Check what version of Node you're running.
 node --version
 ```
 
-If it doesn't start with `v4`, you need to update Node. You're probably on a Mac and installed Node via Homebrew, so try:
+If it doesn't start with `v4` or greater (`v5`, etc.), you need to update Node. You're probably on a Mac and installed Node via Homebrew, so try:
 
 ```sh
 brew update
 brew upgrade node
 ```
 
-## Install dependencies
+## Install Dependencies
 
 Inside the `bean-docs` folder, run this to install the project dependencies:
 
@@ -70,3 +70,12 @@ For videos, use the same syntax with `video_rel` instead:
 ```
 
 The max width argument doesn't work with videos yet.
+
+# Verifying Style
+
+We have a few checks for both code and content. Rum them as follows:
+
+```bash
+npm run lint-style  # Check Markdown files for common writing errors
+npm run lint-code   # Check JavaScript files for style errors
+```

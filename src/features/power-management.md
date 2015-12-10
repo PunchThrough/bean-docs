@@ -6,7 +6,7 @@ autotoc: true
 
 ## Introduction
 
-The Bean was designed to be power-efficient so it can run on a battery for a very long time. There are a few things you need to take into account to achieve a longer battery life with your sketches. This guide will walk you through some best practices for designing low-power Bean projects. 
+Bean was designed to be power-efficient so it can run on a battery for a very long time. There are a few things you need to take into account to achieve a longer battery life with your sketches. This guide will walk you through some best practices for designing low-power Bean projects. 
 
 ## What You Need
 
@@ -27,7 +27,7 @@ Please make sure you're familiar with the following before starting this guide:
 
 ### Bean.sleep vs. Arduino Delay
 
-The key to a low-power sketch is putting the Bean to sleep whenever it's not actively doing something. Bean has a simple command to sleep for a set amount of time: `Bean.sleep()`.
+The key to a low-power sketch is putting Bean to sleep whenever it's not actively doing something. Bean has a simple command to sleep for a set amount of time: `Bean.sleep()`.
 
 During Bean sleep, the entire system is asleep and consumes barely any power. With a simple delay, Bean is still running at full power but does nothing while it waits for the delay to expire.
 
@@ -51,7 +51,7 @@ What actually happens in Bean sleep is that the ATmega (the microcontroller runn
 * A received serial message will wake the ATmega
 * Any type of interrupt will wake the ATmega
 
-A common practice is to have the Bean sleep for as long as possible using `Bean.sleep(0xFFFFFFFF)`. This way, the Bean will stay asleep indefinitely, and you can wake up Bean with a serial message or interrupt.
+A common practice is to have Bean sleep for as long as possible using `Bean.sleep(0xFFFFFFFF)`. This way, Bean will stay asleep indefinitely, and you can wake up Bean with a serial message or interrupt.
 
 ### Minimum Sleep Time
 
@@ -79,9 +79,9 @@ The preferred method is to use **interrupts**. With interupts, you specify an ev
 
 ## Example: Pin Interrupts vs Polling
 
-This tutorial assumes you have completed the [Getting Started guide](#), which covers tasks such as connecting to and programming the Bean with the Bean Loader. 
+This tutorial assumes you have completed the [Getting Started guide](#), which covers tasks such as connecting to and programming Bean with Bean Loader. 
 
-### Program the Bean
+### Program Your Bean
 
 Connect to your Bean and upload this Arduino sketch:
 
@@ -92,7 +92,7 @@ Connect to your Bean and upload this Arduino sketch:
 void setup() {
    pinMode(0, INPUT_PULLUP);
    // run pinChanged when something changes on D0 
-   // This is an external library, so you don't need the Bean prefix
+   // This is an external library, so you don't need the prefix "Bean"
    attachPinChangeInterrupt(0, pinChanged, CHANGE);
 }
  
@@ -123,7 +123,7 @@ When you ground pin D0, you should see Bean's LED blink red briefly. This means 
 
 ## Conclusion
 
-In this guide, you learned some best practices to keep the Bean's power consumption low and get longer battery life.
+In this guide, you learned some best practices to keep Bean's power consumption low and get longer battery life.
 
 Here are some times when using interrupts instead of polling can save battery power:
 
