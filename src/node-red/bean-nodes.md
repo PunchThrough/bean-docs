@@ -1,5 +1,5 @@
 ---
-title: Bean Nodes
+title: Using Bean Nodes
 layout: basic.hbs
 autotoc: true
 order: 3
@@ -7,9 +7,9 @@ order: 3
 
 ## Introduction
 
-In this guide, you'll learn how to use the custom Bean nodes to build Node-RED flows that talk to your Bean.
+In this guide, you'll learn how to use the Bean nodes to build Node-RED flows that talk to your Bean.
 
-## Using Bean Nodes
+## Picking the Right Bean
 
 Every Bean node needs to know which Bean you want to communicate with. To configure a Bean node, double-click on it and the configuration window will pop up:
 
