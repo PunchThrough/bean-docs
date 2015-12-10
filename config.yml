@@ -63,11 +63,15 @@ lint:
   files:
     - '**/*.md'
   rules:
-    - pattern: !!js/regexp /\wbean\w/
+    - slug: caps-bean
+      pattern: !!js/regexp /\sbean\s/
       message: 'Always capitalize Bean'
-    - pattern: !!js/regexp /\wlightblue|Lightblue\w/
+    - slug: caps-lb
+      pattern: !!js/regexp /\slightblue|Lightblue\s/
       message: 'Always capitalize LightBlue'
-    - pattern: !!js/regexp /\blight blue\b/i
+    - slug: one-word-lb
+      pattern: !!js/regexp /\blight blue\b/i
       message: 'LightBlue is one word, not two'
-    - pattern: !!js/regexp /\bthe beans?\b/i
+    - slug: bean-not-the-bean
+      pattern: !!js/regexp /\bthe beans?\b/i
       message: 'Instead of "the Bean", prefer simply "Bean"'
