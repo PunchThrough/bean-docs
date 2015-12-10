@@ -1,4 +1,4 @@
-console.log('frontend')
+/*global $, hljs*/
 
 // Syntax highlighting. Depends on highlight.js
 var pre = document.getElementsByTagName('pre')
@@ -15,8 +15,8 @@ hljs.initHighlighting()
 
 // Make links that end in >> into buttons with »
 var links = Array.prototype.slice.call(document.getElementsByTagName('a'))
-var to_buttons = links.filter(function(e) { return e.text.endsWith('>>') })
-to_buttons.forEach(function(e) {
+var to_buttons = links.filter(function (e) { return e.text.endsWith('>>') })
+to_buttons.forEach(function (e) {
   e.innerHTML = e.innerHTML.replace('&gt;&gt;', '&raquo;')
   $(e).addClass('btn btn-primary btn-lg')
 })

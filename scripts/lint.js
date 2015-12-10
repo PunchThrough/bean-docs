@@ -6,15 +6,15 @@ var fs = require('fs')
 
 var config = yaml.load(fs.readFileSync('config.yml', 'utf8'))
 
-files = []
-config.lint.files.forEach(function(pattern) {
+var files = []
+config.lint.files.forEach(function (pattern) {
   files = files.concat(glob.sync(pattern))
 })
 
 var rules = config.lint.rules
 // add the global flag to every pattern so we can use re.exec() to iterate over all matches
 // http://stackoverflow.com/a/5836103/254187
-rules.forEach(function(rule) {
+rules.forEach(function (rule) {
   var pattern = rule.pattern
   if (!pattern.global) {
     var flags = 'g'
@@ -30,7 +30,7 @@ var errorTypes = {}
 var warningCount = 0
 var warningFileCount = 0
 
-files.forEach(function(path) {
+files.forEach(function (path) {
   // read a file and split it into lines
   var firstError = true
   var firstWarning = true
@@ -39,8 +39,7 @@ files.forEach(function(path) {
   // run every rule on each line
   for (var i = 0; i < lines.length; i++) {
     var line = lines[i]
-    rules.forEach(function(rule) {
-      var results = []
+    rules.forEach(function (rule) {
       var result
       while ((result = rule.pattern.exec(line)) !== null) {
         // print the file header for the first error/warning of each file
@@ -93,7 +92,7 @@ files.forEach(function(path) {
   }
 })
 
-Object.keys(errorTypes).forEach(function(slug) {
+Object.keys(errorTypes).forEach(function (slug) {
   var count = errorTypes[slug]
   console.log(sprintf('%4d %s', count, slug))
 })
