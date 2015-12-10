@@ -4,7 +4,7 @@ var colors = require('colors/safe')
 var sprintf = require('sprintf-js').sprintf
 var fs = require('fs')
 
-var config = yaml.load(fs.readFileSync('config.yml', 'utf8'))
+var config = yaml.safeLoad(fs.readFileSync('config.yml', 'utf8'))
 
 var files = []
 config.lint.files.forEach(function (pattern) {
@@ -13,14 +13,12 @@ config.lint.files.forEach(function (pattern) {
 
 var rules = config.lint.rules
 // add the global flag to every pattern so we can use re.exec() to iterate over all matches
-// http://stackoverflow.com/a/5836103/254187
 rules.forEach(function (rule) {
-  var pattern = rule.pattern
-  if (!pattern.global) {
-    var flags = 'g'
-    if (pattern.ignoreCase) flags += 'i'
-    if (pattern.multiline) flags += 'm'
-    rule.pattern = RegExp(pattern.source, flags)
+  if (!rule.flags) {
+    rule.flags = ''
+  }
+  if (rule.flags.indexOf('g') === -1) {
+    rule.flags += 'g'
   }
 })
 
@@ -40,8 +38,9 @@ files.forEach(function (path) {
   for (var i = 0; i < lines.length; i++) {
     var line = lines[i]
     rules.forEach(function (rule) {
+      var pattern = new RegExp(rule.regex, rule.flags)
       var result
-      while ((result = rule.pattern.exec(line)) !== null) {
+      while ((result = pattern.exec(line)) !== null) {
         // print the file header for the first error/warning of each file
         if (firstError && firstWarning) {
           console.log(colors.black(colors.bgWhite(path)))

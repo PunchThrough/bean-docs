@@ -19,7 +19,7 @@ let Stylus = require('metalsmith-stylus')
 let InPlace = require('metalsmith-in-place')
 let Paths = require('metalsmith-paths')
 
-const config = Yaml.load(fs.readFileSync('config.yml', 'utf8'))
+const config = Yaml.safeLoad(fs.readFileSync('config.yml', 'utf8'))
 
 module.exports =
   Metalsmith(__dirname)

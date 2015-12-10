@@ -64,23 +64,26 @@ lint:
     - 'src/**/*.md'
   rules:
     - slug: caps-bean
-      pattern: !!js/regexp /\sbean\s/
+      regex: '\sbean\s'
       message: 'Always capitalize Bean'
     - slug: caps-lb
-      pattern: !!js/regexp /\slightblue|Lightblue\s/
+      regex: '\slightblue|Lightblue\s'
       message: 'Always capitalize LightBlue'
     - slug: one-word-lb
-      pattern: !!js/regexp /\blight blue\b/i
+      regex: '\blight blue\b'
+      flags: 'i'
       message: 'LightBlue is one word, not two'
     - slug: two-words-pt
-      pattern: !!js/regexp /\sPunchThrough\s/i
+      regex: '\sPunchThrough\s'
+      flags: 'i'
       message: 'Punch Through is two words, not one'
     - slug: pt-not-ptd
-      pattern: !!js/regexp /\bPunch Through Design\b/i
+      regex: '\bPunch Through Design\b'
+      flags: 'i'
       message: 'Instead of "Punch Through Design", prefer "Punch Through"'
     - slug: os-x-not-osx
-      pattern: !!js/regexp /\bOSX\b/
+      regex: '\bOSX\b'
       message: 'Instead of "OSX", use "OS X"'
     - slug: no-abs-links
-      pattern: !!js/regexp /\]\(\//
+      regex: '\]\(\//'
       message: 'Do not use absolute links'
