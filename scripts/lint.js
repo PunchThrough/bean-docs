@@ -1,7 +1,7 @@
 var glob = require('glob')
 var yaml = require('js-yaml')
-var S = require('string')
 var colors = require('colors/safe')
+var sprintf = require('sprintf-js').sprintf
 var fs = require('fs')
 
 var config = yaml.load(fs.readFileSync('config.yml', 'utf8'))
@@ -24,6 +24,10 @@ rules.forEach(function(rule) {
   }
 })
 
+var errorCount = 0
+var errorFileCount = 0
+var errorTypes = {}
+
 files.forEach(function(path) {
   var firstError = true
   var all = fs.readFileSync(path, 'utf8')
@@ -34,10 +38,18 @@ files.forEach(function(path) {
       var results = []
       var result
       while ((result = rule.pattern.exec(line)) !== null) {
+        errorCount++
         if (firstError) {
           firstError = false
+          errorFileCount++
           console.log(colors.black(colors.bgWhite(path)))
           console.log()
+        }
+
+        if (rule.slug in errorTypes) {
+          errorTypes[rule.slug] = errorTypes[rule.slug] + 1
+        } else {
+          errorTypes[rule.slug] = 1
         }
 
         var index = result.index
@@ -45,15 +57,8 @@ files.forEach(function(path) {
         var length = match.length
         var highlighted = line.substr(0, index) + colors.white(colors.bold(match)) + line.substr(index + length)
 
-        var loc = S('{{line_num}}:{{col}}').template({
-            line_num: i,
-            col: index,
-          }).s
-        var info = S('{{loc}} {{message}}')
-          .template({
-            loc: colors.red(loc),
-            message: colors.green(rule.message),
-          }).s
+        var loc = sprintf('%d:%d', i, index)
+        var info = sprintf('%s %s', colors.red(loc), colors.green(rule.message))
         console.log(info)
         console.log(colors.grey(highlighted))
         console.log()
@@ -61,3 +66,16 @@ files.forEach(function(path) {
     })
   }
 })
+
+Object.keys(errorTypes).forEach(function(slug) {
+  var count = errorTypes[slug]
+  console.log(sprintf('%4d %s', count, slug))
+})
+console.log()
+
+if (errorCount === 0) {
+  console.log(colors.green('No errors found! :)'))
+} else {
+  console.log(colors.red(sprintf('%d errors found across %d files', errorCount, errorFileCount)))
+  process.exit(1)
+}
