@@ -81,3 +81,6 @@ lint:
     - slug: os-x-not-osx
       pattern: !!js/regexp /\bOSX\b/
       message: 'Instead of "OSX", use "OS X"'
+    - slug: no-abs-links
+      pattern: !!js/regexp /\]\(\//
+      message: 'Do not use absolute links'
