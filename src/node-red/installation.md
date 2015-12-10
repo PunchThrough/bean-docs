@@ -39,5 +39,6 @@ Finally, in order to make use of Bean nodes, you must install them in a place th
 
 ## Next Steps
 
-* Learn how to use our [Bean Nodes](/node-red/bean-nodes)
-* [Official Node-RED docs](http://nodered.org/docs/)
+Now that Node-RED and the Bean nodes are installed, you can start learning to use them to build flows with Bean!
+
+[Learn to Use Bean Nodes >>](../bean-nodes)

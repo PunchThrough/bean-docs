@@ -7,11 +7,11 @@ order: 3
 
 ## Introduction
 
-This guide will walk you through how to use the custom nodes for communicating with Bean.
+In this guide, you'll learn how to use the custom Bean nodes to build Node-RED flows that talk to your Bean.
 
 ## Using Bean Nodes
 
-When using any Bean node, you will have to tell the flow which Bean you want to communicate with. To do this, begin by double clicking on any Bean node. You will see the following menu.
+Every Bean node needs to know which Bean you want to communicate with. To configure a Bean node, double-click on it and the configuration window will pop up:
 
 {{{img_rel this 'config-bean.png' 'Config Bean' '100%'}}}
 
@@ -19,19 +19,21 @@ Clicking on the pencil icon will allow you to configure Bean's name or UUID. Mak
 
 {{{img_rel this 'config-bean-name.png' 'Config Bean Name' '100%'}}}
 
-### Injecting and Debugging Flows 
+## Using Inject and Debug to Understand Flows
 
-Some of the following examples will make use of two important nodes, `inject` and `debug`. 
+Some of the following examples will make use of two important nodes, inject and debug:
 
-{{{img_rel this 'inject.png' 'Inject Node' '70%'}}}
+{{{img_rel this 'inject.png' 'Inject Node' '25%'}}}
 
-{{{img_rel this 'debug.png' 'Debug Node' '70%'}}}
+{{{img_rel this 'debug.png' 'Debug Node' '25%'}}}
 
-The inject node allows you to start a flow by clicking a button or by firing a timer. If you need to input test data such as a string the inject node is also used for that purpose. The Debug node will allow you to view the output from any node.
+The inject node allows you to send an event to a node by clicking a button. It can also send events automatically on a timer. Finally, the inject node can send a string of your choice to any node.
+
+The debug node will allow you to view the output from any node. Any data that comes into the debug node will appear under the Debug tab in the right-side pane of the Node-RED interface.
 
 ## Bean Node Examples
 
-Check out the following sections to get an understanding on how to use Bean nodes.
+Here are some basic flows that demonstrate what's possible with Bean and Node-RED.
 
 ### LED Node
 
@@ -53,7 +55,7 @@ This node behaves in a very similar way to the acceleration node. Any message re
 
 {{{img_rel this 'example-temp-node.png' 'Temp Node' '100%'}}}
 
-__Note__: The temperature reading is in __celsius__.
+__Note__: The temperature reading is in __Celsius__.
 
 ### Scratch Nodes
 
@@ -73,7 +75,7 @@ To show this functionality, here is an example flow that writes serial data to B
 
 {{{img_rel this 'example-serial-node.png' 'Serial node' '100%'}}}
 
-This example assumes there is a dead-simple serial loopback sketch programmed on Bean. A loopback sketch reads serial bytes and writes them straight back to the connected client. Here's an example:
+This example assumes there is a serial loopback sketch programmed on Bean. That sketch reads serial bytes and writes them straight back to the connected client. Here's an example you can use on your Bean:
 
 ```
 void setup() {
@@ -88,7 +90,7 @@ void loop() {
 }
 ```
 
-Also, the incoming and outgoing messages from the Bean Serial node need to be configured to include a "split" character in order to maintain the original message format.
+The incoming and outgoing messages from the Bean Serial node need to be configured to include a "split" character in order to maintain the original message format:
 
 {{{img_rel this 'example-serial-node-cfg.png' 'Serial node Config' '100%'}}}
 
@@ -98,8 +100,10 @@ This guide shows you how to start using the 6 custom nodes provided by Punch Thr
 
 ## Next Steps
 
-* Check out some examples projects!
-	* [Logging Bean data](https://www.hackster.io/punchthrough/projects)
-	* [Tweet sentiment to LED](https://www.hackster.io/punchthrough/projects)
-	* [Email temperature warning system](https://www.hackster.io/punchthrough/projects)
-* [Official Node-RED docs](http://nodered.org/docs/)
+Check out some example projects for inspiration:
+
+* [Log Bean data to a CSV file](https://www.hackster.io/punch-through/logging-data-from-the-bean-7653e6)
+* [Turn a tweet's sentiment into an LED color](https://www.hackster.io/punch-through/tweet-sentiment-to-led-using-node-red-6a380a)
+* [Send an email when Bean gets too hot or cold](https://www.hackster.io/punch-through/email-temperature-warning-system-using-node-red-43723f)
+
+Or learn more about Node-RED at the [official Node-RED docs](http://nodered.org/docs/).
