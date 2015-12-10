@@ -58,3 +58,16 @@ relativeRoots:
   indexFilename: index.md
 
 index: 'getting-started/intro/'
+
+lint:
+  files:
+    - '**/*.md'
+  rules:
+    - pattern: !!js/regexp /\wbean\w/
+      message: 'Always capitalize Bean'
+    - pattern: !!js/regexp /\wlightblue|Lightblue\w/
+      message: 'Always capitalize LightBlue'
+    - pattern: !!js/regexp /\blight blue\b/i
+      message: 'LightBlue is one word, not two'
+    - pattern: !!js/regexp /\bthe beans?\b/i
+      message: 'Instead of "the Bean", prefer simply "Bean"'
