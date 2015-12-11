@@ -13,4 +13,4 @@ Enhancing education is very important to us. Having access to the tools and reso
 ## Classrooms, Workshops, and Presentations
 Learning is the first step to teaching. We offer workshops on the LightBlue Bean, Bluetooth Low Energy, iBeacons and much more. Whether you are learning basic hardware hacking, or want to learn about the different BLE protocols as an advanced user, let’s make arrangements to get your questions answered. Contact us at info@punchthrough.com 
 
-
+{{{img_rel this 'gretchen-workshop.jpg' '70%'}}}
