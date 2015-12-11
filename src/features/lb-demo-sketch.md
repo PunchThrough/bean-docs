@@ -107,7 +107,7 @@ You can see the values change when you open the LightBlue App and select the Bea
 
 ## Conclusion
 
-In this guide, you programmed your Bean with 
+In this guide, you programmed your Bean with the LightBlue Demo Sketch. You connected to Bean using LightBlue Explorer and learned how Bean's sketch communicates pin values back to your app.
 
 ## Troubleshooting
 
