@@ -53,13 +53,11 @@ void loop()
 
 Here's what the code does:
 
-* `Line 1` is the [setup function](https://www.arduino.cc/en/Reference/Setup). This function is excuted only once during the duration of the program.
-* `Line 6` is the [loop function](https://www.arduino.cc/en/Reference/Loop).  This function is excuted continuously until Bean is either turned off or unprogrammed.
-* `Line 8` reads the accelerometer values (range from -512 to 511)
-* `Lines 9-11` scales the values to the range 0 to 255.
-* `Line 12` sets the LED's red, green and blue values to the scaled X, Y, and Z values.
-* Executes loop() again. 
-
+* **Line 1**: The [setup function](https://www.arduino.cc/en/Reference/Setup). This function is executed only once when Bean is powered on.
+* **Line 6**: The [loop function](https://www.arduino.cc/en/Reference/Loop).  This function is executed continuously until Bean is turned off or its program is cleared.
+* **Line 8**: Read the accelerometer values (range from -512 to 511)
+* **Lines 9-11**: Scale the values to the range 0 to 255.
+* **Line 12**: Set the LED's red, green and blue values to the scaled X, Y, and Z values.
 
 Upload this Arduino sketch to your Bean. If you haven't installed Bean Loader or don't know how to connect to your Bean, [visit the Getting Started guide for downloads and instructions](#).
 
@@ -97,8 +95,8 @@ void loop()
 }
 ```
 
- * `Line 15` is an example of how to print to the Serial Monitor. To find out more about activating Virtual Serial on Bean and viewing it on the Arduino's Serial Monitor, check out our [Virtual Serial guide](#).
- * `Line 16-17` can be uncommented (delete the `//` characters) to see the Y and Z axis values as well.
+ * **Line 15** is an example of how to print to the Serial Monitor. To find out more about activating Virtual Serial on Bean and viewing incoming data in Arduino IDE's Serial Monitor, check out our [Virtual Serial guide](#).
+ * **Lines 16-17** can be uncommented (delete the `//` characters) to see the Y and Z axis values as well.
 
 Your Bean's accelerometer is configured in low power mode.  As a result, when your Bean requests a reading, the accelerometer takes about 5 ms to warm up before it returns a reading. This means that your Bean is able to read the accelerometer at a maximum frequency of 200 Hz.
 

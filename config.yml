@@ -87,3 +87,6 @@ lint:
     - slug: no-abs-links
       regex: '\]\(\//'
       message: 'Do not use absolute links'
+    - slug: line-nums-bold
+      regex: '\*\s+`Line'
+      message: 'Use **bold** instead of `code` for discussing line numbers of code blocks'
