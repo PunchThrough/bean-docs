@@ -1,17 +1,23 @@
 ---
-title: Bean-Tweet
+title: Tweeting from Bean
 layout: basic.hbs
 autotoc: true
 ---
 
 ## Introduction
-Lets say we want to tweet the Bean's temperature. We would have to go through the process of building a server and transferring the Bean's information to it, either through an iOS application or a rasberry pi. Node-RED is used to connect the Bean to the internet that mitigates the need of building a server. In this tutorial, I will guide you in how to tweet the Bean's temperature through Node-RED. 
+
+Say you want to build an app that tweets Bean's temperature. Normally, you'd have to go through the process of writing software that can speak to both Twitter and your Bean. If you use Node-RED, you can avoid having to write that software since it understands how to communicate with both Twitter and your Bean!
+
+In this tutorial, you'll build a Node-RED flow that connects your Bean's temperature sensor to a Twitter account.
 
 ## Setup
+
+This tutorial assumes you have completed the [Getting Started guide](#). It covers tasks such as connecting to and programming Bean with Bean Loader.
 
 Please make sure you're familiar with the following before starting this guide:
 
 ### Software
+
 * Bean Loader ([install guides](#))
 * Node-RED installation ([install Node-RED](#))
 
@@ -20,27 +26,22 @@ Please make sure you're familiar with the following before starting this guide:
 * LightBlue Bean
 * Computer device
 
-## Program the Bean on Bean Loader
-This tutorial assumes you have completed the [Getting Started guide](#). It covers tasks such as connecting to and programming the Bean with the Bean Loader.
+## Program Your Bean
 
-Connect to your Bean and upload this Arduino sketch:
+Connect to your Bean and upload this Arduino sketch using Bean Loader:
+
 ```
 int8_t temp = 0;
 
-// the setup routine runs once when you press reset:
 void setup() {
-  // initialize serial communication
-  Serial.begin();
+  // We don't need to do anything here; Serial is configured automatically on Bean
 }
 
 void loop() {
   int8_t newTemp = Bean.getTemperature();
-
   if (newTemp != temp) {
     temp = newTemp;
-
-    Serial.print(temp);
-    Serial.print("\n");
+    Serial.println(temp);
   }
 
   Bean.sleep(10000);
@@ -49,48 +50,44 @@ void loop() {
 ```
 Here's what the code does:
 
-* `Line 1` esentially declares that temp is an 8-bit long integer. 
-* `Line 4` is the [setup function](https://www.arduino.cc/en/Reference/Setup). This function is excuted only once during the duration of the program.
-* `Line 9` is the [loop function](https://www.arduino.cc/en/Reference/Loop).  This function is excuted continuously until the Bean is either turned off or unprogrammed.
-* `Line 10` reads the temperature value. Checkout the ([Bean Arduino reference guide](http://legacy.punchthrough.com/bean/the-arduino-reference/))
-* `Lines 12` checks to make sure that the last value of temperature is not the current value.  This prevents the same temperature information from being reported.
-* `Line 13`if the two values are not the same, temp is reassigned. 
-* `Line 15` sends the temperature information through Serial.
-* `Line 16`sends a blank line to Serial. When Node-RED is reading the Bean's value, the "\n" will be the delimiter.  This allows Node-RED to separate the messages.
-* `Line 19`sets the Bean sleep for 10 seconds.  This prevents twitter from being bombarded with the Bean's tweets. 
-* Executes loop() again. 
+* **Line 1**: Declare `temp` as an 8-bit long integer. Declaring it outside `loop` causes it to keep its value between loops.
+* **Line 7**: The [loop function](https://www.arduino.cc/en/Reference/Loop). This function is executed continuously until Bean is either turned off or unprogrammed.
+* **Line 8**: Read the temperature value from bean.
+* **Line 9**: Check if the temperature has changed since the last loop.
+* **Line 10**: If the temperature has changed, save the new value for reference next time.
+* **Line 11**: Send the temperature information back to Node-RED followed by a newline character `\n`. This allows Node-RED to separate the messages.
+* **Line 14**: Sleep for 10 seconds. This prevents Twitter from being bombarded with tweets from Bean.
 
-## Program the Bean on Node-RED
-Once you have programmed the Bean, disconnect the Bean from the Bean Loader App. On the terminal, type
+## Program Bean on Node-RED
 
-```
-node-red
-```
-When you open Node-RED on a browser, you should see this: 
+Once you have programmed Bean, disconnect from your Bean in Bean Loader. Then start Node-RED and open it in your browser:
+
 {{{img_rel this 'Node-RED.jpg'}}}
 
-Go ahead and add the Bean's serial node to the sheet:
+Add a **Bean serial** node to your flow. Double-click it to configure it. Ensure your Bean is selected and the node is splitting incoming data on the character `\n`:
+
 {{{img_rel this 'Read-Bean-Serial-Data.JPG'}}}
 
-When you click on the node, you will see the detail information that needs to be filled in. Notice the "\n".  This is why we had to program the Bean to send it.
+Notice the `\n` character is configued as the input delimiter. This matches our Arduino sketch, since we use `Serial.println` to add `\n` to our temperature data.
 
+Next, add a **Twitter out** node to your flow. Join the two nodes by clicking and dragging a connection line between the two:
 
-Next, put the 'Twitter out node' on the sheet and click on the connectors to join the each node. Notice that the connector for the 'Twitter out node' is on the left hand side. Some nodes are polarized, meaning, each node can receive and incoming message OR send an outgoing message.  Fill out the information for your Twitter login. 
 {{{img_rel this 'Tweet-info.JPG'}}}
 
-Afterwards, you can click on 'Deploy,'on the upper right hand corner. 
+Notice that the connector for the **Twitter out** node is on the left side. Some nodes are polarized, meaning each node can receive an incoming message OR send an outgoing message.
+
+Fill out the information for your Twitter login. Once that's done, click **Deploy** in the upper-right corner. 
 
 {{{img_rel this 'Deploy-Node-RED.jpg'}}}
 
-Now, go ahead and check your twitter account!
+Now, go ahead and check your Twitter account to see tweets from your Bean!
 
 ## Conclusion
-In this tutorial, we learned how to connect the Bean to the internet through Node-RED. With Node-RED, you have the ability to build more complicated apps.  The Bean can now integrate with Twilio, IRC, MySQL, and so much more. 
 
-### Learn More about Node-RED
-* http://nodered.org/
+In this guide, you learned how to connect Bean to Twitter using Node-RED. This is one example of a complex flow that's made easy with Node-RED. You could use what you've learned to integrate your Bean with Twilio, IRC, MySQL, and so much more!
 
+Want to learn more about Node-RED? Check out [the project's website](http://nodered.org/).
 
 ## Troubleshooting
-* Having trouble with this guide? Try the steps listed in [General Bean troubleshooting](#).
-* Checkout our [community forum](#).
+
+Having trouble with this guide? Try the steps listed in [General Bean troubleshooting](#).
