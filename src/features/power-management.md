@@ -133,5 +133,4 @@ Here are some times when using interrupts instead of polling can save battery po
 
 ## Troubleshooting
 
-Having trouble with this guide? Try the steps listed in [General Bean troubleshooting](#).
-
+{{> snip_troubleshooting}}

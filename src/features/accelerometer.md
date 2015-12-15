@@ -123,5 +123,4 @@ Looking to use accelerometer data in a desktop app? Check out our [Processing tu
 
 ## Troubleshooting
 
-Having trouble with this guide? Try the steps listed in [General Bean troubleshooting](#).
-
+{{> snip_troubleshooting}}

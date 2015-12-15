@@ -70,11 +70,11 @@ Add a **Bean serial** node to your flow. Double-click it to configure it. Ensure
 
 Notice the `\n` character is configued as the input delimiter. This matches our Arduino sketch, since we use `Serial.println` to add `\n` to our temperature data.
 
-Next, add a **Twitter out** node to your flow. Join the two nodes by clicking and dragging a connection line between the two:
+Next, add a **Tweet** node to your flow. Join the two nodes by clicking and dragging a connection line between the two:
 
 {{{img_rel this 'Tweet-info.JPG'}}}
 
-Notice that the connector for the **Twitter out** node is on the left side. Some nodes are polarized, meaning each node can receive an incoming message OR send an outgoing message.
+Notice that the connector for the **Tweet** node is on the left side. Some nodes have connectors on both sides, indicating they can both receive incoming messages AND send outgoing messages.
 
 Fill out the information for your Twitter login. Once that's done, click **Deploy** in the upper-right corner. 
 
@@ -90,4 +90,4 @@ Want to learn more about Node-RED? Check out [the project's website](http://node
 
 ## Troubleshooting
 
-Having trouble with this guide? Try the steps listed in [General Bean troubleshooting](#).
+{{> snip_troubleshooting}}
