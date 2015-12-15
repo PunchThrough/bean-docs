@@ -25,7 +25,7 @@ Or by searching for the Bean Loader in the Windows Store
 
 * [Download the Bean Loader for OS X](http://legacy.punchthrough.com/files/bean/loader/latest.php?download) below and install.
 
-After downloading, be sure to update your Bean’s firmware right away.
+**After downloading, be sure to update your Bean’s firmware right away.**
 
 ## API References
 
