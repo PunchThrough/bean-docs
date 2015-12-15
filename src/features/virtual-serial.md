@@ -126,4 +126,4 @@ Check out the [Arduino Serial reference](https://www.arduino.cc/en/Reference/Ser
 
 ## Troubleshooting
 
-Having trouble with this guide? Try the steps listed in [General Bean troubleshooting](#).
+{{> snip_troubleshooting}}

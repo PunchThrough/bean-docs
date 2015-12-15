@@ -65,10 +65,11 @@ This sketch reads Bean's temperature and prints it over Virtual Serial. Connect 
 
 In this guide, we read a temperature from Bean's temperature sensor and sent it to your computer via Virtual Serial.
 
-## Troubleshooting
-
-Having trouble with this guide? Try the steps listed in [General Bean troubleshooting](#).
-
-## Related projects
+Check out this related project to see another application of Bean's thermometer:
 
 * [Temperature-controlled fan](http://www.instructables.com/id/Automatic-desktop-fan/): This fan turns on to cool people down when Bean detects the room is getting too hot.
+
+## Troubleshooting
+
+{{> snip_troubleshooting}}
+

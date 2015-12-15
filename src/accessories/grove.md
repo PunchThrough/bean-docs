@@ -46,4 +46,4 @@ Please make sure you're familiar with the following before starting this guide:
 
 ## Troubleshooting
 
-Having trouble with this guide? Try the steps listed in [General Bean troubleshooting](#).
+{{> snip_troubleshooting}}

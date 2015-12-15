@@ -111,4 +111,4 @@ In this guide, you programmed your Bean with the LightBlue Demo Sketch. You conn
 
 ## Troubleshooting
 
-Having trouble with this guide? Try the steps listed in [General Bean troubleshooting](#). Reach out to [BeanTalk](#) to get directed feedback from our developers and community!
+{{> snip_troubleshooting}}
