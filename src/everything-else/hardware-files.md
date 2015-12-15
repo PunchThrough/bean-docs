@@ -1,5 +1,5 @@
 ---
-title: Hardware File References
+title: Hardware Files
 layout: basic.hbs
 autotoc: true
 ---
