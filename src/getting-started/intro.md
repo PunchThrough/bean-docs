@@ -15,13 +15,15 @@ Or keep reading to learn more!
 
 ## Bean and Bean+ Features
 
-Bean and Bean+ are two different flavors of the same software, the [LightBlue Platform](http://punchthrough.com/platform). Here's what they have in common:
+Bean and Bean+ are two different flavors of the same software, the LightBlue Platform.
+
+The LightBlue Platform is Punch Through's way of adding value to your product. LightBlue adds complex BLE functionality to your existing code, leaving you to write just the business logic. If you want to turn your Bean project into a product, check out the [LightBlue Platform](http://punchthrough.com/platform)!
+
+Here's what Bean and Bean+ have in common:
 
 {{{img_rel this 'bean-and-plus-comparison.jpg' 'Bean and Bean+ feature comparison'}}}
 
-TODO: Briefly touch on Platform
-
-TODO: Link to [tech specs](../tech-specs)
+Looking for specifics about the Bean's hardware? [Check out our tech specs page.](../tech-specs)
 
 ## Be an Inventor
 
@@ -38,4 +40,14 @@ Looking for more project ideas? Check out [Hackster.io](https://www.hackster.io/
 ## The Beantalk Community
 We're proud to host one of the coolest groups of makers at [Beantalk](http://beantalk.punchthrough.com/), our community forums. If you're looking for project inspiration, troubleshooting issues, or showing off something cool you built, Beantalk is the place to go!
 
-TODO: Link to next page in guides
+## Next Steps
+
+Pick your favorite platform to install Bean Loader and program your Bean:
+
+[Bean Loader for OS X >>](../os-x/)
+
+[Bean Loader for Windows >>](../windows/)
+
+[Bean Loader for iOS >>](../ios/)
+
+[Bean Loader for Android >>](../android/)
