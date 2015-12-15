@@ -9,15 +9,15 @@ We want you to be able to modify, improve, and change the Bean to fit your needs
 * **Share** — You can copy and redistribute the material in any medium or format.
 * **Adapt** — You can remix, transform, and build upon the material for any purpose, even commercially.
 
-# Dimensions
+## Dimensions
 
-The LightBlue Bean’s dimensions are 1.79 x 0.80 x 0.33 inches (45.5 x 20.3 x 8.38 mm). To make it even smaller, you can cut off the prototyping area under the GPIOs:
+The LightBlue Bean’s dimensions are 1.79 x 0.80 x 0.33 inches (45.5 x 20.3 x 8.38 mm). If you want to make Bean even smaller, you can cut off the prototyping area that sits next to the GPIO pads:
 
-TODO picture of the area that can be safely cut
+{{{img_rel this 'bean-protoboard-safe-area.jpg' 'Bean protoboard safe-to-cut area' '60%'}}}
 
 ## Downloads
 
-Download the Bean hardware files (Rev.E) here:
+### LightBlue Bean (Revision E)
 
 * [Eagle schematic, Eagle PCB layout, and 3D models](http://punchthrough.com/files/bean/hardware/BEAN_MODEL_REVE_1.1.0.zip)
 * [PDF schematic and Gerbers](http://punchthrough.com/docs/files/Bean/Bean_revE_board_export.pdf)
