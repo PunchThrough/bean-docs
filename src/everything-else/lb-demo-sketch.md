@@ -103,7 +103,7 @@ LightBlue Explorer parses the response and visualizes the received data on your 
 
 You can see the values change when you open the LightBlue App and select the Bean you programmed: 
 
-{{{img_rel this 'lb-demo-image.png' '20%'}}}
+{{{img_rel this 'lb-demo-image.png' 'LightBlue demo sketch is running!' '40%'}}}
 
 ## Conclusion
 
