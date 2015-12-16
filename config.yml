@@ -90,3 +90,7 @@ lint:
     - slug: line-nums-bold
       regex: '\*\s+`Line'
       message: 'Use **bold** instead of `code` for discussing line numbers of code blocks'
+    - slug: bl-for-win
+      regex: '\bWindows Bean Loader\b'
+      flags: 'i'
+      message: 'Use "Bean Loader for Windows", not "Windows Bean Loader"'

@@ -1,38 +1,47 @@
 ---
-title: Software Downloads and API References 
+title: Downloads and SDKs 
 layout: basic.hbs
 autotoc: true
 ---
+
+## First-Time Users
+
+Are you installing Bean Loader for the first time? Check out our Getting Started guides to get up and running fast:
+
+* [Getting Started on OS X](../../getting-started/os-x/)
+* [Getting Started on Windows](../../getting-started/windows/)
+* [Getting Started on iOS](../../getting-started/ios/)
+* [Getting Started on Android](../../getting-started/android/)
+
 ## Software Downloads
 
-Installing the Bean Software for the first time?
-Use these special instructions to get started with [Windows](#) or [Mac OS X](#).
+Bean Loader for Windows and OS X relies on the Arduino IDE to compile your Arduino sketches and program the Bean.
 
-The Bean loader apps rely on the Arduino IDE to compile your Arduino sketches and program the Bean.
+On iOS and Android, Bean Loader uses the Bean Cloud Compiler to compile your Arduino sketches.
 
+### Windows
 
-**To install the app on Windows, follow these steps:**
+* [Arduino IDE](https://www.arduino.cc/en/Main/Software)
+* [Bean Loader for Windows on the Windows Store](https://www.microsoft.com/en-us/store/apps/bean-loader-lightblue-bean/9nblggh0xfmh)
 
-* [Download the Arduino IDE  for Windows](https://www.arduino.cc/en/Main/Software) and install
+### OS X
 
-* [Download the Bean Loader from the Windows Store](https://www.microsoft.com/en-us/store/apps/bean-loader-lightblue-bean/9nblggh0xfmh)
-Or by searching for the Bean Loader in the Windows Store
+* [Arduino IDE](https://www.arduino.cc/en/Main/Software)
+* [Bean Loader for OS X](http://punchthrough.com/files/bean/loader/latest.php?download)
 
+### iOS
 
-**To install the app on Mac OS X, follow these steps:**
+* [Bean Loader for iOS on the App Store](https://itunes.apple.com/us/app/bean-loader-lightblue-bean/id936509473)
 
-* [Download the Arduino IDE for OS X](https://www.arduino.cc/en/Main/Software), extract and install.
+### Android
 
-* [Download the Bean Loader for OS X](http://legacy.punchthrough.com/files/bean/loader/latest.php?download) below and install.
+* [Bean Loader for Android on the Play Store](https://play.google.com/store/apps/details?id=com.punchthrough.bean.loader)
 
-**After downloading, be sure to update your Bean’s firmware right away.**
+## Platform SDKs
 
-## API References
+We want to help you build native apps for your platform. Talk to Bean over BLE with these SDKs:
 
-* [iOS-OSX SDK](https://github.com/PunchThrough/Bean-iOS-OSX-SDK3)
-* [Android SDK](https://github.com/PunchThrough/Bean-Android-SDK1)
-* [Arduino References](http://legacy.punchthrough.com/bean/the-arduino-reference/1)
+* [iOS and OS X SDK](https://github.com/PunchThrough/Bean-iOS-OSX-SDK)
+* [Android SDK](https://github.com/PunchThrough/Bean-Android-SDK)
 
-## Troubleshooting
-
-{{> snip_troubleshooting}}
+Looking for help with our SDKs? Try [Beantalk, our community forum](http://beantalk.punchthrough.com).
