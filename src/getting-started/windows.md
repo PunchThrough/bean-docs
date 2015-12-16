@@ -151,14 +151,14 @@ The **BeanBlink** sketch uses the LED and is therefore power hungry. To preserve
 
 ## Troubleshooting
 
-### No Beans are Appearing in my PC Settings
+### No Beans are appearing in PC Settings.
 
 It may take a while for your Bean to appear in the PC settings, but Beans usually appear in less than 30 seconds. If no Beans appear, you may want to check the battery on your Bean. You should also try cycling the power on your BLE hardware.
 
-### No Beans are Appearing in my Bean Loader
+### No Beans are appearing in Bean Loader.
 
 If a Bean is not appearing in the list on your Bean Loader, ensure you have run through the steps above in [Connect to Your Bean](#connect-to-your-bean).
 
 ### Further Troubleshooting
 
-If you are having other problems with Bean Loader for Windows, use the [Troubleshooting page](http://legacy.punchthrough.com/bean/support/troubleshooting/) or ask in the [Beantalk forum](http://beantalk.punchthrough.com/).
+{{> snip_troubleshooting}}
