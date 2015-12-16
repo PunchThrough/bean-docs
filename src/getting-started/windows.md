@@ -9,7 +9,7 @@ order: 2
 
 In this guide, you'll install Bean Loader for Windows and wirelessly program a sketch to your Bean. You'll also learn how to interact with your Bean using Bean Loader. 
 
-{{{img_rel this 'windows_surf_reporter.PNG' 'Windows Bean Loader' '60%'}}}
+{{{img_rel this 'windows_surf_reporter.PNG' 'Bean Loader for Windows' '60%'}}}
 
 ## What You Need
 
@@ -68,89 +68,97 @@ Managing connections to Beans is done through the **PC Settings** screen:
 
 {{{img_rel this 'windows_bluetooth_devices.PNG' 'Windows 10 Bluetooth Devices' '60%'}}}
 
-A screen will appear asking you for a passcode. Enter '0' to continue.
+A screen will appear asking you for a passcode. Enter **0** to continue:
 
 {{{img_rel this 'windows_device_passcode.PNG' 'Windows 10 Passcode Screen' '60%'}}}
 
-It may take a while for Windows to connect to your Bean at first. Watch the status bar for progress. If the connection was successful, the Bean's status will read **Connected.**
+It may take a while for Windows to connect to your Bean at first. Watch the status bar for progress. If the connection was successful, the Bean's status will read **Connected**:
 
 {{{img_rel this 'windows_bean_paired.PNG' 'Connected Bean' '60%'}}}
 
-## Using the Windows Bean Loader
+## Open Bean Loader
 
-The Windows Bean Loader allows for wireless programming of Arduino sketches to your Bean or Bean+.
+Bean Loader allows for wireless programming of Arduino sketches to your Bean or Bean+. Open it from the Windows Start Screen:
 
-{{{img_rel this 'windows_sketch_compiled.PNG' 'Windows Bean Loader'}}}
+{{{img_rel this 'windows_sketch_compiled.PNG' 'Bean Loader for Windows' '80%'}}}
 
 ### Select Your Connected Bean
 
-Your connected Beans will appear in the list on the right side of the screen.
+Your connected Beans will appear in the list on the right side of the screen. Select the Bean you paired with in PC Settings:
 
-{{{img_rel this 'windows_loader_bean.PNG' 'Windows Loader Beans'}}}
-
-Select the Bean that you wish to use.
+{{{img_rel this 'windows_loader_bean.PNG' 'Windows Loader Beans' '60%'}}}
 
 ### Update Your Bean
 
-Once connected, you may be prompted to update the firmware on the Bean. You need to do this to reliably program Arduino sketches!
+Once connected, you may be prompted to update the firmware on the Bean. Firmware updates come with new features and stability fixes. It's important to install these to reliably program Bean.
 
-{{{img_rel this 'windows_loader_update.PNG' 'Bean Firmware Update'}}}
+* Select **Update Firmware** to begin. The first update may take up to 8 minutes.
+* After the update completes, disconnect and reconnect your Bean in PC Settings.
 
-* Select "Update Firmware" to begin. The first update may take up to 8 minutes.
-* After the update completes, you will need to disconnect and then re-connect your Bean using PC Settings.
-* You can choose to update the firmware through the menu at any time.
+You can update a Bean's firmware manually in the menu:
+
+{{{img_rel this 'windows_loader_update.PNG' 'Bean Firmware Update' '60%'}}}
 
 ## Open the Blink Example
 
-* Open the Arduino app.
-* Select the LightBlue Bean or Bean+ as the Board you are using.
-  * Click Tools ->
-  * Go to Boards -> 
-  * Select LightBlue Bean or Bean+. 
-* Now you can select the BeanBlink sketch.
-  * Click File ->
-  * Go to Examples -> 
-  * Open LightBlue-Bean ->
-  * Choose the sketch "BeanBlink."
-* Click the “Upload” button in the top left corner to compile the Sketch [Note: this has changed from “Verify” in older versions].
+Open the Arduino IDE. Select the LightBlue Bean as your target board:
+  * Select **Tools**
+  * Select **Boards** 
+  * Select **LightBlue Bean**
 
-{{{img_rel this 'windows_arduino_beanblink.PNG' 'BeanBlink Arduino Sketch'}}}
+Open the BeanBlink example sketch:
+  * Select **File**
+  * Select **Examples** 
+  * Select **LightBlue-Bean**
+  * Choose the sketch **BeanBlink**
+
+Select the **Upload** button in the top left corner to compile the Sketch:
+
+{{{img_rel this 'windows_arduino_beanblink.PNG' 'BeanBlink Arduino Sketch' '60%'}}}
 
 ## Select Your Sketch in the Bean Loader
-* Your compiled sketch will appear in the WindowsBeanLoader document folder.
-* Click “Select Sketch Folder” near the top of the Bean Loader screen and select the WindowsBeanLoader folder.
-* **Important:** This needs to be done every time the application is opened (not every time a sketch is compiled), as Windows Store apps cannot access folders without permission.
+
+Your compiled sketch will appear in the **WindowsBeanLoader** document folder.
+
+* Select **Select Sketch Folder** near the top of the Bean Loader screen
+* Select the **WindowsBeanLoader** folder
+
+**Important:** This needs to be done every time the application is opened (not every time a sketch is compiled), as Windows Store apps cannot access folders without permission.
 
 ## Program Your Bean
 
-* The “BeanBlink” sketch you verified in Arduino is ready for loading and is shown in grey text on the top of the Bean loader app.
-* Click Program to start uploading your sketch.
+The **BeanBlink** sketch you verified in Arduino is ready for loading. You can see **BeanBlink.hex** at the top of the Bean Loader window.
 
-{{{img_rel this 'windows_programming_bean.PNG' 'Windows Loader Programming'}}}
+Select **Program** to start uploading your sketch:
+
+{{{img_rel this 'windows_programming_bean.PNG' 'Bean Loader Programming' '80%'}}}
 
 Once the sketch finishes uploading, your Bean will start running it!
 
-{{{img_rel this 'windows_programmed_bean.PNG' 'Programmed Bean'}}}
+{{{img_rel this 'windows_programmed_bean.PNG' 'Programmed Bean' '80%'}}}
 
-Nice job! You have successfully installed the Windows Bean Loader and programmed your Bean with the BeanBlink sketch. 
+Nice job! You have successfully programmed your Bean with the BeanBlink sketch using Bean Loader.
 
 ## Conclusion
 
-In this guide, you installed the Windows Bean Loader and programmed your Bean with an example sketch. You should be ready to get started uploading sketches to your Bean using Windows!
+In this guide, you installed Bean Loader for Windows and programmed your Bean with an example sketch. You should be ready to get started writing and uploading sketches to your Bean!
+
+## Bean Loader Tips
+
+If you have multiple Beans, you can blink Bean's LED from Bean Loader to locate the Bean that you are connected to.  Connect to a Bean, then select **Commands**, and finally select **Blink LED**.
+
+The **BeanBlink** sketch uses the LED and is therefore power hungry. To preserve your battery when you are finished, you can turn off the onboard Arduino. Connect to your Bean and select the **Arduino on/off** menu item.
 
 ## Troubleshooting
 
 ### No Beans are Appearing in my PC Settings
-It may take a while for your Bean to appear in the PC settings, but usually less than 30 seconds. If no Beans appear, you may want to check the battery, and reconnect any BLE dongle you may be using.
+
+It may take a while for your Bean to appear in the PC settings, but Beans usually appear in less than 30 seconds. If no Beans appear, you may want to check the battery on your Bean. You should also try cycling the power on your BLE hardware.
 
 ### No Beans are Appearing in my Bean Loader
 
 If a Bean is not appearing in the list on your Bean Loader, ensure you have run through the steps above in [Connect to Your Bean](#connect-to-your-bean).
 
 ### Further Troubleshooting
-If you are having other problems with the Windows Bean Loader, use the [Troubleshooting page](http://legacy.punchthrough.com/bean/support/troubleshooting/) or ask in the [Beantalk forum](http://beantalk.punchthrough.com/).
 
-## Windows Bean Loader Tips
-
-* If you have multiple Beans, you can blink an LED from the Windows Bean Loader to locate the Bean that you are connected to.  Choose “Commands” then “Blink LED” to do this.
-* The “BeanBlink” sketch uses the LED and is therefore power hungry. To preserve your battery when you are finished, connect to your Bean and toggle the "Arduino on/off" button.
+If you are having other problems with Bean Loader for Windows, use the [Troubleshooting page](http://legacy.punchthrough.com/bean/support/troubleshooting/) or ask in the [Beantalk forum](http://beantalk.punchthrough.com/).
