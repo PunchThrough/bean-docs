@@ -82,7 +82,7 @@ lint:
       flags: 'i'
       message: 'Instead of "Punch Through Design", prefer "Punch Through"'
     - slug: os-x-not-osx
-      regex: '\bOSX\b'
+      regex: '\sOSX\s'
       message: 'Instead of "OSX", use "OS X"'
     - slug: no-abs-links
       regex: '\]\(\//'
