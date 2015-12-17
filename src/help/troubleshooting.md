@@ -27,7 +27,6 @@ If you're having trouble discovering your Bean, try power cycling your Bluetooth
 If your Bean is not connecting, frequently disconnects, or doesn't show up in Bean Loader after resetting Bluetooth, try power cycling your Bean.
 
 * Bean: Remove and replace the coin cell battery.
-* Bean+: Flip the power switch off and back on.
 
 ## Reset Your Bean's Memory
 

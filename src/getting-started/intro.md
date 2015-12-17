@@ -5,7 +5,7 @@ autotoc: true
 order: 1
 ---
 
-Congratulations! You're the proud new owner of a LightBlue Bean or Bean+. What’s even cooler is you are now part of our creative and innovative community that’s building some pretty awesome wearable and IoT devices. We’ll go over the features of Bean and Bean+, and the resources we provide so you can begin building. We at Punch Through love building wireless products with Bean and Bean+ and we think you will too!
+Congratulations! You're the proud new owner of a LightBlue Bean. What’s even cooler is you are now part of our creative and innovative community that’s building some pretty awesome wearable and IoT devices. We’ll go over the features of Bean and the resources we provide so you can begin building. We at Punch Through love building wireless products with Bean and we think you will too!
 
 ## Get Started
 
@@ -13,15 +13,13 @@ Ready to get started with Bean? Start by scrolling to the bottom of the page to 
 
 Or keep reading to learn more!
 
-## Bean and Bean+ Features
+## Bean Features
 
-Bean and Bean+ are two different flavors of the same software, the LightBlue Platform.
+The Bean is part of the LightBlue Platform.
 
 The LightBlue Platform is Punch Through's way of adding value to your product. LightBlue adds complex BLE functionality to your existing code, leaving you to write just the business logic. If you want to turn your Bean project into a product, check out the [LightBlue Platform](http://punchthrough.com/platform)!
 
-Here's what Bean and Bean+ have in common:
-
-{{{img_rel this 'bean-and-plus-comparison.jpg' 'Bean and Bean+ feature comparison'}}}
+{{{img_rel this 'detail-bean.png'}}}
 
 Looking for specifics about the Bean's hardware? [Check out our tech specs page.](../tech-specs)
 

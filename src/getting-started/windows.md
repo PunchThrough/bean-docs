@@ -80,7 +80,7 @@ It may take a while for Windows to connect to your Bean at first. Watch the stat
 
 ## Open Bean Loader
 
-Bean Loader allows for wireless programming of Arduino sketches to your Bean or Bean+. Open it from the Windows Start Screen:
+Bean Loader allows for wireless programming of Arduino sketches to your Bean. Open it from the Windows Start Screen:
 
 {{{img_rel this 'windows_sketch_compiled.PNG' 'Bean Loader for Windows' '80%'}}}
 
