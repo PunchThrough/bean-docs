@@ -36,7 +36,7 @@ __Built-In Peripherals:__ The Bean comes with an accelerometer, a temperature se
 
 Arduino sketches run on the ATmega328p microcontroller. This is the same part that is common to most original Arduinos and provides the most compatibility with example code.
 
-The Bean uses the ATmega328p. Each board has a slightly different configuration. Here is what the Bean has:
+The Bean uses the ATmega328p. Here is what the Bean has:
 
 * 8-bit CPU
 * 32KB Flash memory
