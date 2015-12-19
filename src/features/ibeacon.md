@@ -123,7 +123,7 @@ If you're on OS X or Linux, we recommend you use Node.js to scan for nearby iBea
 
 * Make sure your version of Node.js is up to date. Run `node --version` to check your installed version of Node.js. This script has been tested with v5.1.1 but might still work on older versions of Node.
 * If you don't already have Node.js installed, [download the latest version from nodejs.org](https://nodejs.org/) and install it.
-* [Download the list-beacons script](https://github.com/PunchThrough/list-beacons/archive/master.zip) and extract it.
+* [Download the list-beacons script](https://github.com/PunchThrough/list-beacons/archive/master.zip) ([view on GitHub](https://github.com/PunchThrough/list-beacons)) and extract it.
 * Open your terminal and navigate to the extracted directory **list-beacons-master**.
 * Run `npm install` to install its dependencies.
 * Finally, run `node index.js` to start the script.
@@ -156,14 +156,56 @@ Tap the row that shows your Bean's iBeacon packet to get more info:
 
 ### Scan for Beacons with iOS
 
-Scanning for iBeacons using iOS can be frustrating. Any iOS apps that scan for iBeacons are limited by what iOS allows them to do. To save power, iOS apps must explicitly subscribe to specific iBeacon UUIDs. In addition, iOS limits the number of UUIDs an app can subscribe to, so it's impossible to build a general-purpose iBeacon scan app.
+Scanning for iBeacons using iOS can be frustrating. Any iOS apps that scan for iBeacons are limited by what iOS allows them to do. To save power, iOS apps must explicitly subscribe to specific iBeacon UUIDs. In addition, iOS limits the number of UUIDs an app can subscribe to, so it's impossible to build an app to scan for all iBeacons.
 
-TODO: Complete the iOS guide
+We've put together a simple demo app that specifically searches for Beans with the iBeacon configuration `DEAD` + `BEEF` + `CAFE`. You'll need a [free Apple Developer account](https://developer.apple.com/), an OS X computer, and a physical iOS device to run this app.
 
-## Learn More about iBeacon
+[Download our example app](https://github.com/PunchThrough/bean-ibeacon-demo-ios/archive/master.zip) ([view on GitHub](https://github.com/PunchThrough/bean-ibeacon-demo-ios)) and extract it.
+
+Open **Bean iB Demo.xcodeproj** in Xcode. Connect your iOS device via USB cable and press **Cmd + R** to build and run the app:
+
+{{{img_rel this 'ios-no-beacons.jpg' 'No beacons found' '40%'}}}
+
+The screen will be blue and show **Outside region** if you're outside the region defined by your iBeacon. The screen will turn green and show **Inside region** once your iOS device detects the presence of your Bean's iBeacon:
+
+{{{img_rel this 'ios-1-beacon.jpg' 'One beacon found' '40%'}}}
+
+Curious why the app is a little slow to pick up on iBeacons turning on and off and region enter/exit events? Check out our **[Learn More: The iOS Example App](#the-ios-example-app)** section below.
+
+## Conclusion
+
+In this guide, you learned how iBeacons work, what they're good for, and why they're an interesting addition to the iOS ecosystem. You uploaded a sketch to Bean that made it act as an iBeacon. Finally, you verified your Bean was acting as an iBeacon by scanning for nearby iBeacons using Node.js, Android, or iOS.
+
+## Troubleshooting
+
+Are you having trouble finding your iBeacon with Node.js, Android, or iOS? You may have to wait a few seconds for your device to detect iBeacon advertising packets.
+
+If you've waited a while and no results appear, make sure your device has hardware support for Bluetooth Low Energy and that your OS is up to date.
+
+* If you're on Android, you need Android 4.3 or higher to use BLE.
+* The iPhone 4S and all iOS devices released after it support BLE.
+* If you're on a computer, make sure your Bluetooth chipset is supported by [noble](https://github.com/sandeepmistry/noble), the Node.js BLE library. You might need to use a Bluetooth USB dongle.
+
+If none of those tips helped, try scanning for iBeacons using a different device.
+
+{{> snip_troubleshooting}}
+
+## Learn More
+
+### Resources
 
 [Apple: iBeacon for Developers](https://developer.apple.com/ibeacon/): Resources for developing an iOS app that supports iBeacon. Includes a great [Getting Started](https://developer.apple.com/ibeacon/Getting-Started-with-iBeacon.pdf) guide.
 
 [Beacon Sandwich: What is iBeacon?](http://www.beaconsandwich.com/what-is-ibeacon.html): A great primer on iBeacon, common use cases, and the history of iBeacon.
 
 [AltBeacon](http://altbeacon.org/): An alternate beacon protocol built by Radius Networks. AltBeacon is an open specification for beacons, with implementations for iOS and Android devices.
+
+[CLLocationManager Class Reference](https://developer.apple.com/library/ios/documentation/CoreLocation/Reference/CLLocationManager_Class/): Lots of important technical details for iOS developers building an app that uses iBeacon.
+
+### The iOS Example App
+
+If you turn off your iBeacon, you might notice that the app doesn't immediately reflect the loss of your iBeacon's signal. You might also notice that it shows **0 iBeacons found** for a while before transitioning from **Inside region** to **Outside region**.
+
+Apple is secretive regarding the details, but at the time of this writing (in iOS 9.1) an iOS device waits 10 seconds before declaring an iBeacon has gone away and 30 seconds before declaring a region exit event. If your iBeacon disappears for 20 seconds, then appears again, iOS's 30-second timer will reset so that you have to wait 30 more seconds for a region exit event. This is to prevent a low-signal iBeacon from sending false region enter and exit events.
+
+If you have more than one iBeacon with the same UUID, major, and minor value, your device will detect both of them. You can access more detail on detected iBeacons, such as RSSI and proximity, inside the **locationManager:didRangeBeacons:inRegion** method inside **AppDelegate.swift**.
