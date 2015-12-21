@@ -8,7 +8,7 @@ autotoc: true
 
 Bean has a built-in accelerometer that lets you detect its orientation and any changes in velocity over time. You can access the accelerometer's data from within your Arduino sketches by using specific functions or through any of Bean platform SDKs.
 
-Our Beantalk users have come up with lots of cool projects that use the accelerometer. One Bean user built a [wall clock that knows when it's perfectly level on a wall hook](#). Another Beanie attached Bean to a [paratrooper toy that automatically deploys its parachute](#) when it detects freefall! There are endless and fun ways the accelerometer features can be used.  We hope this tutorial will get you started on your own personal projects!
+Our Beantalk users have come up with lots of cool projects that use the accelerometer. One Bean user built a [a simple motion dectector](http://beantalk.punchthrough.com/t/simple-motion-detector/149). Another Beanie attached Bean to a [paratrooper toy that automatically deploys its parachute](http://beantalk.punchthrough.com/t/bean-parachute-toy/1328) when it detects freefall! There are endless and fun ways the accelerometer features can be used.  We hope this tutorial will get you started on your own personal projects!
 
 In this tutorial, you'll read data from the accelerometer on a Bean and view it in Arduino's Serial Monitor using the Virtual Serial port.
 
@@ -16,11 +16,11 @@ In this tutorial, you'll read data from the accelerometer on a Bean and view it 
 
 Please make sure you're familiar with the following before starting this guide:
 
-* [Getting Started](#)
+* [Getting Started](../../getting-started/intro)
 
 ### Software
 
-* Bean Loader ([install guides](#))
+* Bean Loader [install guides](../../getting-started/intro/#next-steps)
 
 ### Hardware
 
@@ -30,7 +30,7 @@ Please make sure you're familiar with the following before starting this guide:
 
 ## Program Your Bean
 
-This tutorial assumes you have completed the [Getting Started guide](#). It covers tasks such as connecting to and programming Bean with Bean Loader. 
+This tutorial assumes you have completed the [Getting Started guide](../../getting-started/intro). It covers tasks such as connecting to and programming Bean with Bean Loader. 
 
 Connect to your Bean and upload this Arduino sketch:
 
@@ -59,7 +59,7 @@ Here's what the code does:
 * **Lines 9-11**: Scale the values to the range 0 to 255.
 * **Line 12**: Set the LED's red, green and blue values to the scaled X, Y, and Z values.
 
-Upload this Arduino sketch to your Bean. If you haven't installed Bean Loader or don't know how to connect to your Bean, [visit the Getting Started guide for downloads and instructions](#).
+Upload this Arduino sketch to your Bean. If you haven't installed Bean Loader or don't know how to connect to your Bean, [visit the Getting Started guide for downloads and instructions](../../getting-started/intro/#next-steps).
 
 ## Understanding and Using Bean's Accelerometer
 
@@ -95,12 +95,12 @@ void loop()
 }
 ```
 
- * **Line 15** is an example of how to print to the Serial Monitor. To find out more about activating Virtual Serial on Bean and viewing incoming data in Arduino IDE's Serial Monitor, check out our [Virtual Serial guide](#).
+ * **Line 15** is an example of how to print to the Serial Monitor. To find out more about activating Virtual Serial on Bean and viewing incoming data in Arduino IDE's Serial Monitor, check out our [Virtual Serial guide](../virtual-serial).
  * **Lines 16-17** can be uncommented (delete the `//` characters) to see the Y and Z axis values as well.
 
 Your Bean's accelerometer is configured in low power mode.  As a result, when your Bean requests a reading, the accelerometer takes about 5 ms to warm up before it returns a reading. This means that your Bean is able to read the accelerometer at a maximum frequency of 200 Hz.
 
-There are other functions that enable you to utilize the accelerometer. For example, You can change the sensitivity of the accelerometer using [`setAccelerationRange`](#) method. Checkout [`Accelerometer`](#) to see more functions that are available to you. 
+There are other functions that enable you to utilize the accelerometer. For example, You can change the sensitivity of the accelerometer using [`setAccelerationRange`](#) method. Checkout [`Accelerometer`](http://legacy.punchthrough.com/bean/the-arduino-reference/) to see more functions that are available to you. 
 
 ## Move Bean around
 
@@ -115,11 +115,11 @@ In this guide, you learned how to read data from Bean's accelerometer and use it
 Here are some ideas for projects you could build with the accelerometer:
 
 * Put Bean on a hanging wall painting and make the LED blink when the painting is perfectly level.
-* Use Bean as an [HID device](#) and use it to control a game on your computer.
+<!-- * Use Bean as an [HID device](../hid) and use it to control a game on your computer. -->
 * Attach Bean to a skateboard and measure the acceleration when you kick off.
 * Add a buzzer to Bean, hide it under papers on your desk, and sound an alarm when someone snoops around your stuff and moves Bean.
 
-Looking to use accelerometer data in a desktop app? Check out our [Processing tutorial](#), where you'll build an app that reads accelerometer data from Bean and displays it in a live visualization.
+<!-- Looking to use accelerometer data in a desktop app? Check out our [Processing tutorial](#), where you'll build an app that reads accelerometer data from Bean and displays it in a live visualization. -->
 
 ## Troubleshooting
 
