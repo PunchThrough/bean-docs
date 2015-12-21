@@ -44,4 +44,4 @@ We want to help you build native apps for your platform. Talk to Bean over BLE w
 * [iOS and OS X SDK](https://github.com/PunchThrough/Bean-iOS-OSX-SDK)
 * [Android SDK](https://github.com/PunchThrough/Bean-Android-SDK)
 
-Looking for help with our SDKs? Try [Beantalk, our community forum](http://beantalk.punchthrough.com).
+Looking for help with our SDKs? Try [Beantalk](http://beantalk.punchthrough.com), our community forum.
