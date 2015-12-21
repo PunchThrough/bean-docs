@@ -14,16 +14,16 @@ In this guide, you'll program your Bean with the LightBlue Demo Sketch, then con
 
 ## Before You Begin
 
-This tutorial assumes you have completed the [Getting Started guide](../../getting-started/intro/) and that you understand how to upload a sketch to Bean using Bean Loader.
+{{> snip_req_getting_started}}
 
 ### Software
 
-* [LightBlue Explorer for iOS](https://itunes.apple.com/us/app/lightblue-explorer-bluetooth/id557428110?mt=8)
-* Bean Loader [install guides](../../getting-started/intro/#next-steps)
+* [LightBlue Explorer for iOS](https://itunes.apple.com/us/app/lightblue-explorer-bluetooth/id557428110)
+* {{> snip_req_bean_loader}}
 
 ### Hardware
 
-* [LightBlue Bean](http://punchthrough.myshopify.com/products/bean)
+* {{> snip_req_bean}}
 * iOS device
 
 ## Program the Bean
