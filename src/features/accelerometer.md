@@ -24,7 +24,7 @@ Please make sure you're familiar with the following before starting this guide:
 
 ### Hardware
 
-* LightBlue Bean
+* [LightBlue Bean](http://punchthrough.myshopify.com/products/bean)
 * Mobile or Computer device
 
 
