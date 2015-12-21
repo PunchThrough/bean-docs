@@ -107,4 +107,4 @@ You can see our office is currently somewhere between 21 and 22 degrees Celsius 
 
 In this guide, you used LightBlue Explorer with Bean's Scratch Characteristics to read simple data without having to write a custom app.
 
-Scratch Characteristics work the other way too. If you want to send data to Bean, you can set Scratch Characteristics using LightBlue Explorer or another app and read them inside your Arduino sketch. See the [Arduino reference](http://legacy.punchthrough.com/bean/the-arduino-reference/) for more details.
+Scratch Characteristics work the other way too. If you want to send data to Bean, you can set Scratch Characteristics using LightBlue Explorer or another app and read them inside your Arduino sketch. See the [Arduino reference](http://punchthrough.com/bean/reference/) for more details.

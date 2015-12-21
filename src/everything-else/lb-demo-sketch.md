@@ -19,11 +19,11 @@ This tutorial assumes you have completed the [Getting Started guide](../../getti
 ### Software
 
 * [LightBlue Explorer for iOS](https://itunes.apple.com/us/app/lightblue-explorer-bluetooth/id557428110?mt=8)
-* Bean Loader (for any platform)
+* Bean Loader [install guides](../../getting-started/intro/#next-steps)
 
 ### Hardware
 
-* LightBlue Bean
+* [LightBlue Bean](http://punchthrough.myshopify.com/products/bean)
 * iOS device
 
 ## Program the Bean
