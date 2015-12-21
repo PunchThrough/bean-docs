@@ -17,8 +17,8 @@ In this guide, you'll upload an example sketch to your Bean, edit it, and save a
 
 To start building with Bean on your OS X computer, you'll need:
 
-* A Mac computer with Bluetooth LE support (built in or with a USB dongle)
-* A LightBlue Bean or Bean+
+* A Mac computer with Bluetooth LE support (built in or with a [USB dongle](http://punchthrough.myshopify.com/collections/all/products/bluetooth-smart-usb-dongle-iogear))
+* [LightBlue Bean](http://punchthrough.myshopify.com/products/bean)
 
 ## Get Started
 
@@ -63,6 +63,10 @@ Once you've found your Bean, right-click on it and select **Connect**:
 {{{img_rel this 'connect.png' 'Connect to Bean' '60%'}}}
 
 Your Bean will show **Connecting...** followed by **Connected**. Once your Bean is connected, you're ready to keep going.
+
+If there are many Beans around, it's a good idea to see if you connected to the right Bean. Bean Loader OS X has a [Blink LED](./#blink-bean-s-led).  When you click on this feature on a connected Bean, the Bean should blink once.  If your Bean blinks, you connected to the right Bean!
+
+If you are sure that you connected to the right Bean, you should [rename your Bean](./#rename-your-bean). 
 
 ### Open An Example Sketch
 
