@@ -91,3 +91,11 @@ lint:
       regex: '\bWindows Bean Loader\b'
       flags: 'i'
       message: 'Use "Bean Loader for Windows", not "Windows Bean Loader"'
+    - slug: no-dash-gt-arrows
+      regex: '\s->\s'
+      flags: 'i'
+      message: 'Use "&rarr;" instead of "->"'
+    - slug: no-dash-lt-arrows
+      regex: '\s<-\s'
+      flags: 'i'
+      message: 'Use "&larr;" instead of "<-"'
