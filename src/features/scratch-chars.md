@@ -5,6 +5,7 @@ autotoc: true
 ---
 
 ## Introduction
+---
 
 There are two ways to communicate with Bean over Bluetooth Low Energy. One way is to send and receive data using Scratch Characteristics. Scratch Characteristics offer a method of communication that more closely matches the "under-the-hood" structure of Bluetooth Low Energy devices. Scratch Characteristics are viewable as part of Bean's BLE profile.
 
@@ -13,6 +14,11 @@ The other method is Virtual Serial, which is the preferred method for sending la
 In this guide, you'll learn how to use Scratch Characteristics to receive structured data from Bean.
 
 ## About Scratch Characteristics
+Below we'll describe what scratch characteristics are and how to use them. 
+
+### What is a Characteristic?
+
+Bluetooth Low Energy organizes information on a device into Profiles. Profiles are made up of Services, which are made up of Characteristics. Characteristics are the smallest division of data. They typically contain one value or a small array of values. If you're new to Bluetooth Low Energy or want to learn more, here is a great [intro to BLE by Adafruit](https://learn.adafruit.com/introduction-to-bluetooth-low-energy/introduction). 
 
 ### When to use Scratch Characteristics 
 
@@ -21,10 +27,6 @@ You might prefer Scratch Characteristics over Virtual Serial when:
 * You're using LightBlue Explorer or another general-purpose Bluetooth Low Energy tool to communicate with Bean.
 
 You probably don't want to use scratch characteristics when you're sending more than 20 bytes of data at once. A BLE characteristic has a size limit, and sending more than this amount of bytes requires you to split your data into chunks. Virtual Serial does this for you and works without any extra effort. If you're sending more than 20 bytes, you probably want to use Virtual Serial.
-
-### What is a Characteristic?
-
-Bluetooth Low Energy organizes information on a device into Profiles. Profiles are made up of Services, which are made up of Characteristics. Characteristics are the smallest division of data. They typically contain one value or a small array of values. If you're new to Bluetooth Low Energy or want to learn more, here is a great [intro to BLE by Adafruit](https://learn.adafruit.com/introduction-to-bluetooth-low-energy/introduction). 
 
 ## Before You Begin
 
@@ -36,7 +38,7 @@ This tutorial assumes you have completed the [Getting Started guide](../../getti
 
 ### Hardware
 
-* LightBlue Bean
+* [LightBlue Bean](http://punchthrough.myshopify.com/products/bean)
 * Mobile or computer device (for programming)
 * iOS device (for LightBlue Explorer)
 
@@ -105,4 +107,4 @@ You can see our office is currently somewhere between 21 and 22 degrees Celsius 
 
 In this guide, you used LightBlue Explorer with Bean's Scratch Characteristics to read simple data without having to write a custom app.
 
-Scratch Characteristics work the other way too. If you want to send data to Bean, you can set Scratch Characteristics using LightBlue Explorer or another app and read them inside your Arduino sketch. See the [Arduino reference](#) for more details.
+Scratch Characteristics work the other way too. If you want to send data to Bean, you can set Scratch Characteristics using LightBlue Explorer or another app and read them inside your Arduino sketch. See the [Arduino reference](http://legacy.punchthrough.com/bean/the-arduino-reference/) for more details.
