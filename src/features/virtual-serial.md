@@ -29,13 +29,13 @@ In this guide, we will explore how Virtual Serial allows your computer and Bean 
 
 ## Bean-Computer Communication
 
-In contrast to boards like the Arduino Uno, Bean doesn't support USB. Instead, all communication is done via Bluetooth 4.0, also known as Bluetooth Smart or Bluetooth Low Energy. To learn more about how the BLE stack works with Bean, check out our [detailed guide](../../everything-else/how-gap-and-gatt-work).
+In contrast to boards like the Arduino Uno, Bean doesn't support USB. Instead, it communicates with clients via Bluetooth 4.0, also known as Bluetooth Smart or Bluetooth Low Energy. To learn more about how the BLE stack works with Bean, check out our [detailed guide](../../everything-else/how-gap-and-gatt-work).
 
 ### How Virtual Serial Works
 
 Bluetooth Low Energy doesn't natively support serial communication.
 
-Unlike Bluetooth Classic, BLE doesn't have a Serial Port Profile (SPP). Instead, Bean's firmware sends serial messages over BLE using the [LightBlue Platform](https://www.punchthrough.com/platform) protocol. On the other end, your computer parses LightBlue Platform messages and converts them back into serial.
+Unlike Bluetooth Classic, BLE doesn't have a Serial Port Profile (SPP). Instead, Bean's firmware sends serial messages over BLE using the protocol we developed for the [LightBlue Platform](/platform). On the other end, your computer parses these messages and converts them back into serial.
 
 When an Arduino sketch writes serial data, Bean Loader receives it, parses it, and passes the data through to the virtual serial port. To see data that Bean is sending, we can use the serial monitor in Arduino IDE.
 
@@ -90,17 +90,19 @@ After uploading your sketch to Bean, enable Virtual Serial. Right-click on your 
 
 The button that opens Serial Monitor is located in the upper-right corner of the Arduino IDE. Click this button to open it.
 
-{{{img_rel this 'sm-button.png'}}}
+{{{img_rel this 'sm-button.png' 'Opening the Serial Monitor' '60%'}}}
 
 ### Toggle Pin 0
 
-To toggle digital pin 0, you need to connect it to ground. Connecting a pin to ground is also called *grounding a pin*. The easiest way to do this is to connect a jumper wire between the `0` and `GND` pins. You could also solder a button to ground pin 0 when pressed.
+To toggle digital pin 0, you need to connect it to ground. Connecting a pin to ground is also called *grounding a pin*. The easiest way to do this is to connect a jumper wire between the `0` and `GND` pins.
+
+You could also solder a button to ground pin 0 when pressed:
 
 {{{img_rel this 'bean-button.svg' 'Bean with a pulldown switch on D0' '30%'}}}
 
 Since we enabled Virtual Serial in Bean Loader, we should see serial data appear in the serial monitor when we ground pin 0:
 
-{{{img_rel this 'serial-monitor.png'}}}
+{{{img_rel this 'serial-monitor.png' 'Serial data appears in Serial Monitor' '80%'}}}
 
 ## Conclusion
 
@@ -113,12 +115,6 @@ Knowing how to use the serial monitor and Virtual Serial lets you do things like
 * Debug your sketches
 
 Check out the [Arduino Serial reference](https://www.arduino.cc/en/Reference/Serial) to learn more about the commands available for serial communication.
-
-### Learn More about BLE
-
-* [Our Guide](../../detail-information/how-ble-works)
-* [Getting Started with Bluetooth Low Energy](http://www.amazon.com/Getting-Started-Bluetooth-Low-Energy-ebook/dp/B00K1N23LA)
-* [Bluetooth Low Energy Core Specification 4.0](https://www.bluetooth.org/en-us/specification/adopted-specifications)
 
 ## Troubleshooting
 
