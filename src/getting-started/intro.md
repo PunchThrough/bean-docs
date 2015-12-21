@@ -9,7 +9,7 @@ Congratulations! You're the proud new owner of a LightBlue Bean or Bean+. Whatâ€
 
 ## Get Started
 
-Ready to get started with Bean? Start by [installing Bean Loader](../install-loader) for your favorite platform.
+Ready to get started with Bean? Start by scrolling to the bottom of the page to download the Bean Loader for your favorite platform.
 
 Or keep reading to learn more!
 
