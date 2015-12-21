@@ -12,18 +12,19 @@ Bean was designed to be power-efficient so it can run on a battery for a very lo
 
 Please make sure you're familiar with the following before starting this guide:
 
-* [Getting Started](#)
+* [Getting Started](../../getting-started/intro)
 
 ### Software
 
-* Bean Loader ([install guides](#))
+* Bean Loader ([install guides](../../getting-started/intro/#next-steps))
 
 ### Hardware
 
-* LightBlue Bean
+* [LightBlue Bean](http://punchthrough.myshopify.com/products/bean)
 * Computer or mobile device
 
 ## Best Practices
+We will describe the difference between `Bean.sleep()` and Arduino `delay()` and how that relates to power consumption. 
 
 ### Bean.sleep vs. Arduino Delay
 
@@ -79,7 +80,7 @@ The preferred method is to use **interrupts**. With interupts, you specify an ev
 
 ## Example: Pin Interrupts vs Polling
 
-This tutorial assumes you have completed the [Getting Started guide](#), which covers tasks such as connecting to and programming Bean with Bean Loader. 
+This tutorial assumes you have completed the [Getting Started guide](../../getting-started/intro), which covers tasks such as connecting to and programming Bean with Bean Loader. 
 
 ### Program Your Bean
 
