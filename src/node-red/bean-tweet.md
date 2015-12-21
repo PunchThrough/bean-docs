@@ -18,12 +18,12 @@ Please make sure you're familiar with the following before starting this guide:
 
 ### Software
 
-* Bean Loader ([install guides](#))
-* Node-RED installation ([install Node-RED](#))
+* Bean Loader [install guides](../../getting-started/intro/#next-steps)
+* Node-RED installation ([install Node-RED](../installation))
 
 ### Hardware
 
-* LightBlue Bean
+* [LightBlue Bean](http://punchthrough.myshopify.com/products/bean)
 * Computer device
 
 ## Program Your Bean
@@ -86,7 +86,7 @@ Now, go ahead and check your Twitter account to see tweets from your Bean!
 
 In this guide, you learned how to connect Bean to Twitter using Node-RED. This is one example of a complex flow that's made easy with Node-RED. You could use what you've learned to integrate your Bean with Twilio, IRC, MySQL, and so much more!
 
-Want to learn more about Node-RED? Check out [the project's website](http://nodered.org/).
+Want to learn more about Node-RED? Check out [Node-RED's website](http://nodered.org/).
 
 ## Troubleshooting
 

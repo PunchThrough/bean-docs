@@ -16,7 +16,7 @@ This temperature sensor can be used to read air temperature near Bean with an ac
 Familiarize yourself with the following Guides:
 
 * [Virtual Serial](../virtual-serial)
-* [Bean Loader Installation](../../getting-started/intro/#next-steps)
+* Bean Loader ([install guides](../../getting-started/intro/#next-steps))
 
 Hardware required:
 
