@@ -11,23 +11,21 @@ This guide will take you through the process of reading the temperature from Bea
 This temperature sensor can be used to read air temperature near Bean with an accuracy of ±3°C.
 
 
-## Before you begin
+## Setup
 
 Familiarize yourself with the following Guides:
 
-* [Virtual Serial](#)
-* [Bean Loader Installation](#)
+* [Virtual Serial](../virtual-serial)
+* [Bean Loader Installation](../../getting-started/intro/#next-steps)
 
 Hardware required:
 
-* Bean
+* [LightBlue Bean](http://punchthrough.myshopify.com/products/bean)
 * Computer
 
-## Step-by-step
+## Program Your Bean
 
-### Program Your Bean
-
-Upload the following sketch to your Bean:
+Upload the following sketch to your Bean.  This sketch reads Bean's temperature and prints it over Virtual Serial. Connect to your Bean and enable Virtual Serial to see the sketch in action.
 
 ```cpp
 int8_t lastTemp = 0;
@@ -49,8 +47,7 @@ void loop() {
   Bean.sleep(1000);
 }
 ```
-
-This sketch reads Bean's temperature and prints it over Virtual Serial. Connect to your Bean and enable Virtual Serial to see the sketch in action.
+Here's what the code does:
 
 * **Line 1** defines a global variable `temp` and initializes its value to 0.
   * `int8_t` means it is an 8-bit signed integer. This is the same type as `Bean.getTemperature()`.

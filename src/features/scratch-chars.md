@@ -28,7 +28,7 @@ You might prefer Scratch Characteristics over Virtual Serial when:
 
 You probably don't want to use scratch characteristics when you're sending more than 20 bytes of data at once. A BLE characteristic has a size limit, and sending more than this amount of bytes requires you to split your data into chunks. Virtual Serial does this for you and works without any extra effort. If you're sending more than 20 bytes, you probably want to use Virtual Serial.
 
-## Before You Begin
+## Setup
 
 This tutorial assumes you have completed the [Getting Started guide](../../getting-started/intro/). It covers tasks such as connecting to and programming the Bean with the Bean Loader.
 
@@ -42,7 +42,7 @@ This tutorial assumes you have completed the [Getting Started guide](../../getti
 * Mobile or computer device (for programming)
 * iOS device (for LightBlue Explorer)
 
-## Program the Sketch
+## Program Your Bean
 
 Connect to your Bean and upload this Arduino sketch. This example will put the current temperature in scratch characteristic 1. 
 
@@ -60,7 +60,7 @@ void loop()
 }
 ```
 
-This sketch does the following:
+Here's what the code does:
 
 * **Line 8:** Get the current temperature and save it to the 8-bit signed integer variable `temperature`
 * **Line 9:** Set the value of Scratch Characteristic #1 to the value of the `temperature` variable

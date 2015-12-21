@@ -93,7 +93,7 @@ void loop() {
 }
 ```
 
-Here's what the sketch does:
+Here's what the code does:
 
 **Line 2:** Disable saving the Bean's BLE configuration to non-volatile memory.
 
