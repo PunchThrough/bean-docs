@@ -29,7 +29,7 @@ In this guide, we will explore how Virtual Serial allows your computer and Bean 
 
 ## Bean-Computer Communication
 
-In contrast to boards like the Arduino Uno, Bean and Bean+ don't support USB. Instead, all their communication is done via Bluetooth 4.0, also known as Bluetooth Smart or Bluetooth Low Energy. To learn more about how the BLE stack works with Bean, check out our [detailed guide](../../detail-information/how-ble-works).
+In contrast to boards like the Arduino Uno, Bean doesn't support USB. Instead, all communication is done via Bluetooth 4.0, also known as Bluetooth Smart or Bluetooth Low Energy. To learn more about how the BLE stack works with Bean, check out our [detailed guide](../../everything-else/how-gap-and-gatt-work).
 
 ### How Virtual Serial Works
 

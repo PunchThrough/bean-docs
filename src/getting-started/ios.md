@@ -15,7 +15,7 @@ To start building with Bean on your iOS device, you'll need:
 
 * An iOS device
 * Access to the App Store
-* A LightBlue Bean or Bean+
+* A LightBlue Bean
 
 ## Install Bean Loader
 
