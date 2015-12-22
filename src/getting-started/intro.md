@@ -9,7 +9,15 @@ Congratulations! You're the proud new owner of a LightBlue Bean. What’s even c
 
 ## Get Started
 
-Ready to get started with Bean? Start by scrolling to the bottom of the page to download the Bean Loader for your favorite platform.
+Ready to get started with Bean? Pick your favorite platform to install Bean Loader and program your Bean:
+
+[Bean Loader for OS X >>](../os-x/)
+
+[Bean Loader for Windows >>](../windows/)
+
+[Bean Loader for iOS >>](../ios/)
+
+[Bean Loader for Android >>](../android/)
 
 Or keep reading to learn more!
 
@@ -37,15 +45,3 @@ Looking for more project ideas? Check out [Hackster.io](https://www.hackster.io/
 
 ## The Beantalk Community
 We're proud to host one of the coolest groups of makers at [Beantalk](http://beantalk.punchthrough.com/), our community forums. If you're looking for project inspiration, troubleshooting issues, or showing off something cool you built, Beantalk is the place to go!
-
-## Next Steps
-
-Pick your favorite platform to install Bean Loader and program your Bean:
-
-[Bean Loader for OS X >>](../os-x/)
-
-[Bean Loader for Windows >>](../windows/)
-
-[Bean Loader for iOS >>](../ios/)
-
-[Bean Loader for Android >>](../android/)
