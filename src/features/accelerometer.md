@@ -95,8 +95,6 @@ void loop()
 
 Your Bean's accelerometer is configured in low power mode.  As a result, when your Bean requests a reading, the accelerometer takes about 5 ms to warm up before it returns a reading. This means that your Bean is able to read the accelerometer at a maximum frequency of 200 Hz.
 
-There are other functions that enable you to utilize the accelerometer. For example, You can change the sensitivity of the accelerometer using [`setAccelerationRange`](#) method. Checkout [`Accelerometer`](http://legacy.punchthrough.com/bean/the-arduino-reference/) to see more functions that are available to you. 
-
 ## Move Bean around
 
 Congratulations!  You have successfully programed Bean to change its LED as the accelerometer reads new values. Try moving your Bean around: picking it up, shaking it, and rotating it in the air. You should see the color of Bean's LED change.
