@@ -18,4 +18,5 @@ deployment:
     commands:
       - git config --global user.email 'circleci@punchthrough.com'
       - git config --global user.name 'CircleCI Automated Build'
+      - npm run build
       - npm run deploy
