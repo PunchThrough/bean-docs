@@ -10,21 +10,19 @@ Say you want to build an app that tweets Bean's temperature. Normally, you'd hav
 
 In this tutorial, you'll build a Node-RED flow that connects your Bean's temperature sensor to a Twitter account.
 
-## Setup
+## Before You Begin
 
-This tutorial assumes you have completed the [Getting Started guide](#). It covers tasks such as connecting to and programming Bean with Bean Loader.
-
-Please make sure you're familiar with the following before starting this guide:
+{{> snip_req_getting_started}}
 
 ### Software
 
-* Bean Loader [install guides](../../getting-started/intro/#next-steps)
-* Node-RED installation ([install Node-RED](../installation))
+* {{> snip_req_bean_loader}}
+* Node-RED ([install guides](../installation))
 
 ### Hardware
 
-* [LightBlue Bean](http://punchthrough.myshopify.com/products/bean)
-* Computer device
+* {{> snip_req_bean}}
+* Computer
 
 ## Program Your Bean
 
