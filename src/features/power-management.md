@@ -77,16 +77,16 @@ The preferred method is to use **interrupts**. With interupts, you specify an ev
 * accelerometer events
 * receiving serial messages
 
-## Example: Pin Interrupts vs Polling
+## Try An Example
 
-This tutorial assumes you have completed the [Getting Started guide](../../getting-started/intro), which covers tasks such as connecting to and programming Bean with Bean Loader. 
+In this example, you'll program Bean with a sketch that keeps the Bean in sleep mode. Bean will only wake up when a pin's value changes, so this sketch will get maximum use of your Bean's battery.
 
 ### Program Your Bean
 
 Connect to your Bean and upload this Arduino sketch:
 
 ```
-// PinChangeInt.h handles pin change interrupts
+// PinChangeInt handles pin change interrupts
 #include <PinChangeInt.h> 
  
 void setup() {
@@ -114,6 +114,8 @@ Here's what the code does:
 * **Line 6** sets up pin D0 as an input with an internal pull-up resistor. This prevents the pin from floating or bouncing between values.
 * **Line 9** sets up an interrupt on pin D0 that will call the `pinChanged()` function when its value changes.
 * **Line 18** defines the ISR that will run when the pin changes.
+
+The pin change interrupt code is provided by the [PinChangeInt library](https://github.com/GreyGnome/PinChangeInt) which is bundled with Bean.
 
 ### Toggle Pin D0
 
