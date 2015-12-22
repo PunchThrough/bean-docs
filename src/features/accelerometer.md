@@ -110,11 +110,8 @@ In this guide, you learned how to read data from Bean's accelerometer and use it
 Here are some ideas for projects you could build with the accelerometer:
 
 * Put Bean on a hanging wall painting and make the LED blink when the painting is perfectly level.
-<!-- * Use Bean as an [HID device](../hid) and use it to control a game on your computer. -->
 * Attach Bean to a skateboard and measure the acceleration when you kick off.
 * Add a buzzer to Bean, hide it under papers on your desk, and sound an alarm when someone snoops around your stuff and moves Bean.
-
-<!-- Looking to use accelerometer data in a desktop app? Check out our [Processing tutorial](#), where you'll build an app that reads accelerometer data from Bean and displays it in a live visualization. -->
 
 ## Troubleshooting
 
