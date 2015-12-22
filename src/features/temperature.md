@@ -10,22 +10,25 @@ This guide will take you through the process of reading the temperature from Bea
 
 This temperature sensor can be used to read air temperature near Bean with an accuracy of ±3°C.
 
+## Before You Begin
 
-## Setup
+{{> snip_req_getting_started}}
 
-Familiarize yourself with the following Guides:
+You also need to understand how to use Virtual Serial to read data from Bean. If you haven't used this yet, [check out the Virtual Serial guide](../virtual-serial/) before continuing.
 
-* [Virtual Serial](../virtual-serial)
+### Software
+
+* {{> snip_req_bean_loader}}
 * Bean Loader ([install guides](../../getting-started/intro/#next-steps))
 
-Hardware required:
+### Hardware
 
-* [LightBlue Bean](http://punchthrough.myshopify.com/products/bean)
-* Computer
+* {{> snip_req_bean}}
+* Computer (for Virtual Serial)
 
 ## Program Your Bean
 
-Upload the following sketch to your Bean.  This sketch reads Bean's temperature and prints it over Virtual Serial. Connect to your Bean and enable Virtual Serial to see the sketch in action.
+Upload the following sketch to your Bean. This sketch reads Bean's temperature and prints it over Virtual Serial. Connect to your Bean and enable Virtual Serial to see the sketch in action.
 
 ```cpp
 int8_t lastTemp = 0;

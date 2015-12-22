@@ -12,25 +12,20 @@ Our Beantalk users have come up with lots of cool projects that use the accelero
 
 In this tutorial, you'll read data from the accelerometer on a Bean and view it in Arduino's Serial Monitor using the Virtual Serial port.
 
-## Setup
+## Before You Begin
 
-Please make sure you're familiar with the following before starting this guide:
-
-* [Getting Started](../../getting-started/intro)
+{{> snip_req_getting_started}}
 
 ### Software
 
-* Bean Loader [install guides](../../getting-started/intro/#next-steps)
+* {{> snip_req_bean_loader}}
 
 ### Hardware
 
-* [LightBlue Bean](http://punchthrough.myshopify.com/products/bean)
-* Mobile or Computer device
-
+* {{> snip_req_bean}}
+* Computer or mobile device
 
 ## Program Your Bean
-
-This tutorial assumes you have completed the [Getting Started guide](../../getting-started/intro). It covers tasks such as connecting to and programming Bean with Bean Loader. 
 
 Connect to your Bean and upload this Arduino sketch:
 

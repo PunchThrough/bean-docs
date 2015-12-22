@@ -14,19 +14,17 @@ In order for any device to communicate with your computer, the device and comput
 
 In this guide, we will explore how Virtual Serial allows your computer and Bean to talk to each other. We'll build an example that uses the serial monitor on the Arduino IDE to send and visualize data coming from Bean.
 
-## Setup
+## Before You Begin
 
-Please make sure you're familiar with the following before starting this guide:
-
-* [Getting Started](../../getting-started/intro)
+{{> snip_req_getting_started}}
 
 ### Software
 
-* Bean Loader ([install guides](../../getting-started/intro/#next-steps)) 
+* {{> snip_req_bean_loader}}
 
 ### Hardware
 
-* [LightBlue Bean](http://punchthrough.myshopify.com/products/bean)
+* {{> snip_req_bean}}
 * OS X computer
 
 ## Bean-Computer Communication

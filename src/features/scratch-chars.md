@@ -5,7 +5,6 @@ autotoc: true
 ---
 
 ## Introduction
----
 
 There are two ways to communicate with Bean over Bluetooth Low Energy. One way is to send and receive data using Scratch Characteristics. Scratch Characteristics offer a method of communication that more closely matches the "under-the-hood" structure of Bluetooth Low Energy devices. Scratch Characteristics are viewable as part of Bean's BLE profile.
 
@@ -28,23 +27,24 @@ You might prefer Scratch Characteristics over Virtual Serial when:
 
 You probably don't want to use scratch characteristics when you're sending more than 20 bytes of data at once. A BLE characteristic has a size limit, and sending more than this amount of bytes requires you to split your data into chunks. Virtual Serial does this for you and works without any extra effort. If you're sending more than 20 bytes, you probably want to use Virtual Serial.
 
-## Setup
+## Before You Begin
 
-This tutorial assumes you have completed the [Getting Started guide](../../getting-started/intro/). It covers tasks such as connecting to and programming the Bean with the Bean Loader.
+{{> snip_req_getting_started}}
 
 ### Software
 
-* [LightBlue Explorer for iOS](https://itunes.apple.com/us/app/lightblue-explorer-bluetooth/id557428110?mt=8)
+* {{> snip_req_bean_loader}}
+* [LightBlue Explorer for iOS](https://itunes.apple.com/us/app/lightblue-explorer-bluetooth/id557428110)
 
 ### Hardware
 
-* [LightBlue Bean](http://punchthrough.myshopify.com/products/bean)
-* Mobile or computer device (for programming)
+* {{> snip_req_bean}}
+* Computer or mobile device (for uploading sketches)
 * iOS device (for LightBlue Explorer)
 
 ## Program Your Bean
 
-Connect to your Bean and upload this Arduino sketch. This example will put the current temperature in scratch characteristic 1. 
+Connect to your Bean and upload this Arduino sketch. This example will put the current temperature in scratch characteristic 1:
 
 ```
 void setup()
@@ -107,4 +107,4 @@ You can see our office is currently somewhere between 21 and 22 degrees Celsius 
 
 In this guide, you used LightBlue Explorer with Bean's Scratch Characteristics to read simple data without having to write a custom app.
 
-Scratch Characteristics work the other way too. If you want to send data to Bean, you can set Scratch Characteristics using LightBlue Explorer or another app and read them inside your Arduino sketch. See the [Arduino reference](http://punchthrough.com/bean/reference/) for more details.
+Scratch Characteristics work the other way too. If you want to send data to Bean, you can set Scratch Characteristics using LightBlue Explorer or another app and read them inside your Arduino sketch. See the [Arduino reference](/bean/reference/) for more details.

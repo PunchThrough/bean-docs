@@ -11,19 +11,21 @@ In this guide, you'll install Bean Loader for Windows and wirelessly program a s
 
 {{{img_rel this 'windows_surf_reporter.PNG' 'Bean Loader for Windows' '60%'}}}
 
-## What You Need
+## Before You Begin
 
-### Hardware
-
-* LightBlue Bean
-* Windows PC or tablet with BLE support
-
-If your computer does not have BLE support built in, you can use a [USB BLE dongle](http://punchthrough.myshopify.com/collections/all/products/bluetooth-smart-usb-dongle-iogear) instead.
+{{> snip_req_getting_started}}
 
 ### Software
 
 * Windows 8.1 or above
 * Access to the Microsoft Store for downloading apps
+
+### Hardware
+
+* {{> snip_req_bean}}
+* Windows PC or tablet with BLE support
+
+If your computer does not have BLE support built in, you can use a [USB BLE dongle](http://punchthrough.myshopify.com/collections/all/products/bluetooth-smart-usb-dongle-iogear) instead.
 
 ## Install Arduino
 

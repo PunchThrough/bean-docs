@@ -21,10 +21,11 @@ Bean was designed to be power-efficient so it can run on a battery for a very lo
 * {{> snip_req_bean}}
 * Computer or mobile device
 
-## Best Practices
-We will describe the difference between `Bean.sleep()` and Arduino `delay()` and how that relates to power consumption. 
+## Best Practices: Sleep vs. Delay
 
-### Bean.sleep vs. Arduino Delay
+Let's review `Bean.sleep()` and Arduino's `delay()` and how they impact Bean's power consumption. 
+
+### To sleep or not to sleep?
 
 The key to a low-power sketch is putting Bean to sleep whenever it's not actively doing something. Bean has a simple command to sleep for a set amount of time: `Bean.sleep()`.
 
