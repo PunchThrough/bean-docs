@@ -2,7 +2,7 @@
 title: Bean Loader for Windows
 layout: basic.hbs
 autotoc: true
-order: 2
+order: 4
 ---
 
 ## Introduction

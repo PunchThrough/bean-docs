@@ -2,6 +2,7 @@
 title: Hardware Files
 layout: basic.hbs
 autotoc: true
+order: 4
 ---
 
 We want you to be able to modify, improve, and change the Bean to fit your needs. So we’ve released Bean's hardware design files under the [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/) license. This allows you to:

@@ -2,7 +2,7 @@
 title: Bean Loader for iOS
 layout: basic.hbs
 autotoc: true
-order: 2
+order: 5
 ---
 
 ## Introduction

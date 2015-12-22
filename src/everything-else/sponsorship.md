@@ -2,6 +2,7 @@
 title: Hackathons and Meetups
 layout: basic.hbs
 autotoc: false
+order: 1
 ---
 
 Are you arranging a hackathon or meetup? We’d love to help out! Punch Through offers sponsorship, speakers and workshops for hackathons and meetups.

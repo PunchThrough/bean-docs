@@ -2,6 +2,7 @@
 title: LightBlue Demo Sketch
 layout: basic.hbs
 autotoc: true
+order: 5
 ---
 
 ## Introduction

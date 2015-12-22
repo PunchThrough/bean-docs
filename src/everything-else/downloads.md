@@ -2,6 +2,7 @@
 title: Downloads and SDKs 
 layout: basic.hbs
 autotoc: true
+order: 3
 ---
 
 ## First-Time Users
