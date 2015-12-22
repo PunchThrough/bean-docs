@@ -2,14 +2,14 @@
 title: Bean Loader for Android
 layout: basic.hbs
 autotoc: true
-order: 2
+order: 6
 ---
 
 ## Introduction
 
 In this guide, you'll upload an example sketch to your Bean, edit it, and save a copy to your Android device. You'll also walk through the different features in Bean Loader for Android.
 
-## What You Need
+## Before You Begin
 
 To start building with Bean on your Android device, you'll need:
 

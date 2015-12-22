@@ -7,8 +7,6 @@ order: 2
 
 ## Introduction
 
----
-
 This guide will help you install Node-RED and the custom nodes used to communicate with Bean.
 
 ## Install Node-RED
@@ -22,7 +20,6 @@ If you are interested in setting up a Raspberry Pi or BeagleBone Black for a ded
 * [Install Node-RED on Raspberry Pi](http://nodered.org/docs/hardware/raspberrypi.html)
 * [Install Node-RED on BeagleBone Black](http://nodered.org/docs/hardware/beagleboneblack.html)
 
-
 ## Install Bean Nodes
 
 {{{img_rel this 'bean-nodes.png' 'Bean Nodes' '50%'}}}
@@ -35,7 +32,6 @@ Finally, in order to make use of Bean nodes, you must install them in a place th
 
 * `mkdir -p ~/.node-red/node_modules`
 * `npm install --prefix ~/.node-red node-red-contrib-bean`
-
 
 ## Next Steps
 

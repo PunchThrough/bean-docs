@@ -57,21 +57,22 @@ In iOS 7, Apple added iBeacon support for iOS devices. This allowed apps to regi
 
 The Bean can act as an iBeacon. The Bean library for Arduino provides commands to configure iBeacon parameters and turn iBeacon mode on and off.
 
-## Setup
+## Before You Begin
 
-Please make sure you're familiar with the following before starting this guide:
-
-* [Getting Started](../../getting-started/intro/)
+{{> snip_req_getting_started}}
 
 ### Software
 
-* Bean Loader
-* [Node.js](https://nodejs.org/) 5.1.1+
+* {{> snip_req_bean_loader}}
+* If you're using a computer, [Node.js](https://nodejs.org/) 5.1.1+
 
 ### Hardware
 
-* LightBlue Bean
-* Computer for running the Node.js List Beacons script
+* {{> snip_req_bean}}
+* One of the following:
+  * Computer (recommended)
+  * Android device (recommended)
+  * iOS device
 
 ## An iBeacon + Bean Example
 
@@ -93,7 +94,7 @@ void loop() {
 }
 ```
 
-Here's what the sketch does:
+Here's what the code does:
 
 **Line 2:** Disable saving the Bean's BLE configuration to non-volatile memory.
 

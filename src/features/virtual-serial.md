@@ -14,36 +14,32 @@ In order for any device to communicate with your computer, the device and comput
 
 In this guide, we will explore how Virtual Serial allows your computer and Bean to talk to each other. We'll build an example that uses the serial monitor on the Arduino IDE to send and visualize data coming from Bean.
 
-## Setup
+## Before You Begin
 
-Please make sure you're familiar with the following before starting this guide:
-
-* [Getting Started](#)
+{{> snip_req_getting_started}}
 
 ### Software
 
-* Bean Loader ([install guides](#))
+* {{> snip_req_bean_loader}}
 
 ### Hardware
 
-* LightBlue Bean
+* {{> snip_req_bean}}
 * OS X computer
 
 ## Bean-Computer Communication
 
-In contrast to boards like the Arduino Uno, Bean and Bean+ don't support USB. Instead, all their communication is done via Bluetooth 4.0, also known as Bluetooth Smart or Bluetooth Low Energy. To learn more about how the BLE stack works with Bean, check out our [detailed guide](#).
+In contrast to boards like the Arduino Uno, Bean and Bean+ don't support USB. Instead, all their communication is done via Bluetooth 4.0, also known as Bluetooth Smart or Bluetooth Low Energy. To learn more about how the BLE stack works with Bean, check out our [detailed guide](../../detail-information/how-ble-works).
 
 ### How Virtual Serial Works
 
 Bluetooth Low Energy doesn't natively support serial communication.
 
-Unlike Bluetooth Classic, BLE doesn't have a Serial Port Profile (SPP). Instead, Bean's firmware sends serial messages over BLE using the [LightBlue Platform](#) protocol. On the other end, your computer parses LightBlue Platform messages and converts them back into serial.
+Unlike Bluetooth Classic, BLE doesn't have a Serial Port Profile (SPP). Instead, Bean's firmware sends serial messages over BLE using the [LightBlue Platform](https://www.punchthrough.com/platform) protocol. On the other end, your computer parses LightBlue Platform messages and converts them back into serial.
 
 When an Arduino sketch writes serial data, Bean Loader receives it, parses it, and passes the data through to the virtual serial port. To see data that Bean is sending, we can use the serial monitor in Arduino IDE.
 
-## Step-by-Step
-
-### Upload a Sketch
+## Program Your Bean
 
 This sketch sends a message over Virtual Serial when the state of digital pin 0 changes. Upload the following sketch to your Bean.
 
@@ -120,7 +116,7 @@ Check out the [Arduino Serial reference](https://www.arduino.cc/en/Reference/Ser
 
 ### Learn More about BLE
 
-* [Our Guide](#)
+* [Our Guide](../../detail-information/how-ble-works)
 * [Getting Started with Bluetooth Low Energy](http://www.amazon.com/Getting-Started-Bluetooth-Low-Energy-ebook/dp/B00K1N23LA)
 * [Bluetooth Low Energy Core Specification 4.0](https://www.bluetooth.org/en-us/specification/adopted-specifications)
 

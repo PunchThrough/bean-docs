@@ -2,14 +2,14 @@
 title: Bean Loader for iOS
 layout: basic.hbs
 autotoc: true
-order: 2
+order: 5
 ---
 
 ## Introduction
 
 In this guide, you'll upload an example sketch to your Bean, edit it, and save a copy to your iOS device. You'll also walk through the different features in Bean Loader for iOS.
 
-## What You Need
+## Before You Begin
 
 To start building with Bean on your iOS device, you'll need:
 

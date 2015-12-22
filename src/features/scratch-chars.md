@@ -13,6 +13,11 @@ The other method is Virtual Serial, which is the preferred method for sending la
 In this guide, you'll learn how to use Scratch Characteristics to receive structured data from Bean.
 
 ## About Scratch Characteristics
+Below we'll describe what scratch characteristics are and how to use them. 
+
+### What is a Characteristic?
+
+Bluetooth Low Energy organizes information on a device into Profiles. Profiles are made up of Services, which are made up of Characteristics. Characteristics are the smallest division of data. They typically contain one value or a small array of values. If you're new to Bluetooth Low Energy or want to learn more, here is a great [intro to BLE by Adafruit](https://learn.adafruit.com/introduction-to-bluetooth-low-energy/introduction). 
 
 ### When to use Scratch Characteristics 
 
@@ -22,27 +27,24 @@ You might prefer Scratch Characteristics over Virtual Serial when:
 
 You probably don't want to use scratch characteristics when you're sending more than 20 bytes of data at once. A BLE characteristic has a size limit, and sending more than this amount of bytes requires you to split your data into chunks. Virtual Serial does this for you and works without any extra effort. If you're sending more than 20 bytes, you probably want to use Virtual Serial.
 
-### What is a Characteristic?
-
-Bluetooth Low Energy organizes information on a device into Profiles. Profiles are made up of Services, which are made up of Characteristics. Characteristics are the smallest division of data. They typically contain one value or a small array of values. If you're new to Bluetooth Low Energy or want to learn more, here is a great [intro to BLE by Adafruit](https://learn.adafruit.com/introduction-to-bluetooth-low-energy/introduction). 
-
 ## Before You Begin
 
-This tutorial assumes you have completed the [Getting Started guide](../../getting-started/intro/). It covers tasks such as connecting to and programming the Bean with the Bean Loader.
+{{> snip_req_getting_started}}
 
 ### Software
 
-* [LightBlue Explorer for iOS](https://itunes.apple.com/us/app/lightblue-explorer-bluetooth/id557428110?mt=8)
+* {{> snip_req_bean_loader}}
+* [LightBlue Explorer for iOS](https://itunes.apple.com/us/app/lightblue-explorer-bluetooth/id557428110)
 
 ### Hardware
 
-* LightBlue Bean
-* Mobile or computer device (for programming)
+* {{> snip_req_bean}}
+* Computer or mobile device (for uploading sketches)
 * iOS device (for LightBlue Explorer)
 
-## Program the Sketch
+## Program Your Bean
 
-Connect to your Bean and upload this Arduino sketch. This example will put the current temperature in scratch characteristic 1. 
+Connect to your Bean and upload this Arduino sketch. This example will put the current temperature in scratch characteristic 1:
 
 ```
 void setup()
@@ -58,7 +60,7 @@ void loop()
 }
 ```
 
-This sketch does the following:
+Here's what the code does:
 
 * **Line 8:** Get the current temperature and save it to the 8-bit signed integer variable `temperature`
 * **Line 9:** Set the value of Scratch Characteristic #1 to the value of the `temperature` variable
@@ -105,4 +107,4 @@ You can see our office is currently somewhere between 21 and 22 degrees Celsius 
 
 In this guide, you used LightBlue Explorer with Bean's Scratch Characteristics to read simple data without having to write a custom app.
 
-Scratch Characteristics work the other way too. If you want to send data to Bean, you can set Scratch Characteristics using LightBlue Explorer or another app and read them inside your Arduino sketch. See the [Arduino reference](#) for more details.
+Scratch Characteristics work the other way too. If you want to send data to Bean, you can set Scratch Characteristics using LightBlue Explorer or another app and read them inside your Arduino sketch. See the [Arduino reference](/bean/reference/) for more details.
