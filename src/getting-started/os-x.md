@@ -2,7 +2,7 @@
 title: Bean Loader for OS X
 layout: basic.hbs
 autotoc: true
-order: 2
+order: 3
 ---
 
 ## Introduction
@@ -64,9 +64,7 @@ Once you've found your Bean, right-click on it and select **Connect**:
 
 Your Bean will show **Connecting...** followed by **Connected**. Once your Bean is connected, you're ready to keep going.
 
-If there are many Beans around, it's a good idea to see if you connected to the right Bean. Bean Loader OS X has a [Blink LED](./#blink-bean-s-led).  When you click on this feature on a connected Bean, the Bean should blink once.  If your Bean blinks, you connected to the right Bean!
-
-If you are sure that you connected to the right Bean, you should [rename your Bean](./#rename-your-bean). 
+**Be careful!** If you start programming the wrong Bean by mistake, you will overwrite its sketch. Try [blinking your LED](#blink-bean-s-led) to make sure you have the right Bean. You can also [rename your Bean](#rename-your-bean) to make sure you don't mix it up with other Beans in the future.
 
 ### Open An Example Sketch
 
