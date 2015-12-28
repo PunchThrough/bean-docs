@@ -6,26 +6,26 @@ autotoc: true
 
 ## Introduction
 
-Are you prototyping with the Bean, but looking to build a production optimized design? 
+Are you prototyping with the Bean and looking to build a production-optimized design? 
 
-The Bean is built upon the LightBlue Platform. The core components of the Bean are the Bluetooth SoC and microcontroller. You can redesign these components into your own product for a more production optimized design and cost.
+Bean is built upon the LightBlue Platform. The core components of the Bean are the Bluetooth SoC and microcontroller. You can build these components into your own product for a production-optimized design.
 
-The Platform supports multiple Bluetooth SoCs and microcontrollers. The Bean is based on our LBM313 module and an Atmega328p microcontroller, but you can also replace them with other parts we support. 
+The LightBlue Platform supports many different Bluetooth SoCs and microcontrollers. Bean is based on our LBM313 module and an ATmega328p microcontroller, but you can also replace them with other parts we support. 
 
 ## Hardware
 
-The core of the Bean is the LBM313 Bluetooth Module and the Atmega328p microcontroller. You can design these 2 parts into your project, and along with the Bean firmware, it will implement Bean features. 
+Bean's heart is the LBM313 Bluetooth module and the ATmega328p microcontroller. Once the LBM313 has Bean firmware loaded, you can design these parts into your project to implement Bean functionality.
 
 {{{img_rel this 'bean-proto-to-prod.jpg' 'Core components' '84%'}}}
 
-For a reference of how to hook up the parts, you can refer to the Bean's open source [Hardware Files]((../hardware-files). 
+For a reference of how Bean's components are connected, check out our open-source [hardware files]((../hardware-files). 
 
-The LightBlue Platform is hardware agnostic, and we are striving to support a variety of Bluetooth components. Currently we support both TI CC254x and Nordic nRF51822 components. You can use certified modules or go chip-down.
+The LightBlue Platform is hardware agnostic and we strive to support a variety of Bluetooth components. We currently support TI CC254x and Nordic nRF51822 components. You can use certified modules or go chip-down.
 
 ## Firmware
 
-You can buy LBM313 modules pre-programmed with the Bean firmware at our store. Alternatively, if you're using another module or have a chip-down design, [contact us](info@punchthrough.com) to get the firmware binary. 
+You can buy LBM313 modules pre-programmed with the Bean firmware [at our store](http://punchthrough.myshopify.com/collections/all/products/lbm313-with-bean-firmware). Alternatively, if you're using another module or have a chip-down design, [contact us](mailto:info@punchthrough.com) to get a copy of our firmware binaries.
 
 ## Single Chip Design
 
-If your design requires the smallest form factor and lowest cost, you can use just the Bluetooth SoC. [Contact us](info@punchthrough.com) to help build your project. 
+If your design requires the smallest form factor and lowest cost, you can use the Bluetooth SoC on its own. [Contact us](mailto:info@punchthrough.com) and we can help you build your project. 
