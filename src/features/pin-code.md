@@ -1,75 +1,94 @@
 ---
-title: Security with Pin Codes
+title: PIN Code Security
 layout: basic.hbs
 autotoc: true
 ---
 
 ## Introduction
-Out-of-the-box, your Bean can be programmed by any device with bluetooth 4.0 that has the Bean Loader application installed. If you’d like to protect your Bean from unauthorized tampering, you can configure the Bean to require the device to authenticate the connection. Then, only your authorized devices can connect to, program, and update your Bean.
+
+Out of the box, your Bean can be programmed by any device with BLE running Bean Loader. If you’d like to ensure you are the only one who can program your Bean, you can configure Bean to require a PIN code on connection.
+
+In this guide, you'll set up PIN code security on your Bean. Only your authorized devices will be able to connect to, program, and update your Bean.
 
 ## Setup
 
-Please make sure you're familiar with the following before starting this guide:
-
-* [Getting Started](../../getting-started/intro)
+{{> snip_req_getting_started}}
 
 ### Software
 
-* Bean Loader [install guides](../../getting-started/intro/#next-steps)
+* Bean Loader for OS X ([install guide](../../getting-started/os-x))
 
 ### Hardware
 
-* [LightBlue Bean](http://punchthrough.myshopify.com/products/bean)
-* Mobile or Computer device
+* {{> snip_req_bean}}
+* Computer or mobile device
 
-## Configuring the Pin Code
-### Set the Bean's Pin Code
-This tutorial assumes you are familiar with [Getting Started](../../getting-started/intro). 
+## Enabling PIN Code Security
 
-Once you have connected to your Bean, you can right click and choose **Pairing PIN Settings**:
+### Set the Bean's PIN Code
 
-{{{img_rel this 'Pairing-PIN-Settings.JPG'}}}
+Open Bean Loader for OS X. Scan for and connect to your Bean.
 
-Afterwards, you can set your secret pin.  The pin code you enter will be one of your choosing. It can be a number from 000000 – 999999 (6 digits). After entering your pin, your Bean will store information about the device you’re connecting to the Bean with; the next time you connect to your Bean with the same device, it will bypass the pin code authorization screen and connect immediately.
+Once you have connected to your Bean, right-click on it and select **Pairing PIN Settings**:
 
-If you don’t enter the correct pin, you will eventually be disconnected from the Bean. No information can be read from the Bean unless the device you are connecting to it with has been authorized!
+{{{img_rel this 'Pairing-PIN-Settings.JPG' 'Pairing PIN Settings' '60%'}}}
 
-{{{img_rel this 'PinCodeSetting.JPG'}}}
+Now you can set your Bean's PIN code:
 
-Now, your Bean is locked.  If someone is trying to pair with your Bean, they will have to enter the pin in order for a device to connect to it. If your Bean does not have a lock next to it, ensure that you are running the latest firmware, and try running through the pin code configuration process again.
+{{{img_rel this 'PinCodeSetting.JPG' "Set Bean's PIN code"}}}
 
-Now you can program a sketch on your Bean!
+Valid PIN codes are 6-digit numbers in the range 000000 to 999999.
 
-{{{img_rel this 'BeanLocked.JPG'}}}
+Once you enter a valid PIN and click Enable, Bean Loader will set your Bean's PIN code and secure your Bean. You'll see a padlock by your Bean:
 
-### Connecting with Authentication Enabled
-To test if your Bean was successfully configured, disconnect from the Bean and reconnect. You should receive the OS X pin code authorization screen show earlier. Enter your six digit code and press Enter to connect to your Bean. You will notice that the next time you connect to your Bean with the loader, you will not be prompted to enter your pin code. This is normal! The Bean stored information about the computer you used to connect to it last and will not prompt for a pin code to make your life easier. In the BLE world, this authentication step is known as “bonding.” Your computer has “bonded” with your Bean and can bypass the pin code process. 
+{{{img_rel this 'BeanLocked.JPG' 'Bean is PIN protected'}}}
 
-{{{img_rel this 'PinRequest.JPG'}}}
+After entering your PIN, both your Bean and your device will save the connection information. The next time you connect to your Bean with the same device, it will bypass PIN code authorization and connect immediately.
+
+If you don’t enter the correct PIN when you connect another device, you will be disconnected from the Bean. No information can be read from the Bean unless a device connects with the correct PIN.
+
+Now you can upload a sketch to your Bean just like you normally do!
+
+### Verify Authentication Works
+
+To test your Bean's new PIN code, disconnect from your Bean, then reconnect. OS X should prompt you to provide a PIN for your Bean:
+
+{{{img_rel this 'PinRequest.JPG' 'OS X pairing request' '80%'}}}
+
+Enter the PIN you assigned and press Enter to connect to your Bean.
+
+You will notice that the next time you connect to your Bean with the loader, you will not be prompted to enter your PIN code. This is normal! The Bean knows it connected to your computer last and will not prompt again for a PIN code. In the BLE world, this authentication step is known as **bonding**.
 
 ### Disabling Authentication
 
 If you’d like to remove authorization protection from your Bean, perform the following steps.
 
-1. If you know your pincode, or are connecting to a device that has bonded with your Bean, connect to your Bean with the loader.
-2. Right-click on your Bean to bring up the context menu and choose “Pairing PIN Settings”
-3. On the pin code configuration screen, click the “Disable” button on the lower-right of the screen.
-4. The lock icon should not be present and you can now connect to your Bean without using pin codes
+* Connect to your Bean with the loader. Enter your PIN code if the pairing prompt appears.
+* Right-click on your Bean and select **Pairing PIN Settings**.
+* Click the **Disable** button on the PIN code configuration screen.
 
-If you cannot remember your pin code, or don’t have access to the loader application, you can reset your Bean using using the steps provided on the Troubleshooting page under [Reset your Bean](../../help/troubleshooting/#reset-your-bean-s-memory)
-
-### Notes on Bonding
-Any devices you have bonded with will be removed from the bonded device list if you do one of the following:
-
-1. Set a new pin code
-2. Disable pin code authorization
-3. Reset your Bean
-
-If you are constantly being asked to enter a pin code, the list of bonded devices may have grown too large. Try setting a new pin code to reset the bond table and try again.
+The lock icon should disappear. You can now connect to your Bean without a PIN code.
 
 ## Conclusion
-In the guide, you learned how to secure your Bean so no intruders can read your Bean's data. 
+
+In the guide, you learned how to enable and disable Bean's PIN code protection. This can help keep your device secure if it's somewhere public where lots of people can connect to it wirelessly.
 
 ## Troubleshooting
+
+### I Forgot My PIN Code
+
+If you cannot remember your PIN code, or don’t have access to the loader application, you can erase your PIN code by following the steps provided on the Troubleshooting page under [Reset your Bean](../../help/troubleshooting/#reset-your-bean-s-memory). This will erase any sketch loaded on your Bean!
+
+### Bean Doesn't Remember My Device
+
+If you are constantly being asked to enter a PIN code, Bean's list of bonded devices may have grown too large to authorize your device. Setting a new PIN code will clear Bean's device bonding table so it can keep track of your device.
+
+Bean's bonded device list will be cleared if you do any of the following:
+
+1. Set a new PIN code
+2. Disable PIN code authorization
+3. Reset your Bean
+
+### Other Problems
 
 {{> snip_troubleshooting}}
