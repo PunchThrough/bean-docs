@@ -9,7 +9,7 @@ The LightBlue Bean runs on BLE, or Bluetooth Low Energy. BLE is a protocol devel
 
 The Bluetooth Protocol Stack is divided into two categories: the controller and the host. Each category has sub-categories, which perform specific roles. The two subcategories we are going to look at is the **Generic Access Profile** (GAP) and the **Generic Attribute Profile** (GATT).
 
-### How do GAP and GATT differ?
+## How do GAP and GATT differ?
 
 It is important to differentiate between GAP and GATT.
 
