@@ -161,6 +161,9 @@ It may take a while for your Bean to appear in the PC settings, but Beans usuall
 
 If a Bean is not appearing in the list on your Bean Loader, ensure you have run through the steps above in [Connect to Your Bean](#connect-to-your-bean).
 
+### No Beans are appearing in Bluetooth Settings When Beans are in iBeacon Mode.
+If your Bean is in iBeacon mode, Windows will not see it. You have to [reset the Bean's memory](../../help/troubleshooting/#reset-your-bean-s-memory)  in order for Windows to recognize your Bean. 
+
 ### Further Troubleshooting
 
 {{> snip_troubleshooting}}
