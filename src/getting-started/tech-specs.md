@@ -38,9 +38,11 @@ Arduino sketches run on the ATmega328p microcontroller. This is the same part th
 * 32KB Flash memory, 2KB SRAM
 * 8 GPIO pins
 * 2 analog input pins on a 10-bit ADC
-* 6 pins with PWM support
+* 4 pins with PWM support
 * 1 SPI port
 * 1 I²C port
+
+{{{img_rel this 'bean-ard-diagram-flush.png' 'Bean Arduino Reference' '60%'}}}
 
 ### Electrical Specifications
 
