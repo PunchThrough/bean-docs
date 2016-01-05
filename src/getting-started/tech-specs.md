@@ -42,6 +42,8 @@ Arduino sketches run on the ATmega328p microcontroller. This is the same part th
 * 1 SPI port
 * 1 I²C port
 
+{{{img_rel this 'bean-arduino-reference.jpg' 'Bean Arduino Reference' '80%'}}}
+
 ### Electrical Specifications
 
 Bean is powered directly from the onboard CR2032 coin cell battery.
