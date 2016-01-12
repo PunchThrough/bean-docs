@@ -30,8 +30,13 @@ Noble has it's own dependencies which need to be installed. Check out the [prere
 
 Finally, in order to make use of Bean nodes, you must install them in a place that Node-RED can find them. Run the following commands in a terminal.
 
+### Mac OSX
 * `mkdir -p ~/.node-red/node_modules`
 * `npm install --prefix ~/.node-red node-red-contrib-bean`
+
+### Windows
+* `mkdir -p %userprofile%/.node-red/node_modules`
+* `npm install --prefix %userprofile%/.node-red node-red-contrib-bean`
 
 ## Next Steps
 
