@@ -29,7 +29,7 @@ If your computer does not have BLE support built in, you can use a [USB BLE dong
 
 ## Install Arduino
 
-Download the [latest Arduino app](https://www.arduino.cc/en/Main/Software) and install it into the default location:
+Download [Arduino 1.6.5](https://www.arduino.cc/en/Main/OldSoftwareReleases) and install it into the default location:
 
 {{{img_rel this 'windows_install_arduino.PNG' 'Install Arduino'}}}
 
