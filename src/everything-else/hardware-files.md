@@ -23,3 +23,7 @@ The LightBlue Bean’s dimensions are 1.79 x 0.80 x 0.33 inches (45.5 x 20.3 x 8
 * [Eagle schematic, Eagle PCB layout, and 3D models](http://punchthrough.com/files/bean/hardware/lightblue-bean-rev-e-board-files-3d-model.zip)
 * [PDF schematic and Gerbers](http://punchthrough.com/docs/files/Bean/Bean_revE_board_export.pdf)
 * [Bean vector image, for your diagrams](https://punchthrough.com/files/bean/graphics/bean-fritzing.svg)
+
+### LightBlue Bean+ (Revision C)
+
+* [Eagle and Altium outlines](https://punchthrough.com/files/bean+/BeanPlusOutline_revC.zip)
