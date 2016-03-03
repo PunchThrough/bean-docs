@@ -12,7 +12,7 @@ For a limited time, if you share any projects you build with Bean on social medi
 Just follow these four steps:
 
 1. Post your Bean-powered project on [Hackster.io](http://hackster.io/punchthrough) and include **LightBlue Bean** in the Components and Supplies section.
-2. Post a link to your project on **Facebook** and tag us: [Punch Through Design](https://www.facebook.com/punchthroughdesign)
+2. Post a link to your project on **Facebook** and tag us: [Punch Through](https://www.facebook.com/punchthroughdesign)
 3. Post a link to your project on **Twitter** and tag us: [@punchthrough](https://twitter.com/punchthrough)
 4. Shoot us an email at [info@punchthrough.com](mailto:info@punchthrough.com) with the links to your three posts.
 
