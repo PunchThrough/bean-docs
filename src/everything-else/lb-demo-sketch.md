@@ -2,7 +2,7 @@
 title: LightBlue Demo Sketch
 layout: basic.hbs
 autotoc: true
-order: 5
+order: 7
 ---
 
 ## Introduction
@@ -102,7 +102,7 @@ LightBlue Explorer parses the response and visualizes the received data on your 
 
 ## Open the LightBlue App
 
-You can see the values change when you open the LightBlue App and select the Bean you programmed: 
+You can see the values change when you open the LightBlue App and select the Bean you programmed:
 
 {{{img_rel this 'lb-demo-image.png' 'LightBlue demo sketch is running!' '40%'}}}
 

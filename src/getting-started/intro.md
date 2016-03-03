@@ -27,7 +27,7 @@ The Bean is part of the LightBlue Platform.
 
 The LightBlue Platform is Punch Through's way of adding value to your product. LightBlue adds complex BLE functionality to your existing code, leaving you to write just the business logic. If you want to turn your Bean project into a product, check out the [LightBlue Platform](http://punchthrough.com/platform)!
 
-{{{img_rel this 'detail-bean.png'}}}
+{{{img_rel this 'detail-bean.png' 'LightBlue Bean features' '60%'}}}
 
 Looking for specifics about the Bean's hardware? [Check out our tech specs page.](../tech-specs)
 
@@ -36,7 +36,7 @@ Looking for specifics about the Bean's hardware? [Check out our tech specs page.
 Programming Bean has never been so easy. With wireless programming and our Bean Loader app, you can write code anywhere and everywhere. There are unlimited possibilities of what you can build with Bean!  Here are some ideas to get you started:
 
 __Make Bean run (almost) forever:__
-Since Bean runs on battery power, we've made it power-efficient. You can tell your Bean to wake up when a phone connects, when a specific pin toggles or when you tap it with your finger. 
+Since Bean runs on battery power, we've made it power-efficient. You can tell your Bean to wake up when a phone connects, when a specific pin toggles or when you tap it with your finger.
 
 __Talk to your connected devices:__
 Bean uses Bluetooth Low Energy, so wireless communications won't suck the battery dry. Control motors or servos from your phone, or log data from your air quality sensor straight to your laptop without wires.
