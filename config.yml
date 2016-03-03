@@ -36,6 +36,9 @@ pathCollector:
     - key: features
       name: Feature Walkthroughs
       pattern: ^features/.+\.md$
+    - key: building-iOS-app
+      name: Building iOS App
+      pattern: ^building-iOS-app/.+\.md$
     - key: node-red
       name: Node-RED
       pattern: ^node-red/.+\.md$
