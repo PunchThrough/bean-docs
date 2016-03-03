@@ -2,7 +2,7 @@
 title: How GAP and GATT Work
 layout: basic.hbs
 autotoc: true
-order: 6
+order: 8
 ---
 
 The LightBlue Bean runs on BLE, or Bluetooth Low Energy. BLE is a protocol developed by [Bluetooth SIG](https://www.bluetooth.org/) that builds on the lessons learned from building lots of Bluetooth Classic devices. Compared to Bluetooth Classic, BLE consumes less power, requires less time and effort to pair devices, and provides lower connection speeds.
@@ -24,7 +24,7 @@ There are two mechanisms a BLE device can use to communicate to the outside worl
 
 ### Getting Connected
 
-A device can join a BLE network by adoping these roles specified in GAP:
+A device can join a BLE network by adopting these roles specified in GAP:
 
 __Broadcasting__: These roles don't have to explicitly connect to one another to transfer data.
 
@@ -33,10 +33,10 @@ __Broadcasting__: These roles don't have to explicitly connect to one another to
 
 __Connecting__: These roles must explicitly connect and handshake to transfer data. These roles are more commonly used than the broadcasting roles.
 
-* __Peripheral:__ A device that advertises its presence so central devices can establish a connection. After connecting, peripherals no longer broadcast data to other central devices and stay connected to the device that accepted connectection request.
+* __Peripheral:__ A device that advertises its presence so central devices can establish a connection. After connecting, peripherals no longer broadcast data to other central devices and stay connected to the device that accepted connection request.
   * Peripherals are low-power because they only have to send beacons periodically. Central devices are responsible for starting communication with peripherals.
   * Bean is an example of a BLE peripheral.
-* __Central:__ A device that initiates a connection with a peripheral device by first listenting to the advertising packets. A central device can connect to many other peripheral devices.
+* __Central:__ A device that initiates a connection with a peripheral device by first listening to the advertising packets. A central device can connect to many other peripheral devices.
   * When the central device wants to connect, it sends a request connection data packet to the peripheral device. If the peripheral device accepts the request from the central device, a connection is established.
   * Your computer is an example of a BLE Central device when it connects to Bean.
 
@@ -50,7 +50,7 @@ __Peripheral or Central Devices Can Terminate Connections:__ Connections might e
 
 ### Roles
 
-Similiar to GAP, there are certain roles that interacting devices can adopt:
+Similar to GAP, there are certain roles that interacting devices can adopt:
 
 * __Client:__ Typically sends a request to the GATT server. The client can read and/or write attributes found in the server.
 * __Server:__ One of the main roles of the server is to store attributes. Once the client makes a request, the server must make the attributes available.

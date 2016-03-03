@@ -2,7 +2,7 @@
 title: Resources for Educators
 layout: basic.hbs
 autotoc: true
-order: 2
+order: 5
 ---
 
 We are proud to be working with schools and educators world-wide to teach programming and analytical skills.  With the LightBlue Bean, our easy to use resources, and your guidance, everyone can learn to program.
