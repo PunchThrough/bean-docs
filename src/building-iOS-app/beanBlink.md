@@ -17,7 +17,7 @@ After this tutorial, you should have a good step forward in implementing our SDK
 ## Setup
 
 {{> snip_req_getting_started}}
- In addition, we are assuming you have some familiarity with Xcode, git, and built at least 1 or 2 iOS simple apps. This tutorial is written for someone who is at an advanced beginner/beginning intermediate stage in programming. 
+ In addition, we are assuming you have some familiarity with Xcode, git, and built at least 1 or 2 simple iOS apps. This tutorial is written for someone who is at an advanced beginner/beginning intermediate stage in programming. 
 
 ### Software
 
@@ -31,17 +31,25 @@ After this tutorial, you should have a good step forward in implementing our SDK
 * OS X Computer
 
 ## Preface to Project's Organization
-You can find the project located [here](https://github.com/PunchThrough/BeanBlinkOnButtonPress). We created two different releases: v.01 and v.02.  The first version, v.01, sets up the storyboard with the UILabel and UIButton.  We also written a function that changes the UILabel when the button "Press Me" is pressed. 
+You can find the project located [here](https://github.com/PunchThrough/BeanBlinkOnButtonPress). We created two different releases: v.01 and v.02.  The first version, v.01, sets up the storyboard with the UILabel and UIButton.  We also written a function that changes the UILabel's text when the button "Press Me" is pressed. The second version, v.02, incorporates v.01 and implementation of the Bean's iOS SDK. We will go over how we did each version in a sequence of steps. 
 
+# First Release: v.01
+## Create the UI in Storyboard
 
+### Step 1:
+We are going to add a view to the View Controller.  We will be placing a UILabel and a UIButton inside this view. The view is a little darker to help you visualize better.
 
+{{{img_rel this 'create-view.jpg' 'Lets Add a View' '40%'}}}
 
+### Step 2:
+Lets add a UIButton and UILabel inside this view. Play with the these views by changing the colors and fonts! 
 
+{{{img_rel this 'add-button-and-label.jpg' 'Lets Add a Button and Label' '40%'}}}
 
+### Step 3:
+After we add these views, we are going to make them a "Stack View"
 
-
-
-
+{{{img_rel this 'create-stack-view.jpg' 'Make the Button and Label a Stack View' '40%'}}}
 
 ### Other Problems
 
