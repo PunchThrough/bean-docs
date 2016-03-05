@@ -75,6 +75,24 @@ After you add these 2 contraints, your UI should look like this:
 
 {{{img_rel this 'final-storyboard.jpg' 'Final UI in Storyboard' '40%'}}}
 
+## Implement logic in the ViewController
+### Step 1: Connect the Button to the ViewController Class
+The overall goal with the button press is to send serial data to the Bean. Before we get to that point, it would be ideal to see that when we press the button, the UILabel changes its text to reflect so. 
+
+We need to connect the UIButton to the ViewController Class so we can implement some of this logic. Click on the Press Me Button only (make sure that on the Document Outline, the button is highlighed.) Once you drag it to the ViewController, the button is going to be an action (we are going to click on it). The name is the name of the function, in this case, I named it PressMeButton. 
+
+{{{img_rel this 'button-action-logic.jpg' 'Connect the UIButton to the ViewController' '40%'}}}
+
+### Step 2: Connect the Label to the ViewController Class
+Similar to what we did for the UIButton, we will do for the UILabel.  When you press 'control', you want to drag the pointer just slightly below the class ViewController declaration. 
+
+{{{img_rel this 'label-outlet.jpg' 'Connect the UIButton to the ViewController' '40%'}}}
+
+### Step 3: Write Logic to Change the UILabel's text
+When we press the button, we want to change the ledTextLabel's text. 
+
+{{{img_rel this 'button-logic.jpg' 'button-logic.jpg' '40%'}}}
+
 ### Other Problems
 
 {{> snip_troubleshooting}}
