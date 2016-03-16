@@ -185,7 +185,7 @@ typedef SInt16 PTD_INT16;
 
 ```
 
-For more information, check out [GitHub Issue](https://github.com/PunchThrough/Bean-iOS-OSX-SDK/issues/24#issuecomment-172148681)
+For more information, check out this [GitHub Issue](https://github.com/PunchThrough/Bean-iOS-OSX-SDK/issues/24#issuecomment-172148681)
 
 ### Step 3: Include the Classes We'll be Using
 We will have to import the Bean iOS SDK in the ViewController.swift file and include the classes we will use. Afterwards we will create variables that have a __type annotation__. This is to ensure we know about the kind of values these variables can store. 
@@ -293,9 +293,9 @@ __Reference__: [BeanManager connectToBean instance method](https://punchthrough.
 Once we are connected to a Bean, data is able to flow bidirectionally from the Bean to the mobile, and from the mobile to the Bean. At this point, when we can now implement the button press logic.
 
 What we want to accomplish with the button press is:
-• Change the light's state
-• Change the UILabel's text
-• Send serial data to the Bean so it knows when to Blink
+* Change the light's state
+* Change the UILabel's text
+* Send serial data to the Bean so it knows when to Blink
 
 Compared to v.01, we are going to rewrite our button logic to reflect these current changes. 
 
@@ -326,7 +326,7 @@ class ViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate{
 ```
 
 ### Step 10: Send Serial Data to the Bean
-We will write our own function to send serial data to the Bean and implement an instance method that hte PTDBean Class provides:
+We will write our own function to send serial data to the Bean and implement an instance method that the PTDBean Class provides:
 
 ```
     // Bean SDK: Send serial datat to the Bean
@@ -442,7 +442,8 @@ class ViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate 
     }
 }
 ```
-
+## Conclusion
+In this tutorial, we guided you in implementing the Bean's SDK by building a simple app. With respect to the SDK, we hoped you learned how to install and modify the pods, import the main classes, and use the instance methods that these classes provide.  In the future, we will show you how to use a UITable to select your Bean instead of changing your Bean's name to connect to it. 
 
 ### Other Problems
 
