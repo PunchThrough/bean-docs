@@ -169,7 +169,7 @@ afterwards you can open your project:
 $ open <YourProjectName>.xcworkspace
 ```
 
-### Step 2: Edit the AppMessagTypes.h in the Pods
+### Step 2: Edit the AppMessageTypes.h in the Pods
 Open Pods/Bean-iOS-OSX-SDK/AppMessageTypes.h  and replace the contents with: 
 
 ```
@@ -441,6 +441,37 @@ class ViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate 
     
     }
 }
+```
+
+### Step 13: Writing the Arduino Code
+In the Arduino code, we only want to see if the Bean is getting serial data.  If it is, we want to check if it is receiving a 0 (False) or a 1 (True). The serial data is being sent as a Hex. If the light state is ON (True), we make the Bean blink. 
+
+```
+void setup() {
+  // Open serial communications and wait for port to open:
+  Serial.begin(9600);
+}
+
+void loop() {
+    while (Serial.available() > 0) {
+       char data = Serial.read();
+       if (data == 1) {
+         Bean.setLed(0,255,0);
+         delay(1000);
+         Bean.setLed(0,0,255);
+         delay(1000);
+         Bean.setLed(255,0,0);
+         delay(1000);
+         Bean.setLed(0,0,0);
+         delay(1000);
+       } else {
+         Bean.setLed(0,0,0);
+     }
+  }
+
+        delay(1000);
+}
+
 ```
 ## Conclusion
 In this tutorial, we guided you in implementing the Bean's SDK by building a simple app. With respect to the SDK, we hoped you learned how to install and modify the pods, import the main classes, and use the instance methods that these classes provide.  In the future, we will show you how to use a UITable to select your Bean instead of changing your Bean's name to connect to it. 
