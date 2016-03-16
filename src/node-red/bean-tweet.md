@@ -82,9 +82,7 @@ Now, go ahead and check your Twitter account to see tweets from your Bean!
 
 ## Conclusion
 
-In this guide, you learned how to connect Bean to Twitter using Node-RED. This is one example of a complex flow that's made easy with Node-RED. You could use what you've learned to integrate your Bean with Twilio, IRC, MySQL, and so much more!
-
-Want to learn more about Node-RED? Check out [Node-RED's website](http://nodered.org/).
+In this guide, we showed you how to implement the Bean's iOS SDK.  This guide should be served as a stepping stone for other projects you may want to create! 
 
 ## Troubleshooting
 
