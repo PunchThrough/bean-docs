@@ -174,7 +174,6 @@ class ViewController: UIViewController {
             ledTextLabel.text = "Led is: OFF"
         }
     }
-
 }
 ```
 
