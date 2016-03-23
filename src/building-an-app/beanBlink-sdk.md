@@ -1,14 +1,11 @@
 ---
-title: Integrate the Bean's iOS SDK
+title: Integrate the SDK to Bean Blink
 layout: basic.hbs
 autotoc: true
 ---
 
 ## Introduction
-
-Ever wanted to build an iOS app that talks to Bean? We've got you covered in this tutorial!
-
-The goal of this tutorial is to show you how to use the Bean SDK in your personal projects. We will gently guide you through the process of building an app using the iOS SDK. We'll start by creating the storyboard and views. From there, we will incorporate logic that will check the LED's state and send the appropriate serial data to the Bean.  The Bean will check the serial data that is being transmitted and display it with its onboard RGB LED.
+This guide builds on our [first guide](../beanBlink-ui), where we built the UI of Bean Blink.  In this tutorial, we will implement the label's, button's, and SDK's logic in order to get the Bean to blink its onboard RGB LED. 
 
 ## Setup
 
@@ -27,155 +24,7 @@ In addition, we are assuming you have some familiarity with Xcode, git, and buil
 * {{> snip_req_bean}}
 * OS X computer
 
-## Preface to Project's Organization
-You can find the project located [here](https://github.com/PunchThrough/BeanBlinkOnButtonPress). Under the **Releases** tab, you'll find two different releases: v.01 and v.02.
-
-The first version, v.01, sets up the storyboard with the UILabel and UIButton.  We have also written a function that changes the UILabel's text when the button "Press Me" is pressed.
-
-The second version, v.02, incorporates v.01 and implementation of the Bean's iOS SDK. We will review how each version was created below.
-
-## First Release: v.01
-
-## Create the UI in Storyboard
-
-### Step 1: Add a View
-We are going to add a view to the View Controller.  We will be placing a UILabel and a UIButton inside this view.
-
-Drag the view from the toolbox on the right into the view controller. The view we are using is a little darker to help you visualize its position better.
-
-{{{img_rel this 'create-view.jpg' 'Add a View' '80%'}}}
-
-### Step 2: Add UILabel and UIButton
-Let's add a UIButton and UILabel inside this view. Drago those components into the view you just placed. Play with the these views by changing the colors and fonts!
-
-{{{img_rel this 'add-button-and-label.jpg' 'Add a Button and Label' '80%'}}}
-
-### Step 3: Make Views a Stack View
-After we add these views, we are going to group them into a **Stack View**. Check the hierarchy in the document outline to make sure the organization is correct.
-
-{{{img_rel this 'create-stack-view.png' 'Make the Button and Label a Stack View' '80%'}}}
-
-### Step 4: Adjust Height and Width of Views
-We are going to play with the height and width of these views.  Here, we've set the width to 230 and height to 45.
-
-Go to **Update Frames** and selcet **Items of New Constraints.** This will adjust the images to their new height and width. Then select **Add 4 Constraints.**
-
-{{{img_rel this 'change-height-width.jpg' 'Change the Width and Height of the Views' '80%'}}}
-
-### Step 5: Adjust the Stack View's Constraints
-Now that we have all the items we need for this app, we need to fix the Stack View's constraints. We will pin the view's position, height, and width. We don't want the Stack View's distance from the top and bottom margins to change.
-
-Click on the red bars. Make sure the left, right, top, and bottom margins are equally aligned.
-
-Then check the **Width** and **Height** boxes.  Finally, we update the frames for **Items of New Constraints** and select **Add 6 Constraints.**
-
-{{{img_rel this 'adjust-stack-view-constraints.jpg' 'Change Stack View Constraints' '80%'}}}
-
-### Step 6: Adjust the View's Constraints
-
-We want to make sure that the UILabel and UIButton are centered for all devices.  One way to achieve this is to adjust the View's constraints. We want to make sure the view is vertically and horizontally aligned.
-
-Check the boxes to the left of the category **Horizontally in Container** and **Vertically in Container** and enter the number `3`. Go ahead and play with those numbers and see how they change the View.
-
-Finally, select **Update Frames** with **Items of New Constraints** then select **Add 2 Constraints.**
-
-{{{img_rel this 'adjust-view-constraints.jpg' 'Change Stack View Constraints' '80%'}}}
-
-### Step 7: Let's Review
-
-After you add these 2 constraints, your UI should look like this:
-
-{{{img_rel this 'final-storyboard.jpg' 'Final UI in Storyboard' '80%'}}}
-
-Next, we'll start adding the program logic that controls the View we just made.
-
-## Implement logic in the ViewController
-
-### Step 1: Connect the Label to the View Controller
-
-The overall goal with the button press is to send serial data to the Bean. Before we get to that point, it would be ideal to see that when the button is pressed, the UILabel changes its text to reflect the press.
-
-Hold the **Control key**. Click on the UILabel, then drag your cursor into the code, just slightly below the `class ViewController` declaration.
-
-When you release your click, Xcode will prompt you to connect the UILabel and create a variable for you. Name this variable `ledTextLabel`:
-
-```
-class ViewController: UIViewController {
-// UILabel connection goes here
-
-}
-```
-
-{{{img_rel this 'label-outlet.jpg' 'Connect the UIButton to the ViewController' '80%'}}}
-
-### Step 2: Connect the Button to the View Controller
-
-We need to connect the UIButton to the View Controller so we can implement some of this logic. Click on the Press Me Button only (make sure that on the Document Outline, the button is highlighed.)
-
-Once you **Control**-drag it to the View Controller, the button is going to be an action (we are going to click on it). Select a name for the function – in this case, I named the function `pressMeButtonToToggleLED`.
-
-{{{img_rel this 'add-button.jpg' 'Connect the UIButton to the ViewController' '80%'}}}
-
-### Step 3: Write Logic to Change the UILabel's text
-
-When we press the button, we want to change the `ledTextLabel`'s text.
-
-```
-    @IBAction func pressMeButtonToToggleLed(sender: AnyObject) {
-        if ledTextLabel.text == nil {
-            ledTextLabel.text = "Led is: OFF"
-        } else if ledTextLabel.text == "Led is: OFF" {
-            ledTextLabel.text = "Led is: ON"
-        } else {
-            ledTextLabel.text = "Led is: OFF"
-        }
-    }
-
-}
-
-```
-
-{{{img_rel this 'button-logic.jpg' 'button-logic.jpg' '80%'}}}
-
-### Step 4: Let's Review
-
-Your `ViewController.swift` should look like this:
-
-```
-import UIKit
-
-class ViewController: UIViewController {
-
-    @IBOutlet weak var ledTextLabel: UILabel!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
-    @IBAction func pressMeButtonToToggleLed(sender: AnyObject) {
-        if ledTextLabel.text == nil {
-            ledTextLabel.text = "Led is: OFF"
-        } else if ledTextLabel.text == "Led is: OFF" {
-            ledTextLabel.text = "Led is: ON"
-        } else {
-            ledTextLabel.text = "Led is: OFF"
-        }
-    }
-
-}
-```
-
-Great work! Now that our button works, we can start wiring in Bean functionality.
-
-## Second Release: v.02
-
-## Implement iOS SDK
+## Implement iOS SDK: v.02
 
 You'll want to keep the [Bean SDK reference](https://punchthrough.com/files/bean/sdk-docs/index.html) handy while you work with the Bean SDK for iOS and OS X.
 
@@ -505,7 +354,7 @@ void loop() {
 ```
 ## Conclusion
 
-In this tutorial, you built a simple app using the Bean SDK for iOS. You built the interface and wired it to program logic. Finally, you installed the SDK and integrated the Bean SDK's methods with your program logic. Congratulations – you just built a full app with Bean!
+Whew! You built your first Bean iOS App! In this guide, we implemented what we did in v.01, installed the SDK, and integrated the Bean SDK's methods with the program logic. Congratulations! You now have the foundation to integrate the Bean's SDK into your personal projects. 
 
 ## Troubleshooting
 
