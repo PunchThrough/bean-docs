@@ -191,7 +191,6 @@ Another easy way to see if the program is working is to print to the console:
             print("Led is: OFF")
         }
     }
-
 }
 
 ```
