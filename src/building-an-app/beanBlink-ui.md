@@ -182,8 +182,7 @@ class ViewController: UIViewController {
 Another easy way to see if the program is working is to print to the console: 
 
 ```
-
-    @IBAction func pressMeButtonToToggleLed(sender: AnyObject) {
+@IBAction func pressMeButtonToToggleLed(sender: AnyObject) {
         if ledTextLabel.text == nil {
             print ("Led is: OFF")
         } else if ledTextLabel.text == "Led is: OFF" {
