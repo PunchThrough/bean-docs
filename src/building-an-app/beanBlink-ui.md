@@ -177,7 +177,7 @@ class ViewController: UIViewController {
 }
 ```
 
-### Helpful Debugging Tools:
+### Helpful Debugging Tool:
 Another easy way to see if the program is working is to print to the console: 
 
 ```
