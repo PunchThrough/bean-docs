@@ -54,27 +54,29 @@ Lastly, you will be prompted to save your project. Choose a directory and contin
 
 We are going to add a view to the View Controller.  We will be placing a UILabel and a UIButton inside this view.
 
-Drag the view from the toolbox on the right into the view controller. The view we are using is a little darker to help you visualize its position better.
+Drag the view from the toolbox "Object Library" on the right into the view controller. The view we are using is a little darker to help you visualize its position better.
 
 {{{img_rel this 'create-view.jpg' 'Add a View' '80%'}}}
 
 ### Step 3: Add UILabel and UIButton
 
-Let's add a UIButton and UILabel inside this view. Drago those components into the view you just placed. Play with the these views by changing the colors and fonts!
+Let's add a UIButton and UILabel inside this view. Drag those components into the view you just placed. In this example, the UIButton reads "Press Me" and the Label has default text of "LED is: OFF". Play with the these views by changing the colors and fonts!
 
 {{{img_rel this 'add-button-and-label.jpg' 'Add a Button and Label' '80%'}}}
 
 ### Step 4: Make Views a Stack View
 
-After we add these views, we are going to group them into a **Stack View**. Check the hierarchy in the document outline to make sure the organization is correct.
+After we add these views, we are going to group them into a **Stack View**. Select both the label and button and click the "Stack" button on the bottom of the screen. Check the hierarchy in the document outline to make sure the organization is correct.
 
 {{{img_rel this 'create-stack-view.png' 'Make the Button and Label a Stack View' '80%'}}}
 
 ### Step 5: Adjust Height and Width of Views
 
+Set the width and height of the UILabel and UIButton. With both selected, click on the
+
 We are going to play with the height and width of these views.  Here, we've set the width to 230 and height to 45.
 
-Go to **Update Frames** and selcet **Items of New Constraints.** This will adjust the images to their new height and width. Then select **Add 4 Constraints.**
+Go to **Update Frames** and select **Items of New Constraints.** This will adjust the images to their new height and width. Then select **Add 4 Constraints.**
 
 {{{img_rel this 'change-height-width.jpg' 'Change the Width and Height of the Views' '80%'}}}
 
@@ -127,7 +129,7 @@ class ViewController: UIViewController {
 
 ### Step 2: Connect the Button to the View Controller
 
-We need to connect the UIButton to the View Controller so we can implement some of this logic. Click on the Press Me Button only (make sure that on the Document Outline, the button is highlighed.)
+We need to connect the UIButton to the View Controller so we can implement some of this logic. Click on the Press Me Button only (make sure that on the Document Outline, the button is highlighted.)
 
 Once you **Control**-drag it to the View Controller, the button is going to be an action (we are going to click on it). Select a name for the function – in this case, I named the function `pressMeButtonToToggleLED`.
 
