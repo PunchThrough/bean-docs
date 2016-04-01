@@ -7,6 +7,8 @@ autotoc: true
 ## Introduction
 This guide builds on our [first guide](../beanBlink-ui), where we built the UI of Bean Blink.  In this tutorial, we will implement the label's, button's, and SDK's logic in order to get the Bean to blink its onboard RGB LED. 
 
+We'll start from the previous tutorial's app with a button and a label.  At the start of the tutorial, pressing the button will change the text of the label, but nothing else.  By the end of this tutorial, the app will connect to the Bean iOS SDK, and communicate with the Bean via Bluetooth LE.  We'll put a small sketch on the Bean, and it will toggle the LED based on the messages from our app.
+
 ## Setup
 
 {{> snip_req_getting_started}}
@@ -354,7 +356,7 @@ void loop() {
 ```
 ## Conclusion
 
-Whew! You built your first Bean iOS App! In this guide, we implemented what we did in v.01, installed the SDK, and integrated the Bean SDK's methods with the program logic. Congratulations! You now have the foundation to integrate the Bean's SDK into your personal projects. 
+Whew! You built your first Bean iOS App! In this guide, we implemented what we did in v1, installed the SDK, and integrated the Bean SDK's methods with the program logic. Congratulations! You now have the foundation to integrate the Bean's SDK into your personal projects. 
 
 ## Troubleshooting
 
