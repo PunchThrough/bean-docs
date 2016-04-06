@@ -8,7 +8,9 @@ autotoc: true
 
 Ever wanted to build an iOS app that talks to Bean? We've got you covered in this tutorial!
 
-The goal of this tutorial is to show you how to use the Bean SDK in your personal projects. We will guide you through the process of building an app using the iOS SDK. Before we use the SDK, we need to create a UI.  We'll start by creating the storyboard and views.
+The goal of these tutorials is to show you how to use the Bean SDK in your personal projects. We will guide you through the process of building an app using the Bean iOS SDK. Before we use the SDK, we need to create a UI.  We'll start by creating the storyboard and views.
+
+At the end of this tutorial, you'll have a simple single view iOS app.  It will have a button and a label, and pressing the button will toggle the label's text from "LED is Off" to "LED is On".  It won't actually talk to the Bean yet--but it will be ready for us to add the Bean-specific code in the next tutorial.
 
 ## Setup
 
@@ -86,7 +88,7 @@ Now that we have all the items we need for this app, we need to fix the Stack Vi
 
 Click on the red bars. Make sure the left, right, top, and bottom margins are equally aligned.
 
-Then check the **Width** and **Height** boxes.  Finally, we update the frames for **Items of New Constraints** and select **Add 6 Constraints.**
+Then check the **Width** and **Height** boxes.  Finally, we update the frames for **Items of New Constraints** and select **Add 6 Constraints.**  The Stack View should end up in the top left corner--we'll fix that in the next step.
 
 {{{img_rel this 'adjust-stack-view-constraints.jpg' 'Change Stack View Constraints' '80%'}}}
 
