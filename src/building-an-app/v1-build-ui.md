@@ -1,5 +1,5 @@
 ---
-title: Building the UI of Bean Blink
+title: 'v1: Build the App Interface'
 layout: basic.hbs
 autotoc: true
 ---
@@ -10,7 +10,7 @@ Ever wanted to build an iOS app that talks to Bean? We've got you covered in thi
 
 The goal of these tutorials is to show you how to use the Bean SDK in your personal projects. We will guide you through the process of building an app using the Bean iOS SDK. Before we use the SDK, we need to create a UI.  We'll start by creating the storyboard and views.
 
-At the end of this tutorial, you'll have a simple single view iOS app.  It will have a button and a label, and pressing the button will toggle the label's text from "LED is Off" to "LED is On".  It won't actually talk to the Bean yet--but it will be ready for us to add the Bean-specific code in the next tutorial.
+At the end of this tutorial, you'll have a simple single view iOS app.  It will have a button and a label, and pressing the button will toggle the label's text from "LED is Off" to "LED is On".  It won't actually talk to the Bean yet, but it will be ready for us to add the Bean-specific code in the next tutorial.
 
 ## Setup
 
@@ -30,7 +30,7 @@ In addition, we are assuming you have some familiarity with Xcode, git, and buil
 * OS X computer
 * iOS device
 
-## Preface to Project's Organization
+## How is this project organized?
 
 You can find the project located [here](https://github.com/PunchThrough/bean-app-ios-blink). Under the **Releases** tab, you'll find two different releases: v1 and v2. This program is compatible with iOS 9.1 and 9.2.
 
@@ -38,7 +38,7 @@ The first version, v1, sets up the storyboard with the UILabel and UIButton.  We
 
 The second version, v2, incorporates v1 and implementation of the Bean's iOS SDK. We will review how each version was created below.
 
-## Create the UI in Storyboard: v1
+## Create the Storyboard with Interface Builder
 
 ### Step 1: Create project in Xcode
 
@@ -102,7 +102,7 @@ Finally, select **Update Frames** with **Items of New Constraints** then select 
 
 {{{img_rel this 'adjust-view-constraints.jpg' 'Change Stack View Constraints' '80%'}}}
 
-### Step 8: Let's Review
+### Let's Review
 
 After you add these 2 constraints, your UI should look like this:
 
@@ -110,7 +110,7 @@ After you add these 2 constraints, your UI should look like this:
 
 Next, we'll start adding the program logic that controls the View we just made.
 
-## Implement logic in the ViewController
+## Connect the Storyboard to the View Controller
 
 ### Step 1: Connect the Label to the View Controller
 
@@ -158,7 +158,7 @@ When we press the button, we want to change the `ledTextLabel`'s text.
 
 {{{img_rel this 'button-logic.jpg' 'button-logic.jpg' '80%'}}}
 
-### Step 4: Let's Review
+### Let's Review
 
 Your `ViewController.swift` should look like this:
 
@@ -191,7 +191,7 @@ class ViewController: UIViewController {
 }
 ```
 
-### Helpful Debugging Tool:
+### Tip: Debug Using the Xcode Console
 Another easy way to see if the program is working is to print to the console:
 
 ```

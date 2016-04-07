@@ -1,11 +1,11 @@
 ---
-title: Integrate the SDK to Bean Blink
+title: 'v2: Integrate the Bean SDK'
 layout: basic.hbs
 autotoc: true
 ---
 
 ## Introduction
-This guide builds on our [first guide](../beanBlink-ui), where we built the UI of Bean Blink.  In this tutorial, we will implement the label's, button's, and SDK's logic in order to get the Bean to blink its onboard RGB LED. 
+This guide builds on our [first guide](../beanBlink-ui), where we built the UI of Bean Blink.  In this tutorial, we will implement the label's, button's, and SDK's logic in order to get the Bean to blink its onboard RGB LED.
 
 We'll start from the previous tutorial's app with a button and a label.  At the start of the tutorial, pressing the button will change the text of the label, but nothing else.  By the end of this tutorial, the app will connect to the Bean iOS SDK, and communicate with the Bean via Bluetooth LE.  We'll put a small sketch on the Bean, and it will toggle the LED based on the messages from our app.
 
@@ -26,11 +26,9 @@ In addition, we are assuming you have some familiarity with Xcode, git, and buil
 * {{> snip_req_bean}}
 * OS X computer
 
-## Implement iOS SDK: v.02
-
 You'll want to keep the [Bean SDK reference](https://punchthrough.com/files/bean/sdk-docs/index.html) handy while you work with the Bean SDK for iOS and OS X.
 
-### Step 1: Install CocoaPods
+## Step 1: Install CocoaPods
 
 Check out the [Installation with CocoaPods](https://github.com/PunchThrough/Bean-iOS-OSX-SDK#installation-with-cocoapods) instructions in the Bean SDK.
 
@@ -54,7 +52,7 @@ Finally, open your project's new workspace:
 $ open <YourProjectName>.xcworkspace
 ```
 
-### Step 2: Edit the AppMessageTypes.h in the Pods
+## Step 2: Edit the AppMessageTypes.h in the Pods
 
 The Bean SDK isn't fully compatible with Swift yet. Right now, there's one bug that needs to be fixed manually to get the SDK working with your project.
 
@@ -75,7 +73,7 @@ typedef SInt16 PTD_INT16;
 
 For more information, check out this [GitHub Issue](https://github.com/PunchThrough/Bean-iOS-OSX-SDK/issues/24#issuecomment-172148681)
 
-### Step 3: Include the Classes We'll Be Using
+## Step 3: Include the Classes We'll Be Using
 We will have to import the Bean iOS SDK in the ViewController.swift file and include the classes we will use. Afterwards we will create variables that have a __type annotation__. This is to ensure we know about the kind of values these variables can store.
 
 ```
@@ -90,7 +88,7 @@ class ViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate 
 }
 
 ```
-### Step 4: Create an Instance of BeanManager
+## Step 4: Create an Instance of BeanManager
 
 We'll create an instance of BeanManager in the viewDidLoad function.  The reason why we are putting it here is because that is when the view is loaded into memory (anytime before that will not be helpful). Afterwards, we'll assign ourselves as the delegate. By doing this, we can respond to an action or retrieve data from an external source without knowing how that source is implemented.
 
@@ -101,7 +99,7 @@ We'll create an instance of BeanManager in the viewDidLoad function.  The reason
         beanManager!.delegate = self
 	}
 ```
-### Step 5: Check to see Bluetooth is On
+## Step 5: Check to see Bluetooth is On
 
 When your app starts for the first time, Apple's Bluetooth interface might not be ready. To listen for changes in the Bluetooth state, we use `beanManagerDidUpdateState`. Once Bluetooth is on and ready, we can start scanning for nearby Beans.
 
@@ -122,7 +120,7 @@ When your app starts for the first time, Apple's Bluetooth interface might not b
 
 __Reference:__ [BeanManagerState](https://punchthrough.com/files/bean/sdk-docs/Constants/BeanManagerState.html)
 
-### Step 6: Scan For Beans
+## Step 6: Scan For Beans
 
 Now let's implement the `startScanning` method. If there is an error, we can print the error:
 
@@ -135,7 +133,7 @@ Now let's implement the `startScanning` method. If there is an error, we can pri
         }
     }
 ```
-### Step 7: Handle Beans We Discovered
+## Step 7: Handle Beans We Discovered
 
 After we scan for Beans, `PTDBeanManager` will automatically call `didDiscoverBean`:
 
@@ -164,7 +162,7 @@ If you've changed your Bean's name, then use that name on line 8 – otherwise,
     }
 ```
 
-### Step 8: Connecting to a Bean
+## Step 8: Connecting to a Bean
 
 We can write our own function `connectToBean` and call BeanManager's instance methods inside it:
 
@@ -177,7 +175,7 @@ We can write our own function `connectToBean` and call BeanManager's instance me
 
 __Reference__: [BeanManager connectToBean instance method](https://punchthrough.com/files/bean/sdk-docs/Classes/PTDBeanManager.html#//api/name/connectToBean:error:)
 
-### Step 9: Button Logic
+## Step 9: Button Logic
 
 Once we are connected to a Bean, data is able to flow bidirectionally from the Bean to your phone as well as from your phone to the Bean. At this point we can implement the button press logic.
 
@@ -211,7 +209,7 @@ class ViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate{
     var lightState: Bool = false
 ```
 
-### Step 10: Send Serial Data to the Bean
+## Step 10: Send Serial Data to the Bean
 
 We will write our own function to send serial data to the Bean and call an instance method on the PTDBean object:
 
@@ -221,7 +219,7 @@ We will write our own function to send serial data to the Bean and call an insta
     }
 ```
 
-### Step 11: Change the UILabel's text
+## Step 11: Change the UILabel's text
 
 When we press the button, this function is called. We want to update the text here so the user knows what the LED is doing:
 
@@ -233,7 +231,7 @@ When we press the button, this function is called. We want to update the text he
 
 ```
 
-### Step 12: Let's Review
+## Step 12: Let's Review
 
 Your `ViewController.swift` should look like this:
 
@@ -332,7 +330,7 @@ class ViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate 
 }
 ```
 
-### Step 13: Writing the Arduino Code
+## Step 13: Writing the Arduino Code
 
 In the Arduino code, we want to check if Bean has received any data. If it has, we want to check if the data is 0 (False) or 1 (True). If we get True, that means the iOS app wants the LED to turn on. False turns the LED off.
 
@@ -356,7 +354,7 @@ void loop() {
 ```
 ## Conclusion
 
-Whew! You built your first Bean iOS App! In this guide, we implemented what we did in v1, installed the SDK, and integrated the Bean SDK's methods with the program logic. Congratulations! You now have the foundation to integrate the Bean's SDK into your personal projects. 
+Whew! You built your first Bean iOS App! In this guide, we implemented what we did in v1, installed the SDK, and integrated the Bean SDK's methods with the program logic. Congratulations! You now have the foundation to integrate the Bean's SDK into your personal projects.
 
 ## Troubleshooting
 
