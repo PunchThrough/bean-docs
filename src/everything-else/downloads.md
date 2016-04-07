@@ -43,6 +43,6 @@ On iOS and Android, Bean Loader uses the Bean Cloud Compiler to compile your Ard
 We want to help you build native apps for your platform. Talk to Bean over BLE with these SDKs:
 
 * [iOS and OS X SDK](https://github.com/PunchThrough/Bean-iOS-OSX-SDK)
-* [Android SDK](https://github.com/PunchThrough/Bean-Android-SDK)
+* [Android SDK](https://github.com/PunchThrough/bean-sdk-android)
 
 Looking for help with our SDKs? Try [Beantalk](http://beantalk.punchthrough.com), our community forum.
