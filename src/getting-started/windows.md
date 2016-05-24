@@ -7,7 +7,7 @@ order: 4
 
 ## Introduction
 
-In this guide, you'll install Bean Loader for Windows and wirelessly program a sketch to your Bean. You'll also learn how to interact with your Bean using Bean Loader. 
+In this guide, you'll install Bean Loader for Windows and wirelessly program a sketch to your Bean. You'll also learn how to interact with your Bean using Bean Loader.
 
 {{{img_rel this 'windows_surf_reporter.PNG' 'Bean Loader for Windows' '60%'}}}
 
@@ -17,7 +17,7 @@ In this guide, you'll install Bean Loader for Windows and wirelessly program a s
 
 ### Software
 
-* Windows 8.1 
+* Windows 8.1
 * Access to the Microsoft Store for downloading apps
 
 ### Hardware
@@ -105,12 +105,12 @@ You can update a Bean's firmware manually in the menu:
 
 Open the Arduino IDE. Select the LightBlue Bean as your target board:
   * Select **Tools**
-  * Select **Boards** 
+  * Select **Boards**
   * Select **LightBlue Bean**
 
 Open the BeanBlink example sketch:
   * Select **File**
-  * Select **Examples** 
+  * Select **Examples**
   * Select **LightBlue-Bean**
   * Choose the sketch **BeanBlink**
 
@@ -162,8 +162,12 @@ It may take a while for your Bean to appear in the PC settings, but Beans usuall
 If a Bean is not appearing in the list on your Bean Loader, ensure you have run through the steps above in [Connect to Your Bean](#connect-to-your-bean).
 
 ### No Beans are appearing in Bluetooth Settings When Beans are in iBeacon Mode.
-If your Bean is in iBeacon mode, Windows will not see it. You have to [reset the Bean's memory](../../help/troubleshooting/#reset-your-bean-s-memory)  in order for Windows to recognize your Bean. 
+If your Bean is in iBeacon mode, Windows will not see it. You have to [reset the Bean's memory](../../help/troubleshooting/#reset-your-bean-s-memory)  in order for Windows to recognize your Bean.
 
 ### Further Troubleshooting
+
+## Windows 10
+
+Windows 10 isn't yet supported by Bean Loader. Changes in Windows 10 have introduced bugs in Bean Loader that we haven't yet been able to resolve. Our users have reported connectivity issues where Bean Loader can't connect to Beans. If you are having connectivity issues, you may need to use a machine running Windows 8.1 to upload sketches to Bean.
 
 {{> snip_troubleshooting}}

@@ -44,11 +44,6 @@ Here's a video by Beantalk user Nonsanity that shows how to reset Bean's memory:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/I_4s842e7MU" frameborder="0" allowfullscreen></iframe>
 
-## Windows 10
-
-Punch Through doesn't officially support Windows 10.  The Windows Bluetooth Low Energy API is very limiting.  There have been connectivity issues reported, where the Bean can't connect to the Bean Loader. If you are having connectivity issues, you may need to downgrade to Windows 8.1. 
-
-
 ## Check Arduino IDE's Version
 
 If you're using Bean Loader on your desktop, make sure you're running on [Arduino 1.6.5](https://www.arduino.cc/en/Main/OldSoftwareReleases#previous) of the Arduino IDE. After you update Arduino IDE, you will need to re-associate Bean Loader.
