@@ -17,7 +17,7 @@ In this guide, you'll install Bean Loader for Windows and wirelessly program a s
 
 ### Software
 
-* Windows 8.1 or above
+* Windows 8.1 
 * Access to the Microsoft Store for downloading apps
 
 ### Hardware
