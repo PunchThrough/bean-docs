@@ -36,6 +36,9 @@ pathCollector:
     - key: features
       name: Feature Walkthroughs
       pattern: ^features/.+\.md$
+    - key: building-an-app
+      name: Building an App
+      pattern: ^building-an-app/.+\.md$
     - key: node-red
       name: Node-RED
       pattern: ^node-red/.+\.md$
