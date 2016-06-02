@@ -74,7 +74,7 @@ After we add these views, we are going to group them into a **Stack View**. Sele
 
 ### Step 5: Adjust Height and Width of Views
 
-Set the width and height of the UILabel and UIButton. With both selected, click on the
+Set the width and height of the UILabel and UIButton. With both selected, click on the pin tool (second icon from the bottom right).  See diagram below.
 
 We are going to play with the height and width of these views.  Here, we've set the width to 230 and height to 45.
 
