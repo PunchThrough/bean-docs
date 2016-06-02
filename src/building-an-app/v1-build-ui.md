@@ -216,7 +216,7 @@ In this tutorial, you built the UI in storyboard for iOS and implemented basic l
 
 ## Next Step
 
-* [Integrate the Bean SDK](../bean-blink-sdk)
+* [Integrate the Bean SDK](../v2-integrate-sdk)
 
 ## Troubleshooting
 
