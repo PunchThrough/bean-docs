@@ -24,7 +24,7 @@ To start building with Bean on your OS X computer, you'll need:
 
 ### Install Arduino
 
-[Download and install **version 1.6.5** of Arduino IDE.](https://www.arduino.cc/en/Main/OldSoftwareReleases) The latest version of Arduino IDE has problems discovering the Virtual Serial port used by Bean.
+[Download and install **version 1.6.8** of Arduino IDE.](https://www.arduino.cc/en/Main/OldSoftwareReleases) The latest version of Arduino IDE has problems discovering the Virtual Serial port used by Bean.
 
 ### Install Bean Loader
 
