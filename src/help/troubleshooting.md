@@ -46,9 +46,7 @@ Here's a video by Beantalk user Nonsanity that shows how to reset Bean's memory:
 
 ## Check Arduino IDE's Version
 
-If you're using Bean Loader on your desktop, make sure you're running the latest version of Arduino IDE. If you need to update your copy, you can download the latest version on [the Arduino website](https://www.arduino.cc/en/Main/Software). After you update Arduino IDE, you will need to re-associate Bean Loader.
-
-Occasionally, updates to Arduino IDE will break Bean Loader's integration. If you update Arduino IDE and your Bean Loader stops working, please [let us know on Beantalk](http://beantalk.punchthrough.com).
+If you're using Bean Loader on your desktop, make sure you're running on [Arduino 1.6.5](https://www.arduino.cc/en/Main/OldSoftwareReleases#previous) of the Arduino IDE. After you update Arduino IDE, you will need to re-associate Bean Loader.
 
 ## Go to Beantalk
 
