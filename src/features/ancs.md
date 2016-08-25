@@ -107,16 +107,6 @@ void incomingCall() {
 }
   }
 }
-
-void incomingCall() {
-  Bean.setLed(100, 0, 0);
-  delay(150);
-  Bean.setLed(0, 100, 0);
-  delay(150);
-  Bean.setLed(0, 0, 100);
-  delay(150);
-  Bean.setLed(0, 0, 0);
-}
 ```
 
 ## Check iOS Notifications
