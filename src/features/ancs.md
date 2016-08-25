@@ -137,7 +137,7 @@ You can also use the [Bean Console](https://itunes.apple.com/us/app/bean-console
 
 * **Line 1**: Initialize `notifications` as an array of type `AncsNotifications`, which is a wrapper for the five main pieces of ANCS data, which are described below.
 * **Line 3**: Initialize our incoming call trigger, which will act as a persistent alarm.
-* **Line 7**: Enable the ANCS profile so the BEan can connect to a compatible iDevice
+* **Line 7**: Enable the ANCS profile so the Bean can connect to a compatible Apple device.
 * **Line 8**: Enable the high-g motion event so the accelerometer will be listening for it.
 * **Line 12**: Set `msgAvail` to be the number of messages currently in the ANCS buffer (there is a maximum of 8 messages at once).
 * **Lines 14-19**: If the `callHappened` boolean is true, check to see if a high-g motion event has occurred. If a the boolean is true but no high-g event has occurred, call the `incomingCall()` method to flash the lights.
