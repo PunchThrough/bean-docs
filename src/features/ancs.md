@@ -22,6 +22,7 @@ You also need to understand how to use Virtual Serial to read data from Bean. If
 
 * {{> snip_req_bean_loader}}
 * Arduino IDE 1.6.8 ([available here](https://www.arduino.cc/en/Main/OldSoftwareReleases))
+* [Bean Console app](https://itunes.apple.com/us/app/bean-console/id982751969?mt=8) (to see serial output)
 
 ### Hardware
 
@@ -127,6 +128,10 @@ Now that your Bean is programmed, disconnect it from the Bean Loader and connect
 The lights will stop flashing when you give the Bean a shake:
 
 {{{video_rel this 'shake-off.mp4'}}}
+
+You can also use the [Bean Console](https://itunes.apple.com/us/app/bean-console/id982751969?mt=8) app to view the serial output of your Bean and see exactly which ANCS notifications are coming through:
+
+{{{img_rel this 'bean-console.png' "Example of the Bean Console app on an iPhone"}}}
 
 ## Explanation
 
