@@ -105,8 +105,6 @@ void incomingCall() {
   delay(150);
   Bean.setLed(0, 0, 0);
 }
-  }
-}
 ```
 
 ## Check iOS Notifications
