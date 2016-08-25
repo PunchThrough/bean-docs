@@ -8,7 +8,7 @@ autotoc: true
 
 Beans have an advertising mode called **ANCS** (Apple Notification Center Service), which allows them to interface with compatible iOS devices (iPhone 4S and later). The purpose of ANCS is to allow a simplistic and universal way to observe iOS notifications from Bluetooth devices. More detailed information about ANCS in general can be found [here](https://developer.apple.com/library/ios/documentation/CoreBluetooth/Reference/AppleNotificationCenterServiceSpecification).
 
-{{{img_rel this 'ancs-example.png' "Example of ANCS notifications on an iPhone"}}}
+{{{img_rel this 'ancs-example.png' "Example of ANCS notifications on an iPhone" '50%' }}}
 
 This guide will show you how to use ANCS functions in your Bean sketches.
 
