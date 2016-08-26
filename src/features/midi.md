@@ -27,7 +27,6 @@ You also need to understand how to use Virtual Serial to read data from Bean. If
 ### Software
 
 * {{> snip_req_bean_loader}}
-* Bean Loader ([install guides](../../getting-started/intro/#next-steps))
 * GarageBand, or another audio program capable of MIDI input
 
 ### Hardware
@@ -94,7 +93,7 @@ void checkMidi() {
 
 For GarageBand, you'll want to open a new keyboard collection while MIDI data is being transmitted from the Bean. The MIDI data should automatically start playing the notes on topmost instrument in the collection. The video below shows a Bean and a Bean+ transmitting MIDI data over channels 1 and 2. Up to 16 channels can be used simultaneously, and multiple Beans can also transmit data over the same channel. 
 
-{{{video_rel this 'two-beans-midi.mp4'}}}
+{{{video_rel this 'two-beans-midi.mp4' '' false}}}
 
 ## Explanation
 
