@@ -32,7 +32,7 @@ To start building with Bean on your OS X computer, you'll need:
 
 Open the downloaded DMG file, then drag and drop the Bean Loader icon into Applications:
 
-{{{video_rel this 'install.mp4' '60%'}}}
+{{{video_rel this 'install.mp4' '60%' true}}}
 
 Once it's finished copying, double click the **Open me!** icon.
 
@@ -52,7 +52,7 @@ Once you've associated, restart Arduino IDE and you should see Bean listed as a 
 
 Bean Loader's main view shows a list of nearby Beans. Click Refresh to clear the list and start scanning for Beans:
 
-{{{video_rel this 'refresh.mp4' '60%'}}}
+{{{video_rel this 'refresh.mp4' '60%' true}}}
 
 You should see nearby Beans appear as they're discovered. Each Bean has a signal strength indicator to the left of its name.
 
@@ -88,7 +88,7 @@ You should see the sketch name **BeanBlink** appear in the bottom-left corner of
 
 Connect to your Bean. Right click and select **Program Sketch**. You'll see the progress as your sketch is programmed and get a notification when it's done:
 
-{{{video_rel this 'upload.mp4' '60%'}}}
+{{{video_rel this 'upload.mp4' '60%' true}}}
 
 Once the sketch upload is complete, you should see your Bean running the Bean Blink sketch. Once your Bean's LED is blinking, you're done!
 

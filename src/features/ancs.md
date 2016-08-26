@@ -111,11 +111,11 @@ void incomingCall() {
 
 Now that your Bean is programmed, disconnect it from the Bean Loader and connect to it using your iPhone's normal Bluetooth settings. When the Bean asks to pair, tap *yes*. Now try having someone call your phone. After a moment, the Bean will start flashing its LEDs as so:
 
-{{{video_rel this 'incoming-call.mp4'}}}
+{{{video_rel this 'incoming-call.mp4' '' true}}}
 
 The lights will stop flashing when you give the Bean a shake:
 
-{{{video_rel this 'shake-off.mp4'}}}
+{{{video_rel this 'shake-off.mp4' '' true}}}
 
 You can also use the [Bean Console](https://itunes.apple.com/us/app/bean-console/id982751969?mt=8) app to view the serial output of your Bean and see exactly which ANCS notifications are coming through:
 
