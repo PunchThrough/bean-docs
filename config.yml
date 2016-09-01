@@ -39,9 +39,9 @@ pathCollector:
     - key: building-an-app
       name: Building an App
       pattern: ^building-an-app/.+\.md$
-    - key: node-red
-      name: Node-RED
-      pattern: ^node-red/.+\.md$
+    - key: node-sdk
+      name: Node.js SDK/CLI
+      pattern: ^node-sdk/.+\.md$
     - key: everything-else
       name: Everything Else
       pattern: ^everything-else/.+\.md$

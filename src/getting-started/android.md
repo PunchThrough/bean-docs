@@ -2,7 +2,7 @@
 title: Bean Loader for Android
 layout: basic.hbs
 autotoc: true
-order: 6
+order: 4
 ---
 
 ## Introduction
@@ -59,7 +59,7 @@ Your Beans are listed with signal strength on the left. This helps you figure ou
 
 To rename or blink a Bean, tap the 3 vertical dots icon to the right of a Bean in the list. If you are renaming a Bean and there are many Beans around, it's a good idea to first blink your Bean's LED to make sure you have selected the right device.
 
-If your Bean doesn't change its name right away, try closing Bean Loader and opening it again. It may take some time for you too see the proper name on your device.  This is particularly due to caching on iOS and Android devices, which is unavoidable. 
+If your Bean doesn't change its name right away, try closing Bean Loader and opening it again. It may take some time for you too see the proper name on your device.  This is particularly due to caching on iOS and Android devices, which is unavoidable.
 
 {{{img_rel this 'bean-actions.png' 'Rename or Blink' '40%'}}}
 
