@@ -106,7 +106,7 @@ Your Bean's accelerometer is configured in low power mode.  As a result, when yo
 
 Congratulations!  You have successfully programmed Bean to change its LED as the accelerometer reads new values. Try moving your Bean around: picking it up, shaking it, and rotating it in the air. You should see the color of Bean's LED change.
 
-{{{video_rel this 'accel_to_rgb.mp4'}}}
+{{{video_rel this 'accel_to_rgb.mp4' '' true}}}
 
 ## Other Functions
 

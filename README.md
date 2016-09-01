@@ -66,10 +66,12 @@ The image above will be 50% the width of the content column with 25% margins on 
 For videos, use the same syntax with `video_rel` instead:
 
 ```
-{{{video_rel this 'move_bean.mp4' 'A description of this video'}}}
+{{{video_rel this 'move_bean.mp4' '60%' true}}}
 ```
 
-The max width argument doesn't work with videos yet.
+'video_rel' takes an additional argument for enabling autoplay and looping.
+
+Note: The max width argument doesn't work with videos yet.
 
 # Verifying Style
 
