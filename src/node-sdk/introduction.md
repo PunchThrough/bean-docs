@@ -5,18 +5,18 @@ autotoc: true
 order: 1
 ---
 
-# Welcome!
+## Welcome!
+
+Welcome to the first official cross-platform Bean SDK and CLI documentation. The
+
+## Motivation
 
 foo bar baz
 
-# Motivation
+## CLI
 
 foo bar baz
 
-# CLI
-
-foo bar baz
-
-# SDK/Library
+## SDK/Library
 
 foo bar baz
