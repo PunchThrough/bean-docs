@@ -15,9 +15,9 @@ order: 5
 
 We officially support the LTS (v4.*.*) and Current (v6.*.*) versions of Node.js.
 
-https://nodejs.org/en/download/
+* [Node.js Download Page](https://nodejs.org/en/download/)
 
-Steps:
+Binary Install Steps:
 
 1. Figure out which version of the ARM architecture your Raspberry Pi has, `uname -a`.
 2. Find the appropriate ARM binary under "Additional Platforms".
@@ -34,7 +34,7 @@ rm README.md
 
 6. Install `sudo cp -R * /usr/local/`
 
-Finally, make sure NPM is at least version 3+.
+Also, make sure NPM is at least version 3+.
 
 1. Check version, `npm --version`.
 2. If it is less than 3, upgrade it `sudo npm install npm -g`
@@ -42,7 +42,7 @@ Finally, make sure NPM is at least version 3+.
 ## Install `bean-sdk`
 
 ```
-sudo npm install --unsafe-perm -g bean-sdk
+sudo npm install -g --unsafe-perm bean-sdk
 ```
 
 ## Run it!
@@ -54,7 +54,7 @@ sudo apt-get install libcap2-bin
 sudo setcap cap_net_raw+eip $(eval readlink -f `which node`)
 ```
 
-Finally, let's scan for Beans!
+Let's scan for Beans to ensure everything is working properly!
 
 ```
 bean scan

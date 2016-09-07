@@ -13,26 +13,22 @@ order: 2
 
 We officially support the LTS (v4.*.*) and Current (v6.*.*) versions of Node.js.
 
-https://nodejs.org/en/download/
+* [Node.js Download Page](https://nodejs.org/en/download/)
 
-Steps:
-
-TODO
-
-Finally, make sure NPM is at least version 3+.
+Also, make sure NPM is at least version 3+.
 
 1. Check version, `npm --version`.
-2. If it is less than 3, upgrade it ``
+2. If it is less than 3, upgrade it `npm install npm -g`
 
 ## Install `bean-sdk`
 
 ```
-sudo npm install --unsafe-perm -g bean-sdk
+npm install -g bean-sdk
 ```
 
 ## Run it!
 
-Finally, let's scan for Beans!
+Let's scan for Beans to ensure everything is working properly!
 
 ```
 bean scan

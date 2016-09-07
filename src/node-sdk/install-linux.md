@@ -13,7 +13,34 @@ order: 4
 
 ## Install Node.js/NPM
 
+We officially support the LTS (v4.*.*) and Current (v6.*.*) versions of Node.js.
+
+* [Node.js Download Page](https://nodejs.org/en/download/)
+
+Binary Install Steps:
+
+1. Download and unzip the appropriate binary Linux distribution for your system.
+5. Enter the newly unpacked folder, and delete the following files:
+
+```
+cd node-v4.5.0-linux-arm7l
+rm CHANGELOG.md
+rm LICENSE
+rm README.md
+```
+
+6. Install `sudo cp -R * /usr/local/`
+
+Also, make sure NPM is at least version 3+.
+
+1. Check version, `npm --version`.
+2. If it is less than 3, upgrade it `sudo npm install npm -g`
+
 ## Install `bean-sdk`
+
+```
+sudo npm install -g --unsafe-perm bean-sdk
+```
 
 ## Run it!
 
@@ -24,7 +51,7 @@ sudo apt-get install libcap2-bin
 sudo setcap cap_net_raw+eip $(eval readlink -f `which node`)
 ```
 
-Finally, let's scan for Beans!
+Let's scan for Beans to ensure everything is working properly!
 
 ```
 bean scan
