@@ -33,9 +33,3 @@ Let's scan for Beans to ensure everything is working properly!
 ```
 bean scan
 ```
-
-## Next Steps
-
-You have now installed the Node.js Bean SDK and CLI. Check out our CLI usage guide next:
-
-* [CLI Usage](/node-sdk/cli-usage/)

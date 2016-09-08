@@ -26,7 +26,7 @@ Here is a list of BLE dongles that we have tested with that work:
 * https://www.adafruit.com/products/1327
 * https://www.amazon.com/IOGEAR-Bluetooth-Micro-Adapter-GBU521/dp/B007GFX0PY
 * https://www.amazon.com/BootKitchenTan-Wireless-bluetooth-cable-free-connections/dp/B01EFB5Q2G/ref=sr_1_12?s=pc&ie=UTF8&qid=1473182516&sr=1-12&keywords=ble+dongle
-* there are more...
+* there are many more...
 
 ## Dongle setup
 

@@ -13,7 +13,7 @@ order: 4
 
 ## Install Node.js/NPM
 
-We officially support the LTS (v4.*.*) and Current (v6.*.*) versions of Node.js.
+We officially support the LTS (v4.x.x) and Current (v6.x.x) versions of Node.js.
 
 * [Node.js Download Page](https://nodejs.org/en/download/)
 
@@ -56,9 +56,3 @@ Let's scan for Beans to ensure everything is working properly!
 ```
 bean scan
 ```
-
-## Next Steps
-
-You have now installed the Node.js Bean SDK and CLI. Check out our CLI usage guide next:
-
-* [CLI Usage](/node-sdk/cli-usage/)
