@@ -11,7 +11,7 @@ order: 2
 
 ## Install Node.js/NPM
 
-We officially support the LTS (v4.*.*) and Current (v6.*.*) versions of Node.js.
+We officially support the LTS (v4.x.x) and Current (v6.x.x) versions of Node.js.
 
 * [Node.js Download Page](https://nodejs.org/en/download/)
 
@@ -29,6 +29,8 @@ npm install -g bean-sdk
 ## Run it!
 
 Let's scan for Beans to ensure everything is working properly!
+
+From the terminal:
 
 ```
 bean scan

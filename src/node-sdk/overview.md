@@ -7,7 +7,7 @@ order: 1
 
 ## Welcome!
 
-Welcome to the first official cross-platform Bean documentation. Building cross-platform apps that interface with real hardware can be difficult and is why we have only supported fully native applications until now. With the help of the [noble library]() we were able to build the first official cross-platform Bean SDK and "CLI loader" using Node.js.
+Welcome to the first official cross-platform Bean documentation. Building cross-platform apps that interface with real hardware can be difficult and is why we have only supported fully native applications until now. With the help of the [noble library]() we were able to build the first official cross-platform Bean SDK and CLI loader using Node.js.
 
 The following platforms are supported:
 
@@ -18,7 +18,7 @@ The following platforms are supported:
 
 #### Motivation
 
-Small team, etc.
+Supporting native applications on 5+ platforms (Linux, Windows, Android, OS X, iOS) is extremely time consuming. At Punch Through, we barely have the resources (developers/time) to keep all of our software of satisfactory quality while also tackling consulting projects. Because of this, we decided to go "all-in" on a cross platform solution so we could follow the mantra of "write once, deploy everywhere". Initially we are only targeting the desktop platforms. We are starting with our well designed SDK and CLI, but will be moving towards a GUI solution that we will distribute as a binary like normal.
 
 ## CLI
 
@@ -29,7 +29,7 @@ The CLI will act as a "Bean Loader" application for Windows and Linux until we h
 
 ## SDK/Library
 
-Documentation coming soon!
+Documentation coming soon! For now, see the [project README](https://github.com/punchthrough/bean-sdk-node).
 
 ## Additional Links
 

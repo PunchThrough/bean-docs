@@ -56,6 +56,8 @@ sudo setcap cap_net_raw+eip $(eval readlink -f `which node`)
 
 Let's scan for Beans to ensure everything is working properly!
 
+From the terminal:
+
 ```
 bean scan
 ```
