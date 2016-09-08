@@ -1,5 +1,5 @@
 ---
-title: Overview
+title: Node.js Bean SDK/CLI Overview
 layout: basic.hbs
 autotoc: true
 order: 1
