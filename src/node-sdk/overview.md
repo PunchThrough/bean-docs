@@ -13,17 +13,17 @@ Now that there are stable cross platform BLE libraries, we are working towards u
 
 The following platforms are supported:
 
-* [Mac OS X](/node-sdk/install-osx/)
-* [Linux (Debian distributions)](/node-sdk/install-linux/)
-* [Windows 7, 8, 10](/node-sdk/install-windows/)
-* [Raspberry Pi 1, 2 and 3](/node-sdk/install-rpi/)
+* [Mac OS X](../install-osx/)
+* [Linux (Debian distributions)](../install-linux/)
+* [Windows 7, 8, 10](../install-windows/)
+* [Raspberry Pi 1, 2 and 3](../install-rpi/)
 
 ## CLI
 
 The CLI will act as a "Bean Loader" application for Windows and Linux until we have a full-featured GUI loader built on top of the SDK.
 
-* [Getting started on Linux](/getting-started/cli-loader/)
-* [Getting started on Windows](/getting-started/cli-loader/)
+* [Getting started on Linux](../../getting-started/cli-loader/)
+* [Getting started on Windows](../../getting-started/cli-loader/)
 
 ## SDK
 

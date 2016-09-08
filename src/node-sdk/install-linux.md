@@ -9,7 +9,7 @@ order: 4
 
 1. Python 2.7.* needs to be installed and on your system PATH
 2. `sudo apt-get install bluetooth bluez libbluetooth-dev libudev-dev`
-3. [Setup BLE Dongle](/node-sdk/ble-dongle-setup/) (Optional: only required if no builtin BLE)
+3. [Setup BLE Dongle](../ble-dongle-setup/) (Optional: only required if no builtin BLE)
 
 ## Install Node.js/NPM
 

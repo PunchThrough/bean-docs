@@ -14,18 +14,18 @@ This guide will walk you step-by-step through the basic functionality of the Bea
 3. Compiled a Sketch
 4. Uploaded the Sketch
 
-If you are looking for an exhaustive reference for the commands available in the CLI please [see here](/node-sdk/cli-reference/).
+If you are looking for an exhaustive reference for the commands available in the CLI please [see here](../../node-sdk/cli-reference/).
 
-We also recommend reading the separate [Bean SDK/CLI Overview](/node-sdk/overview) to get a better understanding of this project!
+We also recommend reading the separate [Bean SDK/CLI Overview](../../node-sdk/overview) to get a better understanding of this project!
 
 ## Before you begin
 
 Follow the install guide for your system:
 
-* [Linux](/node-sdk/install-linux)
-* [Windows](/node-sdk/install-windows)
-* [OS X](/node-sdk/install-osx)
-* [Raspberry Pi](/node-sdk/install-rpi)
+* [Linux](../../node-sdk/install-linux)
+* [Windows](../../node-sdk/install-windows)
+* [OS X](../../node-sdk/install-osx)
+* [Raspberry Pi](../../node-sdk/install-rpi)
 
 Also, [install Arduino IDE](https://www.arduino.cc/en/Main/Software).
 
@@ -124,5 +124,5 @@ Complete!
 
 ## Next Steps
 
-* [Bean SDK/CLI Overview](/node-sdk/overview)
-* [CLI Reference](/node-sdk/cli-reference)
+* [Bean SDK/CLI Overview](../../node-sdk/overview)
+* [CLI Reference](../../node-sdk/cli-reference)
