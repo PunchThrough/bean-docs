@@ -15,6 +15,8 @@ Ready to get started with Bean? Pick your favorite platform to install Bean Load
 
 [Bean Loader for Windows >>](../windows/)
 
+[Bean Loader for Linux >>](../linux/)
+
 [Bean Loader for iOS >>](../ios/)
 
 [Bean Loader for Android >>](../android/)
