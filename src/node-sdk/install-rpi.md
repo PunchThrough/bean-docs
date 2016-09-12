@@ -17,7 +17,7 @@ We officially support the LTS (v4.*.*) and Current (v6.*.*) versions of Node.js.
 
 * [Node.js Download Page](https://nodejs.org/en/download/)
 
-Binary Install Steps:
+**Binary Install Steps:**
 
 1. Figure out which version of the ARM architecture your Raspberry Pi has, `uname -a`.
 2. Find the appropriate ARM binary under "Additional Platforms".
@@ -65,3 +65,4 @@ bean scan
 ## Next Steps
 
 * [Getting Started with CLI Loader](../../getting-started/cli-loader/)
+* [CLI Reference Docs](../cli-reference)

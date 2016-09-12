@@ -17,7 +17,7 @@ We officially support the LTS (v4.x.x) and Current (v6.x.x) versions of Node.js.
 
 * [Node.js Download Page](https://nodejs.org/en/download/)
 
-Binary Install Steps:
+**Binary Install Steps:**
 
 1. Download and unzip the appropriate binary Linux distribution for your system.
 5. Enter the newly unpacked folder, and delete the following files:
@@ -61,4 +61,5 @@ bean scan
 
 ## Next Steps
 
-* [Getting Started with CLI Loader]()
+* [Getting Started with CLI Loader](../../getting-started/cli-loader/)
+* [CLI Reference Docs](../cli-reference)

@@ -39,3 +39,4 @@ bean scan
 ## Next Steps
 
 * [Getting Started with CLI Loader](../../getting-started/cli-loader/)
+* [CLI Reference Docs](../cli-reference)

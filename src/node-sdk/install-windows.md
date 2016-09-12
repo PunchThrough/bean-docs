@@ -50,6 +50,8 @@ If option 1 didn't work for you, and you have Visual Studio installed on your co
 ```
 npm config set msvs_version 2015 --global
 ```
+**Note**: In addition to having MS Visual Studio installed, you must ensure that C++ toolchain is actually installed. To do this, create a C++ project in VS and
+
 
 ## Install `bean-sdk`
 
@@ -68,3 +70,8 @@ From the terminal:
 ```
 bean scan
 ```
+
+## Next Steps
+
+* [Getting Started with CLI Loader](../../getting-started/cli-loader/)
+* [CLI Reference Docs](../cli-reference)
