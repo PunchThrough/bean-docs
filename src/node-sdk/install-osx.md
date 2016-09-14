@@ -20,7 +20,7 @@ Also, make sure NPM is at least version 3+.
 1. Check version, `npm --version`.
 2. If it is less than 3, upgrade it `npm install npm -g`
 
-## Install `bean-sdk`
+## Install Bean CLI Loader
 
 ```
 npm install -g bean-sdk

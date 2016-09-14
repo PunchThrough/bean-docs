@@ -58,7 +58,7 @@ npm config set msvs_version 2015 --global
 ```
 **Note**: In addition to having MS Visual Studio installed, you must ensure that C++ toolchain is actually installed. To do this, create a C++ project in VS. By creating a C++ project, additional required dependencies will be installed.
 
-## Install `bean-sdk`
+## Install Bean CLI Loader
 
 Finally, install `bean-sdk`
 
