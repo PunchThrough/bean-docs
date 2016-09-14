@@ -13,6 +13,10 @@ Bean Loader helps you find, connect to, and program your Beans. When you click U
 
 In this guide, you'll upload an example sketch to your Bean, edit it, and save a copy to your computer. You'll also learn about the different features in Bean Loader for OS X.
 
+**Note:** We also have a CLI Loader that works great on OS X!
+
+[CLI Loader >>](../cli-loader/)
+
 ## What You Need
 
 To start building with Bean on your OS X computer, you'll need:
@@ -78,7 +82,7 @@ Now that you have a sketch open, it's time to upload it to your Bean!
 
 ### Send to Bean Loader
 
-Click **Upload** (the **&#10140;** icon in the upper-left of Arduino IDE) to compile the example sketch and send it to Bean Loader. 
+Click **Upload** (the **&#10140;** icon in the upper-left of Arduino IDE) to compile the example sketch and send it to Bean Loader.
 
 You should see the sketch name **BeanBlink** appear in the bottom-left corner of Bean Loader:
 
@@ -130,7 +134,7 @@ Bean Loader for OS X comes with a few other features to improve your Bean-progra
 
 ### Blink Bean's LED
 
-Once you're connected to a Bean, right-click its name and select **Blink LED**: 
+Once you're connected to a Bean, right-click its name and select **Blink LED**:
 
 {{{img_rel this 'blink.png' 'Blink Bean' '60%'}}}
 
@@ -155,7 +159,7 @@ And yes... you can use emoji. 💯
 
 If you're in space with lots of Beans, or concerned about security for a project, adding a pairing PIN is the thing for you. Only people with the pairing code will be able to connect and program the Bean. You'll only need to enter the code when your computer connects for the first time.
 
-Connect to your Bean, right click on it, and select "Pairing PIN Settings". Choose your passcode and enable. 
+Connect to your Bean, right click on it, and select "Pairing PIN Settings". Choose your passcode and enable.
 
 {{{img_rel this 'set-pin.png' 'Set a Bean Pairing PIN' '60%'}}}
 

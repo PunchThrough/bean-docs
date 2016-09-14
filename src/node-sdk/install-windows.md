@@ -8,7 +8,7 @@ order: 3
 
 ## Prerequisites
 
-1. Python 2.7.* needs to be installed and on your system PATH. You system PATH or Path is an environment variable. Sometimes the Python installer may add Python to your PATH for you, if not there is plenty of documentation online for doing this.
+1. [Python 2.7.*](https://www.python.org/downloads/) needs to be installed and on your system PATH. You system PATH or Path is an environment variable. Sometimes the Python installer may add Python to your PATH for you, if not there is plenty of documentation online for doing this.
 2. [Setup BLE Dongle](../ble-dongle-setup/)
 3. [node-gyp](https://github.com/nodejs/node-gyp#installation) prerequisites, explained further later, ignore for now.
 
@@ -30,6 +30,12 @@ C:\Users\<user>\AppData\Roaming\npm\node_modules\npm
 ```
 
 ## Install Microsoft Build Tools
+
+First, make sure the proper Python version is on your system PATH. When you type `python --version` it should report v2.x.x. If this is not the case, configure NPM to use Python2.7...here is an example:
+
+```
+npm config set python C:\Python27\python.exe --global
+```
 
 Before we jump into installing the bean-sdk, we must first ensure your system is ready to build native Node.js modules using [node-gyp](https://github.com/nodejs/node-gyp#installation).
 
@@ -59,6 +65,8 @@ Finally, install `bean-sdk`
 ```
 npm install -g bean-sdk
 ```
+
+**Important:** We are currently working through some installation issues in certain Windows environments, particularly those with a pre-existing Visual Studio installation. Please contact us at **info@punchthrough.com** and we will work through any installation issues.
 
 ## Run it!
 

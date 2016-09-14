@@ -7,7 +7,7 @@ order: 2
 
 ## Prerequisites
 
-1. Python 2.7.* needs to be installed and on your system PATH
+1. [Python 2.7.*](https://www.python.org/downloads/) needs to be installed and on your system PATH
 
 ## Install Node.js/NPM
 

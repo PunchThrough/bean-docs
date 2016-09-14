@@ -27,7 +27,7 @@ Follow the install guide for your system:
 * [OS X](../../node-sdk/install-osx)
 * [Raspberry Pi](../../node-sdk/install-rpi)
 
-Also, [install Arduino IDE](https://www.arduino.cc/en/Main/Software).
+Also, [install Arduino IDE 1.6.11 or greater](https://www.arduino.cc/en/Main/Software).
 
 ## Get Started
 
@@ -59,7 +59,7 @@ See it in action!
 
 Ok! It looks like we have the correct address for the Bean we are interested in, let's move on.
 
-### Optional: Update Bean Firmware
+### Important: Update Bean Firmware
 
 This step ensures the Bean has the latest and greatest firmware. Although not always required for all Bean interactions it's never a bad idea and certain functionality wont work if the Bean isn't up to date!
 

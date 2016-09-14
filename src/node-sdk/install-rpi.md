@@ -7,7 +7,7 @@ order: 5
 
 ## Prerequisites
 
-1. Python 2.7.* needs to be installed and on your system PATH
+1. [Python 2.7.*](https://www.python.org/downloads/) needs to be installed and on your system PATH
 2. `sudo apt-get install bluetooth bluez libbluetooth-dev libudev-dev`
 3. [Setup BLE Dongle](../ble-dongle-setup/) (Optional: not required for Raspberry Pi 3)
 

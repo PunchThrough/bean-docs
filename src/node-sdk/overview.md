@@ -20,10 +20,9 @@ The following platforms are supported:
 
 ## CLI
 
-The CLI will act as a "Bean Loader" application for Windows and Linux until we have a full-featured GUI loader built on top of the SDK.
+The CLI will act as a "Bean Loader" application for Windows and Linux until we have a full-featured GUI loader built on top of the SDK. Of course, it also works on OS X.
 
-* [Getting started on Linux](../../getting-started/cli-loader/)
-* [Getting started on Windows](../../getting-started/cli-loader/)
+* [Getting started with CLI Loader](../../getting-started/cli-loader/)
 
 ## SDK
 
