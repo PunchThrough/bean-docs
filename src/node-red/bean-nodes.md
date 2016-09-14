@@ -5,15 +5,9 @@ autotoc: true
 order: 3
 ---
 
-<!-- <div style="height: 200px; background: #ff3333; border-radius: 25px; text-align: center; vertical-align: middle; line-height: 60px;">
-<font color="white" size="3">
-We are temporarily discontinuing support for Node-RED. Currently we are focusing all of our attention on a cross-platform SDK and CLI Loader based on Node.js. Once stable, we will refocus our attention on the Node-RED project and determine which parts need to be rewritten using our official Node.js SDK.
-</font>
-</div> -->
+**Disclaimer:** We are temporarily not offering support for the Node-RED project. The reason for this is because we are focusing our attention on an official [Node.js SDK and CLI Loader](../../node-sdk/overview/), rather than the forked and unsupported libraries that our Bean Node-RED project is currently based on. Once the Node SDKs and CLI Loaders are stable, we will determine if we need to rewrite the Node-RED implementation with the new SDKs, and fully support it again.
 
 ## Introduction
-
-<font color="red" size="3"><b>Disclaimer:</b></font> We are temporarily discontinuing support for Node-RED. Currently we are focusing all of our attention on a cross-platform SDK and CLI Loader based on Node.js. Once stable, we will refocus our attention on the Node-RED project and determine which parts need to be rewritten using our official Node.js SDK.
 
 In this guide, you'll learn how to use the Bean nodes to build Node-RED flows that talk to your Bean.
 

@@ -5,11 +5,7 @@ autotoc: true
 order: 2
 ---
 
-<div style="height: 60px; background: #ff3333; border-radius: 25px; text-align: center; vertical-align: middle; line-height: 60px;">
-<font color="white" size="3">
-We are currently discontinuing support for Node-RED. Use at your own risk!
-</font>
-</div>
+**Disclaimer:** We are temporarily not offering support for the Node-RED project. The reason for this is because we are focusing our attention on an official [Node.js SDK and CLI Loader](../../node-sdk/overview/), rather than the forked and unsupported libraries that our Bean Node-RED project is currently based on. Once the Node SDKs and CLI Loaders are stable, we will determine if we need to rewrite the Node-RED implementation with the new SDKs, and fully support it again.
 
 ## Introduction
 
