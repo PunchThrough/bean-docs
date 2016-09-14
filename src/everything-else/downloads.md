@@ -24,7 +24,7 @@ On iOS and Android, Bean Loader uses the Bean Cloud Compiler to compile your Ard
 ### Windows
 
 * [Arduino IDE](https://www.arduino.cc/en/Main/Software)
-* [CLI Loader](../../node-sdk/install-windows/)
+* [CLI Loader for Windows](../../node-sdk/install-windows/)
 
 **Warning:** The Windows Loader available on the Windows store is discontinued, we are moving all support to a cross-platform solution, starting with the [CLI Loader](../../getting-started/cli-loader/).
 
@@ -42,6 +42,10 @@ On iOS and Android, Bean Loader uses the Bean Cloud Compiler to compile your Ard
 ### Android
 
 * [Bean Loader for Android on the Play Store](https://play.google.com/store/apps/details?id=com.punchthrough.bean.loader)
+
+### Linux
+
+* [CLI Loader for Linux](../../node-sdk/install-linux/)
 
 ## Platform SDKs
 
