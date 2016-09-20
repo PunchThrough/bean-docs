@@ -25,12 +25,12 @@ We officially support the LTS (v4.*.*) and Current (v6.*.*) versions of Node.js.
 4. Unpack. Example: `tar -xf node-v4.5.0-linux-armv7l.tar.xz`
 5. Enter the newly unpacked folder, and delete the following files:
 
-```
-cd node-v4.5.0-linux-arm7l
-rm CHANGELOG.md
-rm LICENSE
-rm README.md
-```
+  ```
+  cd node-v4.5.0-linux-arm7l
+  rm CHANGELOG.md
+  rm LICENSE
+  rm README.md
+  ```
 
 6. Install `sudo cp -R * /usr/local/`
 

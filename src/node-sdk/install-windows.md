@@ -31,12 +31,6 @@ C:\Users\<user>\AppData\Roaming\npm\node_modules\npm
 
 ## Install Microsoft Build Tools
 
-First, make sure the proper Python version is on your system PATH. When you type `python --version` it should report v2.x.x. If this is not the case, configure NPM to use Python2.7...here is an example:
-
-```
-npm config set python C:\Python27\python.exe --global
-```
-
 Before we jump into installing the bean-sdk, we must first ensure your system is ready to build native Node.js modules using [node-gyp](https://github.com/nodejs/node-gyp#installation).
 
 There are two options for doing this. The option you pick depends on if you have you have Visual Studio installed on your computer. Even for those of you with VS installed, we recommend *trying* option 1 first! If it doesn't work, move on to option 2.
@@ -77,6 +71,22 @@ From the terminal:
 ```
 bean scan
 ```
+
+## Troubleshooting
+
+1. Try upgrading to the latest possible `npm` version:
+
+  ```
+  npm -g install npm@next
+  ```
+2. Make sure Python27 is on System Path. When you type `python --version` it should report v2.x.x. If this is not the case, configure NPM to use Python2.7...here is an example:
+
+  ```
+  npm config set python C:\Python27\python.exe --global
+  ```
+
+3. Uninstall Visual Studio and re-try option 1. It should never come to this, but if it does, this may help.
+
 
 ## Next Steps
 
