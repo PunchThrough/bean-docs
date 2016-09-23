@@ -2,6 +2,7 @@
 title: Troubleshooting
 layout: basic.hbs
 autotoc: true
+order: 1
 ---
 
 Are you having trouble with your Bean or Bean Loader? Here are some steps that might help you if you're experiencing problems.
