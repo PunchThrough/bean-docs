@@ -9,8 +9,12 @@ order: 3
 ## Prerequisites
 
 1. [Python 2.7.*](https://www.python.org/downloads/) needs to be installed and on your system PATH. You system PATH or Path is an environment variable. Sometimes the Python installer may add Python to your PATH for you, if not there is plenty of documentation online for doing this.
-2. [Setup BLE Dongle](../ble-dongle-setup/)
-3. [node-gyp](https://github.com/nodejs/node-gyp#installation) prerequisites, explained further later, ignore for now.
+2. [node-gyp](https://github.com/nodejs/node-gyp#installation) prerequisites, explained further later, ignore for now.
+
+
+## Setup BLE Dongle 
+
+[How to replace the driver on the BLE dongle to work with Node.js](../ble-dongle-setup/)
 
 ## Install Node.js/NPM
 
