@@ -80,7 +80,7 @@ void loop() {
 
 Congratulations! You can now use your Bean to control your computer cursor and media playback.
 
-{{{video_rel this 'hid-cursor-control.mp4'}}}
+{{{video_rel this 'hid-cursor-control.mp4' true}}}
 
 ## Explanation
 
