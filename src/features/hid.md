@@ -35,7 +35,7 @@ Upload the following sketch to your Bean. This sketch will enable Bean to act li
 
 After uploading the sketch, you will need to turn the Bean off, then on again, and then connect to it as a Bluetooth device in your normal computer Bluetooth settings.
 
-When you want to connect to the Bean with Bean Loader to upload a new sketch, you may need to go to your computer's Bluetooth settings and manually disconnect from the Bean. This is because HID requires pairing, and cannot connect to the Bean Loader while being used as a HID peripheral.
+When you want to connect to the Bean with Bean Loader to upload a new sketch, you will need to go to your computer's Bluetooth settings and both disconnect and un-pair the Bean. This is because BLE HID requires pairing, and cannot connect to the Bean Loader while being used as a HID peripheral.
 
 ```cpp
 void setup() {
