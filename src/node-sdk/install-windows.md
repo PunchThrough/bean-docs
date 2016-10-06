@@ -14,7 +14,7 @@ order: 3
 
 ## Setup BLE Dongle 
 
-[How to replace the driver on the BLE dongle to work with Node.js](../ble-dongle-setup/)
+[How to replace the driver on the BLE dongle to work with bean-sdk](../ble-dongle-setup/)
 
 ## Install Node.js/NPM
 
