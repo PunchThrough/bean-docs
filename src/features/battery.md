@@ -8,23 +8,25 @@ autotoc: true
 
 The Bean uses 3V to run its sketches, which can be provided by a 3V coin cell battery or any other 3V power source, such as two 1.5V AA batteries. The Bean+ can run off either its included lithium battery, or a microUSB charging cable, which respectively range from 3V to 5V.
 
+The Bean operates from 2.6V-3.6V and can be powered directly by a 3V coin cell battery or a external power source connected to the VBAT pin. The Bean has no internal voltage regulators so it is important not to connect a power source outside of the operating voltage range. 
+
+The Bean+ offers the convenience of an included rechargeable lithium battery and 3.3V and 5V voltage regulators. This flexibility allows the Bean+ to work with higher power accessories right out of the box. 
+
 This guide will show you how to read the approximate voltage and remaining battery level in your Bean.
 
 ## Coin Cell Batteries
 
-Also called button cell or watch cell bateries, these are used primarily to power small electronics, and come in a variety of dimensions and materials. Each battery is a single anode-cathode cell. Anodes and cathodes refer to the positive and negative terminals used in the battery, which allow current to flow one or two ways depending on the type of battery. The coin cell battery used by Bean is called CR2032, and is a 3-volt lithium-manganese dioxide battery. CR2032s are most commonly used in the motherboards of computers as CMOS batteries. They store ~225mAh of power, and typically last a long time because of their low power output. The lifetime of the battery, however, will depend entirely on its usage and application.
+The coin cell battery used by Bean is called CR2032, and is a 3-volt lithium-manganese dioxide battery. CR2032s store ~225mAh of power, and typically last a long time because of their low power output. The lifetime of the battery, however, will depend entirely on its usage and application. CR2032 batteries do not work will in higher current applications due to their high internal resistance. If the Bean is going to be used with motors or high brightness LED's you will more than likely want to use an external power source such as a AA battery pack. 
 
 ## Lithium Polymer Batteries
 
-The Bean+ has a rechargeable lithium-ion polymer (LiPo) battery which stores 600mAh of power and discharges between 2.45 and 4.20 volts, depending on how full it is. The term *polymer* refers to the polymer electrolyte used as a means of generating and dispelling a charge instead of the more conventional liquid electrolyte. It also refers to the flexible case for the batteries' components, as opposed to the more common rigid case needed to ensure no leaks occur. The polymer electrolyte also allows for batteries to be made in virtually any shape and size.
+The Bean+ has a rechargeable lithium-ion polymer (LiPo) battery which stores 600mAh of power and operates from from ~2.45 and 4.20 volts, depending on its state of charge. This battery is rechargeable from a 5V Micro USB cable and takes approximately 1.5 hours to recharge.
 
-The battery for the Bean+ also includes a protection circuit that stops the charge or discharge or power to avoid several scenarios that would cause a decrease in battery lifetime, including:
+{{{img_rel this 'BeanPlus_Charging.JPG' 'Bean+ Charging' '40%'}}}
 
-* If voltage surpasses 4.20V (checks every 1.2s)
-* If voltage drops below 2.45V (checks every 120ms)
-* If incoming voltage is greater than 150mV (checks every 10ms)
+There is an orange LED on the underside of the Bean+ that indicates that the battery is being charged and will turn off when charging is complete.
 
-The battery also stops charging after being plugged in for 8 consecutive hours, and will not charge again until being replugged in.
+The battery for the Bean+ also includes a protection circuit that stops the charge or discharge or power to avoid damage to the battery.
 
 ## Before You Begin
 
