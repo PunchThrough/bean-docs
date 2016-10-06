@@ -6,8 +6,6 @@ autotoc: true
 
 ## Introduction
 
-The Bean uses 3V to run its sketches, which can be provided by a 3V coin cell battery or any other 3V power source, such as two 1.5V AA batteries. The Bean+ can run off either its included lithium battery, or a microUSB charging cable, which respectively range from 3V to 5V.
-
 The Bean operates from 2.6V-3.6V and can be powered directly by a 3V coin cell battery or a external power source connected to the VBAT pin. The Bean has no internal voltage regulators so it is important not to connect a power source outside of the operating voltage range. 
 
 The Bean+ offers the convenience of an included rechargeable lithium battery and 3.3V and 5V voltage regulators. This flexibility allows the Bean+ to work with higher power accessories right out of the box. 
