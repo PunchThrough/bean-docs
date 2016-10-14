@@ -29,11 +29,37 @@ You also need to understand how to use Virtual Serial to read data from Bean. If
 
 ## Attach Grove Modules
 
-Here is a diagram of how to attach the modules from the [Grove Starter Kit](http://store.punchthrough.com/collections/all/products/grove-starter-kit-pre-order). This project will use the [touch sensor](http://wiki.seeed.cc/Grove-Touch_Sensor), [potentiometer](http://wiki.seeed.cc/Grove-Rotary_Angle_Sensor), and [buzzer](http://wiki.seeed.cc/Grove-Buzzer) modules.
+Now we will connect some of the Grove modules from the [Grove Starter Kit](http://store.punchthrough.com/collections/all/products/grove-starter-kit-pre-order). This project will use the [touch sensor](http://wiki.seeed.cc/Grove-Touch_Sensor), [potentiometer](http://wiki.seeed.cc/Grove-Rotary_Angle_Sensor), and [buzzer](http://wiki.seeed.cc/Grove-Buzzer) modules.
+
+{{{img_rel this 'grove-modules1.png' "Grove modules for this project"}}}
+
+Before starting, make sure the Bean+ is in 5V mode, which is required by the Grove modules.
+
+{{{img_rel this 'bean-plus-5-or-3.png' "Make sure the Bean+ is in 5V mode"}}}
+
+Plug the included 4-wire header cables into the modules:
+
+{{{img_rel this 'grove-modules2.png' "Grove modules with cables connected"}}}
+
+Next, connect the potentiometer to the `A2/A3` port and the buzzer into the buzzer into the `I2C` port as shown below:
+
+{{{img_rel this 'grove-modules-connected' "Plug the Grove modules into the Bean+"}}}
+
+If we run out of Grove ports like we have just now, there is an easy workaround; connect some wires to the touch sensor (the colors of the wires do not matter, but matching wire colors will help us kep track of which ones go where):
+
+{{{img_rel this 'touch-sensor-wires.png' "Attach wires to the touch sensor cable"}}}
+
+Now connect the wires from the touch sensor cable to the Bean+ as pictured below:
+
+{{{img_rel this 'module-pins-closeup.png' "Closeup of the pins connecting to the touch sensor"}}}
+
+Everything should be connected now. Make sure your Bean+ looks like the one in the image below:
+
+{{{img_rel this 'all-modules-connected.png' "Your Bean+ should look like this one"}}}
 
 ## Program Your Bean
 
-Upload the following sketch to your Bean. This sketch will 
+Now that all the hardware is connected, upload the following sketch to your Bean. This sketch will emit noises from the buzzer whenever the touch sensor is pressed, and the frequency of the noise can be altered with the potentiometer.
 
 ```cpp
 #define TOUCH_SENSOR     0
@@ -87,14 +113,11 @@ Here's what the code does:
 	* **Line 27:** Map `potential`, our analog value between 0 and 1023, to `note`, our audio frequency between 2000 and 4400.
 	* **Lines 29-30:** Print the current audio frequency to serial.
 	* **Line 32:** Play the tone on the `BUZZER` pin, at the frequency of `note`, for `NOTE_ON_TIME` milliseconds.
+* **Line 35:** Pause the program for `NOTE_OFF_TIME` milliseconds before looping back through again.
 
 ## Conclusion
 
-In this guide, we read a temperature from Bean's temperature sensor and sent it to your computer via Virtual Serial.
-
-Check out this related project to see another application of Bean's thermometer:
-
-* [Temperature-controlled fan](http://www.instructables.com/id/Automatic-desktop-fan/): This fan turns on to cool people down when Bean detects the room is getting too hot.
+In this guide, we learned how to use the Grove ports on the Bean+.
 
 ## Troubleshooting
 
