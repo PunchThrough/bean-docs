@@ -6,9 +6,9 @@ autotoc: true
 
 ## Introduction
 
-This guide will show you how to utilize Grove modules for the Bean+, especially those included in the [Grove Starter Kit](http://store.punchthrough.com/collections/all/products/grove-starter-kit-pre-order).
+This guide will show you how to utilize Grove modules for the Bean+, specifically those included in the [Grove Starter Kit](http://store.punchthrough.com/collections/all/products/grove-starter-kit-pre-order).
 
-As the name would suggest, [Grove modules](http://wiki.seeed.cc/Grove_System) are modular sensors, actuators, displays, or other devices that can interface with the Bean+ directly through the `A2/A3` and `I2C` ports (shown below). With over 120 different Grove devices available, from CO2 sensors to serial MP3 players, the possibilities are endless!
+As the name would suggest, [Grove modules](http://wiki.seeed.cc/Grove_System) are modular sensors, actuators, displays, or other devices that can interface with the Bean+ directly through the `A2/A3` and `I2C` ports (pictured below). With over 120 different Grove devices available, from CO2 sensors to serial MP3 players, the possibilities are endless!
 
 {{{img_rel this 'bean-plus-grove-ports.png' "Grove ports on Bean+"}}}
 
@@ -33,7 +33,7 @@ Now we will connect some of the Grove modules from the [Grove Starter Kit](http:
 
 {{{img_rel this 'grove-modules1.png' "Grove modules for this project"}}}
 
-Before starting, make sure the Bean+ is in 5V mode, which is required by the Grove modules.
+Before starting, make sure the Bean+ is in 5V mode; 5V is required to power the Grove modules.
 
 {{{img_rel this 'bean-plus-5-or-3.png' "Make sure the Bean+ is in 5V mode"}}}
 
@@ -117,7 +117,7 @@ Here's what the code does:
 
 ## Conclusion
 
-In this guide, we learned how to use the Grove ports on the Bean+.
+In this guide, we learned how to use the Grove ports on the Bean+. The Grove modules from this demo are available [here]().
 
 ## Troubleshooting
 
