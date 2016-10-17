@@ -27,15 +27,33 @@ You also need to understand how to use Virtual Serial to read data from Bean. If
 * {{> snip_req_bean}}
 * Computer (for Virtual Serial)
 
+## Grove Module Communication
+
+Grove modules' I/O pins can be broken down into several categories, depending on the complexity of the module:
+
+**Single Data Pin:** For the simpler sensors, the pins are VCC (power), GND (ground), SIG (data), and NC (not connected; not to be confused with *normally-closed*). These essentially use just the three pins mentioned first, as NC is not connected to anything and has no electronic function. Some modules will not even have an NC pin.
+
+{{{img_rel this 'basic-module1.jpg' "An example of a basic module (active buzzer module)"}}}
+
+**Two Data Pins:** Basic sensors with more than one I/O pin will still have VCC and GND pins, but the NC/blank pin will be replaced by another data pin. In the image below, the sensor's data pins are labeled *SUR* and *OBJ* to identify them as *surface temperature* and *object temperature*.
+
+{{{img_rel this 'basic-module2.jpg' "An example of a basic sensor with two data pins (infrared temperature sensor)"}}}
+
+**I2C:** Also known as inter-integrated circuit, this standard allows for multiple inputs and outputs through single pins by forcing the incoming/outgoing data (SDA, or Serial Data Line) to take turns based on pre-specified clock intervals (SCL, or Serial Clock Line). I2C modules also have VCC and GND pins for power and ground.
+
+{{{img_rel this 'i2c-module1.jpg' "An example of an I2C module (I2C touch sensor hub)"}}}
+
+{{{img_rel this 'i2c-module2.png' "Another I2C example, this one has an NC pin (NunChuck module)"}}}
+
+**Shift Registers:** Like I2C, shift registers are used for sending or receiving input or output from a number of devices through a turn-based process. Shift registers also have VCC, GND, data (D), and clock (DCK) pins. They differ in that they can send multiple commands at a time using bit-shifted values. The example below shows the Grove LED bar, which has its own [library](http://wiki.seeed.cc/Grove-LED_Bar) to circumvent the need to send raw bit-shifted data. In addition to the 4-pin Grove port, this module also has data-out and data-in pins, which can be used to daisy-chain several of them together.
+
+{{{img_rel this 'shift-register-module1.jpg' "An example of a chainable shift register (LED bar module)"}}}
+
 ## Attach Grove Modules
 
 Now we will connect some of the Grove modules from the [Grove Starter Kit](http://store.punchthrough.com/collections/all/products/grove-starter-kit-pre-order). This project will use the [touch sensor](http://wiki.seeed.cc/Grove-Touch_Sensor), [potentiometer](http://wiki.seeed.cc/Grove-Rotary_Angle_Sensor), and [buzzer](http://wiki.seeed.cc/Grove-Buzzer) modules.
 
 {{{img_rel this 'grove-modules1.png' "Grove modules for this project"}}}
-
-Before starting, make sure the Bean+ is in 5V mode; 5V is required to power the Grove modules.
-
-{{{img_rel this 'bean-plus-5-or-3.png' "Make sure the Bean+ is in 5V mode"}}}
 
 Plug the included 4-wire header cables into the modules:
 
@@ -43,7 +61,7 @@ Plug the included 4-wire header cables into the modules:
 
 Next, connect the potentiometer to the `A2/A3` port and the buzzer into the buzzer into the `I2C` port as shown below:
 
-{{{img_rel this 'grove-modules-connected' "Plug the Grove modules into the Bean+"}}}
+{{{img_rel this 'grove-modules-connected.png' "Plug the Grove modules into the Bean+"}}}
 
 If we run out of Grove ports like we have just now, there is an easy workaround; connect some wires to the touch sensor (the colors of the wires do not matter, but matching wire colors will help us kep track of which ones go where):
 
