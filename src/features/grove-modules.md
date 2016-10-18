@@ -39,13 +39,13 @@ Grove modules' I/O pins can be broken down into several categories, depending on
 
 {{{img_rel this 'basic-module2.jpg' "An example of a basic sensor with two data pins (infrared temperature sensor)"}}}
 
-**I2C:** Also known as inter-integrated circuit, this standard allows for multiple inputs and outputs through single pins by forcing the incoming/outgoing data (SDA, or Serial Data Line) to take turns based on pre-specified clock intervals (SCL, or Serial Clock Line). I2C modules also have VCC and GND pins for power and ground.
+**I2C:** Also known as inter-integrated circuit, this standard allows for multiple inputs and outputs through single pins. Devices communicating via I2C have a master/slave relationship, where the master can communicate with multiple slaves by forcing the incoming/outgoing data pin (SDA, or Serial Data Line) to take turns based on time intervals specified by the master device on a clock pin (SCL, or Serial Clock Line). I2C modules also have VCC and GND pins for power and ground.
 
 {{{img_rel this 'i2c-module1.jpg' "An example of an I2C module (I2C touch sensor hub)"}}}
 
 {{{img_rel this 'i2c-module2.png' "Another I2C example, this one has an NC pin (NunChuck module)"}}}
 
-**Shift Registers:** Like I2C, shift registers are used for sending or receiving input or output from a number of devices through a turn-based process. Shift registers also have VCC, GND, data (D), and clock (DCK) pins. They differ in that they can send multiple commands at a time using bit-shifted values. The example below shows the Grove LED bar, which has its own [library](http://wiki.seeed.cc/Grove-LED_Bar) to circumvent the need to send raw bit-shifted data. In addition to the 4-pin Grove port, this module also has data-out and data-in pins, which can be used to daisy-chain several of them together.
+**Shift Registers:** Like I2C, shift registers are used for sending or receiving input or output from a number of devices through a turn-based process. Shift registers also have VCC, GND, data (D), and clock (DCK) pins. They differ in that they can send multiple commands at a time using bit-shifted values. The example below shows the Grove LED bar, which has its own [library](https://github.com/Seeed-Studio/Grove_LED_Bar) to circumvent the need to send raw bit-shifted data. In addition to the 4-pin Grove port, this module also has data-out and data-in pins, which can be used to daisy-chain several of them together.
 
 {{{img_rel this 'shift-register-module1.jpg' "An example of a chainable shift register (LED bar module)"}}}
 
