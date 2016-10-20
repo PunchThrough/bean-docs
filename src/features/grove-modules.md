@@ -31,7 +31,24 @@ You also need to understand how to use Virtual Serial to read data from Bean. If
 
 Grove modules' I/O pins can be broken down into several categories, depending on the complexity of the module:
 
-**Single Data Pin:** For the simpler sensors, the pins are VCC (power), GND (ground), SIG (data), and NC (not connected; not to be confused with *normally-closed*). These essentially use just the three pins mentioned first, as NC is not connected to anything and has no electronic function. Some modules will not even have an NC pin.
+### Identifying Protocols Based On Pins:
+
+All Grove modules are connected with the same 4-pin cables, thus all Grove modules must connect to the Bean+ via 4-pins. You can use the table below to help you identify which communication protocols your sensors and actuators use based on how their pins are labeled.
+
+| Protocol |  -> 	| Identifier
+|:-:	|:-:	|:-:
+| Single Data |	| [GND, VCC, NC\*\*, SIG]
+| Double Data |	| [GND, VCC, DAT1\*, DAT2\*]
+| I2C 	|	| [GND, VCC, SDA, SCL]
+| Shift Register |	| [DO, DCKO, VCC, GND]
+| UART |	| [TX, RX, VCC, GND]
+| SPI | 	| [MOSI, MISO, VCC, GND]
+
+\**Note: Actual pin names may differ slightly based on the purpose of the module (see infrared temperature module below)*
+
+\*\**Also note: NC (not connected) pins may be absent on modules, resulting in only three pins*
+
+**Single Data Pin:** For the simpler sensors, the pins are VCC (power), GND (ground), SIG (data), and NC (not connected; not to be confused with *normally-closed*). These essentially use just the three pins mentioned first, as NC is not connected to anything and has no electronic function. Some modules will not even have an NC pin. Data pins can be either analog, digital, or both, depending on the type of data being recorded by the sensor. You can learn more about digital pins [here](https://www.arduino.cc/en/Tutorial/DigitalPins) and analog pins [here](https://www.arduino.cc/en/Tutorial/AnalogInputPins).
 
 {{{img_rel this 'basic-module1.jpg' "An example of a basic module (active buzzer module)"}}}
 
@@ -39,15 +56,21 @@ Grove modules' I/O pins can be broken down into several categories, depending on
 
 {{{img_rel this 'basic-module2.jpg' "An example of a basic sensor with two data pins (infrared temperature sensor)"}}}
 
-**I2C:** Also known as inter-integrated circuit, this standard allows for multiple inputs and outputs through single pins. Devices communicating via I2C have a master/slave relationship, where the master can communicate with multiple slaves by forcing the incoming/outgoing data pin (SDA, or Serial Data Line) to take turns based on time intervals specified by the master device on a clock pin (SCL, or Serial Clock Line). I2C modules also have VCC and GND pins for power and ground.
+**I2C:** Also known as inter-integrated circuit, this standard allows for multiple inputs and outputs through single pins. Devices communicating via I2C have a master/slave relationship, where the master can communicate with multiple slaves by forcing the incoming/outgoing data pin (SDA, or Serial Data Line) to take turns based on time intervals specified by the master device on a clock pin (SCL, or Serial Clock Line). I2C modules also have VCC and GND pins for power and ground. You can learn more about I2C [here](https://www.arduino.cc/en/Reference/Wire).
 
 {{{img_rel this 'i2c-module1.jpg' "An example of an I2C module (I2C touch sensor hub)"}}}
 
 {{{img_rel this 'i2c-module2.png' "Another I2C example, this one has an NC pin (NunChuck module)"}}}
 
-**Shift Registers:** Like I2C, shift registers are used for sending or receiving input or output from a number of devices through a turn-based process. Shift registers also have VCC, GND, data (D), and clock (DCK) pins. They differ in that they can send multiple commands at a time using bit-shifted values. The example below shows the Grove LED bar, which has its own [library](https://github.com/Seeed-Studio/Grove_LED_Bar) to circumvent the need to send raw bit-shifted data. In addition to the 4-pin Grove port, this module also has data-out and data-in pins, which can be used to daisy-chain several of them together.
+**Shift Registers:** Like I2C, shift registers are used for sending or receiving input or output from a number of devices through a turn-based process. Shift registers also have VCC, GND, data (D), and clock (DCK) pins. They differ in that they can send multiple commands at a time using bit-shifted values. The example below shows the Grove LED bar, which has its own [library](https://github.com/Seeed-Studio/Grove_LED_Bar) to circumvent the need to send raw bit-shifted data. In addition to the 4-pin Grove port, this module also has data-out and data-in pins, which can be used to daisy-chain several of them together. You can learn more about shift registers [here](https://learn.sparkfun.com/tutorials/shift-registers).
 
 {{{img_rel this 'shift-register-module1.jpg' "An example of a chainable shift register (LED bar module)"}}}
+
+**UART:** Also known as *Universal Asynchronous Receiver Transmitter*, this protocol is rarely used in Grove modules and is not supported by the Bean+ hardware. You can learn more about UART [here](https://learn.sparkfun.com/tutorials/serial-communication/uarts).
+
+**SPI:** The *Serial Peripheral Interface* protocol is not currently used by any Grove modules. You can learn more about SPI [here](https://www.arduino.cc/en/Reference/SPI).
+
+To learn more about any specific Grove module, check out the [Grove wiki](http://wiki.seeed.cc/Grove) on Seeed for example projects and in-depth explanations.
 
 ## Attach Grove Modules
 
@@ -135,7 +158,7 @@ Here's what the code does:
 
 ## Conclusion
 
-In this guide, we learned how to use the Grove ports on the Bean+. The Grove modules from this demo are available [here]().
+In this guide, we learned how to use the Grove ports on the Bean+. The Grove modules from this demo are available in the [Grove Starter Kit](http://store.punchthrough.com/collections/all/products/grove-starter-kit-pre-order), and other Grove modules can be purchased from the [Seeed](https://www.seeedstudio.com/category/grove-c-45.html).
 
 ## Troubleshooting
 
