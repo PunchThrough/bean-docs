@@ -29,7 +29,7 @@ This guide will show you how to use HID mode in your Bean sketches for use with 
 
 ## Program Your Bean
 
-Upload the following sketch to your Bean. This sketch will enable Bean to act like a mouse and control the position of your cursor via changes in the accelerometer. You will also be able to send data to the Bean over serial to use it as a media remote.
+Upload the following sketch to your Bean. This sketch will enable Bean to act like a mouse and control the position of your cursor via changes in position sensed by the accelerometer.
 
 After uploading the sketch, you will need to turn the Bean off, then on again, and then connect to it as a Bluetooth device in your normal computer Bluetooth settings.
 
@@ -63,7 +63,7 @@ void loop() {
 
 ## Move Bean Around
 
-Congratulations! You can now use your Bean to control your computer cursor and media playback.
+Congratulations! You can now use your Bean to control your computer cursor.
 
 {{{video_rel this 'hid-cursor-control.mp4' true}}}
 
