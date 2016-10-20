@@ -35,11 +35,11 @@ The battery for the Bean+ also includes a protection circuit that stops the char
 * {{> snip_req_bean_loader}}
 * Bean Loader ([install guides](../../getting-started/intro/#next-steps))
 * Arduino IDE 1.6.8 ([available here](https://www.arduino.cc/en/Main/OldSoftwareReleases))
+* [OSX Virtual serial](../virtual-serial) or [log_serial on CLI loader](../../node-sdk/overview)
 
 ### Hardware
 
 * {{> snip_req_bean}}
-* Computer (for Virtual Serial)
 
 ## Program Your Bean
 
