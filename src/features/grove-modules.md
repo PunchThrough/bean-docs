@@ -29,26 +29,11 @@ You also need to understand how to use Virtual Serial to read data from Bean. If
 
 ## Grove Module Communication
 
-Grove modules' I/O pins can be broken down into several categories, depending on the complexity of the module:
+All Grove modules are connected with the same standardized 4-pin cables. All modules have at least one VCC (power) pin and at least one GND (ground) pin, which are used to power the modules. Most modules can run on either 5V or 3.3V power, but some require one or the other. You can check the [Seeed Wiki](http://wiki.seeed.cc/Grove) to find specifications for each module.
 
-### Identifying Protocols Based On Pins:
+Grove modules' I/O pins for sending and receiving data can be broken down into several categories, depending on the complexity of the module:
 
-All Grove modules are connected with the same 4-pin cables, thus all Grove modules must connect to the Bean+ via 4-pins. You can use the table below to help you identify which communication protocols your sensors and actuators use based on how their pins are labeled.
-
-| Protocol |  -> 	| Identifier
-|:-:	|:-:	|:-:
-| Single Data |	| [GND, VCC, NC\*\*, SIG]
-| Double Data |	| [GND, VCC, DAT1\*, DAT2\*]
-| I2C 	|	| [GND, VCC, SDA, SCL]
-| Shift Register |	| [DO, DCKO, VCC, GND]
-| UART |	| [TX, RX, VCC, GND]
-| SPI | 	| [MOSI, MISO, VCC, GND]
-
-\**Note: Actual pin names may differ slightly based on the purpose of the module (see infrared temperature module below)*
-
-\*\**Also note: NC (not connected) pins may be absent on modules, resulting in only three pins*
-
-**Single Data Pin:** For the simpler sensors, the pins are VCC (power), GND (ground), SIG (data), and NC (not connected; not to be confused with *normally-closed*). These essentially use just the three pins mentioned first, as NC is not connected to anything and has no electronic function. Some modules will not even have an NC pin. Data pins can be either analog, digital, or both, depending on the type of data being recorded by the sensor. You can learn more about digital pins [here](https://www.arduino.cc/en/Tutorial/DigitalPins) and analog pins [here](https://www.arduino.cc/en/Tutorial/AnalogInputPins).
+**Single Data Pin:** For the simpler sensors, the pins are VCC, GND, SIG (data), and NC (not connected; not to be confused with *normally-closed*). These essentially use just the three pins mentioned first, as NC is not connected to anything and has no electronic function. Some modules will not even have an NC pin. Data pins can be either analog, digital, or both, depending on the type of data being recorded by the sensor. You can learn more about digital pins [here](https://www.arduino.cc/en/Tutorial/DigitalPins) and analog pins [here](https://www.arduino.cc/en/Tutorial/AnalogInputPins).
 
 {{{img_rel this 'basic-module1.jpg' "An example of a basic module (active buzzer module)"}}}
 
@@ -62,19 +47,19 @@ All Grove modules are connected with the same 4-pin cables, thus all Grove modul
 
 {{{img_rel this 'i2c-module2.png' "Another I2C example, this one has an NC pin (NunChuck module)"}}}
 
-**Shift Registers:** Like I2C, shift registers are used for sending or receiving input or output from a number of devices through a turn-based process. Shift registers also have VCC, GND, data (D), and clock (DCK) pins. They differ in that they can send multiple commands at a time using bit-shifted values. The example below shows the Grove LED bar, which has its own [library](https://github.com/Seeed-Studio/Grove_LED_Bar) to circumvent the need to send raw bit-shifted data. In addition to the 4-pin Grove port, this module also has data-out and data-in pins, which can be used to daisy-chain several of them together. You can learn more about shift registers [here](https://learn.sparkfun.com/tutorials/shift-registers).
+**Shift Registers:** Like I2C, shift registers are used for sending or receiving input or output from a number of devices through a turn-based process. Shift registers also have VCC, GND, data (D), and clock (DCK) pins. They differ in that they can send multiple "commands" at a time using bit-shifted values. The example below shows the Grove LED bar, which has its own [library](https://github.com/Seeed-Studio/Grove_LED_Bar) to circumvent the need to send raw bit-shifted data. In addition to the 4-pin Grove port, this module also has data-out and data-in pins, which can be used to daisy-chain several of them together. You can learn more about shift registers [here](https://learn.sparkfun.com/tutorials/shift-registers).
 
 {{{img_rel this 'shift-register-module1.jpg' "An example of a chainable shift register (LED bar module)"}}}
 
-**UART:** Also known as *Universal Asynchronous Receiver Transmitter*, this protocol is rarely used in Grove modules and is not supported by the Bean+ hardware. You can learn more about UART [here](https://learn.sparkfun.com/tutorials/serial-communication/uarts).
+**UART:** Also known as *Universal Asynchronous Receiver Transmitter*, this protocol is rarely used in Grove modules and is not supported by the Bean+ hardware. These modules can be identified by their TX (transmit) and RX (receive) pins. You can learn more about UART [here](https://learn.sparkfun.com/tutorials/serial-communication/uarts).
 
-**SPI:** The *Serial Peripheral Interface* protocol is not currently used by any Grove modules. You can learn more about SPI [here](https://www.arduino.cc/en/Reference/SPI).
+**SPI:** The *Serial Peripheral Interface* protocol is not currently used by any Grove modules other than the [Grove Base BoosterPack](http://wiki.seeedstudio.com/wiki/Grove_Base_BoosterPack). SPI devices can be identified by having MOSI (master out, slave in) and MISO (master in, slave out) pins. You can learn more about SPI [here](https://www.arduino.cc/en/Reference/SPI).
 
 To learn more about any specific Grove module, check out the [Grove wiki](http://wiki.seeed.cc/Grove) on Seeed for example projects and in-depth explanations.
 
-## Attach Grove Modules
+## Connect Grove Modules
 
-Now we will connect some of the Grove modules from the [Grove Starter Kit](http://store.punchthrough.com/collections/all/products/grove-starter-kit-pre-order). This project will use the [touch sensor](http://wiki.seeed.cc/Grove-Touch_Sensor), [potentiometer](http://wiki.seeed.cc/Grove-Rotary_Angle_Sensor), and [buzzer](http://wiki.seeed.cc/Grove-Buzzer) modules.
+Now we will connect some of the Grove modules from the [Grove Starter Kit](http://store.punchthrough.com/collections/all/products/grove-starter-kit-pre-order). This project will use the [touch sensor](http://wiki.seeed.cc/Grove-Touch_Sensor), [potentiometer](http://wiki.seeed.cc/Grove-Rotary_Angle_Sensor), and [buzzer](http://wiki.seeed.cc/Grove-Buzzer) modules, as well as some basic jumper wires.
 
 {{{img_rel this 'grove-modules1.png' "Grove modules for this project"}}}
 
@@ -90,7 +75,13 @@ If we run out of Grove ports like we have just now, there is an easy workaround;
 
 {{{img_rel this 'touch-sensor-wires.png' "Attach wires to the touch sensor cable"}}}
 
-Now connect the wires from the touch sensor cable to the Bean+ as pictured below:
+Now connect the pins of the touch sensor to the Bean+ as follows:
+
+VCC -> `5V`
+
+GND -> `GND`
+
+SIG -> `D0`
 
 {{{img_rel this 'module-pins-closeup.png' "Closeup of the pins connecting to the touch sensor"}}}
 
