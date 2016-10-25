@@ -36,6 +36,9 @@ pathCollector:
     - key: features
       name: Feature Walkthroughs
       pattern: ^features/.+\.md$
+    - key: projects
+      name: Bean Projects
+      pattern: ^projects/.+\.md$
     - key: node-sdk
       name: Node.js SDK/CLI
       pattern: ^node-sdk/.+\.md$
