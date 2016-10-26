@@ -4,12 +4,20 @@ layout: basic-top-video.hbs
 vid: ../../projects/fire-pumpkin/PumpkinFirePhone.mp4
 loop: true
 autotoc: true
-order: 2
+order: 1
 ---
 
 ## Introduction
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ScVQEZZuLLU" frameborder="0" allowfullscreen></iframe>
+
+The pumpkin NotiFire is a delicious but questionable combination of a Glade aerosol air freshener, fire and text messages. We hacked a Glade air freshener and combined it with our Bean+ to make a pumpkin spit fire based on iOS notifications. 
+
+The Bean+ is connected to the phone over Bluetooth Low Energy using ANCS (Apple Notification Center Service) to receive the phones notifications. The Bean+ sketch filters through the notifications and triggers the air freshener on any new message. ANCS can be used to to trigger on any notification, have fire shoot every time your favorite team scores using the ESPN app or really light your fire when you get a Tinder match. 
+
+Let's start by saying, this is just a horrible idea. One of those horrible ideas that is just so good you can't resist making it. Building this Mike singed his eye brows, burned his hand and even inhaled flaming hair spray. The upside is your home will have an overwhelming smell of fresh burning linen. 
+
+Now that we got that warning out of the way, let's make this horrible Halloween contraption!
 
 ## Before You Begin
 
@@ -37,11 +45,11 @@ We removed the batteries that came with the air freshener and opted to power the
 
 Originally the Pumpkin NotiFire was going to use a stun gun that is triggered by the Bean+ to ignite the aerosol stream. After putting together a questionable Amazon cart that included, servos, butane and many different stun guns we forgot to click the order button. After realizing it is pretty hard to find stun guns locally we fell back on the 1800's classic, a candle. 
 
-{{{img_rel this 'GladeInPackage.jpg' 'New Glade!' '100%'}}}
+{{{img_rel this 'GladeInPackage.jpg' 'New Glade!' '75%'}}}
 
-{{{img_rel this 'GladeOpen.jpg' 'The insides' '100%'}}}
+{{{img_rel this 'GladeOpen.jpg' 'The insides' '75%'}}}
 
-{{{img_rel this 'Candle.jpg' 'New Glade!' '100%'}}}
+{{{img_rel this 'Candle.jpg' 'New Glade!' '75%'}}}
 
 Glue the candle to the front of the glade or find a way to set it in front of it.  It is best to place the candle as close to the nozzle on the Glade air fresher as possible. Make sure the flame isn't in the path of the stream, otherwise it puts out the candle every time.
 
@@ -49,31 +57,31 @@ Glue the candle to the front of the glade or find a way to set it in front of it
 
 It is essential that your pumpkin looks amazing otherwise the Halloween gods may punish you with a proper burning. ( I lost my knuckle hair for my sins. ) Really this means making sure you line up the nozzle on the Glade Air Freshener with the mouth of your pumpkin.
 
-{{{img_rel this 'CarvingSettingUp.JPG' 'Get everything you need' '100%'}}}
+{{{img_rel this 'CarvingSettingUp.JPG' 'Get everything you need' '75%'}}}
 
 Get everything together to gut this puppy!
 
-{{{img_rel this 'PumpkinCutTop.jpg' 'STAB TOP OFF' '100%'}}}
+{{{img_rel this 'PumpkinCutTop.jpg' 'STAB TOP OFF' '75%'}}}
 
 Safely use a large knife to remove the top.
 
-{{{img_rel this 'PumpkinPullOutGuts.jpg' 'Gutt it!' '100%'}}}
+{{{img_rel this 'PumpkinPullOutGuts.jpg' 'Gutt it!' '75%'}}}
 
 Use hands to cleanly remove insides.
 
-{{{img_rel this 'PumpkinKnifeEyes.jpg' 'REMOVE EYES!' '100%'}}}
+{{{img_rel this 'PumpkinKnifeEyes.jpg' 'REMOVE EYES!' '75%'}}}
 
 Safely hold pumpkin in one hand while using sharp knife to stab eyes out.
 
-{{{img_rel this 'PumpkinOutside.jpg' 'All Done!' '100%'}}}
+{{{img_rel this 'PumpkinOutside.jpg' 'All Done!' '75%'}}}
 
-Admire your creation. It is now time to turn this pumpkin into a fire breathing dragon.
+Admire your creation. It is time to turn this pumpkin into a fire breathing dragon.
 
 ## Program Your Bean
 
 In order to get the Pumpkin NotiFire to spit flames whenever you get a text we used [ANCS ](/features/ancs/) (Apple Notification Center Service) to receive all the phones notifications. The Bean+ goes through the notifications and triggers if there is a text message notifications. This could be done with any notification or a specific text message!
 
-After the Bean+ is paired with your phones ANCS sends all notifications that you recieve. Be careful because it sends all the qued up notifications that you have never looked at. Before you go throwing flames it's time to clear all those tinder match notificaitons and the text messages that come with them.
+After the Bean+ is paired with your phones ANCS sends all notifications that you receive. Be careful because it sends all the qued up notifications that you have never looked at. Before you go throwing flames it's time to clear all those tinder match notifications and the text messages that come with them.
 
 ### Code
 
@@ -115,16 +123,17 @@ void loop() {
 
 ## Add the Fire & Test
 
-{{{video_rel this 'FireTest.mp4' '' true }}}
+{{{video_rel this 'FireTest.mp4' '75%' true }}}
 
 ## Bring it all Together!
 
-Place your now working flamethrower inside the pumpkin making sure the nozzle points out of the pumpkin. Otherwise you could end up with a dangerous melted pile of plastic inside the pumpkin.
+Place your now working flamethrower inside the pumpkin making sure the nozzle points out of the pumpkin. Otherwise you could end up with a Note 7 situation inside the pumpkin.
 
-{{{img_rel this 'InsidePumpkin.jpg' 'New Glade!' '100%'}}}
+{{{img_rel this 'InsidePumpkin.jpg' 'New Glade!' '75%'}}}
 
-{{{video_rel this 'PumpkinFireExperiment.mp4' '' true }}}
+{{{video_rel this 'PumpkinFireExperiment.mp4' '75%' true }}}
 
 ## Conclusion
 
 ## Learn More
+* [Thanks to David Bates and his wonderful idea to use the air freshener!](https://www.hackster.io/Dlbates/iot-flaming-and-talking-pumpkin-using-aws-and-esp8266-49934f)
