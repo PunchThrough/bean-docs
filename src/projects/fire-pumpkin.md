@@ -54,7 +54,7 @@ Originally the Pumpkin NotiFire was going to use a stun gun triggered by the Bea
 
 {{{img_rel this 'GladeOpen.jpg' 'The insides' '75%'}}}
 
-{{{img_rel this 'Candle.jpg' 'New Glade!' '75%'}}}
+{{{img_rel this 'Candle.jpg' 'Candle!' '75%'}}}
 
 Glue or place the candle as close to the Glade nozzle as possible.  Protip: Make sure the flame isn't in the path of the stream, otherwise it puts out the candle every time.
 
@@ -134,7 +134,7 @@ void loop() {
 
 Place your now working flamethrower inside the pumpkin making sure the nozzle points out of the pumpkin, otherwise you could end up with a Note 7 situation inside.
 
-{{{img_rel this 'InsidePumpkin.jpg' 'New Glade!' '75%'}}}
+{{{img_rel this 'InsidePumpkin.jpg' 'Inside!' '75%'}}}
 
 {{{video_rel this 'PumpkinFireExperiment.mp4' '75%' true }}}
 
