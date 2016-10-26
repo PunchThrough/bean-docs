@@ -44,11 +44,9 @@ Now that we have warned you of the dangers, let's start creating this fire-breat
 
 ### Hack the Glade
 
-The air freshener is controlled through it's one shot switch located on the back of the unit. Normally the air freshener is operated on a timer but glade added a manual one-shot for those especially dank moments. The one-shot button is a micro-switch that connects an active low signal to ground in order to activate the unit. The ones-shot signal from the air freshener is connected to D0 on the Bean+ and is used to trigger the spray.
+The air freshener is controlled through it's one-shot switch located on the back of the unit. Normally the air freshener is operated on a timer but glade added a manual one-shot for those especially dank moments. The one-shot button is a micro-switch that connects an active low signal to ground in order to activate the unit. The one-shot signal from the air freshener is connected to D0 on the Bean+ and is used to trigger the spray.
 
 We removed the batteries that came with the air freshener and opted to power the whole device from the Bean+'s 3.3V regulator. This allows the Pumpkin NotiFire to be re-charged and more importantly there is one power switch. It is really important when you are working with things that breath fire ;)
-
-Originally the Pumpkin NotiFire was going to use a stun gun triggered by the Bean+ to ignite the aerosol stream. After putting together a questionable Amazon cart that included, servos, butane and many different stun guns we forgot to click the order button. After realizing it is pretty hard to find stun guns locally, we fell back on the 1800's classic, a candle. 
 
 {{{img_rel this 'GladeInPackage.jpg' 'New Glade!' '75%'}}}
 
