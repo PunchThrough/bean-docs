@@ -130,13 +130,15 @@ void loop() {
 
 {{{video_rel this 'FireTest.mp4' '75%' true }}}
 
-## Bring it all Together!
+## Bring it all Together! ( 📱+ ✉️ = 🎃🔥🔥 )
 
 Place your now working flamethrower inside the pumpkin making sure the nozzle points out of the pumpkin, otherwise you could end up with a Note 7 situation inside.
 
 {{{img_rel this 'InsidePumpkin.jpg' 'New Glade!' '75%'}}}
 
 {{{video_rel this 'PumpkinFireExperiment.mp4' '75%' true }}}
+
+👋 Goodbye.
 
 ## Learn More
 * [Thanks to David Bates and his wonderful idea to use the air freshener!](https://www.hackster.io/Dlbates/iot-flaming-and-talking-pumpkin-using-aws-and-esp8266-49934f)
