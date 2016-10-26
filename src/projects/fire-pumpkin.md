@@ -16,13 +16,13 @@ order: 1
 
 The pumpkin NotiFire is a delicious but questionable combination of a Glade aerosol air freshener, fire and text messages. We hacked a Glade air freshener and combined it with our Bean+ to make a pumpkin spit fire based on iOS notifications. 
 
-The Bean+ is connected to the phone over Bluetooth Low Energy using ANCS (Apple Notification Center Service) to receive the phones notifications. The Bean+ sketch filters through the notifications and triggers the air freshener on any new message. ANCS can be used to to trigger on any notification, have fire shoot every time your favorite team scores using the ESPN app or really light your fire when you get a Tinder match. 
+The Bean+ is connected to the phone over Bluetooth Low Energy using ANCS (Apple Notification Center Service) to receive the phones notifications. The Bean+ sketch filters through the notifications and triggers the air freshener on any new text message. ANCS can be used to trigger on any notification, have fire shoot every time your favorite team scores using the ESPN app or really light your fire when you get a Tinder match. 
 
-Let's start by saying, this is just a horrible idea. One of those horrible ideas that is just so good you can't resist making it. Building this Mike singed his eye brows, burned his hand and even inhaled flaming hair spray. The upside is your home will have an overwhelming smell of fresh burning linen. 
+Let's start by saying, this is just a horrible idea. One of those horrible ideas that is just so good you can't resist making it. While building this, Mike singed his eye brows, burned his hand and even inhaled flaming hair spray. The upside is your home will have an overwhelming smell of fresh burning linen. 
 
 {{{video_rel this 'HandBurn.mp4' '75%' true }}}
 
-Now that we got that warning out of the way, let's make this horrible Halloween contraption!
+Now that we have warned you of the dangers, let's start creating this fire-breathing Halloween contraption!
 
 ## Before You Begin
 
@@ -84,7 +84,7 @@ Admire your creation. It is time to turn this pumpkin into a fire breathing drag
 
 ## Program Your Bean
 
-In order to get the Pumpkin NotiFire to spit flames whenever you get a text we used [ANCS ](/features/ancs/) (Apple Notification Center Service) to receive all the phones notifications. The Bean+ goes through the notifications and triggers if there is a text message. The opportunities are endless, as it can be triggered with any notification or a specific text message!
+In order to get the Pumpkin NotiFire to spit flames whenever you get a text we used [ANCS](/features/ancs/) (Apple Notification Center Service) to receive all the phones notifications. The Bean+ goes through the notifications and triggers if there is a text message. The opportunities are endless, as it can be triggered with any notification or a specific text message!
 
 After the Bean+ is paired with the phone, it will forward all notifications over ANCS. Be careful because it sends all the queued up notifications that you have never looked at. So before you go throwing flames you better clear the notifications for all those tinder matches and the text messages that come with them.
 
