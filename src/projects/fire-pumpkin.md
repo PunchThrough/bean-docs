@@ -27,9 +27,6 @@ order: 2
 * [Tea Candles](https://www.amazon.com/Country-Dreams-Unscented-Lights-Pkg-White/dp/B001681QZ8)
 * Large Pumpkin & various carving tools
 
-
-PumpkinFirePhone
-
 ## Make it
 
 ### Hack the Glade
@@ -40,10 +37,9 @@ We removed the batteries that came with the air freshener and opted to power the
 
 Originally the Pumpkin NotiFire was going to use a stun gun that is triggered by the Bean+ to ignite the aerosol stream. After putting together a questionable Amazon cart that included, servos, butane and many different stun guns we forgot to click the order button. After realizing it is pretty hard to find stun guns locally we fell back on the 1800's classic, a candle. 
 
-
 {{{img_rel this 'GladeInPackage.jpg' 'New Glade!' '100%'}}}
-{{{img_rel this 'GladeOpen.jpg' 'The insides' '100%'}}}
 
+{{{img_rel this 'GladeOpen.jpg' 'The insides' '100%'}}}
 
 {{{img_rel this 'Candle.jpg' 'New Glade!' '100%'}}}
 
@@ -116,8 +112,6 @@ void loop() {
   }
 }
 ```
-
-#### Explanation
 
 ## Add the Fire & Test
 
