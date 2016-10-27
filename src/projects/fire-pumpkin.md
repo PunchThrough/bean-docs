@@ -82,7 +82,7 @@ Admire your creation. It is time to turn this pumpkin into a fire breathing drag
 
 ## Program Your Bean
 
-In order to get the Pumpkin NotiFire to spit flames whenever you get a text we used [ANCS](/features/ancs/) (Apple Notification Center Service) to receive all the phones notifications. The Bean+ goes through the notifications and triggers if there is a text message. The opportunities are endless, as it can be triggered with any notification or a specific text message!
+In order to get the Pumpkin NotiFire to spit flames whenever you get a text we used [ANCS](../../features/ancs/) (Apple Notification Center Service) to receive all the phones notifications. The Bean+ goes through the notifications and triggers if there is a text message. The opportunities are endless, as it can be triggered with any notification or a specific text message!
 
 After the Bean+ is paired with the phone, it will forward all notifications over ANCS. Be careful because it sends all the queued up notifications that you have never looked at. So before you go throwing flames you better clear the notifications for all those tinder matches and the text messages that come with them.
 
@@ -140,4 +140,4 @@ Place your now working flamethrower inside the pumpkin making sure the nozzle po
 
 ## Learn More
 * [Thanks to David Bates and his wonderful idea to use the air freshener!](https://www.hackster.io/Dlbates/iot-flaming-and-talking-pumpkin-using-aws-and-esp8266-49934f)
-* [Guide for ANCS on the Bean+](/features/ancs/)
+* [Guide for ANCS on the Bean+](../../features/ancs/)
