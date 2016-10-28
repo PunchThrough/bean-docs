@@ -39,47 +39,46 @@ module.exports = config => {
 
     // If files are in guides or example-projects
     Object.keys(files).forEach((filePath) => {
-        let data = files[filePath]
-        guides.forEach((coll, index) => {
-          let collRegex = new RegExp(coll.pattern)
-          if (collRegex.test(filePath)) {
-            guideCollections[index].pages.push(data)
-            // Each file should be aware of the collection it's in
-            files[filePath].coll_key = coll.key
-          }
-        })
-        projects.forEach((coll, index) => {
-          let collRegex = new RegExp(coll.pattern)
-          if (collRegex.test(filePath)) {
-            projectCollections[index].pages.push(data)
-            // Each file should be aware of the collection it's in
-            files[filePath].coll_key = coll.key
-          }
-        })
+      let data = files[filePath]
+      guides.forEach((coll, index) => {
+        let collRegex = new RegExp(coll.pattern)
+        if (collRegex.test(filePath)) {
+          guideCollections[index].pages.push(data)
+          // Each file should be aware of the collection it's in
+          files[filePath].coll_key = coll.key
+        }
+      })
+      projects.forEach((coll, index) => {
+        let collRegex = new RegExp(coll.pattern)
+        if (collRegex.test(filePath)) {
+          projectCollections[index].pages.push(data)
+          // Each file should be aware of the collection it's in
+          files[filePath].coll_key = coll.key
+        }
+      })
     })
 
     // Sort all pages by their "order" property, if it exists
     guideCollections.forEach((coll) => {
       coll.pages = coll.pages.sort(pageOrder)
     })
-    
+
     projectCollections.forEach((coll) => {
       coll.pages = coll.pages.sort(pageOrder)
     })
 
     // Store in Metalsmith global object
     metalsmith.collections = guideCollections + projectCollections
-    
+
     // Store in each File for local access
     Object.keys(files).forEach((filePath) => {
-      if (filePath.includes("guides")) {
-      	files[filePath].collections = guideCollections
-      }
-      else if (filePath.includes("projects")) {
-      	files[filePath].collections = projectCollections
+      if (filePath.includes('guides')) {
+        files[filePath].collections = guideCollections
+      } else if (filePath.includes('projects')) {
+        files[filePath].collections = projectCollections
       }
     })
-    
+
     done()
   }
 }
