@@ -29,7 +29,7 @@ autotoc:
 
 pathCollector:
   debug: false
-  guides:
+  guides:  # Sidebar links for the guides site
     - key: getting-started
       name: Getting Started
       pattern: ^guides/getting-started/.+\.md$
@@ -51,7 +51,7 @@ pathCollector:
     - key: help
       name: Having Problems?
       pattern: ^guides/help/.+\.md$
-  projects:
+  projects:  # Sidebar links for the projects section
     - key: fake-page
       name: Ipsum One
       pattern: ^example-projects/fake-page/.+\.md$
