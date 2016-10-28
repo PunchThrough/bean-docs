@@ -1,5 +1,5 @@
 ---
-title: Overview (not actually)
+title: Project Two
 layout: basic.hbs
 autotoc: true
 ---

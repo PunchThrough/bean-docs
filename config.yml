@@ -52,15 +52,10 @@ pathCollector:
       name: Having Problems?
       pattern: ^guides/help/.+\.md$
   projects:  # Sidebar links for the projects section
-    - key: fake-page
-      name: Ipsum One
-      pattern: ^example-projects/fake-page/.+\.md$
-    - key: not-real
-      name: Ipsum Two
-      pattern: ^example-projects/not-real/.+\.md$
-    - key: faux
-      name: Ipsum Three
-      pattern: ^example-projects/faux-link/.+\.md$
+    - key: projects
+      name: Projects
+      pattern: ^example-projects/projects/.+\.md$
+
 
 permalinks:
   pattern: :coll_key/:id
