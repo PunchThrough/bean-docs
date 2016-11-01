@@ -54,7 +54,7 @@ pathCollector:
   projects:  # Sidebar links for the projects section
     - key: projects
       name: Projects
-      pattern: ^example-projects/projects/.+\.md$
+      pattern: ^projects/.+\.md$
 
 permalinks:
   pattern: :coll_key/:id
@@ -65,7 +65,7 @@ relativeRoots:
   indexFilename: index.md
 
 guides_index: 'getting-started/intro/'
-projects_index: 'projects/overview/'
+projects_index: 'overview/'
 
 lint:
   files:

@@ -3,6 +3,21 @@
 let pluralize = require('pluralize')
 
 
+let pageOrder = (a, b) => {
+  if (!a.order && !b.order) {
+    // Default: sort alphabetically
+    // http://stackoverflow.com/a/51169/254187
+    // localeCompare with locale and sort options doesn't work with
+    // case-insensitivity for some reason
+    return a.title.toLowerCase().localeCompare(b.title.toLowerCase())
+  }
+  // Sort pages with "order" above pages without
+  if (!a.order) return 1
+  if (!b.order) return -1
+  return a.order - b.order
+}
+
+
 module.exports = (config) => {
 
   return (files, metalsmith, done) => {
@@ -11,21 +26,7 @@ module.exports = (config) => {
       console.log('Generating collections for ' + count + ' ' + pluralize('file', count))
     }
 
-    let pageOrder = (a, b) => {
-      if (!a.order && !b.order) {
-        // Default: sort alphabetically
-        // http://stackoverflow.com/a/51169/254187
-        // localeCompare with locale and sort options doesn't work with
-        // case-insensitivity for some reason
-        return a.title.toLowerCase().localeCompare(b.title.toLowerCase())
-      }
-      // Sort pages with "order" above pages without
-      if (!a.order) return 1
-      if (!b.order) return -1
-      return a.order - b.order
-    }
-
-    // Permanent sidebar links for all subpages of /example-projects/
+    // Permanent sidebar links for all subpages of /projects/
     let projects = config.projects
     let projectCollections = []
     projects.forEach((coll) => {
@@ -39,23 +40,26 @@ module.exports = (config) => {
       guideCollections.push({key: coll.key, name: coll.name, pages: []})
     })
 
-    // If files are in guides or example-projects
+    // Collect pages that should be in the guides/project nav
     Object.keys(files).forEach((filePath) => {
+      if (filePath.endsWith('index.md'))
+        return
+
       let data = files[filePath]
-      guides.forEach((coll, index) => {
-        let collRegex = new RegExp(coll.pattern)
+      guides.forEach((guideCollection, index) => {
+        let collRegex = new RegExp(guideCollection.pattern)
         if (collRegex.test(filePath)) {
           guideCollections[index].pages.push(data)
           // Each file should be aware of the collection it's in
-          files[filePath].coll_key = coll.key
+          files[filePath].coll_key = guideCollection.key
         }
       })
-      projects.forEach((coll, index) => {
-        let collRegex = new RegExp(coll.pattern)
+      projects.forEach((projectCollection, index) => {
+        let collRegex = new RegExp(projectCollection.pattern)
         if (collRegex.test(filePath)) {
           projectCollections[index].pages.push(data)
           // Each file should be aware of the collection it's in
-          files[filePath].coll_key = coll.key
+          files[filePath].coll_key = projectCollection.key
         }
       })
     })
