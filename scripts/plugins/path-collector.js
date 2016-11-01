@@ -2,7 +2,9 @@
 
 let pluralize = require('pluralize')
 
-module.exports = config => {
+
+module.exports = (config) => {
+
   return (files, metalsmith, done) => {
     let count = Object.keys(files).length
     if (config.debug) {
@@ -81,4 +83,5 @@ module.exports = config => {
 
     done()
   }
+
 }

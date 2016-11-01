@@ -56,7 +56,6 @@ pathCollector:
       name: Projects
       pattern: ^example-projects/projects/.+\.md$
 
-
 permalinks:
   pattern: :coll_key/:id
 
@@ -66,7 +65,7 @@ relativeRoots:
   indexFilename: index.md
 
 guides_index: 'getting-started/intro/'
-projects_index: 'overview/'
+projects_index: 'projects/overview/'
 
 lint:
   files:
