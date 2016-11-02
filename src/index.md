@@ -1,5 +1,3 @@
-[Redirecting...]({{config.index}})
+* [Guides](http://localhost:8080/guides/)
 
-<script>
-  window.location.replace('{{config.index}}')
-</script>
+* [Example Projects](http://localhost:8080/projects/)
