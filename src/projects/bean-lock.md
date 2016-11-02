@@ -42,9 +42,7 @@ The Bean cannot operate at the same voltage as the motor, so we need to use a [v
 
 ## Code
 
-To open the lock, we will use the [LightBlue app](https://itunes.apple.com/us/app/lightblue-bluetooth-low-energy/id557428110?mt=8). It has a section called the Sandbox, that lets you control the Beanwithout having to program your own iOS app. When the Bean receives a serial message, it checks the bytes received against the keycode saved inside the sketch. If the keycode matches the buttons pressed in the sandbox, the Bean Lock will unlock or lock.
-
-**CODE FROM GITHUB**
+To open the lock, we will use the [LightBlue app](https://itunes.apple.com/us/app/lightblue-bluetooth-low-energy/id557428110?mt=8). It has a section called the Sandbox, that lets you control the Bean without having to program your own iOS app. When the Bean receives a serial message, it checks the bytes received against the keycode saved inside the sketch. If the keycode matches the buttons pressed in the sandbox, the Bean Lock will unlock or lock. Program the Bean with **[this code](https://github.com/PunchThrough/Bean-LightBlueLatch)**.
 
 {{{img_rel this '4F2AJEK4HZZRKYEQ.jpg' 'Sandbox in LightBlue app' '75%'}}}
 
