@@ -31,7 +31,7 @@ The Bean cannot operate at the same voltage as the motor, so we need to use a [v
 
 ## What You'll Need
 
-* [LightBlue Bean](http://store.punchthrough.com/collections/all/products/bean)
+* [LightBlue Bean](http://store.punchthrough.com/collections/all/products/bean) or [Bean+](http://store.punchthrough.com/collections/all/products/lightblue-bean-plus)
 * [Electronic deadbolt](http://www.amazon.com/gp/product/B000FBU2KW/ref=oh_aui_detailpage_o01_s00?ie=UTF8&psc=1)
 * [H-Bridge motor driver](http://www.sparkfun.com/products/9457)
 * [3.3V linear voltage regulator](http://www.sparkfun.com/products/526)
