@@ -207,7 +207,7 @@ A few wires and lines of codes later and boom, you have a lock that you can open
   <iframe width="703" height="396" src="https://player.vimeo.com/video/105260443" frameborder="0" allowfullscreen></iframe>
 </div>
 
-### Security Flaws
+## Security Flaws
 
 The Bean Lock would be a terrible lock if it were hackable enough to let people right into your home. Until you can be sure this is secure, we wouldn’t recommend you replace your home’s standard deadbolt with the Bean Lock. The Bean was designed to be very easy to program, but in the case of a lock, you may not want your neighbors having the same access as you have. To avoid this, we have added [pincode protection](http://punchthrough.com/bean/protect-your-bean-with-authentication) to the latest firmware release. It will prevent anyone without the pincode from reprogramming your Bean.
 
