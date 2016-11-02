@@ -2,7 +2,7 @@
 title: Bean Lock
 layout: basic.hbs
 autotoc: true
-order: 1
+order: 2
 ---
 
 {{{img_rel this '1beanlockphoto_copy.png' 'Bean lock' '100%'}}}
