@@ -188,4 +188,4 @@ Click deploy in the top right corner to update server.
 
 Place the sensor in water to send the warning email.
 
-{{{video_rel this 'IMG_0012.mp4' '100%' true }}}
+{{{video_rel this 'IMG_0013.mp4' '100%' true }}}
