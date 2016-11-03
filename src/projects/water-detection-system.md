@@ -35,9 +35,9 @@ It’s happened to me. But, worry no more with this water detection system which
 
 ## What do the different nodes do?
 
-Node-RED is a visual programming interface for the Internet of things. If you haven’t used Node-RED with the LightBlue Bean before, here is more [information](http://punchthrough.com/bean/node-red/).
+Node-RED is a visual programming interface for the Internet of things. If you haven’t used Node-RED with the LightBlue Bean before, here is more [information]({{relativeRoot}}guides/node-red/what-is-node-red/).
 
-This example uses a RaspberryPi to run the Node-RED server. The node red server acts as an internet access point for the LightBlue Bean. Here are the full [installation](https://punchthrough.com/bean/guides/node-red/installation/) details for using the LightBlue Bean and Node-RED.
+This example uses a RaspberryPi to run the Node-RED server. The node red server acts as an internet access point for the LightBlue Bean. Here are the full [installation]({{relativeRoot}}guides/node-red/installation/) details for using the LightBlue Bean and Node-RED.
 
 This is what the Node-RED flow for the project looks like:
 
