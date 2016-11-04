@@ -79,6 +79,8 @@ We'll use an iOS device that supports Bluetooth Low Energy with an app that talk
 * Bean `GND`: Connected to the PowerSwitch Tail II `-in` (pin 2)
 4.7k resistor: Connected between Bean `BAT` and Bean IO pin `2` (pullup on the DS18B20 data line)
 
+{{{img_rel this '2bean-sous-vide.png' 'wire your Bean' '100%'}}}
+
 ### Rename your Bean
 
 You'll need to rename your Bean using the OS X Loader App. The iOS app finds the Sous Vide Bean by looking for a nearby Bean with the name `SousVide`— if your Bean isn't named exactly the same, the iOS app won't try to connect.
