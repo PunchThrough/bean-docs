@@ -81,7 +81,7 @@ We'll use an iOS device that supports Bluetooth Low Energy with an app that talk
 
 ### Rename your Bean
 
-You'll need to rename your Bean using the OS X Loader App. The iOS app finds the Sous Vide bean by looking for a nearby Bean with the name `SousVide`— if your Bean isn't named exactly the same, the iOS app won't try to connect.
+You'll need to rename your Bean using the OS X Loader App. The iOS app finds the Sous Vide Bean by looking for a nearby Bean with the name `SousVide`— if your Bean isn't named exactly the same, the iOS app won't try to connect.
 
 Alternately, you can change the name that the app searches for inside `Sous Vide/Controllers/SVViewController.m` to match your Bean instead:
 
