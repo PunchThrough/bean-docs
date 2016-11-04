@@ -157,5 +157,3 @@ Create an empty .txt file, name it `datalog` and load it to the SD card. Put the
 ## Learn More
 
 If you have any questions about this project, the best place to ask is the [Beantalk community forum](http://beantalk.punchthrough.com/).
-
-All aspects of this project are covered under the [MIT License](http://opensource.org/licenses/MIT).
