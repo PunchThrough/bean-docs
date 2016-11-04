@@ -1,12 +1,12 @@
 ---
 title: Holiday Light Hack
-layout: basic.hb2s
+layout: basic.hbs
 loop: true
 autotoc: true
 order: 2
 ---
 
-{{{video_rel this '307329768.mp4' '75%' true }}}
+{{{video_rel this '307329768.mp4' '100%' true }}}
 
 ## Introduction
 
@@ -31,7 +31,7 @@ In this tutorial you will learn how to hack holiday lights, and control it throu
 * {{> snip_req_bean}}
 * iOS device
 * [Resistor 10k ohm](http://octopart.com/mfr-25fbf52-10k-yageo-8100639)
-* Controllable RGB lights **FIND LIGHTS AND ADD LINK!**
+* [Controllable RGB lights](https://www.amazon.com/Zofei-Christmas-lights-String-Colorful/dp/B01FU1WC18/ref=sr_1_59?ie=UTF8&qid=1478291640&sr=8-59&keywords=rgb+holiday+lights)
 
 ### Tools
 
@@ -148,3 +148,8 @@ void loop() {
 Open the app LightBlue and connect to your Bean. Click options and choose Sandbox. If everything has been set up correctly, you can turn the lights on and off by pressing the buttons in the third view.
 
 {{{img_rel this '10iphone6-sandbox2_wide.png' 'Bean iOS sandbox' '100%'}}}
+
+
+## Learn More
+
+If you have any questions about this project, the best place to ask is the [Beantalk community forum](http://beantalk.punchthrough.com/).
