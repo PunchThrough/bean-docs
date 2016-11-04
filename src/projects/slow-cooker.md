@@ -134,7 +134,7 @@ Sometimes the app will disconnect from the Bean but show that it's still connect
 The iOS app frequently loses connection to the Bean. This won't affect your cooking—the Bean holds the last-set values in memory and continues to use them to regulate the temperature of the water in the cooker.
 
 
-## What's Next?
+## Learn More
 
 If you have any questions about this project, the best place to ask is the [Beantalk community forum](http://beantalk.punchthrough.com/).
 
