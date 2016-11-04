@@ -10,11 +10,11 @@ order: 2
 
 ## Introduction
 
-This tutorial teaches you how to write data to an SD card using the [LightBlue Bean](https://punchthrough.com/bean/).
+This tutorial teaches you how to write data to an SD card using the [LightBlue Bean]({{relativeRoot}}bean/).
 
 The LightBlue Bean is an Arduino compatible microcontroller with integrated Bluetooth Low Energy that you can program wirelessly from your smartphone or desktop.
 
-We will get the ambient temperature using [Bean.getTemperature()](../../bean/arduino-reference/gettemperature/) and then save it in a text file on the SD card.
+We will get the ambient temperature using [Bean.getTemperature()]({{relativeRoot}}bean/reference/#Temperature_getTemperature) and then save it in a text file on the SD card.
 
 ## Before You Begin
 
