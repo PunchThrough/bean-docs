@@ -33,7 +33,7 @@ It’s happened to me. But, worry no more with this water detection system which
 * [	SeeedStudio 2xAA Battery Holder](http://www.seeedstudio.com/depot/2xAA-Battery-Holder-p-1109.html)
 * [SeeedStudio 4 Pin Male Jumper to Grove Conversion Cable](http://www.seeedstudio.com/depot/Grove-4-pin-Male-Jumper-to-Grove-4-pin-Conversion-Cable-5-PCs-per-Pack-p-1565.html)
 
-## What do the different nodes do?
+### What do the different nodes do?
 
 Node-RED is a visual programming interface for the Internet of things. If you haven’t used Node-RED with the LightBlue Bean before, here is more [information]({{relativeRoot}}guides/node-red/what-is-node-red/).
 
@@ -51,17 +51,19 @@ This is what the Node-RED flow for the project looks like:
 
 **Email:** Sends the string passed from the previous node to a specified address.
 
-## Step 1: Get Node-RED up and running on the RaspberryPi
+## Make It
+
+### Get Node-RED up and running on the RaspberryPi
 
 Follow these [instructions](http://nodered.org/docs/hardware/raspberrypi.html) to set up Node-RED.
 
 {{{img_rel this '4IMG_0006.jpg' 'Raspberry Pi' '105%'}}}
 
-## Step 2: Gather Other Parts
+### Gather Other Parts
 
 {{{img_rel this '5IMG_0001.jpg' 'other components' '100%'}}}
 
-## Step 3: Wire the Bean
+### Wire the Bean
 
 Solder the wires accordingly and connect the Grove moisture sensor using the 4 pin male jumper to Grove conversion cable.
 
@@ -71,9 +73,9 @@ And here's how it should look in real life:
 
 {{{img_rel this '7IMG_0004.jpg' 'how it should look' '60%'}}}
 
-## Program the Bean
+## Program Your Bean
 
-Use the following code to measure the moisture:
+Upload the following sketch to your Bean or Bean+ to measure the moisture:
 
 ```cpp
 int sensorPin = A0;
