@@ -124,6 +124,13 @@ If you're still having trouble, it is likely that the Arduino IDE update broke c
 
 Please drop us a line on [Beantalk](http://beantalk.punchthrough.com) if something breaks. We want to know right away so we can get a fix to you!
 
+### Known Issues
+
+Pairing, which is required for ANCS, HID, and MIDI, creates a special bond between the OS and the Bean. Two known issues exist when the Bean is paired with the computer.
+
+* Regular Bluetooth devices, such as headsets, being used at the same time are unstable due to a bug in some version of OS X.
+* Connection states between the Bean Loader and Bluetooth Preferences are not the same.
+
 ### Other Issues
 
 {{> snip_troubleshooting}}
