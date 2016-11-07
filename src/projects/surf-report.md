@@ -10,7 +10,7 @@ order: 2
 
 ## Introduction
 
-Punch Through Design is a company filled with surfers, always keeping track of the surf reports from all the nearby spots. This used to involve pulling up a bunch of tabs in a browser. Now, we just glance at the wall!
+Punch Through is a company filled with surfers, always keeping track of the surf reports from all the nearby spots. This used to involve pulling up a bunch of tabs in a browser. Now, we just glance at the wall!
 
 We enjoy seeing technology added to things in a subtle way. With this surf map, when the LEDs are off, you’d never know they are there. This surf map displays the report for the upcoming week, along with tide times, by use of LEDs behind the canvas. The report is pulled from the web by a Python script on my computer, then sent to the artwork over BLE using the Bean’s virtual serial port. Finally the Bean parses the report and displays the LEDs accordingly.
 
