@@ -1,7 +1,7 @@
 ---
 title: Pumpkin NotiFire
 layout: basic-top-video.hbs
-vid: ../../projects/fire-pumpkin/pumpkin-fire-phone.mp4
+vid: ../../projects/pumpkin-notifire/pumpkin-fire-phone.mp4
 loop: true
 autotoc: true
 order: 2
@@ -14,11 +14,11 @@ order: 2
 </div>
 
 
-The pumpkin NotiFire is a delicious but questionable combination of a Glade aerosol air freshener, fire and text messages. We hacked a Glade air freshener and combined it with our Bean+ to make a pumpkin spit fire based on iOS notifications. 
+The pumpkin NotiFire is a delicious but questionable combination of a Glade aerosol air freshener, fire and text messages. We hacked a Glade air freshener and combined it with our Bean+ to make a pumpkin spit fire based on iOS notifications.
 
-The Bean+ is connected to the phone over Bluetooth Low Energy using ANCS (Apple Notification Center Service) to receive the phones notifications. The Bean+ sketch filters through the notifications and triggers the air freshener on any new text message. ANCS can be used to trigger on any notification, have fire shoot every time your favorite team scores using the ESPN app or really light your fire when you get a Tinder match. 
+The Bean+ is connected to the phone over Bluetooth Low Energy using ANCS (Apple Notification Center Service) to receive the phones notifications. The Bean+ sketch filters through the notifications and triggers the air freshener on any new text message. ANCS can be used to trigger on any notification, have fire shoot every time your favorite team scores using the ESPN app or really light your fire when you get a Tinder match.
 
-Let's start by saying, this is just a horrible idea. One of those horrible ideas that is just so good you can't resist making it. While building this, Mike singed his eye brows, burned his hand and even inhaled flaming hair spray. The upside is your home will have an overwhelming smell of fresh burning linen. 
+Let's start by saying, this is just a horrible idea. One of those horrible ideas that is just so good you can't resist making it. While building this, Mike singed his eye brows, burned his hand and even inhaled flaming hair spray. The upside is your home will have an overwhelming smell of fresh burning linen.
 
 {{{video_rel this 'hand-burn.mp4' '75%' true }}}
 
@@ -102,7 +102,7 @@ void setup() {
 
 void loop() {
   int msgAvail = BeanAncs.notificationsAvailable();
-  
+
   if (msgAvail) {
     Bean.setLedRed(30);
 
