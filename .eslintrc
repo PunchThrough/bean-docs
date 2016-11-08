@@ -1,3 +1,8 @@
 {
-  "extends": "standard"
+  "extends": "standard",
+  "rules": {
+    "no-multiple-empty-lines": 0,
+    "curly": 0,
+    "padded-blocks": 0
+  }
 }
