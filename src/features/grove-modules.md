@@ -77,11 +77,11 @@ If we run out of Grove ports like we have just now, there is an easy workaround;
 
 Now connect the pins of the touch sensor to the Bean+ as follows:
 
-VCC -> `5V`
+VCC &rarr; `5V`
 
-GND -> `GND`
+GND &rarr; `GND`
 
-SIG -> `D0`
+SIG &rarr; `D0`
 
 {{{img_rel this 'module-pins-closeup.png' "Closeup of the pins connecting to the touch sensor"}}}
 
