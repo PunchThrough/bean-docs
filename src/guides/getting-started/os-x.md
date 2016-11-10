@@ -128,8 +128,8 @@ Please drop us a line on [Beantalk](http://beantalk.punchthrough.com) if somethi
 
 Pairing, which is required for ANCS, HID, and MIDI, creates a special bond between the OS and the Bean. Two known issues exist when the Bean is paired with the computer.
 
-* Regular Bluetooth devices, such as headsets, being used at the same time are unstable due to a bug in some version of OS X.
-* Connection states between the Bean Loader and Bluetooth Preferences are not the same.
+* Regular Bluetooth devices, such as headsets, being used at the same time are unstable due to a bug in some version of OS X. Connections may be interrupted or result in unexpected behavior.
+* Connection states between the Bean Loader and Bluetooth Preferences are not the same. When a Bean is paired with the computer and you disconnect from it in the Bean Loader, the OS will remain connected to the Bean. If you want to connect to the Bean with another device or remove pairing, you will need to open Bluetooth Preferences and unpair by removing the device from the list of connected devices. 
 
 ### Other Issues
 
