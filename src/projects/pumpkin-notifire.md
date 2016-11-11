@@ -4,7 +4,7 @@ layout: basic-top-video.hbs
 vid: ../../projects/pumpkin-notifire/pumpkin-fire-phone.mp4
 loop: true
 autotoc: true
-order: 1
+order: 2
 ---
 
 ## Introduction
