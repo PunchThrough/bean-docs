@@ -1,11 +1,10 @@
 ---
 title: Bean Lock
-layout: basic.hbs
+layout: basic-top-image.hbs
+img: ../../projects/bean-lock/1beanlockphoto_copy.png
 autotoc: true
 order: 2
 ---
-
-{{{img_rel this '1beanlockphoto_copy.png' 'Bean lock' '100%'}}}
 
 ## Introduction
 
