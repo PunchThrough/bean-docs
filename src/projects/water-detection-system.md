@@ -1,11 +1,10 @@
 ---
 title: Water Detection System
-layout: basic.hbs
+layout: basic-top-image.hbs
+img: ../../projects/water-detection-system/1IMG_0009.jpeg
 autotoc: true
 order: 1
 ---
-
-{{{img_rel this '1IMG_0009.jpeg' 'Bean lock' '100%'}}}
 
 ## Introduction
 
