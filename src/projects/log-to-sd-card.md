@@ -1,12 +1,10 @@
 ---
 title: Log Data on SD Card
-layout: basic.hbs
-loop: true
+layout: basic-top-image.hbs
+img: ../../projects/log-to-sd-card/1breadboard-bean-front.jpg
 autotoc: true
 order: 2
 ---
-
-{{{img_rel this '1breadboard-bean-front.jpg' 'Bean with female headers' '100%'}}}
 
 ## Introduction
 
