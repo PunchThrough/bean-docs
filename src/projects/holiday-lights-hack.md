@@ -1,12 +1,11 @@
 ---
 title: Holiday Light Hack
-layout: basic.hbs
+layout: basic-top-video.hbs
+vid: ../../projects/holiday-lights-hack/307329768.mp4
 loop: true
 autotoc: true
 order: 2
 ---
-
-{{{video_rel this '307329768.mp4' '100%' true }}}
 
 ## Introduction
 
