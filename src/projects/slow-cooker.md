@@ -1,12 +1,11 @@
 ---
 title: DIY Sous Vide Cooker
-layout: basic.hbs
-loop: true
+layout: basic-top-image.hbs
+img: ../../projects/slow-cooker/1teaser.jpg
 autotoc: true
 order: 2
 ---
 
-{{{img_rel this '1teaser.jpg' 'Bean sous vide' '100%'}}}
 
 ## Introduction
 
@@ -14,13 +13,9 @@ Build a sous-vide cooker with your Bean! Make delicious food and leverage the po
 
 ### What is sous-vide?
 
-Short version:
+From Wikipedia,
 
->Sous-vide is hot-water immersion cooking. You seal your food in plastic bags and put it into hot water. This keeps the moisture locked in and makes sure meat cooks fully all the way through.
-
-Long version from Wikipedia:
-
->Sous-vide (French for "under vacuum") is a method of cooking food sealed in airtight plastic bags in a water bath or in a temperature-controlled steam environment for longer than normal cooking times at an accurately regulated temperature much lower than normally used for cooking. The intention is to cook the item evenly, ensuring that the inside is properly cooked without overcooking the outside, and retain moisture.
+>"Sous-vide (French for "under vacuum") is a method of cooking food sealed in airtight plastic bags in a water bath or in a temperature-controlled steam environment for longer than normal cooking times at an accurately regulated temperature much lower than normally used for cooking. The intention is to cook the item evenly, ensuring that the inside is properly cooked without overcooking the outside, and retain moisture."
 
 Once you start cooking your food sous-vide, you'll never go back—everything comes out moist and delicious and falls apart on your fork. It's great for cooking everything from salmon to steak to squash.
 
