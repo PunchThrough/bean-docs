@@ -1,12 +1,10 @@
 ---
 title: Surf Report Notifier
-layout: basic.hbs
-loop: true
+layout: basic-top-image.hbs
+img: ../../projects/surf-report/1diagram21.png
 autotoc: true
 order: 2
 ---
-
-{{{img_rel this '1diagram21.png' 'Bean surf report' '100%'}}}
 
 ## Introduction
 
@@ -14,7 +12,7 @@ Punch Through is a company filled with surfers, always keeping track of the surf
 
 We enjoy seeing technology added to things in a subtle way. With this surf map, when the LEDs are off, you’d never know they are there. This surf map displays the report for the upcoming week, along with tide times, by use of LEDs behind the canvas. The report is pulled from the web by a Python script on my computer, then sent to the artwork over BLE using the Bean’s virtual serial port. Finally the Bean parses the report and displays the LEDs accordingly.
 
-{{{video_rel this '281916134.mp4' '100%' true }}}
+{{{video_rel this '281916134.mp4' '100%' false }}}
 
 ### Wave heights vs. quality
 
