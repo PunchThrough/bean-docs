@@ -26,4 +26,5 @@ The LightBlue Bean’s dimensions are 1.79 x 0.80 x 0.33 inches (45.5 x 20.3 x 8
 
 ### LightBlue Bean+ (Revision C)
 
+* [Altium Schematic](https://punchthrough.com/files/bean+/PunchThroughBean+RevisionDSchematic.PDF)
 * [Eagle and Altium outlines](https://punchthrough.com/files/bean+/BeanPlusOutline_revC.zip)
