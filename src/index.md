@@ -1,3 +1,10 @@
-* [Guides](http://localhost:8080/guides/)
+---
+layout: root.hbs
+---
 
-* [Example Projects](http://localhost:8080/projects/)
+# Welcome to Bean Docs
+
+Check out one of the following sections.
+
+* [Guides](guides/)
+* [Example Projects](projects/)
