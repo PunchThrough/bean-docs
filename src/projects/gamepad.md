@@ -1,6 +1,7 @@
 ---
 title: Bean+ Gamepad
-layout: basic.hbs
+layout: basic-top-image.hbs
+img: ../../projects/gamepad/gamepad-header.png
 autotoc: true
 order: 2
 ---
@@ -121,3 +122,15 @@ void loop()
 * **Lines 30-37:** An array of the HID messages sent from the Bean+. HID messages can be either `chars` or `modifierKey`s. The full list of valid HID keys can be found in the [Bean's HID library](https://github.com/PunchThrough/bean-arduino-core/blob/master/hardware/bean/avr/cores/bean/BeanHID.h). These values can be modified to have the Bean+ output different values when the buttons are pressed.
 * **Lines 39-57:** Initialize the Bean HID profile and all of the pins associated with the gamepad.
 * **Lines 61-79:** Check each button sequentially to see if the pin has changed from high to low, or vice versa, and send the appropriate HID message accordingly.
+
+## Using the Gamepad
+
+{{{img_rel this 'gamepad-transparency.png' 'Bean+ Gamepad' '100%'}}}
+
+Now that your Bean+ is programmed and you have the gamepad shield attached, disconnect your Bean+ from Bean Loader and connect it to your computer through the normal Bluetooth menu. If you have issues connecting your Bean+ through the Bluetooth settings, ensure all other Bluetooth devices are disconnected.
+
+{{{img_rel this 'gamepad-bluetooth-connected.png' 'connect Bean+ in Bluetooth settings menu' '100%'}}}
+
+After the gamepad is set up, it will essentially work like a keyboard through the HID profile; when you press the `B` button on the gamepad, it will be as if the 'B' key on your keyboard is being pressed. You can map each button to different HID messages, such as other keyboard buttons, media controls, or even mouse movement.
+
+To learn more about how HID works on the Bean and Bean+, check out [our guide on HID]({{relativeRoot}}guides/features/hid). For issues and troubleshooting, check out the [BeanTalk forums](http://beantalk.punchthrough.com/).
