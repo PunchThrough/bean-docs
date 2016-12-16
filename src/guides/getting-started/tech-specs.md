@@ -86,7 +86,7 @@ Arduino sketches run on the ATmega328p microcontroller. This is the same part th
 * Recommended Operating Voltage Range: 2.6 to 3.6V
 * Maximum Operating Voltage Range: 2.0 to 3.6V.  
   *Note: Below 2.6V, the blue and green LEDs may not turn on.*
-* Operating Temperature Range: -40°C to 85°C
+* Operating Temperature Range:  -40°C to 85°C 
 
 **Bean+** can be powered from the included rechargeable battery or directly from a USB cable. It supports 2 operating voltages: 5V and 3.3V.
 
@@ -94,7 +94,9 @@ Arduino sketches run on the ATmega328p microcontroller. This is the same part th
 * Operating Voltage Range (USB): 5V +/- 10%
 * Maximum Current @ 5V: .6A
 * Maximum Current @ 3.3V: 1A
-* Operating Temperature Range: -40°C to 85°C
+* Operating Temperature Range:
+	- Charging: 0°C to 45°C
+	- Discharging: -20C to 45C
 
 ### Bean+ RF Specifications
 
