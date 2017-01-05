@@ -6,16 +6,13 @@ autotoc: true
 order: 2
 ---
 
-{{{img_rel this 'mario.png' 'mario' '100%'}}}
-
 ## Before You Begin
 
 {{> snip_req_getting_started}}
 
 ### Software
 
-* {{> snip_req_bean_loader}}
-* OR {{> snip_req_cli_loader}}
+* {{> snip_req_bean_loader}} or {{> snip_req_cli_loader}}
 
 ### Hardware
 
@@ -63,6 +60,7 @@ const uint8_t buttonPins[NUM_BUTTONS] = {
 };
 
 // The HID messages corresponding to button pins
+// Can be changed to different HID messages
 const uint8_t buttonFunctions[NUM_BUTTONS] = {
   'B', 'A', 'X', 'Y',  // Normal right thumb buttons
   KEY_RETURN, KEY_ESC,  // START and SELECT buttons
@@ -77,18 +75,18 @@ void setup()
   BeanHid.enable();
   
   // Set all used pins as inputs
-  pinMode(B, INPUT_PULLUP);
-  pinMode(A, INPUT_PULLUP);
-  pinMode(X, INPUT_PULLUP);
-  pinMode(Y, INPUT_PULLUP);
-  pinMode(START, INPUT_PULLUP);
-  pinMode(SELECT, INPUT_PULLUP);
-  pinMode(RIGHT, INPUT_PULLUP);
-  pinMode(UP, INPUT_PULLUP);
-  pinMode(DOWN, INPUT_PULLUP);
-  pinMode(LEFT, INPUT_PULLUP);
-  pinMode(LTRIG, INPUT_PULLUP);
-  pinMode(RTRIG, INPUT_PULLUP);
+  pinMode(B, INPUT);
+  pinMode(A, INPUT);
+  pinMode(X, INPUT);
+  pinMode(Y, INPUT);
+  pinMode(START, INPUT);
+  pinMode(SELECT, INPUT);
+  pinMode(RIGHT, INPUT);
+  pinMode(UP, INPUT);
+  pinMode(DOWN, INPUT);
+  pinMode(LEFT, INPUT);
+  pinMode(LTRIG, INPUT);
+  pinMode(RTRIG, INPUT);
 }
 
 void loop() 
@@ -115,11 +113,11 @@ void loop()
 }
 ```
 
-### Explanation:
+### Explanation
 
 * **Lines 1-16:** Defines the number of buttons and their respective pins. These numbers correspond to the physical pins of the Bean+ and shouldn't be changed.
 * **Lines 21-28:** An array of the Bean+'s pins to read their states from a for-loop.
-* **Lines 30-37:** An array of the HID messages sent from the Bean+. HID messages can be either `chars` or `modifierKey`s. The full list of valid HID keys can be found in the [Bean's HID library](https://github.com/PunchThrough/bean-arduino-core/blob/master/hardware/bean/avr/cores/bean/BeanHID.h). These values can be modified to have the Bean+ output different values when the buttons are pressed.
+* **Lines 30-37:** An array of the HID messages sent from the Bean+. HID messages can be either `chars` or a `modifierKey`. The full list of valid HID keys can be found in the [Bean's HID library](https://github.com/PunchThrough/bean-arduino-core/blob/master/hardware/bean/avr/cores/bean/BeanHID.h). These values can be modified to have the Bean+ output different values when the buttons are pressed.
 * **Lines 39-57:** Initialize the Bean HID profile and all of the pins associated with the gamepad.
 * **Lines 61-79:** Check each button sequentially to see if the pin has changed from high to low, or vice versa, and send the appropriate HID message accordingly.
 
@@ -131,6 +129,6 @@ Now that your Bean+ is programmed and you have the gamepad shield attached, disc
 
 {{{img_rel this 'gamepad-bluetooth-connected.png' 'connect Bean+ in Bluetooth settings menu' '100%'}}}
 
-After the gamepad is set up, it will essentially work like a keyboard through the HID profile; when you press the `B` button on the gamepad, it will be as if the 'B' key on your keyboard is being pressed. You can map each button to different HID messages, such as other keyboard buttons, media controls, or even mouse movement.
+After the gamepad is set up, it will essentially work like a keyboard through the HID profile; when you press the `B` button on the gamepad, it will be as if the 'B' key on your keyboard is being pressed. You can map each button to different [HID messages](https://github.com/PunchThrough/bean-arduino-core/blob/master/hardware/bean/avr/cores/bean/BeanHID.h), such as other keyboard buttons, media controls, or even mouse movement.
 
 To learn more about how HID works on the Bean and Bean+, check out [our guide on HID]({{relativeRoot}}guides/features/hid). For issues and troubleshooting, check out the [BeanTalk forums](http://beantalk.punchthrough.com/).
