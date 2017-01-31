@@ -21,12 +21,6 @@ order: 2
 * Bean+ Terminator
 * [Adafruit NeoPixel Strip](https://www.adafruit.com/products/1138)
 
-## Make It
-
-Put the terminator shield onto your Bean+:
-
-{{{img_rel this 'terminator-top.jpg' 'terminator shield' '100%'}}}
-
 ## Program Your Bean
 
 Program your Bean+ with this code:
@@ -60,8 +54,10 @@ void setup() {
 }
 
 void loop() {
-  // Each NeoPixel can draw up to 60mA when displaying bright white (red AND green AND blue LEDs at full birghtness).
-  // Care should be taken to ensure average current drawn from the Bean+ battery is less than 600mA when using the NeoPixel strip.
+  // Each NeoPixel can draw up to 60mA when displaying bright 
+  // white (red AND green AND blue LEDs at full birghtness).
+  // Care should be taken to ensure average current drawn from 
+  // the Bean+ battery is less than 600mA when using the NeoPixel strip.
 
   // We set the brightness to 32 here to minimize current draw.
   colorWipe(strip.Color(0, 32, 0), 50); // Green
@@ -89,8 +85,22 @@ void colorWipeReverse(uint32_t c, uint8_t wait) {
 }
 ```
 
-## Attach the NeoPixel strip and turn on Bean+
+## Make It
+
+Put the terminator shield onto your Bean+:
+
+{{{img_rel this 'terminator-top.jpg' 'terminator shield' '100%'}}}
+
+Attach the NeoPixel strip to the following terminals:
+
+* D6 – White wire (Din)
+* 5V – Red wire (5V)
+* GND - Black wire (GND)
 
 {{{img_rel this 'terminator-top-wood.jpg' 'Bean+ Terminator' '100%'}}}
 
-For issues and troubleshooting, check out the [BeanTalk forums](http://beantalk.punchthrough.com/).
+You will want to make sure that the NeoPixel strip is facing the correct way, with Din from the NeoPixel strip connecting to D6 on the Bean+. You will also want to be sure that your Bean+ is in 5V mode by flipping the 3.3V/5V switch to 5V.
+
+## Learn More
+* [Adafruit NeoPixel Uberguide](https://learn.adafruit.com/adafruit-neopixel-uberguide)
+* For issues and troubleshooting, check out the [BeanTalk forums](http://beantalk.punchthrough.com/).
