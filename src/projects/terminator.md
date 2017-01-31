@@ -7,7 +7,11 @@ autotoc: true
 order: 2
 ---
 
-## Before You Begin
+## Introduction
+
+What did the giant mess of wires say to the Bean+ Terminator shield? "I'll be back." Except they won't be back because the Terminator shield is the ultimate solution for tidying up a giant mess of wires.
+
+We connected an Adafruit NeoPixel strip to the Bean+ Terminator shield in this example and programmed the Bean+ to control the strip. The Bean+ sketch simply turns the NeoPixels on and off. The Bean+ with the Terminator shield could also be used to add a decorative flare to a light up gift box, or to let you know when your friend, Ron, is calling.
 
 {{> snip_req_getting_started}}
 
@@ -20,6 +24,7 @@ order: 2
 * {{> snip_req_bean_plus}}
 * Bean+ Terminator
 * [Adafruit NeoPixel Strip](https://www.adafruit.com/products/1138)
+* Small flat-head screwdriver
 
 ## Program Your Bean
 
@@ -91,7 +96,7 @@ Put the terminator shield onto your Bean+:
 
 {{{img_rel this 'terminator-top.jpg' 'terminator shield' '100%'}}}
 
-Attach the NeoPixel strip to the following terminals:
+Attach the NeoPixel strip to the following terminals using a flat-head screwdriver:
 
 * D6 – White wire (Din)
 * 5V – Red wire (5V)
@@ -100,6 +105,8 @@ Attach the NeoPixel strip to the following terminals:
 {{{img_rel this 'terminator-top-wood.jpg' 'Bean+ Terminator' '100%'}}}
 
 You will want to make sure that the NeoPixel strip is facing the correct way, with Din from the NeoPixel strip connecting to D6 on the Bean+. You will also want to be sure that your Bean+ is in 5V mode by flipping the 3.3V/5V switch to 5V.
+
+After you've programmed your Bean+ and made the above connections, you can grab the popcorn, your 3D glasses, and turn on your Terminator-outfitted Bean+. 
 
 ## Learn More
 * [Adafruit NeoPixel Uberguide](https://learn.adafruit.com/adafruit-neopixel-uberguide)
