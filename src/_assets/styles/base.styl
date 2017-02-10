@@ -78,7 +78,7 @@ code.hljs
     bottom: -100%
     left: -100%
 
-$bg: rgba(0, 0, 0, 0.2)
+$bg: rgba(0, 0, 0, 1)
 .bg,
 .overlay
   text-align: center
@@ -96,7 +96,7 @@ img,
     bottom: 0
     background: $bg
     color: #fff
-    opacity: 0
+    opacity: 0.6
     width: 100%
     h2
       margin-top: 45%
@@ -105,7 +105,8 @@ img,
       color: whitesmoke
   &:hover
     .overlay
-      opacity: 1
+      opacity: 0.75
+      background-color: #000
     img
       -webkit-filter: blur(2px)
       filter: blur(2px)

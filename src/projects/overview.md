@@ -18,11 +18,11 @@ TILE(S)
 
 {{{tile this 'gamepad/gamepad-transparency.png' 'Bean+ Gamepad' 'https://punchthrough.com/bean/docs/projects/gamepad/'}}}
 
-{{{tile this 'holiday-lights-hack/307329768.mp4' 'Holiday Lights Hack' 'https://punchthrough.com/bean/docs/projects/holiday-lights-hack/'}}}
+{{{tile this 'holiday-lights-hack/lights-tile.jpg' 'Holiday Lights Hack' 'https://punchthrough.com/bean/docs/projects/holiday-lights-hack/'}}}
 
 {{{tile this 'log-to-sd-card/1breadboard-bean-front.jpg' 'Log Bean Info to SD Card' 'https://punchthrough.com/bean/docs/projects/log-to-sd-card/'}}}
 
-{{{tile this 'pumpkin-notifire/pumpkin-fire-phone.mp4' 'Pumpkin Notifire' 'https://punchthrough.com/bean/docs/projects/pumpkin-notifire/'}}}
+{{{tile this 'pumpkin-notifire/notifire-tile.png' 'Pumpkin Notifire' 'https://punchthrough.com/bean/docs/projects/pumpkin-notifire/'}}}
 
 {{{tile this 'slow-cooker/1teaser.jpg' 'Bean Sous Vide' 'https://punchthrough.com/bean/docs/projects/slow-cooker/'}}}
 
