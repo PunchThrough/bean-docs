@@ -171,11 +171,11 @@ void sendMessage(int messageNumber)
 
 ## Using the Bean+ Slack Messenger
 
-Now that your Bean+ is programmed and you have the button and LED bar connected, disconnect your Bean+ from Bean Loader and connect it to your computer through the normal Bluetooth menu. If you have issues connecting your Bean+ through the Bluetooth settings, ensure all other Bluetooth devices are disconnected.
+Now that your Bean+ is programmed and you have the button and LED bar connected, disconnect your Bean+ from Bean Loader and connect it to your computer, phone, or tablet through the normal Bluetooth menu. If you have issues connecting your Bean+ through the Bluetooth settings, ensure all other Bluetooth devices are disconnected.
 
 {{{img_rel this 'bp-connected.png' 'connect Bean+ in Bluetooth settings menu' '100%'}}}
 
-After everything is set up and connected, the Bean+ will work like a standard keyboard through the HID profile. You can cycle through different messages by pressing the button. If you press & hold the button, a message will be sent to your computer/phone using HID! Pretty slick.
+After everything is set up and connected, the Bean+ will work like a standard keyboard through the HID profile. You can cycle through different messages by pressing the button. If you press & hold the button, a message will be sent to your computer, phone, or tablet using HID! Pretty slick.
 
 {{{img_rel this 'starter-kit.JPG' 'Assembled Bean Messenger' '100%'}}}
 
