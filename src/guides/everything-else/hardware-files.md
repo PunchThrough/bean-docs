@@ -16,6 +16,8 @@ The LightBlue Bean’s dimensions are 1.79 x 0.80 x 0.33 inches (45.5 x 20.3 x 8
 
 {{{img_rel this 'bean-protoboard-safe-area.jpg' 'Bean protoboard safe-to-cut area' '60%'}}}
 
+The dimensions of the LightBlue Bean+ are 2.56 x 1.38 x 0.59 inches (65 x 35 x 15 mm) without an accessory plugged in.
+
 ## Downloads
 
 ### LightBlue Bean (Revision E)
@@ -24,7 +26,8 @@ The LightBlue Bean’s dimensions are 1.79 x 0.80 x 0.33 inches (45.5 x 20.3 x 8
 * [PDF schematic and Gerbers](http://punchthrough.com/docs/files/Bean/Bean_revE_board_export.pdf)
 * [Bean vector image, for your diagrams](https://punchthrough.com/files/bean/graphics/bean-fritzing.svg)
 
-### LightBlue Bean+ (Revision C)
+### LightBlue Bean+ (Revision D)
 
 * [Altium Schematic](https://punchthrough.com/files/bean+/PunchThroughBean+RevisionDSchematic.PDF)
 * [Eagle and Altium outlines](https://punchthrough.com/files/bean+/BeanPlusOutline_revC.zip)
+* [3D models](https://punchthrough.com/files/bean+/BeanPlus_RevD_step_models.zip)
