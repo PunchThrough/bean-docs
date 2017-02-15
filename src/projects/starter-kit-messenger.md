@@ -11,7 +11,7 @@ order: 2
 
 Looking for ways to save time typing? Want to increase efficiency and maximize your time thinking of catchy buzz words? Or perhaps you're just looking to automate your "LOLs" and 😬 emoji Slack responses. Whatever the case, we have THE solution for you.
 
-Use the Bean+ starter kit to send messages with the press of a button. Choose from up to 10 messages to send. The LED bar keeps track of which message you are selecting and the button sends the message to your phone, computer, or tablet!
+Use the Bean+ starter kit to send messages with the press of a button. Choose from up to 10 messages to send. The LED bar keeps track of which message you have selected and the button sends the message to your phone, computer, or tablet via a press and hold!
 
 ## Before You Begin
 
@@ -76,7 +76,7 @@ void setup()
   pinMode(buttonPin, INPUT);  // initialize the pushbutton pin as an input
   
   bar.begin();
-  bar.setBits(0); // turn off all LEDs.
+  bar.setBits(0); // turn off all LEDs
 }
 
 void loop()
@@ -102,7 +102,7 @@ void loop()
     buttonDownTime = millis();
     }
 
-  // reset the counter if pressed over 10 times.
+  // reset the counter if pressed over 10 times
   if(buttonPushCounter > 10) {
     buttonPushCounter = 0; 
     }
@@ -116,7 +116,7 @@ void loop()
 void lightLedBar(int ledToLight)
 {
   if(ledToLight == 0) {
-    bar.setBits(0); // turn off all LEDs.
+    bar.setBits(0); // turn off all LEDs
     ledBits = 0;
     }
   else {
@@ -131,7 +131,7 @@ void lightLedBar(int ledToLight)
 void sendMessage(int messageNumber)
 {
   if(messageNumber == 1) {
-    ledBits = 0b000001000000000; // Light the first LED;
+    ledBits = 0b000001000000000; // Light the first LED
     bar.setBits(ledBits); 
     BeanHid.sendKeys("laugh meter: 1/10 - not funny.");
     BeanHid.sendKeys("\r\n");
@@ -161,7 +161,7 @@ void sendMessage(int messageNumber)
     
   }
   else if(messageNumber == 10) {
-    ledBits = 0b000001111111111; // Light all LEDs;
+    ledBits = 0b000001111111111; // Light all LEDs
     bar.setBits(ledBits); 
     BeanHid.sendKeys("laugh meter: 10/10 - maximum laughter.");
     BeanHid.sendKeys("\r\n");
