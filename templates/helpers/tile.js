@@ -4,7 +4,7 @@ let S = require('string')
 
 module.exports = (context, imagePath, desc, projectLink) => {
     let srcTemplate = '{{relativeRoot}}_assets/images/projects/{{imagePath}}'
-    let htmlTemplate = ('<div class="frame-square bg">' +
+    let htmlTemplate = ('<div class="guide-tile-holder bg">' +
                         '<div class="crop">' +
                         '<a href="{{projectLink}}" target="_blank">' +
                         '<img class="guide-img" src="{{src}}" alt="{{desc}}" title="{{desc}}" ' +
