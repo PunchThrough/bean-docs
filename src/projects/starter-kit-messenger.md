@@ -73,7 +73,7 @@ void setup()
 {
   BeanHid.enable();
   
-  pinMode(buttonPin, INPUT);  // initialize the pushbutton pin as an input:
+  pinMode(buttonPin, INPUT);  // initialize the pushbutton pin as an input
   
   bar.begin();
   bar.setBits(0); // turn off all LEDs.
@@ -81,7 +81,7 @@ void setup()
 
 void loop()
 {
-  // read the pushbutton input pin:
+  // read the pushbutton input pin
   buttonState = digitalRead(buttonPin);
 
   // compare the buttonState to its previous state
