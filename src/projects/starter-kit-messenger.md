@@ -9,7 +9,7 @@ order: 2
 
 ## Introduction
 
-Looking for ways to save time typing? Want to increase efficiency and maximize your time thinking of catchy buzz words? Or perhaps you're just looking to automate your "LOLs" and 😬 emoji Slack responses. Whatever the case, we have THE solution for you.
+Looking for ways to save time typing? Want to increase efficiency and maximize your time thinking of catchy buzzwords? Or perhaps you're just looking to automate your "LOLs" and 😬 emoji Slack responses. Whatever the case, we have THE solution for you.
 
 Use the Bean+ starter kit to send messages with the press of a button. Choose from up to 10 messages to send. The LED bar keeps track of which message you have selected and the button sends the message to your phone, computer, or tablet via a press and hold!
 
