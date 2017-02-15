@@ -14,13 +14,13 @@ module.exports = (context, imagePath, desc, projectLink) => {
                       '</div>')
 
   let src = S(srcTemplate).template({
-      relativeRoot: context.relativeRoot,  // Relative root (e.g. './')
-      imagePath: imagePath  // Actual filename of image (e.g. 'birbs.jpg')
+    relativeRoot: context.relativeRoot,  // Relative root (e.g. './')
+    imagePath: imagePath  // Actual filename of image (e.g. 'birbs.jpg')
   })
 
   return S(htmlTemplate).template({
-      src: src,
-      desc: desc,
-      projectLink: projectLink  // Link to the project page
+    src: src,
+    desc: desc,
+    projectLink: projectLink  // Link to the project page
   })
 }
