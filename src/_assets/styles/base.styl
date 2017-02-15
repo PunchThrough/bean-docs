@@ -47,46 +47,18 @@ code.hljs
 
 // Tiles should be two-and-two and square, with an overlay of words and blur on hover
 .guide-tile-holder
-  //width: 50%
-  //text-align: center
-  //float: left
-  //display: inline-block
-  //overflow: hidden
-  //position: relative
-.frame-square
   display: inline-block
   vertical-align: top
-  padding: 1px
-  width: 343px
-  height: 343px
-  margin-right: .5em
-  margin-bottom: .3em
-  border-radius: 4px
-.crop
-  height: 100%
-  overflow: hidden
-  position: relative
-  border-radius: 4px
-  img
-    display: block
-    min-width: 100%
-    min-height: 100%
-    margin: auto
-    position: absolute
-    top: -100%
-    right: -100%
-    bottom: -100%
-    left: -100%
+  width: 350px
+  height: 350px
 
-$bg: rgba(0, 0, 0, 1)
-.bg,
-.overlay
+$bg: rgba(0, 0, 0, 1)  // (R, G, B, Opacity)
+.bg, .overlay
   text-align: center
-img,
-.overlay
+img, .overlay
   transition: .2s all
 .bg
-  float: left
+  //float: left
   position: relative
   .overlay
     position: absolute
@@ -95,9 +67,9 @@ img,
     right: 0
     bottom: 0
     background: $bg
-    color: #fff
-    opacity: 0.6
-    width: 100%
+    opacity: 0  // Opacity (transparency) for overlaid words
+    width: 97%
+    height: 97%
     h2
       margin-top: 45%
       font-family: 'Droid Serif', sans-serif
@@ -105,8 +77,9 @@ img,
       color: whitesmoke
   &:hover
     .overlay
-      opacity: 0.75
-      background-color: #000
+      opacity: 0.75  // Opacity for black background; darkens image
+      background-color: black
+      border-radius: 4px
     img
       -webkit-filter: blur(2px)
       filter: blur(2px)
