@@ -7,7 +7,7 @@ order: 1
 
 # Overview
 
-Welcome to Punch Through example projects! These are projects we've personally made, and range from beginner to intermediate in difficulty. For more projects and project ideas, check out our [BeanTalk](http://beantalk.punchthrough.com/) forums and our page on [Hackster.io](https://www.hackster.io/punchthrough)! <i class="em em-alien"></i>
+Welcome to Punch Through example projects! These are projects we've personally made, and range from beginner to intermediate in difficulty. For more projects and project ideas, check out our [BeanTalk](http://beantalk.punchthrough.com/) forums and our page on [Hackster.io](https://www.hackster.io/punchthrough)!
 
 <hr>
 
