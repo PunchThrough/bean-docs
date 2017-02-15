@@ -131,8 +131,4 @@ Now that your Bean+ is programmed and you have the gamepad shield attached, disc
 
 After the gamepad is set up, it will work like a keyboard through the HID profile. When you press the `B` button on the gamepad, it will be as if the 'B' key on your keyboard is being pressed. You can map each button to different [HID messages](https://github.com/PunchThrough/bean-arduino-core/blob/master/hardware/bean/avr/cores/bean/BeanHID.h), such as other keyboard buttons, media controls, or even mouse movement.
 
-## Learn More
- * [Adafruit NeoPixel Uberguide](https://learn.adafruit.com/adafruit-neopixel-uberguide)
- * For issues and troubleshooting, check out the [BeanTalk forums](http://beantalk.punchthrough.com/).
-
 To learn more about how HID works on the Bean and Bean+, check out [our guide on HID]({{relativeRoot}}guides/features/hid). For issues and troubleshooting, check out the [BeanTalk forums](http://beantalk.punchthrough.com/).
