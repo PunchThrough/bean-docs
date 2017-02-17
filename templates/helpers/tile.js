@@ -6,7 +6,7 @@ module.exports = (context, imagePath, desc, projectLink) => {
   let srcTemplate = '{{relativeRoot}}_assets/images/projects/{{imagePath}}'
   let htmlTemplate = ('<div class="guide-tile-holder bg">' +
                       '<div class="crop">' +
-                      '<a href="{{projectLink}}" target="_blank">' +
+                      '<a href="{{projectLink}}">' +
                       '<img class="guide-img" src="{{src}}" alt="{{desc}}" title="{{desc}}" ' +
                       '</a>' +
                       '<div class="overlay"> <h2>{{desc}}</h2> </div>' +
