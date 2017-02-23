@@ -9,7 +9,7 @@ order: 2
 
 ## Introduction
 
-The Bean Boo Alert is a great way to light up your love (woo puns)! Never miss those special messages again with this simple, yet very romantic, Bean+ project. We connected a [NeoPixel](https://www.adafruit.com/products/1138) strip to a Bean+ and made it illuminate based on iOS notifications.
+The Bean Boo Alert is a great way to light up your love (woo puns)! Never miss those special messages again with this simple, yet very romantic Bean+ project. We connected a [NeoPixel](https://www.adafruit.com/products/1138) strip to a Bean+ and made it illuminate based on iOS notifications.
 
 The Bean+ is connected to the phone over Bluetooth Low Energy using ANCS (Apple Notification Center Service) to receive the phone's notifications. The Bean+ sketch filters through the notifications and causes the NeoPixel strip to light on any new text message!
 
@@ -39,7 +39,7 @@ You will want to make sure that the NeoPixel strip is facing the correct way, wi
 
 We wanted to make our Boo Alert as cute as possible, so we used some cable ties to turn the strip into a heart shape!
 
-{{{img_rel this 'boo-alert-heart.png' 'totes adorbs' '75%'}}}
+{{{img_rel this 'boo-alert-heart.png' 'totes adorbs' '100%'}}}
 
 ## Program Your Bean
 
@@ -51,7 +51,7 @@ Program your Bean+ with this code:
 
 ```cpp
 #include <Adafruit_NeoPixel.h>
- 
+
 // Parameter 1 = number of pixels in strip
 // Parameter 2 = Arduino pin number (most are valid)
 // Parameter 3 = pixel type flags, add together as needed:
@@ -69,7 +69,7 @@ void setup() {
   BeanAncs.enable();
 
   strip.begin();
-  strip.show(); // Initialize all pixels to 'off'
+  strip.show();  // Initialize all pixels to 'off'
 }
 
 void loop() {
@@ -80,9 +80,9 @@ void loop() {
 
     for (int i = 0; i < msgAvail; i++) {
       if (notifications[i].catID == 4) {
-        colorWipe(strip.Color(255, 0, 0), 50); // Red wipe
-        fadeInAndOut(255, 0, 0, 2); // First red fade
-        fadeInAndOut(255, 0, 0, 2); // Second red fade
+        colorWipe(strip.Color(255, 0, 0), 50);  // Red wipe
+        fadeInAndOut(255, 0, 0, 2);  // First red fade
+        fadeInAndOut(255, 0, 0, 2);  // Second red fade
         colorWipe(strip.Color(0, 0, 0), 50); // Turn all pixels off
         delay(50);
       }
@@ -92,25 +92,25 @@ void loop() {
 
 // Fill the dots one after the other with a color
 void colorWipe(uint32_t c, uint8_t wait) {
-  for(uint16_t i=0; i<strip.numPixels(); i++) {
+  for(uint16_t i = 0; i < strip.numPixels(); i++) {
       strip.setPixelColor(i, c);
       strip.show();
       delay(wait);
   }
 }
- 
+
 void fadeInAndOut(uint8_t red, uint8_t green, uint8_t blue, uint8_t wait) {
-  for(uint8_t b=0; b <255; b++) {
-     for(uint8_t i=0; i < strip.numPixels(); i++) {
-        strip.setPixelColor(i, red*b/255, green*b/255, blue*b/255);
+  for(uint8_t b = 0; b < 255; b++) {
+     for(uint8_t i = 0; i < strip.numPixels(); i++) {
+        strip.setPixelColor(i, (red * b) / 255, (green * b) / 255, (blue * b) / 255);
      }
      strip.show();
      delay(2);
   }
 
-  for(uint8_t b=255; b > 0; b--) {
-     for(uint8_t i=0; i < strip.numPixels(); i++) {
-        strip.setPixelColor(i, red*b/255, green*b/255, blue*b/255);
+  for(uint8_t b = 255; b > 0; b--) {
+     for(uint8_t i = 0; i < strip.numPixels(); i++) {
+        strip.setPixelColor(i, (red * b) / 255, (green * b) / 255, (blue * b) / 255);
      }
      strip.show();
      delay(1);
@@ -122,7 +122,7 @@ void fadeInAndOut(uint8_t red, uint8_t green, uint8_t blue, uint8_t wait) {
 
 Place your Boo Alert on your desk and ensure that it has been paired with your phone through the normal Bluetooth menu. Then you just have to wait to get that lovely message. Or you can do what we did and send yourself a message. Don't worry; it's not sad.
 
-{{{img_rel this 'boo-alert.png' 'Aww for cute!' '75%'}}}
+{{{img_rel this 'boo-alert.png' 'Aww for cute!' '100'}}}
 
 💋 With Love, Punch Through
 
