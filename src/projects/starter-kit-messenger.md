@@ -9,7 +9,7 @@ order: 2
 
 ## Introduction
 
-Looking for ways to save time typing? Want to increase efficiency and maximize your time thinking of catchy buzzwords? Or perhaps you're just looking to automate your "LOLs" and 😬 emoji Slack responses. Whatever the case, we have THE solution for you.
+Looking for ways to save time typing? Want to increase efficiency and maximize your time thinking of catchy buzzwords? Or perhaps you're just looking to automate your "LOLs" and 😬 emoji Slack responses. Whatever the case, we have the solution for you.
 
 Use the Bean+ starter kit to send messages with the press of a button. Choose from up to 10 messages to send. The LED bar keeps track of which message you have selected and the button sends the message to your phone, computer, or tablet via a press and hold!
 
@@ -34,7 +34,7 @@ Connect the button to the Grove connector on the Bean+ that's labeled "I2C" and 
 
 ## Program Your Bean
 
-* Download and extract the Grove LED Bar Library as shown on the [Grove LED Bar Wiki]((http://wiki.seeed.cc/Grove-LED_Bar/).
+* Download and extract the Grove LED Bar Library as shown on the [Grove LED Bar Wiki](http://wiki.seeed.cc/Grove-LED_Bar).
 * Program your Bean+ with this code:
 
 ```cpp
@@ -55,117 +55,113 @@ The bits >10 are ignored, shown here as x: 0bxxxxx0000000000
 #include <Grove_LED_Bar.h>
 
 Grove_LED_Bar bar(A2, A3, 0);  // Clock pin, Data pin, Orientation
-const int buttonPin = A5;      // the number of the pushbutton pin
+const int buttonPin = A5;      // The number of the pushbutton pin
 
 // Variables will change:
-int buttonPushCounter = 0;    // counter for the number of button presses
-int buttonState = 0;          // current state of the button
-int lastButtonState = 0;      // previous state of the button
-unsigned long buttonDownTime; // how long since the button was first pressed 
-unsigned long buttonUpTime;   // how long since the button was first pressed 
+int buttonPushCounter = 0;    // Counter for the number of button presses
+int buttonState = 0;          // Current state of the button
+int lastButtonState = 0;      // Previous state of the button
+unsigned long buttonDownTime; // How long since the button was first pressed 
+unsigned long buttonUpTime;   // How long since the button was first pressed 
 
-#define debounce 20 // ms debounce period
-#define holdTime 500 // ms hold period for press and hold
+#define debounce 20   // ms debounce period
+#define holdTime 500  // ms hold period for press and hold
 
 int ledBits = 0b000000000000000; // Keep track of the LEDs to light
 
-void setup()
-{
+void setup() {
   BeanHid.enable();
-  
-  pinMode(buttonPin, INPUT);  // initialize the pushbutton pin as an input
-  
+
+  pinMode(buttonPin, INPUT);  // Initialize the pushbutton pin as an input
+
   bar.begin();
-  bar.setBits(0); // turn off all LEDs
+  bar.setBits(0);  // turn off all LEDs
 }
 
-void loop()
-{
-  // read the pushbutton input pin
+void loop() {
+  // Read the pushbutton input pin
   buttonState = digitalRead(buttonPin);
 
-  // compare the buttonState to its previous state
+  // Compare the buttonState to its previous state
   if (buttonState == HIGH && lastButtonState == LOW && (millis() - buttonUpTime) > long(debounce)) {
     buttonPushCounter++;
     buttonDownTime = millis();
-    }
+  }
 
   // Check for press and release
   if(buttonState == LOW && lastButtonState == HIGH && (millis() - buttonDownTime) > long(debounce)) {
     lightLedBar(buttonPushCounter);
     buttonUpTime = millis();
-    }
+  }
 
   // Check for press and hold
   if(buttonState == HIGH && (millis() - buttonDownTime) > long(holdTime)) {
     sendMessage(buttonPushCounter);
     buttonDownTime = millis();
-    }
+  }
 
-  // reset the counter if pressed over 10 times
+  // Reset the counter if pressed over 10 times
   if(buttonPushCounter > 10) {
     buttonPushCounter = 0; 
-    }
-    
+  }
+
   lastButtonState = buttonState;
 }
-    
+
 //=================================================
 // Cycle through LEDs on LED bar
 //=================================================
-void lightLedBar(int ledToLight)
-{
+void lightLedBar(int ledToLight) {
   if(ledToLight == 0) {
-    bar.setBits(0); // turn off all LEDs
+    bar.setBits(0);  // Turn off all LEDs
     ledBits = 0;
-    }
+  }
   else {
     ledBits = ledBits | ( 0b000010000000000 >> ledToLight);
     bar.setBits(ledBits);
-    }
+  }
 }
 
 //=================================================
 // Send HID message
 //=================================================      
-void sendMessage(int messageNumber)
-{
+void sendMessage(int messageNumber) {
   if(messageNumber == 1) {
-    ledBits = 0b000001000000000; // Light the first LED
+    ledBits = 0b000001000000000;  // Light the first LED
     bar.setBits(ledBits); 
     BeanHid.sendKeys("laugh meter: 1/10 - not funny.");
     BeanHid.sendKeys("\r\n");
-    }
+  }
   else if(messageNumber == 2) {
-    
+    // ADD YOUR OWN MESSAGE HERE
   }
   else if(messageNumber == 3) {
-    
+    // ADD YOUR OWN MESSAGE HERE
   }
   else if(messageNumber == 4) {
-    
+    // ADD YOUR OWN MESSAGE HERE
   }
   else if(messageNumber == 5) {
-    
+    // ADD YOUR OWN MESSAGE HERE
   }
   else if(messageNumber == 6) {
-    
+    // ADD YOUR OWN MESSAGE HERE
   }
   else if(messageNumber == 7) {
-    
+    // ADD YOUR OWN MESSAGE HERE
   }
   else if(messageNumber == 8) {
-    
+    // ADD YOUR OWN MESSAGE HERE
   }
   else if(messageNumber == 9) {
-    
+    // ADD YOUR OWN MESSAGE HERE
   }
   else if(messageNumber == 10) {
-    ledBits = 0b000001111111111; // Light all LEDs
+    ledBits = 0b000001111111111;  // Light all LEDs
     bar.setBits(ledBits); 
     BeanHid.sendKeys("laugh meter: 10/10 - maximum laughter.");
     BeanHid.sendKeys("\r\n");
-    }
+  }
 }
 ```
 
