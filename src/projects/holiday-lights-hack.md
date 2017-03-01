@@ -4,7 +4,6 @@ layout: basic-top-video.hbs
 vid: ../../projects/holiday-lights-hack/307329768.mp4
 loop: true
 autotoc: true
-order: 2
 ---
 
 ## Introduction

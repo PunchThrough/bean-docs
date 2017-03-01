@@ -3,7 +3,6 @@ title: Log Data on SD Card
 layout: basic-top-image.hbs
 img: ../../projects/log-to-sd-card/1breadboard-bean-front.jpg
 autotoc: true
-order: 2
 ---
 
 ## Introduction
