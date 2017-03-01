@@ -36,11 +36,67 @@ code.hljs
 .guide-img
   max-width: 100%
   max-height: auto
+.guide-tile
+  max-width: 50%
+  max-height: auto
 .guide-img-holder
   width: 100%
   margin-top: 20px
   margin-bottom: 20px
   text-align: center
 
+// Tiles should be two-and-two and square, with an overlay of words and blur on hover
+.guide-tile-holder
+  display: inline-block
+  vertical-align: top
+  width: 350px
+  height: 350px
+  padding: 7px
+
+$bg: rgba(0, 0, 0, 1)  // (R, G, B, Opacity)
+.bg, .overlay
+  text-align: center
+img, .overlay
+  transition: .2s all
+.bg
+  //float: left
+  position: relative
+  .overlay
+    position: absolute
+    top: 6px
+    left: 6px
+    right: 0
+    bottom: 0
+    background: $bg
+    opacity: 0  // Opacity (transparency) for overlaid words
+    padding: 10px
+    width: 96%
+    height: 96%
+    h2
+      margin-top: 45%
+      font-family: 'Droid Serif', sans-serif
+      text-align: center
+      color: whitesmoke
+  &:hover
+    .overlay
+      opacity: 0.75  // Opacity for black background; darkens image
+      background-color: black
+      border-radius: 4px
+    img
+      -webkit-filter: blur(2px)
+      -moz-filter: blur(2px)
+      -ms-filter: blur(2px)
+      -o-filter: blur(2px)
+      filter: blur(2px)
+
 .title
   margin-top: 0
+
+.hr
+  display: block
+  margin-top: 0.5em
+  margin-bottom: 0.5em
+  margin-left: auto
+  margin-right: auto
+  border-style: inset
+  border-width: 1px
