@@ -4,7 +4,6 @@ layout: basic-top-video.hbs
 vid: ../../projects/starter-kit-messenger/starter-kit-slack.mp4
 loop: true
 autotoc: true
-order: 2
 ---
 
 ## Introduction
