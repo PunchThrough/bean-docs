@@ -3,7 +3,6 @@ title: Bean+ Gamepad
 layout: basic-top-image.hbs
 img: ../../projects/gamepad/gamepad-header.png
 autotoc: true
-order: 2
 ---
 
 ## Before You Begin

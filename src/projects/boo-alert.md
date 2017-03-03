@@ -4,7 +4,6 @@ layout: basic-top-video.hbs
 vid: ../../projects/boo-alert/boo-alert-phone.mp4
 loop: true
 autotoc: true
-order: 2
 ---
 
 ## Introduction

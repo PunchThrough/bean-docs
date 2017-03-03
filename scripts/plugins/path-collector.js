@@ -17,12 +17,6 @@ let pageOrder = (a, b) => {
   return a.order - b.order
 }
 
-let alphabetical = (a, b) => {
-  // Alphabetical comparison sorting (projects only)
-  // http://stackoverflow.com/a/51169/254187
-  return a.title.toLowerCase().localeCompare(b.title.toLowerCase())
-}
-
 
 module.exports = (config) => {
 
@@ -76,7 +70,7 @@ module.exports = (config) => {
     })
 
     projectCollections.forEach((coll) => {
-      coll.pages = coll.pages.sort(alphabetical)
+      coll.pages = coll.pages.sort(pageOrder)
     })
 
     // Store in Metalsmith global object

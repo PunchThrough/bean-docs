@@ -3,7 +3,6 @@ title: Water Detection System
 layout: basic-top-image.hbs
 img: ../../projects/water-detection-system/1IMG_0009.jpeg
 autotoc: true
-order: 1
 ---
 
 ## Introduction

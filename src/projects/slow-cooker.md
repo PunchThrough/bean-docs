@@ -3,7 +3,6 @@ title: DIY Sous Vide Cooker
 layout: basic-top-image.hbs
 img: ../../projects/slow-cooker/1teaser.jpg
 autotoc: true
-order: 2
 ---
 
 

@@ -3,7 +3,6 @@ title: Surf Report Notifier
 layout: basic-top-image.hbs
 img: ../../projects/surf-report/1diagram21.png
 autotoc: true
-order: 2
 ---
 
 ## Introduction
