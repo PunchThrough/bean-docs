@@ -29,11 +29,15 @@ Once you start cooking your food sous-vide, you'll never go back—everything co
 
 ### Hardware
 
-* {{> snip_req_bean}}
-* [PowerSwitch Tail II](https://www.sparkfun.com/products/10747)
-* [DS18B20 Temperature Sensor](https://www.sparkfun.com/products/11050)
-* [Hamilton-Beach 8-Quart Slow Cooker](http://smile.amazon.com/Hamilton-Beach-33182A-Cooker-8-Quart/dp/B00EZI26C8/)
-* [Bean Maker Kit](http://store.punchthrough.com/collections/all/products/bean-maker-kit) or generic battery pack
+{{{part this 'LightBlue Bean or Bean+' '1' 'https://store.punchthrough.com/collections/bean-family'}}}
+
+{{{part this 'PowerSwitch Tail II' '1' 'https://www.sparkfun.com/products/10747'}}}
+
+{{{part this 'DS18B20 Temperature Sensor' '1' 'https://www.sparkfun.com/products/11050'}}}
+
+{{{part this 'Hamilton-Beach 8-Quart Slow Cooker' '1' 'http://smile.amazon.com/Hamilton-Beach-33182A-Cooker-8-Quart/dp/B00EZI26C8/'}}}
+
+{{{part this 'Bean Maker Kit' '1' 'http://store.punchthrough.com/collections/all/products/bean-maker-kit'}}}
 
 
 ## Make It
