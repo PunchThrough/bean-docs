@@ -125,9 +125,9 @@ img, .overlay
     float: right
     padding: 7px
     border-radius: 2px
-    border: 2px solid lightgrey;
-    //box-shadow: 0px 0px 3px #888
+    border: 2px solid lightgrey
   li
+    margin-left: 10px
     border-top: 1px solid lightgrey
     background-color: white
     list-style-type: none
@@ -135,3 +135,61 @@ img, .overlay
     padding-bottom: 35px
     &:hover
       background-color: #f4f4f4
+
+.beanButton
+  background-color: #00adee
+  -moz-border-radius: 20px
+  -webkit-border-radius: 20px
+  border-radius: 10px
+  border: 1px solid #2ac0fc
+  display: inline-block
+  cursor: pointer
+  color: #ffffff
+  font-family: Arial
+  font-size: 17px
+  padding: 24px 31px
+  margin-bottom: 10px
+  margin-right: -25px
+  text-decoration: none
+  text-shadow: 0px 1px 0px #2f6627
+  float: right
+  &:hover
+    background-color: #0079a5
+    color: white
+    text-decoration: underline wavy red
+  &:active
+    position: relative
+    top: 1px
+
+.buy-bean-banner
+  background-color: #00adee
+  padding-bottom: 74px
+  border-radius: 10px
+  margin-bottom: 10px
+  span
+    font-size: 1.5em
+    color: white
+    display: inline-block
+    position: absolute
+    margin-left: 105px
+    margin-top: 20px
+img.bean
+  position: absolute
+  width: 30px
+  margin-top: 24px
+  margin-left: 50px
+  display: inline-block
+img.bean-plus
+  position: absolute
+  width: 39px
+  margin-top: 1px
+  margin-left: 5px
+  display: inline-block
+
+.drop-shadow {
+  -webkit-filter: drop-shadow(0 1px 2px rgba(0,0,0,.5));
+  -moz-filter: drop-shadow(0 1px 2px rgba(0,0,0,.5));
+  -ms-filter: drop-shadow(0 1px 2px rgba(0,0,0,.5));
+  -o-filter: drop-shadow(0 1px 2px rgba(0,0,0,.5));
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,.5));
+}
