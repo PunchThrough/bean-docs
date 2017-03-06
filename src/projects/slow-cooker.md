@@ -28,7 +28,7 @@ Once you start cooking your food sous-vide, you'll never go back—everything co
 
 ### Hardware
 
-{{{part this 'LightBlue Bean or Bean+' '1' 'https://store.punchthrough.com/collections/bean-family'}}}
+{{> snip_bean_button}}
 
 {{{part this 'PowerSwitch Tail II' '1' 'https://www.sparkfun.com/products/10747'}}}
 
