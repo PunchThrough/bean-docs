@@ -25,7 +25,9 @@ It’s happened to me. But, worry no more with this water detection system which
 
 ### Hardware
 
-{{{part this 'LightBlue Bean or Bean+' '1' 'https://store.punchthrough.com/collections/bean-family/products/bean'}}}
+{{> snip_bean_part}}
+
+{{> snip_bean_plus_part}}
 
 {{{part this 'Raspberry Pi 2 Model B' '1' 'http://www.adafruit.com/product/2358'}}}
 

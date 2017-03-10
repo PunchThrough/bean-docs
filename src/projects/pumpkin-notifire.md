@@ -33,11 +33,19 @@ Now that we have warned you of the dangers, let's start creating this fire-breat
 
 ### Hardware
 
-* {{> snip_req_bean}}
-* iOS device
-* [Glade Automatic Spray Air Freshener](https://www.amazon.com/GladeAutomatic-Freshener-Hawaiian-Breeze-Starter/dp/B004GCUK8A/)
-* [Tea Candles](https://www.amazon.com/Country-Dreams-Unscented-Lights-Pkg-White/dp/B001681QZ8)
-* Large Pumpkin & various carving tools
+{{> snip_bean_part}}
+
+{{> snip_bean_plus_part}}
+
+{{{part this 'Glade Automatic Spray Air Freshener' '1' 'https://www.amazon.com/GladeAutomatic-Freshener-Hawaiian-Breeze-Starter/dp/B004GCUK8A'}}}
+
+{{{part this 'Tea Candles' '1' 'https://www.amazon.com/Country-Dreams-Unscented-Lights-Pkg-White/dp/B001681QZ8'}}}
+
+{{{part this 'iOS Device' '1' 'http://www.apple.com/iphone/'}}}
+
+{{{part this 'Large Pumpkin' '1' 'http://www.agbase.com/market/vegetable/pumpkin/fresh'}}}
+
+{{{part this 'Pumpkin Carving Tools' '1' 'https://www.amazon.com/KINREX-Halloween-Pumpkin-Carving-Kit/dp/B01L9KO3RK'}}}
 
 ## Make it
 

@@ -27,13 +27,21 @@ Are you one of them? Stop glaring at your empty mailbox and channel all your fru
 
 ### Hardware
 
-* {{> snip_req_bean}}
-* iOS device
-* [Electronic deadbolt](http://www.amazon.com/gp/product/B000FBU2KW/ref=oh_aui_detailpage_o01_s00?ie=UTF8&psc=1)
-* [H-Bridge motor driver](http://www.sparkfun.com/products/9457)
-* [3.3V linear voltage regulator](http://www.sparkfun.com/products/526)
-* [	Ceramic capacitor (0.1uF)](http://www.sparkfun.com/products/8375)
-* [Electrolytic decoupling capacitor (10uF)](http://www.sparkfun.com/products/523)
+{{> snip_bean_part}}
+
+{{> snip_bean_plus_part}}
+
+{{{part this 'iOS device' '1' 'http://www.apple.com/iphone'}}}
+
+{{{part this 'Electronic deadbolt' '1' 'http://www.amazon.com/gp/product/B000FBU2KW/ref=oh_aui_detailpage_o01_s00?ie=UTF8&psc=1'}}}
+
+{{{part this 'H-Bridge motor driver' '1' 'http://www.sparkfun.com/products/9457'}}}
+
+{{{part this '3.3V linear voltage regulator' '1' '3.3V linear voltage regulator'}}}
+
+{{{part this 'Ceramic capacitor (0.1uF)' '1' 'http://www.sparkfun.com/products/8375'}}}
+
+{{{part this 'Electrolytic decoupling capacitor (10uF)' '1' 'http://www.sparkfun.com/products/523'}}}
 
 {{{img_rel this '3FI21FO5I0462QJM.jpg' 'wiring (image developed using Fritzing.org)' '100%'}}}
 

@@ -22,7 +22,7 @@ The Bean+ is connected to the phone over Bluetooth Low Energy using ANCS (Apple 
 
 ### Hardware
 
-{{{part this 'LightBlue Bean+' '1' 'https://store.punchthrough.com/collections/bean-family/products/bean'}}}
+{{> snip_bean_plus_part}}
 
 {{{part this 'iOS Device' '1' 'http://www.apple.com/iphone'}}}
 

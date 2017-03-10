@@ -27,7 +27,7 @@ Use the Bean+ starter kit to send messages with the press of a button. Choose fr
 <br>
 #### OR
 
-{{{part this 'Bean+' '1' 'http://store.punchthrough.com/collections/bean-family/products/lightblue-bean-plus'}}}
+{{> snip_bean_plus_part}}
 
 {{{part this 'Bean+ Accessory Kit' '1' 'http://store.punchthrough.com/collections/kits/products/bean-accessory-kit'}}}
 

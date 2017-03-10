@@ -15,8 +15,9 @@ autotoc: true
 
 ### Hardware
 
-* {{> snip_req_bean_plus}}
-* [Bean+ Gamepad](http://store.punchthrough.com/products/bean-gamepad)
+{{> snip_bean_plus_part}}
+
+{{{part this 'Bean+ Gamepad' '1' 'http://store.punchthrough.com/products/bean-gamepad'}}}
 
 ## Make It
 

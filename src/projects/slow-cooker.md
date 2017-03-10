@@ -28,7 +28,9 @@ Once you start cooking your food sous-vide, you'll never go back—everything co
 
 ### Hardware
 
-{{> snip_bean_button}}
+{{> snip_bean_part}}
+
+{{> snip_bean_plus_part}}
 
 {{{part this 'PowerSwitch Tail II' '1' 'https://www.sparkfun.com/products/10747'}}}
 

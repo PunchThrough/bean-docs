@@ -26,10 +26,15 @@ In this tutorial you will learn how to hack holiday lights, and control it throu
 
 ### Hardware
 
-* {{> snip_req_bean}}
-* iOS device
-* [Resistor 10k ohm](http://octopart.com/mfr-25fbf52-10k-yageo-8100639)
-* [Controllable RGB lights](https://www.amazon.com/Zofei-Christmas-lights-String-Colorful/dp/B01FU1WC18/ref=sr_1_59?ie=UTF8&qid=1478291640&sr=8-59&keywords=rgb+holiday+lights)
+{{> snip_bean_part}}
+
+{{> snip_bean_plus_part}}
+
+{{{part this 'iOS device' '1' 'http://www.apple.com/iphone'}}}
+
+{{{part this 'Resistor 10k ohm' '1' 'http://octopart.com/mfr-25fbf52-10k-yageo-8100639'}}}
+
+{{{part this 'Controllable RGB lights' '1' 'https://www.amazon.com/Zofei-Christmas-lights-String-Colorful/dp/B01FU1WC18/ref=sr_1_59?ie=UTF8&qid=1478291640&sr=8-59&keywords=rgb+holiday+lights'}}}
 
 ### Tools
 
