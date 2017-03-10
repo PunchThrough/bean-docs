@@ -3,7 +3,6 @@ title: Bean Lock
 layout: basic-top-image.hbs
 img: ../../projects/bean-lock/1beanlockphoto_copy.png
 autotoc: true
-order: 2
 ---
 
 ## Introduction

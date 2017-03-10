@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <!-- Punch Through styling -->
+    <link rel="stylesheet" href="{{relativeRoot}}_assets/vendor/punchthrough/homepage.css" data-pt-ignore>
+    <!-- Syntax highlighting -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/tomorrow-night.min.css">
+    <!-- Docs styling -->
+    <link rel="stylesheet" href="{{relativeRoot}}_assets/styles/base.css">
+    <link rel="stylesheet" href="{{relativeRoot}}_assets/styles/standalone.css" data-pt-ignore>
+</head>
+<body>
+<div class="container-fluid lc-white">
+    <div class="row">
+        <div class="col-xs-12">
+            {{{contents}}}
+        </div>
+    </div>
+</div>
+<!-- JavaScript -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+<script src="{{relativeRoot}}_assets/scripts/frontend.js"></script>
+</body>
+</html>
