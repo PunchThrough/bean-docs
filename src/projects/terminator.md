@@ -9,9 +9,9 @@ order: 2
 
 ## Introduction
 
-What did the giant mess of wires say to the Bean+ Terminator shield? "I'll be back." Except they won't be back because the Terminator shield is the ultimate solution for tidying up a giant mess of wires.
+What did the Bean+ Terminator shield say to the giant mess of wires? "HASTA LA VISTA, BABY!" The Terminator shield is a convenient, and cool 😎 , solution for tidying up those wires.
 
-We connected an Adafruit NeoPixel strip to the Bean+ Terminator shield in this example and programmed the Bean+ to control the strip. The Bean+ sketch simply turns the NeoPixels on and off. The Bean+ with the Terminator shield could also be used to add a decorative flare to a light up gift box, or to let you know when your friend, Ron, is calling.
+We connected an Adafruit NeoPixel strip to the Bean+ Terminator shield in this example and programmed the Bean+ to control the strip. The Bean+ sketch simply turns the NeoPixels on and off.
 
 {{> snip_req_getting_started}}
 
