@@ -1,8 +1,8 @@
 ---
-title: Troubleshooting
+title: Troubleshooting Guide
 layout: basic.hbs
 autotoc: true
-order: 1
+order: 2
 ---
 
 Are you having trouble with your Bean or Bean Loader? Here are some steps that might help you if you're experiencing problems.
@@ -51,4 +51,4 @@ If you're using Bean Loader on your desktop, make sure you're running on [Arduin
 
 ## Go to Beantalk
 
-If none of the steps above have fixed the problem you're seeing, [ask for help on Beantalk](http://beantalk.punchthrough.com)! Beantalk is our community forum where people talk about Bean and ask questions when they need help. Our developers visit frequently, so it's the best place to go for help.
+If none of the steps above have fixed the problem you're seeing, [ask for help on Beantalk](http://beantalk.punchthrough.com)! Beantalk is our community forum where people talk about Bean and ask questions when they need help.

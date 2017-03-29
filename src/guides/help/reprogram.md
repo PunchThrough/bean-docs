@@ -2,7 +2,7 @@
 title: Reprogram Malicious Sketch
 layout: basic.hbs
 autotoc: true
-order: 2
+order: 3
 ---
 
 ## The Problem
