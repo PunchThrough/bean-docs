@@ -22,7 +22,7 @@ We connected an Adafruit NeoPixel strip to the Bean+ Terminator shield in this e
 ### Hardware
 
 * {{> snip_req_bean_plus}}
-* Bean+ Terminator
+* [Bean+ Terminator](https://store.punchthrough.com/collections/all/products/bean-terminator-board)
 * [Adafruit NeoPixel Strip](https://www.adafruit.com/products/1138)
 * Small flat-head screwdriver
 
@@ -60,7 +60,7 @@ void setup() {
 
 void loop() {
   // Each NeoPixel can draw up to 60mA when displaying bright 
-  // white (red AND green AND blue LEDs at full birghtness).
+  // white (red AND green AND blue LEDs at full brightness).
   // Care should be taken to ensure average current drawn from 
   // the Bean+ battery is less than 600mA when using the NeoPixel strip.
 
@@ -70,7 +70,7 @@ void loop() {
 }
 
 // Fill dots one after the other with a color
-// Skip ever other dot to minimize current draw from the battery on Bean+
+// Skip every other dot to minimize current draw from the battery on Bean+
 void colorWipe(uint32_t c, uint8_t wait) {
   for(uint16_t i=0; i<strip.numPixels(); i=i+2) {
     strip.setPixelColor(i, c);
@@ -80,7 +80,7 @@ void colorWipe(uint32_t c, uint8_t wait) {
 }
 
 // Fill the dots one after the other with a color
-// Skip ever other dot to minimize current draw from the battery on Bean+
+// Skip every other dot to minimize current draw from the battery on Bean+
 void colorWipeReverse(uint32_t c, uint8_t wait) {
   for(int16_t i=(strip.numPixels()); i>=0; i=i-2) {
     strip.setPixelColor(i, c);
