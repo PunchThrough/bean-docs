@@ -107,4 +107,4 @@ After you've programmed your Bean+ and made the above connections, you can grab 
 
 ## Learn More
 * [Adafruit NeoPixel Uberguide](https://learn.adafruit.com/adafruit-neopixel-uberguide)
-* For issues and troubleshooting, check out the [BeanTalk forums](http://beantalk.punchthrough.com/).
+* For issues and troubleshooting, check out the [Beantalk forums](http://beantalk.punchthrough.com/).
