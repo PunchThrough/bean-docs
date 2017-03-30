@@ -19,6 +19,8 @@ Welcome to Punch Through example projects! These are projects we've personally m
 
 {{{tile this 'overview/gamepad-tile.png' 'Bean+ Gamepad' '../gamepad'}}}
 
+{{{tile this 'overview/terminator-tile.png' 'Bean+ Terminator' '../terminator'}}}
+
 {{{tile this 'overview/sous-vide-tile.jpg' 'Bean Sous Vide' '../slow-cooker'}}}
 
 {{{tile this 'overview/surf-report-tile.png' 'Surf Report' '../surf-report'}}}
