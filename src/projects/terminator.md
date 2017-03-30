@@ -91,7 +91,7 @@ void colorWipeReverse(uint32_t c, uint8_t wait) {
 
 Put the terminator shield onto your Bean+:
 
-{{{img_rel this 'terminator-top.jpg' 'terminator shield' '100%'}}}
+{{{img_rel this 'terminator-top.JPG' 'terminator shield' '100%'}}}
 
 Attach the NeoPixel strip to the following terminals using a flat-head screwdriver:
 
@@ -99,7 +99,7 @@ Attach the NeoPixel strip to the following terminals using a flat-head screwdriv
 * 5V – Red wire (5V)
 * GND - Black wire (GND)
 
-{{{img_rel this 'terminator-top-wood.png' 'Bean+ Terminator' '100%'}}}
+{{{img_rel this 'terminator-top-wood.PNG' 'Bean+ Terminator' '100%'}}}
 
 You will want to make sure that the NeoPixel strip is facing the correct way, with Din from the NeoPixel strip connecting to D6 on the Bean+. You will also want to be sure that your Bean+ is in 5V mode by flipping the 3.3V/5V switch to 5V.
 
