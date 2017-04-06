@@ -17,3 +17,10 @@ Just follow these four steps:
 4. Shoot us an email at [info@punchthrough.com](mailto:info@punchthrough.com) with the links to your three posts.
 
 Then we'll ship you a brand new Bean for you to use in another project. Don't forget to include your shipping address in the email!
+
+Promotion Details:
+
+- Your project must include either a Bean or Bean+. 
+- In-progress projects do not qualify. We'd love to see your project once it has been finished. Please send us an email after your project is completed and then we'll send you a code to get a free Bean :)
+- Shipping and tax are not included.
+- The promotion is only valid for a free Bean, not a free Bean+. 
