@@ -5,9 +5,9 @@ autotoc: true
 order: 2
 ---
 
-We love our Bean users. The Beantalk community is made of really smart people, and we always like seeing what you build with the LightBlue Bean and Bean+.
+We love our Bean users. The Beantalk community is made up of really smart people, and we always like seeing what you build with the LightBlue Bean and Bean+.
 
-For a limited time, if you share any projects you build with Bean on social media, we'll send you a new LightBlue Bean for free!
+For a limited time, if you share any projects you have built with Bean or Bean+ on social media, we'll send you a new LightBlue Bean for free!
 
 **Just follow these four steps:**
 
