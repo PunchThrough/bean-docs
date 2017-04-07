@@ -9,7 +9,7 @@ We love our Bean users. The Beantalk community is made of really smart people, a
 
 For a limited time, if you share any projects you build with Bean on social media, we'll send you a new LightBlue Bean for free!
 
-Just follow these four steps:
+**Just follow these four steps:**
 
 1. Post your Bean-powered project on [Hackster.io](http://hackster.io/punchthrough) and include **LightBlue Bean** in the Components and Supplies section.
 2. Post a link to your project on **Facebook** and tag us: [Punch Through](https://www.facebook.com/punchthroughdesign)
@@ -18,7 +18,7 @@ Just follow these four steps:
 
 Then we'll ship you a brand new Bean for you to use in another project. Don't forget to include your shipping address in the email!
 
-Promotion Details:
+**Promotion Details:**
 
 - Your project must include either a Bean or Bean+. 
 - In-progress projects do not qualify. We'd love to see your project once it has been finished. Please send us an email after your project is completed and then we'll send you a code to get a free Bean :)
