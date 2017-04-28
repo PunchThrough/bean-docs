@@ -21,10 +21,15 @@ We connected an Adafruit NeoPixel strip to the Bean+ Terminator shield in this e
 
 ### Hardware
 
-* {{> snip_req_bean_plus}}
-* [Bean+ Terminator](https://store.punchthrough.com/collections/all/products/bean-terminator-board)
-* [Adafruit NeoPixel Strip](https://www.adafruit.com/products/1138)
-* Small flat-head screwdriver
+{{> snip_bean_plus_part}}
+
+{{{part this 'Bean+ Terminator' '1' 'https://store.punchthrough.com/collections/all/products/bean-terminator-board'}}}
+
+{{{part this 'Or LightBlue Bean+ Terminator Bundle' '1' 'https://store.punchthrough.com/collections/all/products/bean-terminator-bundle'}}}
+
+{{{part this 'Adafruit NeoPixel Strip' '1' 'https://www.adafruit.com/products/1138'}}}
+
+{{{part this 'Small Screwdriver' '1' 'https://www.amazon.com/iFixit-IF145-299-1-Bit-Driver-Kit/dp/B0189YWOIO/ref=sr_1_1?ie=UTF8&qid=1493400394&sr=8-1&keywords=ifixit+screwdriver'}}}
 
 ## Program Your Bean
 

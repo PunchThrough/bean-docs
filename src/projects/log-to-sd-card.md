@@ -23,16 +23,29 @@ We will get the ambient temperature using [Bean.getTemperature()]({{relativeRoot
 
 ### Hardware
 
-* {{> snip_req_bean}}
-* iOS device
-* [microSD card with microSD to SD adapter](https://www.sparkfun.com/products/13833)
-* [SD card breakout board (optional)](https://www.sparkfun.com/products/12941)
-* [Breadboard (generic)](https://www.sparkfun.com/products/12002)
-* [Jumper wires (generic)](https://www.sparkfun.com/products/11026)
-* [Male headers](https://www.sparkfun.com/products/10112)
-* [Female headers](https://www.sparkfun.com/products/743)
-* [2xAA battery holder](https://www.sparkfun.com/products/9547)
-* 2 x AA batteries
+You need either a Bean **OR** a Bean+ for this project.
+
+{{> snip_bean_part}}
+
+{{> snip_bean_plus_part}}
+
+{{{part this 'iOS device' '1' 'http://www.apple.com/iphone'}}}
+
+{{{part this 'microSD card with microSD to SD adapter' '1' 'https://www.sparkfun.com/products/13833'}}}
+
+{{{part this 'SD card breakout board (optional)' '1' 'https://www.sparkfun.com/products/12941'}}}
+
+{{{part this 'Breadboard (generic)' '1' 'https://www.sparkfun.com/products/12002'}}}
+
+{{{part this 'Jumper wires (generic)' '1' 'https://www.sparkfun.com/products/11026'}}}
+
+{{{part this 'Male headers' '1' 'https://www.sparkfun.com/products/10112'}}}
+
+{{{part this 'Female headers' '1' 'https://www.sparkfun.com/products/743'}}}
+
+{{{part this '2xAA battery holder' '1' 'https://www.sparkfun.com/products/9547'}}}
+
+{{{part this '2 x AA batteries' '1' 'https://www.amazon.com/Energizer-Batteries-Designed-Damaging-24-Count/dp/B004U429AQ'}}}
 
 
 ## Make it

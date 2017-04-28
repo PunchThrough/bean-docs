@@ -25,11 +25,19 @@ It’s happened to me. But, worry no more with this water detection system which
 
 ### Hardware
 
-* {{> snip_req_bean}}
-* [Raspberry Pi 2 Model B](http://www.adafruit.com/product/2358)
-* [SeeedStudio Grove Moisture Sensor](http://www.seeedstudio.com/depot/Grove-Moisture-Sensor-p-955.html)
-* [	SeeedStudio 2xAA Battery Holder](http://www.seeedstudio.com/depot/2xAA-Battery-Holder-p-1109.html)
-* [SeeedStudio 4 Pin Male Jumper to Grove Conversion Cable](http://www.seeedstudio.com/depot/Grove-4-pin-Male-Jumper-to-Grove-4-pin-Conversion-Cable-5-PCs-per-Pack-p-1565.html)
+You need either a Bean **OR** a Bean+ for this project.
+
+{{> snip_bean_part}}
+
+{{> snip_bean_plus_part}}
+
+{{{part this 'Raspberry Pi 2 Model B' '1' 'http://www.adafruit.com/product/2358'}}}
+
+{{{part this 'SeeedStudio Grove Moisture Sensor' '1' 'http://www.seeedstudio.com/depot/Grove-Moisture-Sensor-p-955.html'}}}
+
+{{{part this 'SeeedStudio 2xAA Battery Holder' '1' 'http://www.seeedstudio.com/depot/2xAA-Battery-Holder-p-1109.html'}}}
+
+{{{part this 'SeeedStudio 4 Pin Male Jumper to Grove Conversion Cable' '1' 'http://www.seeedstudio.com/depot/Grove-4-pin-Male-Jumper-to-Grove-4-pin-Conversion-Cable-5-PCs-per-Pack-p-1565.html'}}}
 
 ### What do the different nodes do?
 

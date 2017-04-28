@@ -22,8 +22,11 @@ Use the Bean+ starter kit to send messages with the press of a button. Choose fr
 
 ### Hardware
 
-* [Bean+ Starter Kit](http://store.punchthrough.com/collections/kits/products/bean-starter-kit) 
-* Or [Bean+](http://store.punchthrough.com/collections/bean-family/products/lightblue-bean-plus) with the [Bean+ Accessory Kit](http://store.punchthrough.com/collections/kits/products/bean-accessory-kit)
+{{> snip_bean_plus_part}}
+
+{{{part this 'Bean+ Accessory Kit' '1' 'http://store.punchthrough.com/collections/kits/products/bean-accessory-kit'}}}
+
+{{{part this 'Or LightBlue Bean+ Starter Kit' '1' 'http://store.punchthrough.com/collections/kits/products/bean-starter-kit'}}}
 
 ## Make it
 

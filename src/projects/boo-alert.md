@@ -22,9 +22,12 @@ The Bean+ is connected to the phone over Bluetooth Low Energy using ANCS (Apple 
 
 ### Hardware
 
-* [Bean+](http://store.punchthrough.com/collections/bean-family/products/lightblue-bean-plus)
-* iOS device
-* [Adafruit NeoPixel Strip](https://www.adafruit.com/products/1138)
+{{> snip_bean_plus_part}}
+
+{{{part this 'iOS Device' '1' 'http://www.apple.com/iphone'}}}
+
+{{{part this 'Adafruit NeoPixel Strip' '1' 'https://www.adafruit.com/products/1138'}}}
+
 
 ## Make it
 
