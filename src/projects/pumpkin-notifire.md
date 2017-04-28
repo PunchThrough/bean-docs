@@ -33,6 +33,8 @@ Now that we have warned you of the dangers, let's start creating this fire-breat
 
 ### Hardware
 
+You need either a Bean **OR** a Bean+ for this project.
+
 {{> snip_bean_part}}
 
 {{> snip_bean_plus_part}}

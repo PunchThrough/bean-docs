@@ -26,6 +26,8 @@ In this tutorial you will learn how to hack holiday lights, and control it throu
 
 ### Hardware
 
+You need either a Bean **OR** a Bean+ for this project.
+
 {{> snip_bean_part}}
 
 {{> snip_bean_plus_part}}

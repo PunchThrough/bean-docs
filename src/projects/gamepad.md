@@ -19,6 +19,8 @@ autotoc: true
 
 {{{part this 'Bean+ Gamepad' '1' 'http://store.punchthrough.com/products/bean-gamepad'}}}
 
+{{{part this 'Or LightBlue Bean+ Gamepad Bundle' '1' 'https://store.punchthrough.com/collections/all/products/bean-gamepad-bundle'}}}
+
 ## Make It
 
 Put the gamepad shield onto your Bean+:

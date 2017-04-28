@@ -28,6 +28,8 @@ Once you start cooking your food sous-vide, you'll never go back—everything co
 
 ### Hardware
 
+You need either a Bean **OR** a Bean+ for this project.
+
 {{> snip_bean_part}}
 
 {{> snip_bean_plus_part}}

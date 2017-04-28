@@ -27,6 +27,8 @@ Are you one of them? Stop glaring at your empty mailbox and channel all your fru
 
 ### Hardware
 
+You need either a Bean **OR** a Bean+ for this project.
+
 {{> snip_bean_part}}
 
 {{> snip_bean_plus_part}}
@@ -37,7 +39,7 @@ Are you one of them? Stop glaring at your empty mailbox and channel all your fru
 
 {{{part this 'H-Bridge motor driver' '1' 'http://www.sparkfun.com/products/9457'}}}
 
-{{{part this '3.3V linear voltage regulator' '1' '3.3V linear voltage regulator'}}}
+{{{part this '3.3V linear voltage regulator' '1' 'https://www.sparkfun.com/products/526'}}}
 
 {{{part this 'Ceramic capacitor (0.1uF)' '1' 'http://www.sparkfun.com/products/8375'}}}
 

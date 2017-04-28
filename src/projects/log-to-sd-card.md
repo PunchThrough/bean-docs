@@ -23,6 +23,8 @@ We will get the ambient temperature using [Bean.getTemperature()]({{relativeRoot
 
 ### Hardware
 
+You need either a Bean **OR** a Bean+ for this project.
+
 {{> snip_bean_part}}
 
 {{> snip_bean_plus_part}}
