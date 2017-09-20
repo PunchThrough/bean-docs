@@ -4,6 +4,13 @@ layout: basic.hbs
 autotoc: true
 ---
 
+---
+** NOTE **
+
+Virtual serial is currently not working. A workaround is to use the [CLI loader's](https://punchthrough.com/bean/docs/guides/getting-started/cli-loader/) log_serial command.
+
+---
+
 ## Introduction
 
 Say you have a digital [pushbutton](https://www.sparkfun.com/products/97) soldered onto your Bean. You want your laptop to post a tweet when you push the button. To get that to happen, you need Bean to read the button and send data to your laptop when you push the button.
