@@ -2,7 +2,7 @@
 title: Bean Loader for Android
 layout: basic.hbs
 autotoc: true
-order: 4
+order: 5
 ---
 
 ## Introduction
