@@ -2,7 +2,7 @@
 title: Bean Loader for OS X
 layout: basic.hbs
 autotoc: true
-order: 3
+order: 4
 ---
 
 ## Introduction
